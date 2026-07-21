@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "dmamove_job_submit",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 849,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'job_count' read through pointer of type dmamove_ctx in dmamove_job_submit(). This type is freed in vgem_dmamove_ctx_free() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "dmamove_job_submit"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 849,
+      "func": "dmamove_job_submit",
+      "callee": ""
+    }
+  ]
+}

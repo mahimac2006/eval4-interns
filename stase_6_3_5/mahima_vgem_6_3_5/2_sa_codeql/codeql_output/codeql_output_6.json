@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "vgem_dmamove_buf_state_get",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 246,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'vgem_dmamove_buf_state_get' sets signal field 'vgem_buf_state.stage_flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=vgem_buf_state;field=stage_flags;offset=1] [oracle:assert=vgem_buf_state.stage_flags stays within the domain its consumer's agreement governs;assume=producer sets stage_flags without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_dmamove_buf_state_get"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 246,
+      "func": "vgem_dmamove_buf_state_get",
+      "callee": ""
+    }
+  ]
+}

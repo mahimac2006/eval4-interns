@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "token_resolve_write",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 201,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.generation' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2] [mem:struct=dmamove_token_slot;field=generation;offset=12] [oracle:assert=dmamove_token_slot.generation is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": "token_resolve_write"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 201,
+      "func": "token_resolve_write",
+      "callee": ""
+    }
+  ]
+}

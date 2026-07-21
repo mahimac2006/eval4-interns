@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun validate_xfrm_ret () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (_ bv0 32) (concat  (select  validate_xfrm_ret (_ bv3 32) ) (concat  (select  validate_xfrm_ret (_ bv2 32) ) (concat  (select  validate_xfrm_ret (_ bv1 32) ) (select  validate_xfrm_ret (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

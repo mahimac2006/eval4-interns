@@ -1,0 +1,103 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_psmgr_sendmsg",
+    "parameters": [
+      "unsigned int hdr_payload_len",
+      "unsigned int wup_len"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_b795f941",
+        "arguments": {
+          "locations": [
+            "psmgr_session.role@5"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun hdr_payload_len () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun wup_len () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  hdr_payload_len (_ bv3 32) ) (concat  (select  hdr_payload_len (_ bv2 32) ) (concat  (select  hdr_payload_len (_ bv1 32) ) (select  hdr_payload_len (_ bv0 32) ) ) ) ) ) ) (and  (bvult  ?B1 (_ bv8 32) ) (=  (concat  (select  wup_len (_ bv3 32) ) (concat  (select  wup_len (_ bv2 32) ) (concat  (select  wup_len (_ bv1 32) ) (select  wup_len (_ bv0 32) ) ) ) ) ?B1 ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun hdr_payload_len () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun wup_len () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (=  false (bvult  (concat  (select  hdr_payload_len (_ bv3 32) ) (concat  (select  hdr_payload_len (_ bv2 32) ) (concat  (select  hdr_payload_len (_ bv1 32) ) (select  hdr_payload_len (_ bv0 32) ) ) ) ) (_ bv8 32) ) ) (=  (_ bv8 32) (concat  (select  wup_len (_ bv3 32) ) (concat  (select  wup_len (_ bv2 32) ) (concat  (select  wup_len (_ bv1 32) ) (select  wup_len (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 582
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 579
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_sendmsg",
+    "file": "psmgr_pipeline.c",
+    "args": []
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ psmgr_sendmsg",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "psmgr_pipeline.c",
+        "line": 469
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_pipeline.c",
+      "line": 469,
+      "function": "psmgr_sendmsg"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_session.role@5",
+        "locations": [
+          {
+            "offset": 5,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_session.role@5",
+      "symbol": "psmgr_sendmsg"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "psmgr_session.role is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_session.role@5",
+      "sa": "psmgr_session.role@5",
+      "code": "psmgr_session.role"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

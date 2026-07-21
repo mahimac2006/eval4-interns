@@ -1,0 +1,11 @@
+array enc_mode[4] : w32 -> w8 = symbolic
+array param_max[4] : w32 -> w8 = symbolic
+array xfrm_type[4] : w32 -> w8 = symbolic
+(query [(Eq 4
+             (ReadLSB w32 0 xfrm_type))
+         (Eq 1
+             (ReadLSB w32 0 enc_mode))
+         (Eq false
+             (Eq 31
+                 (ReadLSB w32 0 param_max)))]
+        false)

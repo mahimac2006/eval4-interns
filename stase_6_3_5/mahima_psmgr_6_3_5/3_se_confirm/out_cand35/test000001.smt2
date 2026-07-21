@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun cur_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun enc_xfrm_validated () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun role () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (and  (=  (_ bv0 32) (concat  (select  cur_state (_ bv3 32) ) (concat  (select  cur_state (_ bv2 32) ) (concat  (select  cur_state (_ bv1 32) ) (select  cur_state (_ bv0 32) ) ) ) ) ) (=  (_ bv2 32) (concat  (select  role (_ bv3 32) ) (concat  (select  role (_ bv2 32) ) (concat  (select  role (_ bv1 32) ) (select  role (_ bv0 32) ) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  enc_xfrm_validated (_ bv3 32) ) (concat  (select  enc_xfrm_validated (_ bv2 32) ) (concat  (select  enc_xfrm_validated (_ bv1 32) ) (select  enc_xfrm_validated (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

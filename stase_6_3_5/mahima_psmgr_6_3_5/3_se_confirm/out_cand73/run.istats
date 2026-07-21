@@ -1,0 +1,50 @@
+version: 1
+creator: klee
+pid: 28900
+cmd: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand73.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fl=/tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand73_wmi2.c
+fn=main
+13 13 1 0 0 0 1 20 0 0 0 0 0 0 0 
+14 13 1 0 0 0 1 19 0 0 0 0 0 0 0 
+15 13 1 0 0 0 1 18 0 0 0 1 0 0 0 
+16 14 1 0 0 0 1 17 0 0 0 0 0 0 0 
+17 14 1 0 0 0 1 15 0 0 0 0 0 0 0 
+18 14 1 0 0 0 1 14 0 0 0 2 0 0 0 
+19 15 1 0 0 0 1 12 0 0 0 1 0 0 0 
+20 15 1 0 0 0 1 11 0 0 0 0 0 0 0 
+21 15 1 1 0 0 1 10 0 0 0 1 2 0 172179 
+24 15 1 0 0 0 1 12 0 0 0 1 0 0 0 
+25 15 1 0 0 0 1 11 0 0 0 0 0 0 0 
+26 15 1 1 0 0 1 10 0 0 0 1 1 0 61574 
+29 15 1 0 0 0 1 12 0 0 0 1 0 0 0 
+30 15 1 0 0 0 1 11 0 0 0 0 0 0 0 
+31 15 1 0 0 0 1 10 0 0 0 0 0 0 0 
+34 13 1 0 0 0 3 9 0 0 0 0 0 0 0 
+35 15 1 0 0 0 3 8 0 0 0 0 0 0 0 
+36 15 1 0 0 0 3 7 0 0 0 0 0 0 0 
+37 15 1 0 0 0 3 6 0 0 0 3 1 0 62562 
+38 16 1 0 0 0 3 4 0 0 0 3 0 0 0 
+39 16 1 0 0 0 3 3 0 0 0 0 0 0 0 
+40 16 1 0 0 0 3 2 0 0 0 3 0 0 0 
+43 16 1 0 0 0 3 0 0 0 0 0 0 0 0 
+46 16 0 0 0 0 0 1 0 0 1 0 0 0 0 
+47 16 0 0 0 0 0 0 0 0 0 0 0 0 0 
+50 17 1 0 0 0 3 0 0 0 0 3 2 0 124754 

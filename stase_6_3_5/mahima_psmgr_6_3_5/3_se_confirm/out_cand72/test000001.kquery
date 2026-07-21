@@ -1,0 +1,4 @@
+array write_count[4] : w32 -> w8 = symbolic
+(query [(Eq 4294967295
+             (ReadLSB w32 0 write_count))]
+        false)

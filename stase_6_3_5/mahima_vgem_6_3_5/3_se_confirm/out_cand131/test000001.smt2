@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun dst_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun src_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvule  (concat  (select  src_size (_ bv3 32) ) (concat  (select  src_size (_ bv2 32) ) (concat  (select  src_size (_ bv1 32) ) (select  src_size (_ bv0 32) ) ) ) ) (concat  (select  dst_size (_ bv3 32) ) (concat  (select  dst_size (_ bv2 32) ) (concat  (select  dst_size (_ bv1 32) ) (select  dst_size (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

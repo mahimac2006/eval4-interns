@@ -1,0 +1,146 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "postproc_job_reap",
+  "target_file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "target_line": 593,
+  "target_cwe": "CWE-787",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "gep_variable_index",
+    "enclosing": "postproc_job_reap"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+      "line": 593,
+      "func": "postproc_job_reap",
+      "callee": "gep_variable_index"
+    }
+  ],
+  "trigger_api": "pipeline_ioctl",
+  "trigger_candidates": [
+    "pipeline_ioctl",
+    "pipeline_ioctl_reap",
+    "pipeline_ioctl_reap_all",
+    "pipeline_ioctl_submit_pp",
+    "postproc_ioctl",
+    "postproc_ioctl_reap"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "pipeline_ioctl:arg0",
+    "pipeline_ioctl:arg1",
+    "pipeline_ioctl:arg2",
+    "pipeline_ioctl_reap:arg0",
+    "pipeline_ioctl_reap:arg1",
+    "pipeline_ioctl_reap_all:arg0",
+    "pipeline_ioctl_reap_all:arg1",
+    "pipeline_ioctl_submit_pp:arg0",
+    "pipeline_ioctl_submit_pp:arg1",
+    "postproc_ioctl:arg0",
+    "postproc_ioctl:arg1",
+    "postproc_ioctl:arg2",
+    "postproc_ioctl_reap:arg0",
+    "postproc_ioctl_reap:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "pipeline_ioctl",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl_reap",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl_reap",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl_reap_all",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl_reap_all",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl_submit_pp",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl_submit_pp",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl_reap",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl_reap",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [
+    "pipeline_open"
+  ],
+  "producers": [
+    {
+      "api": "pipeline_open",
+      "type": "",
+      "out": ""
+    }
+  ],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "pipeline_open",
+      "api": "pipeline_open",
+      "capture": []
+    },
+    {
+      "name": "trigger",
+      "api": "pipeline_ioctl",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "0 <= {postproc_job_reap:%idxprom45} < sizeof({postproc_job_reap:%47})"
+  ],
+  "concrete_params": []
+}

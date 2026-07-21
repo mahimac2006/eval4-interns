@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun peer_id_field () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun role_field () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  (_ bv0 32) (concat  (select  role_field (_ bv3 32) ) (concat  (select  role_field (_ bv2 32) ) (concat  (select  role_field (_ bv1 32) ) (select  role_field (_ bv0 32) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  peer_id_field (_ bv3 32) ) (concat  (select  peer_id_field (_ bv2 32) ) (concat  (select  peer_id_field (_ bv1 32) ) (select  peer_id_field (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

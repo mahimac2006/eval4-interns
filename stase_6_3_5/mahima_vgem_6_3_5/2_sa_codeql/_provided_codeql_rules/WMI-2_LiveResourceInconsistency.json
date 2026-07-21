@@ -1,0 +1,1024 @@
+[
+ {
+  "file": "./include/linux/dcache.h",
+  "line": 576,
+  "func": "d_real",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dentry.d_flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dentry;field=d_flags;offset=0\\] \\[oracle:assert=dentry.d_flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/delayed_call.h",
+  "line": 27,
+  "func": "do_delayed_call",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'delayed_call.fn' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=delayed_call;field=fn;offset=0\\] \\[oracle:assert=delayed_call.fn is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/dma-mapping.h",
+  "line": 481,
+  "func": "dma_get_max_seg_size",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'device_dma_parameters.max_segment_size' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=device_dma_parameters;field=max_segment_size;offset=0\\] \\[oracle:assert=device_dma_parameters.max_segment_size is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/dma-mapping.h",
+  "line": 497,
+  "func": "dma_get_seg_boundary",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'device_dma_parameters.segment_boundary_mask' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=device_dma_parameters;field=segment_boundary_mask;offset=8\\] \\[oracle:assert=device_dma_parameters.segment_boundary_mask is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/fs.h",
+  "line": 3154,
+  "func": "dir_emit_dots",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dir_context.pos' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dir_context;field=pos;offset=8\\] \\[oracle:assert=dir_context.pos is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/fs.h",
+  "line": 3159,
+  "func": "dir_emit_dots",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dir_context.pos' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dir_context;field=pos;offset=8\\] \\[oracle:assert=dir_context.pos is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/idr.h",
+  "line": 68,
+  "func": "idr_get_cursor",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'idr.idr_next' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=idr;field=idr_next;offset=92\\] \\[oracle:assert=idr.idr_next is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/idr.h",
+  "line": 81,
+  "func": "idr_set_cursor",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'idr.idr_next' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=idr;field=idr_next;offset=92\\] \\[oracle:assert=idr.idr_next is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/ioport.h",
+  "line": 236,
+  "func": "resource_contains",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'resource.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=resource;field=flags;offset=24\\] \\[oracle:assert=resource.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 217,
+  "func": "iosys_map_is_equal",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 219,
+  "func": "iosys_map_is_equal",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 237,
+  "func": "iosys_map_is_null",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 267,
+  "func": "iosys_map_clear",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 289,
+  "func": "iosys_map_memcpy_to",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 309,
+  "func": "iosys_map_memcpy_from",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 325,
+  "func": "iosys_map_incr",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 344,
+  "func": "iosys_map_memset",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'iosys_map.is_iomem' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=iosys_map;field=is_iomem;offset=8\\] \\[oracle:assert=iosys_map.is_iomem is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 655,
+  "func": "vm_flags_reset_once",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).__vm_flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=__vm_flags;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).__vm_flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 2391,
+  "func": "update_hiwater_rss",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).hiwater_rss' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=hiwater_rss;offset=504\\] \\[oracle:assert=(unnamed class/struct/union).hiwater_rss is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 2397,
+  "func": "update_hiwater_vm",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).hiwater_vm' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=hiwater_vm;offset=512\\] \\[oracle:assert=(unnamed class/struct/union).hiwater_vm is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/mm_types.h",
+  "line": 827,
+  "func": "lru_gen_use_mm",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).bitmap' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=bitmap;offset=16\\] \\[oracle:assert=(unnamed class/struct/union).bitmap is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 224,
+  "func": "page_fixed_fake_head",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'page.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=page;field=flags;offset=0\\] \\[oracle:assert=page.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 302,
+  "func": "PagePoisoned",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'page.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=page;field=flags;offset=0\\] \\[oracle:assert=page.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 318,
+  "func": "folio_flags",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'page.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=page;field=flags;offset=0\\] \\[oracle:assert=page.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 954,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).page_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=page_type;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).page_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 978,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).page_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=page_type;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).page_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 988,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).page_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=page_type;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).page_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/page-flags.h",
+  "line": 993,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).page_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=page_type;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).page_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/radix-tree.h",
+  "line": 402,
+  "func": "radix_tree_next_slot",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'radix_tree_iter.tags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=radix_tree_iter;field=tags;offset=16\\] \\[oracle:assert=radix_tree_iter.tags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/radix-tree.h",
+  "line": 404,
+  "func": "radix_tree_next_slot",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'radix_tree_iter.tags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=radix_tree_iter;field=tags;offset=16\\] \\[oracle:assert=radix_tree_iter.tags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/ratelimit.h",
+  "line": 27,
+  "func": "ratelimit_state_exit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'ratelimit_state.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=ratelimit_state;field=flags;offset=96\\] \\[oracle:assert=ratelimit_state.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/ratelimit.h",
+  "line": 30,
+  "func": "ratelimit_state_exit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'ratelimit_state.missed' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=ratelimit_state;field=missed;offset=84\\] \\[oracle:assert=ratelimit_state.missed is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/rcupdate.h",
+  "line": 1084,
+  "func": "rcu_head_after_call_rcu",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'callback_head.func' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=callback_head;field=func;offset=8\\] \\[oracle:assert=callback_head.func is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 205,
+  "func": "current_gfp_context",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'task_struct.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=task_struct;field=flags;offset=44\\] \\[oracle:assert=task_struct.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 468,
+  "func": "mm_pasid_drop",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field '(unnamed class/struct/union).pasid' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=(unnamed class/struct/union);field=pasid;offset=2264\\] \\[oracle:assert=(unnamed class/struct/union).pasid is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 298,
+  "func": "kernel_signal_stop",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'task_struct.jobctl' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=task_struct;field=jobctl;offset=2368\\] \\[oracle:assert=task_struct.jobctl is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 453,
+  "func": "signal_wake_up",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'task_struct.jobctl' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=task_struct;field=jobctl;offset=2368\\] \\[oracle:assert=task_struct.jobctl is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 540,
+  "func": "test_and_clear_restore_sigmask",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'task_struct.restore_sigmask' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=task_struct;field=restore_sigmask;offset=2384\\] \\[oracle:assert=task_struct.restore_sigmask is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 605,
+  "func": "on_sig_stack",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'task_struct.sas_ss_flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=task_struct;field=sas_ss_flags;offset=3328\\] \\[oracle:assert=task_struct.sas_ss_flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 613,
+  "func": "sas_ss_flags",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'task_struct.sas_ss_size' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=task_struct;field=sas_ss_size;offset=3320\\] \\[oracle:assert=task_struct.sas_ss_size is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 259,
+  "func": "__seqprop_sequence",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 274,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 275,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 276,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 277,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 429,
+  "func": "do___read_seqcount_retry",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 682,
+  "func": "raw_read_seqcount_latch",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'seqcount.sequence' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 59,
+  "func": "timespec64_compare",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 61,
+  "func": "timespec64_compare",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 95,
+  "func": "timespec64_valid",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 98,
+  "func": "timespec64_valid",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_nsec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_nsec;offset=8\\] \\[oracle:assert=timespec64.tv_nsec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 108,
+  "func": "timespec64_valid_strict",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 118,
+  "func": "timespec64_valid_settod",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 133,
+  "func": "timespec64_to_ns",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 136,
+  "func": "timespec64_to_ns",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'timespec64.tv_sec' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=timespec64;field=tv_sec;offset=0\\] \\[oracle:assert=timespec64.tv_sec is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/vmalloc.h",
+  "line": 201,
+  "func": "get_vm_area_size",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vm_struct.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vm_struct;field=flags;offset=24\\] \\[oracle:assert=vm_struct.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/wait.h",
+  "line": 177,
+  "func": "__add_wait_queue",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'wait_queue_entry.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=wait_queue_entry;field=flags;offset=0\\] \\[oracle:assert=wait_queue_entry.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/ww_mutex.h",
+  "line": 173,
+  "func": "ww_acquire_done",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'ww_acquire_ctx.done_acquire' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=ww_acquire_ctx;field=done_acquire;offset=24\\] \\[oracle:assert=ww_acquire_ctx.done_acquire is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/ww_mutex.h",
+  "line": 191,
+  "func": "ww_acquire_fini",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'ww_acquire_ctx.acquired' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=ww_acquire_ctx;field=acquired;offset=16\\] \\[oracle:assert=ww_acquire_ctx.acquired is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1675,
+  "func": "xas_next_entry",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'xa_state.xa_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=xa_state;field=xa_offset;offset=18\\] \\[oracle:assert=xa_state.xa_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1680,
+  "func": "xas_next_entry",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'xa_state.xa_index' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=xa_state;field=xa_index;offset=8\\] \\[oracle:assert=xa_state.xa_index is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1682,
+  "func": "xas_next_entry",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'xa_state.xa_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=xa_state;field=xa_offset;offset=18\\] \\[oracle:assert=xa_state.xa_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1739,
+  "func": "xas_next_marked",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'xa_state.xa_index' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=xa_state;field=xa_index;offset=8\\] \\[oracle:assert=xa_state.xa_index is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1830,
+  "func": "xas_prev",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'xa_state.xa_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=xa_state;field=xa_offset;offset=18\\] \\[oracle:assert=xa_state.xa_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1859,
+  "func": "xas_next",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'xa_state.xa_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=xa_state;field=xa_offset;offset=18\\] \\[oracle:assert=xa_state.xa_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 96,
+  "func": "token_alloc_slot",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.generation' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_token_slot;field=generation;offset=12\\] \\[oracle:assert=dmamove_token_slot.generation is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 147,
+  "func": "vgem_dmamove_token_free",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.generation' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_token_slot;field=generation;offset=12\\] \\[oracle:assert=dmamove_token_slot.generation is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 174,
+  "func": "token_resolve",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.generation' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_token_slot;field=generation;offset=12\\] \\[oracle:assert=dmamove_token_slot.generation is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 175,
+  "func": "token_resolve",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.tag' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_token_slot;field=tag;offset=8\\] \\[oracle:assert=dmamove_token_slot.tag is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 201,
+  "func": "token_resolve_write",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.generation' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_token_slot;field=generation;offset=12\\] \\[oracle:assert=dmamove_token_slot.generation is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 202,
+  "func": "token_resolve_write",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_token_slot.tag' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_token_slot;field=tag;offset=8\\] \\[oracle:assert=dmamove_token_slot.tag is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 243,
+  "func": "vgem_dmamove_buf_state_get",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'vgem_buf_entry.file' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-controlled-alloc-size;indicates=WMI-2\\] \\[mem:struct=vgem_buf_entry;field=file;offset=8\\] \\[oracle:assert=vgem_buf_entry.file is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 266,
+  "func": "vgem_dmamove_buf_state_get",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'vgem_buf_entry.buf' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-controlled-alloc-size;indicates=WMI-2\\] \\[mem:struct=vgem_buf_entry;field=buf;offset=0\\] \\[oracle:assert=vgem_buf_entry.buf is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 267,
+  "func": "vgem_dmamove_buf_state_get",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'vgem_buf_entry.file' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-controlled-alloc-size;indicates=WMI-2\\] \\[mem:struct=vgem_buf_entry;field=file;offset=8\\] \\[oracle:assert=vgem_buf_entry.file is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 296,
+  "func": "vgem_dmamove_buf_set_intermediate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.intermediate_pending' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=intermediate_pending;offset=20\\] \\[oracle:assert=vgem_buf_state.intermediate_pending is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 324,
+  "func": "vgem_dmamove_buf_mark_staged",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.state' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=state;offset=0\\] \\[oracle:assert=vgem_buf_state.state is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 325,
+  "func": "vgem_dmamove_buf_mark_staged",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.state' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=state;offset=0\\] \\[oracle:assert=vgem_buf_state.state is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 385,
+  "func": "dmamove_finalize_pending",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.pending_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=pending_count;offset=128\\] \\[oracle:assert=dmamove_job.pending_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 389,
+  "func": "dmamove_finalize_pending",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 393,
+  "func": "dmamove_finalize_pending",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 400,
+  "func": "dmamove_finalize_pending",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=flags;offset=36\\] \\[oracle:assert=move_desc.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 402,
+  "func": "dmamove_finalize_pending",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.completion_token' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=completion_token;offset=24\\] \\[oracle:assert=move_desc.completion_token is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 491,
+  "func": "dmamove_fetch_ring",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.reserved' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=reserved;offset=44\\] \\[oracle:assert=move_desc.reserved is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 556,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 559,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=flags;offset=36\\] \\[oracle:assert=move_desc.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 566,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 574,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.src_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=src_offset;offset=0\\] \\[oracle:assert=move_desc.src_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 575,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 582,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.dst_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=dst_offset;offset=8\\] \\[oracle:assert=move_desc.dst_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 583,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 595,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=flags;offset=36\\] \\[oracle:assert=move_desc.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 596,
+  "func": "dmamove_run_descs",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.completion_token' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=completion_token;offset=24\\] \\[oracle:assert=move_desc.completion_token is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 619,
+  "func": "dmamove_job_execute",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.import_ring' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=import_ring;offset=112\\] \\[oracle:assert=dmamove_job.import_ring is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 649,
+  "func": "dmamove_job_execute",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.src_role' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=src_role;offset=108\\] \\[oracle:assert=dmamove_job.src_role is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 706,
+  "func": "vgem_dmamove_ctx_free",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.import_ring' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=import_ring;offset=112\\] \\[oracle:assert=dmamove_job.import_ring is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 714,
+  "func": "vgem_dmamove_ctx_free",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.active_imports' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=active_imports;offset=24\\] \\[oracle:assert=vgem_buf_state.active_imports is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 754,
+  "func": "dmamove_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_ctx.job_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_ctx;field=job_count;offset=256\\] \\[oracle:assert=dmamove_ctx.job_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 798,
+  "func": "dmamove_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'dmamove_job.ctx' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-controlled-alloc-size;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=ctx;offset=152\\] \\[oracle:assert=dmamove_job.ctx is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 805,
+  "func": "dmamove_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.src_role' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=src_role;offset=108\\] \\[oracle:assert=dmamove_job.src_role is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 812,
+  "func": "dmamove_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.state' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=state;offset=0\\] \\[oracle:assert=vgem_buf_state.state is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 813,
+  "func": "dmamove_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.intermediate_pending' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=intermediate_pending;offset=20\\] \\[oracle:assert=vgem_buf_state.intermediate_pending is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 865,
+  "func": "dmamove_job_query",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.status' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=status;offset=140\\] \\[oracle:assert=dmamove_job.status is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 866,
+  "func": "dmamove_job_query",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.completed' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=completed;offset=144\\] \\[oracle:assert=dmamove_job.completed is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 881,
+  "func": "dmamove_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.status' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=status;offset=140\\] \\[oracle:assert=dmamove_job.status is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 885,
+  "func": "dmamove_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.exec_active' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=exec_active;offset=114\\] \\[oracle:assert=dmamove_job.exec_active is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 896,
+  "func": "dmamove_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.import_ring' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=import_ring;offset=112\\] \\[oracle:assert=dmamove_job.import_ring is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 904,
+  "func": "dmamove_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.active_imports' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=active_imports;offset=24\\] \\[oracle:assert=vgem_buf_state.active_imports is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 931,
+  "func": "dmamove_job_exec",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.import_ring' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=import_ring;offset=112\\] \\[oracle:assert=dmamove_job.import_ring is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 935,
+  "func": "dmamove_job_exec",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.status' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=status;offset=140\\] \\[oracle:assert=dmamove_job.status is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 939,
+  "func": "dmamove_job_exec",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.exec_done' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=exec_done;offset=113\\] \\[oracle:assert=dmamove_job.exec_done is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 943,
+  "func": "dmamove_job_exec",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'dmamove_job.pending_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=dmamove_job;field=pending_count;offset=128\\] \\[oracle:assert=dmamove_job.pending_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1027,
+  "func": "dmamove_open",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1033,
+  "func": "dmamove_release",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1164,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1167,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=flags;offset=36\\] \\[oracle:assert=move_desc.flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1169,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1171,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.src_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=src_offset;offset=0\\] \\[oracle:assert=move_desc.src_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1172,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1174,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.dst_offset' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=dst_offset;offset=8\\] \\[oracle:assert=move_desc.dst_offset is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1175,
+  "func": "dmamove_ioctl_validate",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=move_desc;field=length;offset=16\\] \\[oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 1204,
+  "func": "dmamove_ioctl",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 98,
+  "func": "pipeline_open",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-controlled-alloc-size;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]\nWMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 112,
+  "func": "pipeline_release",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 150,
+  "func": "pipeline_ioctl_submit_pp",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'pipeline_ctx.job_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=pipeline_ctx;field=job_count;offset=256\\] \\[oracle:assert=pipeline_ctx.job_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 208,
+  "func": "pipeline_ioctl_submit_dma",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'pipeline_ctx.job_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=pipeline_ctx;field=job_count;offset=256\\] \\[oracle:assert=pipeline_ctx.job_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 308,
+  "func": "pipeline_ioctl_query_all",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'pipeline_job.job_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=pipeline_job;field=job_type;offset=4\\] \\[oracle:assert=pipeline_job.job_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 350,
+  "func": "pipeline_ioctl_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'pipeline_job.job_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=pipeline_job;field=job_type;offset=4\\] \\[oracle:assert=pipeline_job.job_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 388,
+  "func": "pipeline_ioctl_reap_all",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'pipeline_job.job_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=pipeline_job;field=job_type;offset=4\\] \\[oracle:assert=pipeline_job.job_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 400,
+  "func": "pipeline_ioctl_reap_all",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'pipeline_job.job_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=pipeline_job;field=job_type;offset=4\\] \\[oracle:assert=pipeline_job.job_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "line": 425,
+  "func": "pipeline_ioctl",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 144,
+  "func": "postproc_build_desc_ring",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.desc_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=desc_count;offset=112\\] \\[oracle:assert=postproc_job.desc_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 172,
+  "func": "postproc_build_desc_ring",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.desc_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=desc_count;offset=112\\] \\[oracle:assert=postproc_job.desc_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 221,
+  "func": "postproc_update_buf_state",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.intermediate_pending' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=intermediate_pending;offset=20\\] \\[oracle:assert=vgem_buf_state.intermediate_pending is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 224,
+  "func": "postproc_update_buf_state",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'vgem_buf_state.stage_flags' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=vgem_buf_state;field=stage_flags;offset=1\\] \\[oracle:assert=vgem_buf_state.stage_flags is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 377,
+  "func": "vgem_postproc_ctx_free",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.desc_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=desc_count;offset=112\\] \\[oracle:assert=postproc_job.desc_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 378,
+  "func": "vgem_postproc_ctx_free",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_comp_entry.token' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_comp_entry;field=token;offset=8\\] \\[oracle:assert=postproc_comp_entry.token is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 420,
+  "func": "postproc_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_ctx.job_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_ctx;field=job_count;offset=256\\] \\[oracle:assert=postproc_ctx.job_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 483,
+  "func": "postproc_job_submit",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'postproc_job.ctx' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-controlled-alloc-size;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=ctx;offset=144\\] \\[oracle:assert=postproc_job.ctx is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 537,
+  "func": "postproc_job_query",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.status' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=status;offset=136\\] \\[oracle:assert=postproc_job.status is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 553,
+  "func": "postproc_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.status' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=status;offset=136\\] \\[oracle:assert=postproc_job.status is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 590,
+  "func": "postproc_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.desc_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=desc_count;offset=112\\] \\[oracle:assert=postproc_job.desc_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 591,
+  "func": "postproc_job_reap",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_comp_entry.token' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_comp_entry;field=token;offset=8\\] \\[oracle:assert=postproc_comp_entry.token is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 617,
+  "func": "postproc_job_desc_query",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'postproc_job.desc_count' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2\\] \\[mem:struct=postproc_job;field=desc_count;offset=112\\] \\[oracle:assert=postproc_job.desc_count is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 665,
+  "func": "postproc_open",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 671,
+  "func": "postproc_release",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "line": 742,
+  "func": "postproc_ioctl",
+  "callee": "",
+  "detail": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. \\[mechanism:field-reinterpreted-as-2-types;indicates=WMI-2\\] \\[mem:struct=file;field=private_data;offset=456\\] \\[oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models\\]"
+ }
+]

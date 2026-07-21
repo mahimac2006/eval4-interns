@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun state_is_null () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (_ bv0 32) (concat  (select  state_is_null (_ bv3 32) ) (concat  (select  state_is_null (_ bv2 32) ) (concat  (select  state_is_null (_ bv1 32) ) (select  state_is_null (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

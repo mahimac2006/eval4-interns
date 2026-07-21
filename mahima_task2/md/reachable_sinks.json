@@ -1,0 +1,263 @@
+[
+  {
+    "source": "ioctl_ops:_ctl_fops[unlocked_ioctl]",
+    "sink_file": "drivers/md/dm-ioctl.c",
+    "sink_line": 1939,
+    "sink_func": "copy_params",
+    "call_chain": "dm_ctl_ioctl → ctl_ioctl → copy_params",
+    "query": "WMI-3b_AttackerContent_OffsetControlledWrite",
+    "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('param_kernel') into object 'struct dm_ioctl' — reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=dm_ioctl;field=param_kernel;offset=?\\] \\[oracle:assert=param_kernel stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct dm_ioctl' — reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=dm_ioctl;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 384,
+    "sink_func": "read_file_page",
+    "call_chain": "md_ioctl → do_md_run → md_bitmap_load → md_bitmap_init_from_disk → read_file_page",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'buffer_head.b_bdev' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=buffer_head;field=b_bdev;offset=48\\] \\[oracle:assert=b_bdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 486,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.events' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=events;offset=24\\] \\[oracle:assert=events holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 489,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap.events_cleared' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap;field=events_cleared;offset=120\\] \\[oracle:assert=events_cleared holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 497,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.daemon_sleep' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=daemon_sleep;offset=56\\] \\[oracle:assert=daemon_sleep holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 498,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.write_behind' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=write_behind;offset=60\\] \\[oracle:assert=write_behind holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 500,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.sync_size' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=sync_size;offset=40\\] \\[oracle:assert=sync_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 501,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.chunksize' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=chunksize;offset=52\\] \\[oracle:assert=chunksize holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 502,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.nodes' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=nodes;offset=68\\] \\[oracle:assert=nodes holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 503,
+    "sink_func": "md_bitmap_update_sb",
+    "call_chain": "md_ioctl → hot_remove_disk → md_update_sb → md_bitmap_update_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.sectors_reserved' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=sectors_reserved;offset=64\\] \\[oracle:assert=sectors_reserved holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 598,
+    "sink_func": "md_bitmap_new_disk_sb",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create → md_bitmap_new_disk_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.sync_size' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=sync_size;offset=40\\] \\[oracle:assert=sync_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 604,
+    "sink_func": "md_bitmap_new_disk_sb",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create → md_bitmap_new_disk_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap.events_cleared' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap;field=events_cleared;offset=120\\] \\[oracle:assert=events_cleared holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 605,
+    "sink_func": "md_bitmap_new_disk_sb",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create → md_bitmap_new_disk_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.events_cleared' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=events_cleared;offset=32\\] \\[oracle:assert=events_cleared holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 708,
+    "sink_func": "md_bitmap_read_sb",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create → md_bitmap_read_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap_super_s.sync_size' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap_super_s;field=sync_size;offset=40\\] \\[oracle:assert=sync_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 747,
+    "sink_func": "md_bitmap_read_sb",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create → md_bitmap_read_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap.cluster_slot' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap;field=cluster_slot;offset=512\\] \\[oracle:assert=cluster_slot holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 754,
+    "sink_func": "md_bitmap_read_sb",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create → md_bitmap_read_sb",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitmap.events_cleared' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap;field=events_cleared;offset=120\\] \\[oracle:assert=events_cleared holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 1838,
+    "sink_func": "md_bitmap_free",
+    "call_chain": "md_ioctl → do_md_run → md_bitmap_destroy → md_bitmap_free",
+    "query": "WMI-3_ArbitraryFree_StaleTraversal",
+    "detail": "WMI-3 Arbitrary Free: md_bitmap_free() traverses 'cluster_info' through a pointer that could be stale (type mddev is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: md_bitmap_free() traverses 'sysfs_can_clear' through a pointer that could be stale (type mddev is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: md_bitmap_free() traverses 'mddev' through a pointer that could be stale (type mddev is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 1912,
+    "sink_func": "md_bitmap_create",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'bitmap.mddev' — the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap;field=mddev;offset=112\\] \\[oracle:assert=mddev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md-bitmap.c",
+    "sink_line": 1918,
+    "sink_func": "md_bitmap_create",
+    "call_chain": "md_ioctl → set_bitmap_file → md_bitmap_create",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'bitmap.sysfs_can_clear' — the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=bitmap;field=sysfs_can_clear;offset=504\\] \\[oracle:assert=sysfs_can_clear holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 168,
+    "sink_func": "rdev_init_serial",
+    "call_chain": "md_ioctl → hot_add_disk → bind_rdev_to_array → mddev_create_serial_pool → rdev_init_serial",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'md_rdev.serial' — the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=serial;offset=512\\] \\[oracle:assert=serial holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 2471,
+    "sink_func": "bind_rdev_to_array",
+    "call_chain": "md_ioctl → hot_add_disk → bind_rdev_to_array",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'md_rdev.sysfs_state' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=sysfs_state;offset=520\\] \\[oracle:assert=sysfs_state holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 2472,
+    "sink_func": "bind_rdev_to_array",
+    "call_chain": "md_ioctl → hot_add_disk → bind_rdev_to_array",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'md_rdev.sysfs_unack_badblocks' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=sysfs_unack_badblocks;offset=528\\] \\[oracle:assert=sysfs_unack_badblocks holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 2474,
+    "sink_func": "bind_rdev_to_array",
+    "call_chain": "md_ioctl → hot_add_disk → bind_rdev_to_array",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'md_rdev.sysfs_badblocks' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=sysfs_badblocks;offset=536\\] \\[oracle:assert=sysfs_badblocks holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 3707,
+    "sink_func": "md_import_device",
+    "call_chain": "md_ioctl → hot_add_disk → md_import_device",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'md_rdev.bdev' — the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=bdev;offset=48\\] \\[oracle:assert=bdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 6078,
+    "sink_func": "md_run",
+    "call_chain": "md_ioctl → do_md_run → md_run",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mddev.sysfs_action' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mddev;field=sysfs_action;offset=1120\\] \\[oracle:assert=sysfs_action holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 6079,
+    "sink_func": "md_run",
+    "call_chain": "md_ioctl → do_md_run → md_run",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mddev.sysfs_completed' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mddev;field=sysfs_completed;offset=1128\\] \\[oracle:assert=sysfs_completed holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 6080,
+    "sink_func": "md_run",
+    "call_chain": "md_ioctl → do_md_run → md_run",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mddev.sysfs_degraded' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mddev;field=sysfs_degraded;offset=1136\\] \\[oracle:assert=sysfs_degraded holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 6972,
+    "sink_func": "md_add_new_disk",
+    "call_chain": "md_ioctl → md_add_new_disk",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'md_rdev.sb_start' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=sb_start;offset=104\\] \\[oracle:assert=sb_start holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  },
+  {
+    "source": "ioctl_ops:md_fops[ioctl]",
+    "sink_file": "drivers/md/md.c",
+    "sink_line": 7057,
+    "sink_func": "hot_add_disk",
+    "call_chain": "md_ioctl → hot_add_disk",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'md_rdev.sb_start' — the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=md_rdev;field=sb_start;offset=104\\] \\[oracle:assert=sb_start holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  }
+]

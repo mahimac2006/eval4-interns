@@ -1,0 +1,9 @@
+array completion_token[8] : w32 -> w8 = symbolic
+array dst_buf_size[8] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 N0:(ReadLSB w64 0 completion_token)))
+         (Eq false
+             (Ult N0
+                  (ReadLSB w64 0 dst_buf_size)))]
+        false)

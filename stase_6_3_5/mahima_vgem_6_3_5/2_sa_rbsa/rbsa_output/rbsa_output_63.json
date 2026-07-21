@@ -1,0 +1,75 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "postproc_job_desc_query",
+  "target_file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "target_line": 621,
+  "target_cwe": "CWE-787",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "gep_variable_index",
+    "enclosing": "postproc_job_desc_query"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+      "line": 621,
+      "func": "postproc_job_desc_query",
+      "callee": "gep_variable_index"
+    }
+  ],
+  "trigger_api": "postproc_ioctl",
+  "trigger_candidates": [
+    "postproc_ioctl",
+    "postproc_ioctl_desc_query"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "postproc_ioctl:arg0",
+    "postproc_ioctl:arg1",
+    "postproc_ioctl:arg2",
+    "postproc_ioctl_desc_query:arg0",
+    "postproc_ioctl_desc_query:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "postproc_ioctl",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl_desc_query",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl_desc_query",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "postproc_ioctl",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "0 <= {postproc_job_desc_query:%idxprom} < sizeof({postproc_job_desc_query:%13})"
+  ],
+  "concrete_params": []
+}

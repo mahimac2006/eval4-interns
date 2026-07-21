@@ -1,0 +1,121 @@
+[
+ {
+  "file": "drivers/md/bcache/alloc.c",
+  "line": 705,
+  "func": "bch_open_buckets_free",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_open_buckets_free() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/bcache/btree.c",
+  "line": 790,
+  "func": "bch_btree_cache_free",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'next' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'cache' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'cache' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'verify_ondisk' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'verify_ondisk' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'verify_data' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_btree_cache_free() traverses 'verify_data' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/bcache/super.c",
+  "line": 2212,
+  "func": "bch_cache_release",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_cache_release() traverses 'cache' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'set' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'data' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'prio_buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'disk_buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/bcache/super.c",
+  "line": 2213,
+  "func": "bch_cache_release",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_cache_release() traverses 'cache' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'set' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'data' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'prio_buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'disk_buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/bcache/super.c",
+  "line": 2216,
+  "func": "bch_cache_release",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_cache_release() traverses 'cache' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'set' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'data' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'prio_buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_cache_release() traverses 'disk_buckets' through a pointer that could be stale (type cache_set is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/bcache/super.c",
+  "line": 2693,
+  "func": "bch_pending_bdevs_cleanup",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_pending_bdevs_cleanup() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_pending_bdevs_cleanup() traverses 'dc' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/bcache/super.c",
+  "line": 2704,
+  "func": "bch_pending_bdevs_cleanup",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: bch_pending_bdevs_cleanup() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: bch_pending_bdevs_cleanup() traverses 'dc' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-cache-background-tracker.c",
+  "line": 69,
+  "func": "btracker_destroy",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: btracker_destroy() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: btracker_destroy() traverses 'next' through a pointer that could be stale (type background_tracker is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: btracker_destroy() traverses 'work_cache' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: btracker_destroy() traverses 'work_cache' through a pointer that could be stale (type background_tracker is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-init.c",
+  "line": 72,
+  "func": "dm_setup_cleanup",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: dm_setup_cleanup() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-init.c",
+  "line": 73,
+  "func": "dm_setup_cleanup",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: dm_setup_cleanup() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-init.c",
+  "line": 75,
+  "func": "dm_setup_cleanup",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: dm_setup_cleanup() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-ps-historical-service-time.c",
+  "line": 223,
+  "func": "free_paths",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: free_paths() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-ps-queue-length.c",
+  "line": 73,
+  "func": "ql_free_paths",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: ql_free_paths() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-ps-round-robin.c",
+  "line": 41,
+  "func": "free_paths",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: free_paths() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-ps-service-time.c",
+  "line": 69,
+  "func": "free_paths",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: free_paths() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/dm-table.c",
+  "line": 177,
+  "func": "free_devices",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: free_devices() traverses 'next' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: free_devices() traverses 'next' through a pointer that could be stale (type dm_dev_internal is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: free_devices() traverses 'dm_dev' through a pointer that could be stale (type list_head is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: free_devices() traverses 'dm_dev' through a pointer that could be stale (type dm_dev_internal is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/md/md-bitmap.c",
+  "line": 1838,
+  "func": "md_bitmap_free",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: md_bitmap_free() traverses 'cluster_info' through a pointer that could be stale (type mddev is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: md_bitmap_free() traverses 'sysfs_can_clear' through a pointer that could be stale (type mddev is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: md_bitmap_free() traverses 'mddev' through a pointer that could be stale (type mddev is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ }
+]

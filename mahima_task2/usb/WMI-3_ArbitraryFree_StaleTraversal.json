@@ -1,0 +1,58 @@
+[
+ {
+  "file": "drivers/usb/core/devio.c",
+  "line": 422,
+  "func": "free_async",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: free_async() traverses 'pid' through a pointer that could be stale (type async is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: free_async() traverses 'cred' through a pointer that could be stale (type async is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/fotg210/fotg210-udc.c",
+  "line": 1166,
+  "func": "fotg210_udc_remove",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: fotg210_udc_remove() traverses 'ep0_req' through a pointer that could be stale (type fotg210_udc is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: fotg210_udc_remove() traverses 'phy' through a pointer that could be stale (type fotg210_udc is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/gadget/udc/bdc/bdc_ep.c",
+  "line": 92,
+  "func": "ep_bd_list_free",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: ep_bd_list_free() traverses 'bdc' through a pointer that could be stale (type bdc_ep is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'bdc' through a pointer that could be stale (type bd_table is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'bd_table_pool' through a pointer that could be stale (type bdc_ep is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'bd_table_pool' through a pointer that could be stale (type bd_table is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'dev' through a pointer that could be stale (type bdc_ep is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'dev' through a pointer that could be stale (type bd_table is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'bd_table_array' through a pointer that could be stale (type bdc_ep is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'bd_table_array' through a pointer that could be stale (type bd_table is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'start_bd' through a pointer that could be stale (type bdc_ep is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: ep_bd_list_free() traverses 'start_bd' through a pointer that could be stale (type bd_table is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/gadget/udc/fusb300_udc.c",
+  "line": 1353,
+  "func": "fusb300_remove",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: fusb300_remove() traverses 'ep0_req' through a pointer that could be stale (type fusb300 is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/host/xhci-debugfs.c",
+  "line": 626,
+  "func": "xhci_debugfs_remove_slot",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: xhci_debugfs_remove_slot() traverses 'debugfs_private' through a pointer that could be stale (type xhci_virt_device is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: xhci_debugfs_remove_slot() traverses 'root' through a pointer that could be stale (type xhci_virt_device is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/mon/mon_text.c",
+  "line": 673,
+  "func": "mon_text_release",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: mon_text_release() traverses 'e_slab' through a pointer that could be stale (type mon_reader_text is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/serial/keyspan.c",
+  "line": 2995,
+  "func": "keyspan_port_remove",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: keyspan_port_remove() traverses 'inack_urb' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: keyspan_port_remove() traverses 'outcont_urb' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: keyspan_port_remove() traverses 'outcont_buffer' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: keyspan_port_remove() traverses 'inack_buffer' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ },
+ {
+  "file": "drivers/usb/serial/keyspan.c",
+  "line": 2997,
+  "func": "keyspan_port_remove",
+  "callee": "",
+  "detail": "WMI-3 Arbitrary Free: keyspan_port_remove() traverses 'inack_urb' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: keyspan_port_remove() traverses 'outcont_urb' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: keyspan_port_remove() traverses 'outcont_buffer' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: keyspan_port_remove() traverses 'inack_buffer' through a pointer that could be stale (type keyspan_port_private is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed."
+ }
+]

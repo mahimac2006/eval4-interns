@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_connect",
+  "target_file": "psmgr_sock.c",
+  "target_line": 385,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'psmgr_session.role' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2] [mem:struct=psmgr_session;field=role;offset=5] [oracle:assert=psmgr_session.role is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_connect"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_sock.c",
+      "line": 385,
+      "func": "psmgr_connect",
+      "callee": ""
+    }
+  ]
+}

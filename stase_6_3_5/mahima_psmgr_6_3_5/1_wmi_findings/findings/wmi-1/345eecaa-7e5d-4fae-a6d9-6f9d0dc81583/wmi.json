@@ -1,0 +1,110 @@
+{
+  "operation": {
+    "name": "write_at_psmgr_create",
+    "parameters": [
+      "int protocol"
+    ],
+    "effects": [
+      {
+        "type": "write",
+        "id": "e_f026fb7b",
+        "arguments": {
+          "destinations": [
+            "psmgr_session.role@5"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun protocol () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  false (bvsle  (_ bv0 32) (concat  (select  protocol (_ bv3 32) ) (concat  (select  protocol (_ bv2 32) ) (concat  (select  protocol (_ bv1 32) ) (select  protocol (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun protocol () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  protocol (_ bv3 32) ) (concat  (select  protocol (_ bv2 32) ) (concat  (select  protocol (_ bv1 32) ) (select  protocol (_ bv0 32) ) ) ) ) ) ) (and  (bvsle  (_ bv0 32) ?B1 ) (bvsle  ?B1 (_ bv65535 32) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 304
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 351
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_create",
+    "file": "psmgr_sock.c",
+    "args": [
+      {
+        "name": "protocol",
+        "type": "int",
+        "value_le_hex": "0xffffffff",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-1: Shared State Divergence @ psmgr_create",
+  "metadata": {
+    "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "mechanism": "unchecked-signal-field-set",
+        "indicates": "WMI-1",
+        "file": "psmgr_sock.c",
+        "line": 189
+      }
+    ],
+    "bug_type": "WMI-1 Shared State Divergence",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_sock.c",
+      "line": 189,
+      "function": "psmgr_create"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_session.role@5",
+        "locations": [
+          {
+            "offset": 5,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_session.role@5",
+      "symbol": "psmgr_create"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "assertion": "psmgr_session.role stays within the domain its consumer's agreement governs",
+        "assumptions": [
+          "producer sets role without enforcing the consumer's cross-field invariant"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_session.role@5",
+      "sa": "psmgr_session.role@5",
+      "code": "psmgr_session.role"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 1,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

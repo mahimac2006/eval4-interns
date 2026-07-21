@@ -1,0 +1,6 @@
+array completions_cap[4] : w32 -> w8 = symbolic
+array desc_count[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Ule (ReadLSB w32 0 desc_count)
+                  (ReadLSB w32 0 completions_cap)))]
+        false)

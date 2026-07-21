@@ -1,0 +1,95 @@
+{
+  "operation": {
+    "name": "copyMem_at_vgem_dmamove_buf_state_get",
+    "parameters": [
+      "unsigned int key"
+    ],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_86f50694",
+        "arguments": {
+          "destinations": [
+            "vgem_buf_entry.buf@0"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(assert true )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 56
+      }
+    ]
+  },
+  "trigger": {
+    "function": "vgem_dmamove_buf_state_get",
+    "file": "vgem_dmamove.c",
+    "args": []
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ vgem_dmamove_buf_state_get",
+  "metadata": {
+    "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "mechanism": "allocated-content-into-field",
+        "indicates": "WMI-3",
+        "file": "vgem_dmamove.c",
+        "line": 266
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_dmamove.c",
+      "line": 266,
+      "function": "vgem_dmamove_buf_state_get"
+    },
+    "memory_layout": [
+      {
+        "name": "vgem_buf_entry.buf@0",
+        "locations": [
+          {
+            "offset": 0,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "vgem_buf_entry.buf@0",
+      "symbol": "vgem_dmamove_buf_state_get"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "assertion": "buf holds trusted, not attacker-determined, content",
+        "assumptions": [
+          "externally-originated content installed into the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "vgem_buf_entry.buf@0",
+      "sa": "vgem_buf_entry.buf@0",
+      "code": "vgem_buf_entry.buf"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

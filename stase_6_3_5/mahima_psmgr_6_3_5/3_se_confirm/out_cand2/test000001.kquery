@@ -1,0 +1,9 @@
+array copy_len[4] : w32 -> w8 = symbolic
+array out_offset[4] : w32 -> w8 = symbolic
+(query [(Ult 0
+              N0:(ReadLSB w32 0 copy_len))
+         (Eq false
+             (Ule (Add w32 (ReadLSB w32 0 out_offset)
+                           N0)
+                  256))]
+        false)

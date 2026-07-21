@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: write_count <= PSMGR_BUF_DATA_SZ
+File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand72_wmi2.c
+Line: 14
+assembly.ll line: 33
+State: 1
+Stack: 
+	#000000033 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand72_wmi2.c:14

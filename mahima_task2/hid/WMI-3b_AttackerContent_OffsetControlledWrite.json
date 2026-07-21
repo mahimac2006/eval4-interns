@@ -1,0 +1,79 @@
+[
+ {
+  "file": "./include/linux/if_vlan.h",
+  "line": 721,
+  "func": "vlan_remove_tag",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('data') into object 'struct sk_buff' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=data;offset=?\\] \\[oracle:assert=data stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "./include/linux/signal.h",
+  "line": 31,
+  "func": "copy_siginfo_to_external",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('to') into object 'struct siginfo' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=siginfo;field=to;offset=?\\] \\[oracle:assert=to stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct siginfo' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=siginfo;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4116,
+  "func": "skb_copy_to_linear_data_offset",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('data') into object 'struct sk_buff' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=data;offset=?\\] \\[oracle:assert=data stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('offset') into object 'struct sk_buff' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=offset;offset=?\\] \\[oracle:assert=offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "./include/net/netlink.h",
+  "line": 964,
+  "func": "nlmsg_append",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('size') into object 'struct sk_buff' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=size;offset=?\\] \\[oracle:assert=size stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct sk_buff' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/hid-core.c",
+  "line": 155,
+  "func": "open_collection",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('collection_size') into object 'struct hid_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_device;field=collection_size;offset=?\\] \\[oracle:assert=collection_size stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('collection') into object 'struct hid_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_device;field=collection;offset=?\\] \\[oracle:assert=collection stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('collection_size') into object 'struct hid_collection' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_collection;field=collection_size;offset=?\\] \\[oracle:assert=collection_size stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('collection') into object 'struct hid_collection' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_collection;field=collection;offset=?\\] \\[oracle:assert=collection stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('collection_size') into object 'struct hid_parser' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_parser;field=collection_size;offset=?\\] \\[oracle:assert=collection_size stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('collection') into object 'struct hid_parser' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_parser;field=collection;offset=?\\] \\[oracle:assert=collection stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/hid-core.c",
+  "line": 380,
+  "func": "hid_parser_global",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('global_stack') into object 'struct hid_parser' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_parser;field=global_stack;offset=?\\] \\[oracle:assert=global_stack stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct hid_parser' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=hid_parser;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/hid-cp2112.c",
+  "line": 796,
+  "func": "cp2112_xfer",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('block') into object 'struct i2c_smbus_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=i2c_smbus_data;field=block;offset=?\\] \\[oracle:assert=block stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/hid-lg-g15.c",
+  "line": 834,
+  "func": "lg_g15_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('transfer_buf') into object 'struct lg_g15_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=lg_g15_data;field=transfer_buf;offset=?\\] \\[oracle:assert=transfer_buf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/hid-lg-g15.c",
+  "line": 848,
+  "func": "lg_g15_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('transfer_buf') into object 'struct lg_g15_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=lg_g15_data;field=transfer_buf;offset=?\\] \\[oracle:assert=transfer_buf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/intel-ish-hid/ishtp-hid-client.c",
+  "line": 154,
+  "func": "process_recv",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('i') into object 'struct ishtp_cl_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=ishtp_cl_data;field=i;offset=?\\] \\[oracle:assert=i stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('hid_devices') into object 'struct ishtp_cl_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=ishtp_cl_data;field=hid_devices;offset=?\\] \\[oracle:assert=hid_devices stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('i') into object 'struct device_info' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=device_info;field=i;offset=?\\] \\[oracle:assert=i stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('hid_devices') into object 'struct device_info' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=device_info;field=hid_devices;offset=?\\] \\[oracle:assert=hid_devices stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/hid/intel-ish-hid/ishtp/hbm.c",
+  "line": 857,
+  "func": "recv_hbm",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('rd_msg_fifo_tail') into object 'struct ishtp_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=ishtp_device;field=rd_msg_fifo_tail;offset=?\\] \\[oracle:assert=rd_msg_fifo_tail stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('rd_msg_fifo') into object 'struct ishtp_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=ishtp_device;field=rd_msg_fifo;offset=?\\] \\[oracle:assert=rd_msg_fifo stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ }
+]

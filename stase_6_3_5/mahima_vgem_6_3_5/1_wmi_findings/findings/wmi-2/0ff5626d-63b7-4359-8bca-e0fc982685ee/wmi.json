@@ -1,0 +1,95 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_token_resolve_write",
+    "parameters": [
+      "unsigned int slot"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_e0a1c300",
+        "arguments": {
+          "locations": [
+            "dmamove_token_slot.generation@12"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun slot () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (bvult  (concat  (select  slot (_ bv3 32) ) (concat  (select  slot (_ bv2 32) ) (concat  (select  slot (_ bv1 32) ) (select  slot (_ bv0 32) ) ) ) ) (_ bv256 32) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 274
+      }
+    ]
+  },
+  "trigger": {
+    "function": "token_resolve_write",
+    "file": "vgem_dmamove.c",
+    "args": []
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ token_resolve_write",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "vgem_dmamove.c",
+        "line": 201
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_dmamove.c",
+      "line": 201,
+      "function": "token_resolve_write"
+    },
+    "memory_layout": [
+      {
+        "name": "dmamove_token_slot.generation@12",
+        "locations": [
+          {
+            "offset": 12,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "dmamove_token_slot.generation@12",
+      "symbol": "token_resolve_write"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "dmamove_token_slot.generation is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "dmamove_token_slot.generation@12",
+      "sa": "dmamove_token_slot.generation@12",
+      "code": "dmamove_token_slot.generation"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

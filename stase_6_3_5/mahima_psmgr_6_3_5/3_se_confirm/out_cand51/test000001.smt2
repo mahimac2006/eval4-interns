@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun next_seq () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (=  (_ bv4294967295 32) (concat  (select  next_seq (_ bv3 32) ) (concat  (select  next_seq (_ bv2 32) ) (concat  (select  next_seq (_ bv1 32) ) (select  next_seq (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

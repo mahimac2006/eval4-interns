@@ -1,0 +1,110 @@
+{
+  "operation": {
+    "name": "write_at_vgem_dmamove_token_free",
+    "parameters": [
+      "unsigned long completion_addr"
+    ],
+    "effects": [
+      {
+        "type": "write",
+        "id": "e_f9fd476a",
+        "arguments": {
+          "destinations": [
+            "dmamove_token_slot.tag@8"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun completion_addr () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  (_ bv0 64) (concat  (select  completion_addr (_ bv7 32) ) (concat  (select  completion_addr (_ bv6 32) ) (concat  (select  completion_addr (_ bv5 32) ) (concat  (select  completion_addr (_ bv4 32) ) (concat  (select  completion_addr (_ bv3 32) ) (concat  (select  completion_addr (_ bv2 32) ) (concat  (select  completion_addr (_ bv1 32) ) (select  completion_addr (_ bv0 32) ) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun completion_addr () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  false (=  (_ bv0 64) (concat  (select  completion_addr (_ bv7 32) ) (concat  (select  completion_addr (_ bv6 32) ) (concat  (select  completion_addr (_ bv5 32) ) (concat  (select  completion_addr (_ bv4 32) ) (concat  (select  completion_addr (_ bv3 32) ) (concat  (select  completion_addr (_ bv2 32) ) (concat  (select  completion_addr (_ bv1 32) ) (select  completion_addr (_ bv0 32) ) ) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 519
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 531
+      }
+    ]
+  },
+  "trigger": {
+    "function": "vgem_dmamove_token_free",
+    "file": "vgem_dmamove.c",
+    "args": [
+      {
+        "name": "completion_addr",
+        "type": "unsigned long",
+        "value_le_hex": "0x0000000000000000",
+        "size_bytes": 8,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-1: Shared State Divergence @ vgem_dmamove_token_free",
+  "metadata": {
+    "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "mechanism": "unchecked-signal-field-set",
+        "indicates": "WMI-1",
+        "file": "vgem_dmamove.c",
+        "line": 150
+      }
+    ],
+    "bug_type": "WMI-1 Shared State Divergence",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_dmamove.c",
+      "line": 150,
+      "function": "vgem_dmamove_token_free"
+    },
+    "memory_layout": [
+      {
+        "name": "dmamove_token_slot.tag@8",
+        "locations": [
+          {
+            "offset": 8,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "dmamove_token_slot.tag@8",
+      "symbol": "vgem_dmamove_token_free"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "assertion": "dmamove_token_slot.tag stays within the domain its consumer's agreement governs",
+        "assumptions": [
+          "producer sets tag without enforcing the consumer's cross-field invariant"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "dmamove_token_slot.tag@8",
+      "sa": "dmamove_token_slot.tag@8",
+      "code": "dmamove_token_slot.tag"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 1,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

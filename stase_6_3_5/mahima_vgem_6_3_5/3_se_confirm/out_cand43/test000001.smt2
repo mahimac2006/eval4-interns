@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun flags () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (bvule  (concat  (select  flags (_ bv3 32) ) (concat  (select  flags (_ bv2 32) ) (concat  (select  flags (_ bv1 32) ) (select  flags (_ bv0 32) ) ) ) ) (_ bv1 32) ) ) )
+(check-sat)
+(exit)

@@ -1,0 +1,268 @@
+[
+ {
+  "file": "./include/linux/bio.h",
+  "line": 87,
+  "func": "bio_next_segment",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'bvec_iter_all.idx' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=bvec_iter_all;field=idx;offset=16\\] \\[oracle:assert=idx governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 259,
+  "func": "bio_last_bvec_all",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'bio.bi_vcnt' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=bio;field=bi_vcnt;offset=112\\] \\[oracle:assert=bi_vcnt governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 173,
+  "func": "bvec_iter_advance_single",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'bvec_iter.bi_idx' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=bvec_iter;field=bi_idx;offset=12\\] \\[oracle:assert=bi_idx governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/cgroup.h",
+  "line": 519,
+  "func": "cgroup_is_descendant",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'cgroup.level' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=cgroup;field=level;offset=304\\] \\[oracle:assert=level governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/energy_model.h",
+  "line": 244,
+  "func": "em_cpu_energy",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'em_perf_domain.nr_perf_states' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=em_perf_domain;field=nr_perf_states;offset=8\\] \\[oracle:assert=nr_perf_states governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/memcontrol.h",
+  "line": 733,
+  "func": "mem_cgroup_lruvec",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'pglist_data.node_id' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=pglist_data;field=node_id;offset=245896\\] \\[oracle:assert=node_id governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/netlink.h",
+  "line": 193,
+  "func": "nl_set_extack_cookie_u64",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'netlink_ext_ack.cookie' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=netlink_ext_ack;field=cookie;offset=34\\] \\[oracle:assert=cookie governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/pid.h",
+  "line": 155,
+  "func": "ns_of_pid",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'pid.level' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=pid;field=level;offset=4\\] \\[oracle:assert=level governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/pid.h",
+  "line": 167,
+  "func": "is_child_reaper",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'pid.level' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=pid;field=level;offset=4\\] \\[oracle:assert=level governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 51,
+  "func": "__ptr_ring_full",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'ptr_ring.producer' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=ptr_ring;field=producer;offset=0\\] \\[oracle:assert=producer governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 106,
+  "func": "__ptr_ring_produce",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'ptr_ring.producer' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=ptr_ring;field=producer;offset=0\\] \\[oracle:assert=producer governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 113,
+  "func": "__ptr_ring_produce",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'ptr_ring.producer' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=ptr_ring;field=producer;offset=0\\] \\[oracle:assert=producer governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 172,
+  "func": "__ptr_ring_peek",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'ptr_ring.consumer_head' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=ptr_ring;field=consumer_head;offset=128\\] \\[oracle:assert=consumer_head governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/signal.h",
+  "line": 239,
+  "func": "siginitset",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field '(unnamed class/struct/union).sig' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=(unnamed class/struct/union);field=sig;offset=0\\] \\[oracle:assert=sig governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/signal.h",
+  "line": 252,
+  "func": "siginitsetinv",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field '(unnamed class/struct/union).sig' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=(unnamed class/struct/union);field=sig;offset=0\\] \\[oracle:assert=sig governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3092,
+  "func": "skb_orphan",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (indirect-call-via-field): the access target is loaded from struct field 'sk_buff.(unknown field)' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:indirect-call-via-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=(unknown field);offset=0\\] \\[oracle:assert=(unknown field) governs a bounded, trusted call target;assume=access target loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3998,
+  "func": "memcpy_to_msg",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'msghdr.msg_iter' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=msghdr;field=msg_iter;offset=16\\] \\[oracle:assert=msg_iter governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4055,
+  "func": "skb_copy_from_linear_data",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4062,
+  "func": "skb_copy_from_linear_data_offset",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4069,
+  "func": "skb_copy_to_linear_data",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4077,
+  "func": "skb_copy_to_linear_data_offset",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/uio.h",
+  "line": 174,
+  "func": "copy_folio_to_iter",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'folio.(unknown field)' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=folio;field=(unknown field);offset=0\\] \\[oracle:assert=(unknown field) governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/net/neighbour.h",
+  "line": 487,
+  "func": "neigh_hh_bridge",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]\nWMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'hh_cache.hh_data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=hh_cache;field=hh_data;offset=144\\] \\[oracle:assert=hh_data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/net/neighbour.h",
+  "line": 511,
+  "func": "neigh_hh_output",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]\nWMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'hh_cache.hh_data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=hh_cache;field=hh_data;offset=144\\] \\[oracle:assert=hh_data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/net/neighbour.h",
+  "line": 518,
+  "func": "neigh_hh_output",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sk_buff.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sk_buff;field=data;offset=216\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]\nWMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'hh_cache.hh_data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=hh_cache;field=hh_data;offset=144\\] \\[oracle:assert=hh_data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/net/neighbour.h",
+  "line": 589,
+  "func": "neigh_ha_snapshot",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'neighbour.ha' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=neighbour;field=ha;offset=464\\] \\[oracle:assert=ha governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1228,
+  "func": "sk_prot_clear_nulls",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sock.__sk_common' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=sock;field=__sk_common;offset=0\\] \\[oracle:assert=__sk_common governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1513,
+  "func": "sock_prot_inuse_add",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'proto.inuse_idx' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=proto;field=inuse_idx;offset=216\\] \\[oracle:assert=inuse_idx governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 316,
+  "func": "psmgr_process_ctrl",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_session.desc' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=psmgr_session;field=desc;offset=40\\] \\[oracle:assert=desc governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 453,
+  "func": "psmgr_sendmsg",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'msghdr.msg_iter' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=msghdr;field=msg_iter;offset=16\\] \\[oracle:assert=msg_iter governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 475,
+  "func": "psmgr_sendmsg",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'msghdr.msg_iter' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=msghdr;field=msg_iter;offset=16\\] \\[oracle:assert=msg_iter governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 516,
+  "func": "psmgr_sendmsg",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'msghdr.msg_iter' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=msghdr;field=msg_iter;offset=16\\] \\[oracle:assert=msg_iter governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 594,
+  "func": "psmgr_recvmsg",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_desc.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=psmgr_desc;field=data;offset=0\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]\nWMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_session.desc' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=psmgr_session;field=desc;offset=40\\] \\[oracle:assert=desc governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 600,
+  "func": "psmgr_recvmsg",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'msghdr.msg_iter' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=msghdr;field=msg_iter;offset=16\\] \\[oracle:assert=msg_iter governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 622,
+  "func": "psmgr_exec",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_desc.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=psmgr_desc;field=data;offset=0\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 644,
+  "func": "psmgr_exec",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (indirect-call-via-field): the access target is loaded from struct field 'psmgr_desc.handler' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:indirect-call-via-field;indicates=WMI-4\\] \\[mem:struct=psmgr_desc;field=handler;offset=136\\] \\[oracle:assert=handler governs a bounded, trusted call target;assume=access target loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 647,
+  "func": "psmgr_exec",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_desc.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=psmgr_desc;field=data;offset=0\\] \\[oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 683,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_session.desc' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=psmgr_session;field=desc;offset=40\\] \\[oracle:assert=desc governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ }
+]

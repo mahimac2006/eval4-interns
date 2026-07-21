@@ -1,0 +1,7 @@
+array nego_len[4] : w32 -> w8 = symbolic
+array nego_offset[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Ule (Add w32 (ReadLSB w32 0 nego_offset)
+                           (ReadLSB w32 0 nego_len))
+                  128))]
+        false)

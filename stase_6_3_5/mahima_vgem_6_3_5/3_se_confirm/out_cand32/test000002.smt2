@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun index () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  index (_ bv3 32) ) (concat  (select  index (_ bv2 32) ) (concat  (select  index (_ bv1 32) ) (select  index (_ bv0 32) ) ) ) ) ) ) (and  (bvult  ?B1 (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) ) (=  false (bvult  ?B1 (_ bv64 32) ) ) ) ) )
+(check-sat)
+(exit)

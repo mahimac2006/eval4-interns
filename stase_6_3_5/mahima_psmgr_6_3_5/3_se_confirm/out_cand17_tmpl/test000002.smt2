@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun attacker_input () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun consumer_view () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun producer_view () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  (_ bv1 32) (concat  (select  attacker_input (_ bv3 32) ) (concat  (select  attacker_input (_ bv2 32) ) (concat  (select  attacker_input (_ bv1 32) ) (select  attacker_input (_ bv0 32) ) ) ) ) ) (=  (concat  (select  producer_view (_ bv3 32) ) (concat  (select  producer_view (_ bv2 32) ) (concat  (select  producer_view (_ bv1 32) ) (select  producer_view (_ bv0 32) ) ) ) ) (concat  (select  consumer_view (_ bv3 32) ) (concat  (select  consumer_view (_ bv2 32) ) (concat  (select  consumer_view (_ bv1 32) ) (select  consumer_view (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

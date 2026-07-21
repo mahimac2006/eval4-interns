@@ -1,0 +1,11 @@
+[
+  {
+    "source": "drm_ioctl:vgem_driver[open]",
+    "sink_file": "drivers/gpu/drm/vgem/vgem_drv.c",
+    "sink_line": 68,
+    "sink_func": "vgem_open",
+    "call_chain": "vgem_open",
+    "query": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drm_file.driver_priv' — the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drm_file;field=driver_priv;offset=488\\] \\[oracle:assert=driver_priv holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+  }
+]

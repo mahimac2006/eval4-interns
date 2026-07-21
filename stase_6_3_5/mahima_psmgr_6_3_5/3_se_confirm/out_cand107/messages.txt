@@ -1,0 +1,16 @@
+KLEE: Using Z3 solver backend
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x783abc800000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x78383c800000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x77383c800000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x77183c800000 size=128 GiB)
+KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand107_wmi3.c:25: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand107_wmi3.c:26: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand107_wmi3.c:30: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand107_wmi3.c:29: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand107_wmi3.c:28: invalid klee_assume call (provably false)
+KLEE: NOTE: now ignoring this error at this location

@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "vgem_dmamove_buf_state_get",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 243,
+  "target_cwe": null,
+  "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+  "wmi_index": null,
+  "message": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'vgem_buf_entry.file' \u2014 the position the confused consumer later follows as a trusted reference. [mechanism:attacker-pointer-into-field;indicates=WMI-3] [mem:struct=vgem_buf_entry;field=file;offset=8] [oracle:assert=file holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'vgem_buf_entry.file' \u2014 the position the confused consumer later follows as a trusted reference. [mechanism:allocated-content-into-field;indicates=WMI-3] [mem:struct=vgem_buf_entry;field=file;offset=8] [oracle:assert=file holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_dmamove_buf_state_get"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 243,
+      "func": "vgem_dmamove_buf_state_get",
+      "callee": ""
+    }
+  ]
+}

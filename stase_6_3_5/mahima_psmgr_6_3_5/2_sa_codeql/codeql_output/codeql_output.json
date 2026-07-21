@@ -1,0 +1,2135 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": null,
+  "target_line": null,
+  "sink": null,
+  "discovered_sinks": [
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 316,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 594,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 621,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 683,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 146,
+      "func": "psmgr_compute_token",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 317,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 322,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 326,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 372,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 377,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 485,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 172,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 175,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 187,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 188,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 189,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 190,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 191,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 192,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 257,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 258,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 316,
+      "func": "psmgr_bind",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 419,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 427,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 428,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 429,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 430,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 447,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 455,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 456,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 457,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 458,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 474,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 475,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 476,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 477,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 533,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 535,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 542,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 545,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 568,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 569,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 591,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 627,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 629,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 631,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 632,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 650,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 654,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 684,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 280,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 277,
+      "func": "psmgr_init",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 278,
+      "func": "psmgr_init",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 279,
+      "func": "psmgr_init",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 78,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 91,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 167,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 171,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 190,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 196,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 220,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 252,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 259,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 268,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 311,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 350,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 351,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 352,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 359,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 403,
+      "func": "psmgr_poll",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 407,
+      "func": "psmgr_poll",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 428,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 435,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 441,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 456,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 469,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 586,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 61,
+      "func": "psmgr_session_lookup",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 183,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 195,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 205,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 310,
+      "func": "psmgr_bind",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 313,
+      "func": "psmgr_bind",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 354,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 356,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 373,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 382,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 385,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 388,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 393,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 394,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 397,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 407,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 438,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 488,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 530,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 561,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 562,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 583,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 584,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 602,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 603,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 644,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 645,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 646,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 662,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 676,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 678,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 61,
+      "func": "psmgr_net_exit",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 62,
+      "func": "psmgr_net_exit",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 64,
+      "func": "psmgr_net_exit",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 124,
+      "func": "psmgr_seq_start",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 153,
+      "func": "psmgr_seq_next",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 193,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 194,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 195,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 196,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 197,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 198,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 199,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 200,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 201,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "af_psmgr.c",
+      "line": 207,
+      "func": "psmgr_seq_show",
+      "callee": ""
+    },
+    {
+      "file": "psmgr.h",
+      "line": 204,
+      "func": "psmgr_session_get",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 78,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 79,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 80,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 91,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 92,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 94,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 97,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 146,
+      "func": "psmgr_compute_token",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 147,
+      "func": "psmgr_compute_token",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 148,
+      "func": "psmgr_compute_token",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 163,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 167,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 168,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 171,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 173,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 185,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 190,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 191,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 196,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 197,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 202,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 203,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 204,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 207,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 220,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 222,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 223,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 226,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 235,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 242,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 252,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 254,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 259,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 268,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 269,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 285,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 286,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 287,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 289,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 290,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 311,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 312,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 316,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 318,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 323,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 327,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 330,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 334,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 339,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 340,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 347,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 350,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 351,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 352,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 353,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 359,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 361,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 378,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 380,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 381,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 403,
+      "func": "psmgr_poll",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 406,
+      "func": "psmgr_poll",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 407,
+      "func": "psmgr_poll",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 409,
+      "func": "psmgr_poll",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 428,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 435,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 440,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 441,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 442,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 445,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 446,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 447,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 448,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 449,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 456,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 457,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 469,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 482,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 485,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 486,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 487,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 491,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 523,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 527,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 545,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 546,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 560,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 586,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 593,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 594,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 595,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 596,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 597,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 598,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 612,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 618,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 619,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 620,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 621,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 622,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 623,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 624,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 627,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 633,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 639,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 646,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 647,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 648,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 60,
+      "func": "psmgr_session_lookup",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 61,
+      "func": "psmgr_session_lookup",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 69,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 70,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 172,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 183,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 184,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 196,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 197,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 199,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 201,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 202,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 203,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 208,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 214,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 245,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 247,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 248,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 251,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 254,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 259,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 260,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 261,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 269,
+      "func": "psmgr_release",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 310,
+      "func": "psmgr_bind",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 313,
+      "func": "psmgr_bind",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 317,
+      "func": "psmgr_bind",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 354,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 373,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 374,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 375,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 382,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 385,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 388,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 393,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 394,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 397,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 403,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 407,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 417,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 418,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 419,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 421,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 423,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 432,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 484,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 485,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 488,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 489,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 490,
+      "func": "psmgr_connect",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 530,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 547,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 561,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 562,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 568,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 570,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 583,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 584,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 589,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 590,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 592,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 602,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 603,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 627,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 628,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 629,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 630,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 633,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 644,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 645,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 646,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 650,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 652,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 653,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 654,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 655,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 656,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 662,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 676,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 677,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 678,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 679,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 683,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 685,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 686,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 723,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 724,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 725,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 734,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 735,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 736,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 744,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 753,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 754,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 755,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 764,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 765,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 766,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 775,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 776,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 777,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 778,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 779,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 780,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 781,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 782,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 783,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 183,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 195,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 205,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 281,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 359,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 316,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 453,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 475,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 516,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 594,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 600,
+      "func": "psmgr_recvmsg",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 622,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 644,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 647,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "psmgr_sock.c",
+      "line": 683,
+      "func": "psmgr_setsockopt",
+      "callee": ""
+    }
+  ],
+  "note": "codeql candidates (recall-biased); one codeql_output_<n>.json per finding."
+}

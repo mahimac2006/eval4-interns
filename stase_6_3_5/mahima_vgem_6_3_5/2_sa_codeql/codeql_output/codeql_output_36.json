@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "postproc_build_desc_ring",
+  "target_file": "vgem_postproc.c",
+  "target_line": 163,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'postproc_build_desc_ring' sets signal field 'move_desc.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=move_desc;field=flags;offset=36] [oracle:assert=move_desc.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_build_desc_ring"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 163,
+      "func": "postproc_build_desc_ring",
+      "callee": ""
+    }
+  ]
+}

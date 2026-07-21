@@ -1,0 +1,126 @@
+{
+  "operation": {
+    "name": "copyPtr_at_psmgr_exec",
+    "parameters": [
+      "unsigned long handler",
+      "unsigned int token",
+      "unsigned int write_count"
+    ],
+    "effects": [
+      {
+        "type": "copyPtr",
+        "id": "e_d936dd08",
+        "arguments": {
+          "destinations": [
+            "psmgr_desc.handler@136"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun handler () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun token () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun write_count () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  handler (_ bv7 32) ) (concat  (select  handler (_ bv6 32) ) (concat  (select  handler (_ bv5 32) ) (concat  (select  handler (_ bv4 32) ) (concat  (select  handler (_ bv3 32) ) (concat  (select  handler (_ bv2 32) ) (concat  (select  handler (_ bv1 32) ) (select  handler (_ bv0 32) ) ) ) ) ) ) ) ) ) ) (and  (and  (and  (=  (_ bv1 32) (concat  (select  write_count (_ bv3 32) ) (concat  (select  write_count (_ bv2 32) ) (concat  (select  write_count (_ bv1 32) ) (select  write_count (_ bv0 32) ) ) ) ) ) (=  false (=  (_ bv0 32) (concat  (select  token (_ bv3 32) ) (concat  (select  token (_ bv2 32) ) (concat  (select  token (_ bv1 32) ) (select  token (_ bv0 32) ) ) ) ) ) ) ) (=  false (=  (_ bv0 64) ?B1 ) ) ) (=  false (=  (_ bv4096 64) ?B1 ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun handler () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun token () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun write_count () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (=  (_ bv1 32) (concat  (select  write_count (_ bv3 32) ) (concat  (select  write_count (_ bv2 32) ) (concat  (select  write_count (_ bv1 32) ) (select  write_count (_ bv0 32) ) ) ) ) ) (=  false (=  (_ bv0 32) (concat  (select  token (_ bv3 32) ) (concat  (select  token (_ bv2 32) ) (concat  (select  token (_ bv1 32) ) (select  token (_ bv0 32) ) ) ) ) ) ) ) (=  (_ bv4096 64) (concat  (select  handler (_ bv7 32) ) (concat  (select  handler (_ bv6 32) ) (concat  (select  handler (_ bv5 32) ) (concat  (select  handler (_ bv4 32) ) (concat  (select  handler (_ bv3 32) ) (concat  (select  handler (_ bv2 32) ) (concat  (select  handler (_ bv1 32) ) (select  handler (_ bv0 32) ) ) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 1027
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 952
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_exec",
+    "file": "psmgr_pipeline.c",
+    "args": [
+      {
+        "name": "handler",
+        "type": "unsigned long",
+        "value_le_hex": "0xff00000000000000",
+        "size_bytes": 8,
+        "source": "klee_witness"
+      },
+      {
+        "name": "token",
+        "type": "unsigned int",
+        "value_le_hex": "0xff000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "write_count",
+        "type": "unsigned int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-4: Attacker-Shaped Data to Arbitrary Memory Access (RWX) @ psmgr_exec",
+  "metadata": {
+    "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+        "mechanism": "indirect-call-via-field",
+        "indicates": "WMI-4",
+        "file": "psmgr_pipeline.c",
+        "line": 644
+      }
+    ],
+    "bug_type": "WMI-4 Attacker-Shaped Data to Arbitrary Memory Access (RWX)",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_pipeline.c",
+      "line": 644,
+      "function": "psmgr_exec"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_desc.handler@136",
+        "locations": [
+          {
+            "offset": 136,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_desc.handler@136",
+      "symbol": "psmgr_exec"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+        "assertion": "handler governs a bounded, trusted call target",
+        "assumptions": [
+          "access target loaded from the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_desc.handler@136",
+      "sa": "psmgr_desc.handler@136",
+      "code": "psmgr_desc.handler"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 4,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

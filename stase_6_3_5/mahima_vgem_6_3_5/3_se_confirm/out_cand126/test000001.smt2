@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun completion_addr () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (_ bv0 64) (concat  (select  completion_addr (_ bv7 32) ) (concat  (select  completion_addr (_ bv6 32) ) (concat  (select  completion_addr (_ bv5 32) ) (concat  (select  completion_addr (_ bv4 32) ) (concat  (select  completion_addr (_ bv3 32) ) (concat  (select  completion_addr (_ bv2 32) ) (concat  (select  completion_addr (_ bv1 32) ) (select  completion_addr (_ bv0 32) ) ) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

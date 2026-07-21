@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun desc_buf_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun i () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  desc_buf_size (_ bv7 32) ) (concat  (select  desc_buf_size (_ bv6 32) ) (concat  (select  desc_buf_size (_ bv5 32) ) (concat  (select  desc_buf_size (_ bv4 32) ) (concat  (select  desc_buf_size (_ bv3 32) ) (concat  (select  desc_buf_size (_ bv2 32) ) (concat  (select  desc_buf_size (_ bv1 32) ) (select  desc_buf_size (_ bv0 32) ) ) ) ) ) ) ) ) ) (?B2 (concat  (select  desc_count (_ bv7 32) ) (concat  (select  desc_count (_ bv6 32) ) (concat  (select  desc_count (_ bv5 32) ) (concat  (select  desc_count (_ bv4 32) ) (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) ) ) ) ) ) (?B3 (concat  (select  i (_ bv7 32) ) (concat  (select  i (_ bv6 32) ) (concat  (select  i (_ bv5 32) ) (concat  (select  i (_ bv4 32) ) (concat  (select  i (_ bv3 32) ) (concat  (select  i (_ bv2 32) ) (concat  (select  i (_ bv1 32) ) (select  i (_ bv0 32) ) ) ) ) ) ) ) ) ) ) (and  (and  (bvule  (bvmul  (_ bv16 64) ?B2 ) ?B1 ) (bvult  ?B3 ?B2 ) ) (=  false (bvule  (bvadd  (_ bv16 64) (bvmul  (_ bv16 64) ?B3 ) ) ?B1 ) ) ) ) )
+(check-sat)
+(exit)

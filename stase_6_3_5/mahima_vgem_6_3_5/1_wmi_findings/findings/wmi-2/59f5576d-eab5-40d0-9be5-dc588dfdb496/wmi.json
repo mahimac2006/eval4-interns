@@ -1,0 +1,95 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_postproc_release",
+    "parameters": [
+      "int status"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_1f9515d1",
+        "arguments": {
+          "locations": [
+            "file.private_data@456"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(assert true )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 56
+      }
+    ]
+  },
+  "trigger": {
+    "function": "postproc_release",
+    "file": "vgem_postproc.c",
+    "args": []
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ postproc_release",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "field-reinterpreted-as-2-types",
+        "indicates": "WMI-2",
+        "file": "vgem_postproc.c",
+        "line": 671
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_postproc.c",
+      "line": 671,
+      "function": "postproc_release"
+    },
+    "memory_layout": [
+      {
+        "name": "file.private_data@456",
+        "locations": [
+          {
+            "offset": 456,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "file.private_data@456",
+      "symbol": "postproc_release"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "file.private_data is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "file.private_data@456",
+      "sa": "file.private_data@456",
+      "code": "file.private_data"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

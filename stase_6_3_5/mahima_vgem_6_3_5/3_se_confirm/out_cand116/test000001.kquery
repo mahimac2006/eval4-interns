@@ -1,0 +1,5 @@
+array desc_count[4] : w32 -> w8 = symbolic
+(query [(Ule N0:(ReadLSB w32 0 desc_count)
+              32)
+         (Eq false (Ult N0 32))]
+        false)

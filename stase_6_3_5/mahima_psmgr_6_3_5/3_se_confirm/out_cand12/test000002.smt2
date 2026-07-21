@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun protocol () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  protocol (_ bv3 32) ) (concat  (select  protocol (_ bv2 32) ) (concat  (select  protocol (_ bv1 32) ) (select  protocol (_ bv0 32) ) ) ) ) ) ) (and  (bvsle  (_ bv0 32) ?B1 ) (bvsle  ?B1 (_ bv65535 32) ) ) ) )
+(check-sat)
+(exit)

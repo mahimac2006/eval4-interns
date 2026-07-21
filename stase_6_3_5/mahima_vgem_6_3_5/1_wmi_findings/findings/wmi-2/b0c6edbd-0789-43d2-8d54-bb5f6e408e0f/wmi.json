@@ -1,0 +1,97 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_dmamove_run_descs",
+    "parameters": [
+      "unsigned int dst_offset",
+      "unsigned int length",
+      "unsigned int dst_buf_size"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_8a282d20",
+        "arguments": {
+          "locations": [
+            "move_desc.dst_offset@8"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun dst_buf_size () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun dst_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun length () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  dst_buf_size (_ bv3 32) ) (concat  (select  dst_buf_size (_ bv2 32) ) (concat  (select  dst_buf_size (_ bv1 32) ) (select  dst_buf_size (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  dst_offset (_ bv3 32) ) (concat  (select  dst_offset (_ bv2 32) ) (concat  (select  dst_offset (_ bv1 32) ) (select  dst_offset (_ bv0 32) ) ) ) ) ) ) (and  (=  false (bvult  ?B1 ?B2 ) ) (=  false (bvult  (bvsub  ?B1 ?B2 ) (concat  (select  length (_ bv3 32) ) (concat  (select  length (_ bv2 32) ) (concat  (select  length (_ bv1 32) ) (select  length (_ bv0 32) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 834
+      }
+    ]
+  },
+  "trigger": {
+    "function": "dmamove_run_descs",
+    "file": "vgem_dmamove.c",
+    "args": []
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ dmamove_run_descs",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "vgem_dmamove.c",
+        "line": 582
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_dmamove.c",
+      "line": 582,
+      "function": "dmamove_run_descs"
+    },
+    "memory_layout": [
+      {
+        "name": "move_desc.dst_offset@8",
+        "locations": [
+          {
+            "offset": 8,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "move_desc.dst_offset@8",
+      "symbol": "dmamove_run_descs"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "move_desc.dst_offset is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "move_desc.dst_offset@8",
+      "sa": "move_desc.dst_offset@8",
+      "code": "move_desc.dst_offset"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

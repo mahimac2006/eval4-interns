@@ -1,0 +1,1381 @@
+[
+ {
+  "file": "./include/linux/bio.h",
+  "line": 139,
+  "func": "bio_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bio_advance' sets signal field 'bvec_iter.bi_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter;field=bi_size;offset=8\\] \\[oracle:assert=bvec_iter.bi_size stays within the domain its consumer's agreement governs;assume=producer sets bi_size without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 287,
+  "func": "bio_first_folio",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bio_first_folio' sets signal field 'folio_iter._seg_count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=folio_iter;field=_seg_count;offset=32\\] \\[oracle:assert=folio_iter._seg_count stays within the domain its consumer's agreement governs;assume=producer sets _seg_count without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 290,
+  "func": "bio_first_folio",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bio_first_folio' sets signal field 'folio_iter._i', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=folio_iter;field=_i;offset=40\\] \\[oracle:assert=folio_iter._i stays within the domain its consumer's agreement governs;assume=producer sets _i without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 48,
+  "func": "bvec_set_page",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_set_page' sets signal field 'bio_vec.bv_len', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_len;offset=8\\] \\[oracle:assert=bio_vec.bv_len stays within the domain its consumer's agreement governs;assume=producer sets bv_len without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 49,
+  "func": "bvec_set_page",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_set_page' sets signal field 'bio_vec.bv_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_offset;offset=12\\] \\[oracle:assert=bio_vec.bv_offset stays within the domain its consumer's agreement governs;assume=producer sets bv_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 147,
+  "func": "bvec_iter_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_iter_advance' sets signal field 'bvec_iter.bi_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter;field=bi_size;offset=8\\] \\[oracle:assert=bvec_iter.bi_size stays within the domain its consumer's agreement governs;assume=producer sets bi_size without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 159,
+  "func": "bvec_iter_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_iter_advance' sets signal field 'bvec_iter.bi_idx', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter;field=bi_idx;offset=12\\] \\[oracle:assert=bvec_iter.bi_idx stays within the domain its consumer's agreement governs;assume=producer sets bi_idx without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 160,
+  "func": "bvec_iter_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_iter_advance' sets signal field 'bvec_iter.bi_bvec_done', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter;field=bi_bvec_done;offset=16\\] \\[oracle:assert=bvec_iter.bi_bvec_done stays within the domain its consumer's agreement governs;assume=producer sets bi_bvec_done without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 177,
+  "func": "bvec_iter_advance_single",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_iter_advance_single' sets signal field 'bvec_iter.bi_bvec_done', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter;field=bi_bvec_done;offset=16\\] \\[oracle:assert=bvec_iter.bi_bvec_done stays within the domain its consumer's agreement governs;assume=producer sets bi_bvec_done without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 198,
+  "func": "bvec_init_iter_all",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_init_iter_all' sets signal field 'bvec_iter_all.done', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter_all;field=done;offset=20\\] \\[oracle:assert=bvec_iter_all.done stays within the domain its consumer's agreement governs;assume=producer sets done without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 199,
+  "func": "bvec_init_iter_all",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_init_iter_all' sets signal field 'bvec_iter_all.idx', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter_all;field=idx;offset=16\\] \\[oracle:assert=bvec_iter_all.idx stays within the domain its consumer's agreement governs;assume=producer sets idx without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 211,
+  "func": "bvec_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_advance' sets signal field 'bio_vec.bv_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_offset;offset=12\\] \\[oracle:assert=bio_vec.bv_offset stays within the domain its consumer's agreement governs;assume=producer sets bv_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 214,
+  "func": "bvec_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_advance' sets signal field 'bio_vec.bv_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_offset;offset=12\\] \\[oracle:assert=bio_vec.bv_offset stays within the domain its consumer's agreement governs;assume=producer sets bv_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 216,
+  "func": "bvec_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_advance' sets signal field 'bio_vec.bv_len', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_len;offset=8\\] \\[oracle:assert=bio_vec.bv_len stays within the domain its consumer's agreement governs;assume=producer sets bv_len without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 222,
+  "func": "bvec_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'bvec_advance' sets signal field 'bvec_iter_all.done', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bvec_iter_all;field=done;offset=20\\] \\[oracle:assert=bvec_iter_all.done stays within the domain its consumer's agreement governs;assume=producer sets done without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/delayed_call.h",
+  "line": 21,
+  "func": "set_delayed_call",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'set_delayed_call' sets signal field 'delayed_call.fn', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=delayed_call;field=fn;offset=0\\] \\[oracle:assert=delayed_call.fn stays within the domain its consumer's agreement governs;assume=producer sets fn without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/delayed_call.h",
+  "line": 33,
+  "func": "clear_delayed_call",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'clear_delayed_call' sets signal field 'delayed_call.fn', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=delayed_call;field=fn;offset=0\\] \\[oracle:assert=delayed_call.fn stays within the domain its consumer's agreement governs;assume=producer sets fn without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/dma-mapping.h",
+  "line": 489,
+  "func": "dma_set_max_seg_size",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'dma_set_max_seg_size' sets signal field 'device_dma_parameters.max_segment_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=device_dma_parameters;field=max_segment_size;offset=0\\] \\[oracle:assert=device_dma_parameters.max_segment_size stays within the domain its consumer's agreement governs;assume=producer sets max_segment_size without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/dma-mapping.h",
+  "line": 524,
+  "func": "dma_set_seg_boundary",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'dma_set_seg_boundary' sets signal field 'device_dma_parameters.segment_boundary_mask', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=device_dma_parameters;field=segment_boundary_mask;offset=8\\] \\[oracle:assert=device_dma_parameters.segment_boundary_mask stays within the domain its consumer's agreement governs;assume=producer sets segment_boundary_mask without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/fs.h",
+  "line": 3157,
+  "func": "dir_emit_dots",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'dir_emit_dots' sets signal field 'dir_context.pos', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=dir_context;field=pos;offset=8\\] \\[oracle:assert=dir_context.pos stays within the domain its consumer's agreement governs;assume=producer sets pos without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/fs.h",
+  "line": 3162,
+  "func": "dir_emit_dots",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'dir_emit_dots' sets signal field 'dir_context.pos', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=dir_context;field=pos;offset=8\\] \\[oracle:assert=dir_context.pos stays within the domain its consumer's agreement governs;assume=producer sets pos without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/idr.h",
+  "line": 139,
+  "func": "idr_init_base",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'idr_init_base' sets signal field 'idr.idr_next', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=idr;field=idr_next;offset=92\\] \\[oracle:assert=idr.idr_next stays within the domain its consumer's agreement governs;assume=producer sets idr_next without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 640,
+  "func": "vm_flags_init",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'vm_flags_init' sets signal field '(unnamed class/struct/union).__vm_flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=__vm_flags;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).__vm_flags stays within the domain its consumer's agreement governs;assume=producer sets __vm_flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 2392,
+  "func": "update_hiwater_rss",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'update_hiwater_rss' sets signal field '(unnamed class/struct/union).hiwater_rss', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hiwater_rss;offset=504\\] \\[oracle:assert=(unnamed class/struct/union).hiwater_rss stays within the domain its consumer's agreement governs;assume=producer sets hiwater_rss without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 2398,
+  "func": "update_hiwater_vm",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'update_hiwater_vm' sets signal field '(unnamed class/struct/union).hiwater_vm', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hiwater_vm;offset=512\\] \\[oracle:assert=(unnamed class/struct/union).hiwater_vm stays within the domain its consumer's agreement governs;assume=producer sets hiwater_vm without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/mm.h",
+  "line": 2403,
+  "func": "reset_mm_hiwater_rss",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'reset_mm_hiwater_rss' sets signal field '(unnamed class/struct/union).hiwater_rss', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hiwater_rss;offset=504\\] \\[oracle:assert=(unnamed class/struct/union).hiwater_rss stays within the domain its consumer's agreement governs;assume=producer sets hiwater_rss without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/mm_types.h",
+  "line": 814,
+  "func": "lru_gen_init_mm",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'lru_gen_init_mm' sets signal field '(unnamed class/struct/union).bitmap', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=bitmap;offset=16\\] \\[oracle:assert=(unnamed class/struct/union).bitmap stays within the domain its consumer's agreement governs;assume=producer sets bitmap without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/netdevice.h",
+  "line": 2549,
+  "func": "netdev_set_ml_priv",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'netdev_set_ml_priv' sets signal field 'net_device.ml_priv_type', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=net_device;field=ml_priv_type;offset=1656\\] \\[oracle:assert=net_device.ml_priv_type stays within the domain its consumer's agreement governs;assume=producer sets ml_priv_type without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/netlink.h",
+  "line": 231,
+  "func": "netlink_skb_clone",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'netlink_skb_clone' sets signal field '(unnamed class/struct/union).destructor', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=destructor;offset=8\\] \\[oracle:assert=(unnamed class/struct/union).destructor stays within the domain its consumer's agreement governs;assume=producer sets destructor without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/poll.h",
+  "line": 75,
+  "func": "init_poll_funcptr",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'init_poll_funcptr' sets signal field 'poll_table_struct._qproc', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=poll_table_struct;field=_qproc;offset=0\\] \\[oracle:assert=poll_table_struct._qproc stays within the domain its consumer's agreement governs;assume=producer sets _qproc without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 115,
+  "func": "__ptr_ring_produce",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_produce' sets signal field 'ptr_ring.producer', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=producer;offset=0\\] \\[oracle:assert=ptr_ring.producer stays within the domain its consumer's agreement governs;assume=producer sets producer without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 281,
+  "func": "__ptr_ring_discard_one",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_discard_one' sets signal field 'ptr_ring.consumer_tail', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_tail;offset=132\\] \\[oracle:assert=ptr_ring.consumer_tail stays within the domain its consumer's agreement governs;assume=producer sets consumer_tail without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 285,
+  "func": "__ptr_ring_discard_one",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_discard_one' sets signal field 'ptr_ring.consumer_tail', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_tail;offset=132\\] \\[oracle:assert=ptr_ring.consumer_tail stays within the domain its consumer's agreement governs;assume=producer sets consumer_tail without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 476,
+  "func": "__ptr_ring_set_size",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_set_size' sets signal field 'ptr_ring.size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=size;offset=256\\] \\[oracle:assert=ptr_ring.size stays within the domain its consumer's agreement governs;assume=producer sets size without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 477,
+  "func": "__ptr_ring_set_size",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_set_size' sets signal field 'ptr_ring.batch', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=batch;offset=260\\] \\[oracle:assert=ptr_ring.batch stays within the domain its consumer's agreement governs;assume=producer sets batch without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 484,
+  "func": "__ptr_ring_set_size",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_set_size' sets signal field 'ptr_ring.batch', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=batch;offset=260\\] \\[oracle:assert=ptr_ring.batch stays within the domain its consumer's agreement governs;assume=producer sets batch without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 494,
+  "func": "ptr_ring_init",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'ptr_ring_init' sets signal field 'ptr_ring.consumer_tail', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_tail;offset=132\\] \\[oracle:assert=ptr_ring.consumer_tail stays within the domain its consumer's agreement governs;assume=producer sets consumer_tail without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 530,
+  "func": "ptr_ring_unconsume",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'ptr_ring_unconsume' sets signal field 'ptr_ring.consumer_tail', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_tail;offset=132\\] \\[oracle:assert=ptr_ring.consumer_tail stays within the domain its consumer's agreement governs;assume=producer sets consumer_tail without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 545,
+  "func": "ptr_ring_unconsume",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'ptr_ring_unconsume' sets signal field 'ptr_ring.consumer_tail', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_tail;offset=132\\] \\[oracle:assert=ptr_ring.consumer_tail stays within the domain its consumer's agreement governs;assume=producer sets consumer_tail without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 575,
+  "func": "__ptr_ring_swap_queue",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_swap_queue' sets signal field 'ptr_ring.producer', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=producer;offset=0\\] \\[oracle:assert=ptr_ring.producer stays within the domain its consumer's agreement governs;assume=producer sets producer without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 576,
+  "func": "__ptr_ring_swap_queue",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_swap_queue' sets signal field 'ptr_ring.consumer_head', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_head;offset=128\\] \\[oracle:assert=ptr_ring.consumer_head stays within the domain its consumer's agreement governs;assume=producer sets consumer_head without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ptr_ring.h",
+  "line": 577,
+  "func": "__ptr_ring_swap_queue",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__ptr_ring_swap_queue' sets signal field 'ptr_ring.consumer_tail', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ptr_ring;field=consumer_tail;offset=132\\] \\[oracle:assert=ptr_ring.consumer_tail stays within the domain its consumer's agreement governs;assume=producer sets consumer_tail without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/radix-tree.h",
+  "line": 343,
+  "func": "radix_tree_iter_retry",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'radix_tree_iter_retry' sets signal field 'radix_tree_iter.tags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=radix_tree_iter;field=tags;offset=16\\] \\[oracle:assert=radix_tree_iter.tags stays within the domain its consumer's agreement governs;assume=producer sets tags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ratelimit.h",
+  "line": 33,
+  "func": "ratelimit_state_exit",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'ratelimit_state_exit' sets signal field 'ratelimit_state.missed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ratelimit_state;field=missed;offset=84\\] \\[oracle:assert=ratelimit_state.missed stays within the domain its consumer's agreement governs;assume=producer sets missed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/ratelimit.h",
+  "line": 40,
+  "func": "ratelimit_set_flags",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'ratelimit_set_flags' sets signal field 'ratelimit_state.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=ratelimit_state;field=flags;offset=96\\] \\[oracle:assert=ratelimit_state.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/rcupdate.h",
+  "line": 1065,
+  "func": "rcu_head_init",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'rcu_head_init' sets signal field 'callback_head.func', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=callback_head;field=func;offset=8\\] \\[oracle:assert=callback_head.func stays within the domain its consumer's agreement governs;assume=producer sets func without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 305,
+  "func": "memalloc_noio_restore",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'memalloc_noio_restore' sets signal field 'task_struct.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=flags;offset=44\\] \\[oracle:assert=task_struct.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 336,
+  "func": "memalloc_nofs_restore",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'memalloc_nofs_restore' sets signal field 'task_struct.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=flags;offset=44\\] \\[oracle:assert=task_struct.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 348,
+  "func": "memalloc_noreclaim_restore",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'memalloc_noreclaim_restore' sets signal field 'task_struct.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=flags;offset=44\\] \\[oracle:assert=task_struct.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 361,
+  "func": "memalloc_pin_restore",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'memalloc_pin_restore' sets signal field 'task_struct.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=flags;offset=44\\] \\[oracle:assert=task_struct.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 457,
+  "func": "mm_pasid_init",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'mm_pasid_init' sets signal field '(unnamed class/struct/union).pasid', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=pasid;offset=2264\\] \\[oracle:assert=(unnamed class/struct/union).pasid stays within the domain its consumer's agreement governs;assume=producer sets pasid without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 463,
+  "func": "mm_pasid_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'mm_pasid_set' sets signal field '(unnamed class/struct/union).pasid', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=pasid;offset=2264\\] \\[oracle:assert=(unnamed class/struct/union).pasid stays within the domain its consumer's agreement governs;assume=producer sets pasid without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/mm.h",
+  "line": 470,
+  "func": "mm_pasid_drop",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'mm_pasid_drop' sets signal field '(unnamed class/struct/union).pasid', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=pasid;offset=2264\\] \\[oracle:assert=(unnamed class/struct/union).pasid stays within the domain its consumer's agreement governs;assume=producer sets pasid without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 520,
+  "func": "set_restore_sigmask",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'set_restore_sigmask' sets signal field 'task_struct.restore_sigmask', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=restore_sigmask;offset=2384\\] \\[oracle:assert=task_struct.restore_sigmask stays within the domain its consumer's agreement governs;assume=producer sets restore_sigmask without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 524,
+  "func": "clear_tsk_restore_sigmask",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'clear_tsk_restore_sigmask' sets signal field 'task_struct.restore_sigmask', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=restore_sigmask;offset=2384\\] \\[oracle:assert=task_struct.restore_sigmask stays within the domain its consumer's agreement governs;assume=producer sets restore_sigmask without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 528,
+  "func": "clear_restore_sigmask",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'clear_restore_sigmask' sets signal field 'task_struct.restore_sigmask', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=restore_sigmask;offset=2384\\] \\[oracle:assert=task_struct.restore_sigmask stays within the domain its consumer's agreement governs;assume=producer sets restore_sigmask without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 542,
+  "func": "test_and_clear_restore_sigmask",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'test_and_clear_restore_sigmask' sets signal field 'task_struct.restore_sigmask', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=restore_sigmask;offset=2384\\] \\[oracle:assert=task_struct.restore_sigmask stays within the domain its consumer's agreement governs;assume=producer sets restore_sigmask without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 622,
+  "func": "sas_ss_reset",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sas_ss_reset' sets signal field 'task_struct.sas_ss_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=sas_ss_size;offset=3320\\] \\[oracle:assert=task_struct.sas_ss_size stays within the domain its consumer's agreement governs;assume=producer sets sas_ss_size without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/sched/signal.h",
+  "line": 623,
+  "func": "sas_ss_reset",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sas_ss_reset' sets signal field 'task_struct.sas_ss_flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=task_struct;field=sas_ss_flags;offset=3328\\] \\[oracle:assert=task_struct.sas_ss_flags stays within the domain its consumer's agreement governs;assume=producer sets sas_ss_flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/seq_file.h",
+  "line": 87,
+  "func": "seq_commit",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'seq_commit' sets signal field 'seq_file.count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=seq_file;field=count;offset=24\\] \\[oracle:assert=seq_file.count stays within the domain its consumer's agreement governs;assume=producer sets count without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/seqlock.h",
+  "line": 78,
+  "func": "__seqcount_init",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__seqcount_init' sets signal field 'seqcount.sequence', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=seqcount;field=sequence;offset=0\\] \\[oracle:assert=seqcount.sequence stays within the domain its consumer's agreement governs;assume=producer sets sequence without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 386,
+  "func": "skb_frag_size_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_frag_size_set' sets signal field 'bio_vec.bv_len', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_len;offset=8\\] \\[oracle:assert=bio_vec.bv_len stays within the domain its consumer's agreement governs;assume=producer sets bv_len without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1139,
+  "func": "skb_dst_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_dst_set' sets signal field '(unnamed class/struct/union)._skb_refdst', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=_skb_refdst;offset=0\\] \\[oracle:assert=(unnamed class/struct/union)._skb_refdst stays within the domain its consumer's agreement governs;assume=producer sets _skb_refdst without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1156,
+  "func": "skb_dst_set_noref",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_dst_set_noref' sets signal field '(unnamed class/struct/union)._skb_refdst', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=_skb_refdst;offset=0\\] \\[oracle:assert=(unnamed class/struct/union)._skb_refdst stays within the domain its consumer's agreement governs;assume=producer sets _skb_refdst without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1433,
+  "func": "skb_clear_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_hash' sets signal field '(unnamed class/struct/union).hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hash;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).hash stays within the domain its consumer's agreement governs;assume=producer sets hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1434,
+  "func": "skb_clear_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_hash' sets signal field '(unnamed class/struct/union).sw_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=sw_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).sw_hash stays within the domain its consumer's agreement governs;assume=producer sets sw_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1435,
+  "func": "skb_clear_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_hash' sets signal field '(unnamed class/struct/union).l4_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=l4_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).l4_hash stays within the domain its consumer's agreement governs;assume=producer sets l4_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1447,
+  "func": "__skb_set_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_set_hash' sets signal field '(unnamed class/struct/union).l4_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=l4_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).l4_hash stays within the domain its consumer's agreement governs;assume=producer sets l4_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1448,
+  "func": "__skb_set_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_set_hash' sets signal field '(unnamed class/struct/union).sw_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=sw_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).sw_hash stays within the domain its consumer's agreement governs;assume=producer sets sw_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1449,
+  "func": "__skb_set_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_set_hash' sets signal field '(unnamed class/struct/union).hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hash;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).hash stays within the domain its consumer's agreement governs;assume=producer sets hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1575,
+  "func": "skb_copy_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_copy_hash' sets signal field '(unnamed class/struct/union).hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hash;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).hash stays within the domain its consumer's agreement governs;assume=producer sets hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1576,
+  "func": "skb_copy_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_copy_hash' sets signal field '(unnamed class/struct/union).sw_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=sw_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).sw_hash stays within the domain its consumer's agreement governs;assume=producer sets sw_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1577,
+  "func": "skb_copy_hash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_copy_hash' sets signal field '(unnamed class/struct/union).l4_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=l4_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).l4_hash stays within the domain its consumer's agreement governs;assume=producer sets l4_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 1584,
+  "func": "skb_copy_decrypted",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_copy_decrypted' sets signal field '(unnamed class/struct/union).decrypted', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=decrypted;offset=4\\] \\[oracle:assert=(unnamed class/struct/union).decrypted stays within the domain its consumer's agreement governs;assume=producer sets decrypted without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 2145,
+  "func": "__skb_queue_head_init",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_queue_head_init' sets signal field 'sk_buff_head.qlen', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sk_buff_head;field=qlen;offset=16\\] \\[oracle:assert=sk_buff_head.qlen stays within the domain its consumer's agreement governs;assume=producer sets qlen without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 2416,
+  "func": "__skb_fill_page_desc_noacc",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_fill_page_desc_noacc' sets signal field 'bio_vec.bv_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_offset;offset=12\\] \\[oracle:assert=bio_vec.bv_offset stays within the domain its consumer's agreement governs;assume=producer sets bv_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 2472,
+  "func": "skb_fill_page_desc",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_fill_page_desc' sets signal field 'skb_shared_info.nr_frags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=skb_shared_info;field=nr_frags;offset=2\\] \\[oracle:assert=skb_shared_info.nr_frags stays within the domain its consumer's agreement governs;assume=producer sets nr_frags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 2493,
+  "func": "skb_fill_page_desc_noacc",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_fill_page_desc_noacc' sets signal field 'skb_shared_info.nr_frags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=skb_shared_info;field=nr_frags;offset=2\\] \\[oracle:assert=skb_shared_info.nr_frags stays within the domain its consumer's agreement governs;assume=producer sets nr_frags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3028,
+  "func": "__skb_set_length",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_set_length' sets signal field 'sk_buff.len', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sk_buff;field=len;offset=112\\] \\[oracle:assert=sk_buff.len stays within the domain its consumer's agreement governs;assume=producer sets len without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3093,
+  "func": "skb_orphan",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_orphan' sets signal field '(unnamed class/struct/union).destructor', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=destructor;offset=8\\] \\[oracle:assert=(unnamed class/struct/union).destructor stays within the domain its consumer's agreement governs;assume=producer sets destructor without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3350,
+  "func": "skb_frag_off_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_frag_off_set' sets signal field 'bio_vec.bv_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_offset;offset=12\\] \\[oracle:assert=bio_vec.bv_offset stays within the domain its consumer's agreement governs;assume=producer sets bv_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3361,
+  "func": "skb_frag_off_copy",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_frag_off_copy' sets signal field 'bio_vec.bv_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=bio_vec;field=bv_offset;offset=12\\] \\[oracle:assert=bio_vec.bv_offset stays within the domain its consumer's agreement governs;assume=producer sets bv_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3668,
+  "func": "skb_add_data",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_add_data' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3740,
+  "func": "__skb_postpull_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_postpull_rcsum' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3744,
+  "func": "__skb_postpull_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_postpull_rcsum' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3761,
+  "func": "skb_postpull_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_postpull_rcsum' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3765,
+  "func": "skb_postpull_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_postpull_rcsum' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3773,
+  "func": "__skb_postpush_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_postpush_rcsum' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3833,
+  "func": "__skb_trim_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_trim_rcsum' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3841,
+  "func": "__skb_grow_rcsum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_grow_rcsum' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4131,
+  "func": "__net_timestamp",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__net_timestamp' sets signal field '(unnamed class/struct/union).tstamp', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=tstamp;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).tstamp stays within the domain its consumer's agreement governs;assume=producer sets tstamp without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4132,
+  "func": "__net_timestamp",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__net_timestamp' sets signal field '(unnamed class/struct/union).mono_delivery_time', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=mono_delivery_time;offset=2\\] \\[oracle:assert=(unnamed class/struct/union).mono_delivery_time stays within the domain its consumer's agreement governs;assume=producer sets mono_delivery_time without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4143,
+  "func": "skb_set_delivery_time",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_delivery_time' sets signal field '(unnamed class/struct/union).tstamp', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=tstamp;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).tstamp stays within the domain its consumer's agreement governs;assume=producer sets tstamp without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4144,
+  "func": "skb_set_delivery_time",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_delivery_time' sets signal field '(unnamed class/struct/union).mono_delivery_time', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=mono_delivery_time;offset=2\\] \\[oracle:assert=(unnamed class/struct/union).mono_delivery_time stays within the domain its consumer's agreement governs;assume=producer sets mono_delivery_time without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4155,
+  "func": "skb_clear_delivery_time",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_delivery_time' sets signal field '(unnamed class/struct/union).mono_delivery_time', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=mono_delivery_time;offset=2\\] \\[oracle:assert=(unnamed class/struct/union).mono_delivery_time stays within the domain its consumer's agreement governs;assume=producer sets mono_delivery_time without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4157,
+  "func": "skb_clear_delivery_time",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_delivery_time' sets signal field '(unnamed class/struct/union).tstamp', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=tstamp;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).tstamp stays within the domain its consumer's agreement governs;assume=producer sets tstamp without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4159,
+  "func": "skb_clear_delivery_time",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_delivery_time' sets signal field '(unnamed class/struct/union).tstamp', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=tstamp;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).tstamp stays within the domain its consumer's agreement governs;assume=producer sets tstamp without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4168,
+  "func": "skb_clear_tstamp",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_clear_tstamp' sets signal field '(unnamed class/struct/union).tstamp', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=tstamp;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).tstamp stays within the domain its consumer's agreement governs;assume=producer sets tstamp without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4377,
+  "func": "__skb_decr_checksum_unnecessary",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_decr_checksum_unnecessary' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4389,
+  "func": "__skb_incr_checksum_unnecessary",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_incr_checksum_unnecessary' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4390,
+  "func": "__skb_incr_checksum_unnecessary",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_incr_checksum_unnecessary' sets signal field '(unnamed class/struct/union).csum_level', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum_level;offset=2\\] \\[oracle:assert=(unnamed class/struct/union).csum_level stays within the domain its consumer's agreement governs;assume=producer sets csum_level without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4397,
+  "func": "__skb_reset_checksum_unnecessary",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_reset_checksum_unnecessary' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4398,
+  "func": "__skb_reset_checksum_unnecessary",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_reset_checksum_unnecessary' sets signal field '(unnamed class/struct/union).csum_level', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum_level;offset=2\\] \\[oracle:assert=(unnamed class/struct/union).csum_level stays within the domain its consumer's agreement governs;assume=producer sets csum_level without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4434,
+  "func": "skb_checksum_complete_unset",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_checksum_complete_unset' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4457,
+  "func": "__skb_checksum_validate_complete",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_checksum_validate_complete' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4519,
+  "func": "__skb_checksum_convert",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_checksum_convert' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4520,
+  "func": "__skb_checksum_convert",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_checksum_convert' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4532,
+  "func": "skb_remcsum_adjust_partial",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_remcsum_adjust_partial' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4560,
+  "func": "skb_remcsum_process",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_remcsum_process' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4642,
+  "func": "__skb_ext_copy",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_ext_copy' sets signal field 'sk_buff.active_extensions', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sk_buff;field=active_extensions;offset=127\\] \\[oracle:assert=sk_buff.active_extensions stays within the domain its consumer's agreement governs;assume=producer sets active_extensions without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4689,
+  "func": "skb_ext_reset",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_ext_reset' sets signal field 'sk_buff.active_extensions', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sk_buff;field=active_extensions;offset=127\\] \\[oracle:assert=sk_buff.active_extensions stays within the domain its consumer's agreement governs;assume=producer sets active_extensions without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4930,
+  "func": "skb_gso_reset",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_gso_reset' sets signal field 'skb_shared_info.gso_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=skb_shared_info;field=gso_size;offset=4\\] \\[oracle:assert=skb_shared_info.gso_size stays within the domain its consumer's agreement governs;assume=producer sets gso_size without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4932,
+  "func": "skb_gso_reset",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_gso_reset' sets signal field 'skb_shared_info.gso_type', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=skb_shared_info;field=gso_type;offset=24\\] \\[oracle:assert=skb_shared_info.gso_type stays within the domain its consumer's agreement governs;assume=producer sets gso_type without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 4971,
+  "func": "skb_forward_csum",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_forward_csum' sets signal field '(unnamed class/struct/union).ip_summed', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=ip_summed;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).ip_summed stays within the domain its consumer's agreement governs;assume=producer sets ip_summed without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 5042,
+  "func": "skb_set_redirected",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_redirected' sets signal field '(unnamed class/struct/union).from_ingress', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=from_ingress;offset=3\\] \\[oracle:assert=(unnamed class/struct/union).from_ingress stays within the domain its consumer's agreement governs;assume=producer sets from_ingress without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/time64.h",
+  "line": 161,
+  "func": "timespec64_add_ns",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'timespec64_add_ns' sets signal field 'timespec64.tv_nsec', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=timespec64;field=tv_nsec;offset=8\\] \\[oracle:assert=timespec64.tv_nsec stays within the domain its consumer's agreement governs;assume=producer sets tv_nsec without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/uio.h",
+  "line": 288,
+  "func": "iov_iter_truncate",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'iov_iter_truncate' sets signal field 'iov_iter.count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=iov_iter;field=count;offset=16\\] \\[oracle:assert=iov_iter.count stays within the domain its consumer's agreement governs;assume=producer sets count without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/uio.h",
+  "line": 297,
+  "func": "iov_iter_reexpand",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'iov_iter_reexpand' sets signal field 'iov_iter.count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=iov_iter;field=count;offset=16\\] \\[oracle:assert=iov_iter.count stays within the domain its consumer's agreement governs;assume=producer sets count without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/wait.h",
+  "line": 84,
+  "func": "init_waitqueue_entry",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'init_waitqueue_entry' sets signal field 'wait_queue_entry.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=wait_queue_entry;field=flags;offset=0\\] \\[oracle:assert=wait_queue_entry.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/wait.h",
+  "line": 92,
+  "func": "init_waitqueue_func_entry",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'init_waitqueue_func_entry' sets signal field 'wait_queue_entry.flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=wait_queue_entry;field=flags;offset=0\\] \\[oracle:assert=wait_queue_entry.flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1598,
+  "func": "xas_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_set' sets signal field 'xa_state.xa_index', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xa_state;field=xa_index;offset=8\\] \\[oracle:assert=xa_state.xa_index stays within the domain its consumer's agreement governs;assume=producer sets xa_index without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1616,
+  "func": "xas_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_advance' sets signal field 'xa_state.xa_index', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xa_state;field=xa_index;offset=8\\] \\[oracle:assert=xa_state.xa_index stays within the domain its consumer's agreement governs;assume=producer sets xa_index without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1617,
+  "func": "xas_advance",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_advance' sets signal field 'xa_state.xa_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xa_state;field=xa_offset;offset=18\\] \\[oracle:assert=xa_state.xa_offset stays within the domain its consumer's agreement governs;assume=producer sets xa_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1630,
+  "func": "xas_set_order",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_set_order' sets signal field 'xa_state.xa_index', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xa_state;field=xa_index;offset=8\\] \\[oracle:assert=xa_state.xa_index stays within the domain its consumer's agreement governs;assume=producer sets xa_index without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1737,
+  "func": "xas_next_marked",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_next_marked' sets signal field 'xa_state.xa_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xa_state;field=xa_offset;offset=18\\] \\[oracle:assert=xa_state.xa_offset stays within the domain its consumer's agreement governs;assume=producer sets xa_offset without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/linux/xarray.h",
+  "line": 1738,
+  "func": "xas_next_marked",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_next_marked' sets signal field 'xa_state.xa_index', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xa_state;field=xa_index;offset=8\\] \\[oracle:assert=xa_state.xa_index stays within the domain its consumer's agreement governs;assume=producer sets xa_index without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/dst.h",
+  "line": 238,
+  "func": "dst_use_noref",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'dst_use_noref' sets signal field 'dst_entry.lastuse', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=dst_entry;field=lastuse;offset=72\\] \\[oracle:assert=dst_entry.lastuse stays within the domain its consumer's agreement governs;assume=producer sets lastuse without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/dst.h",
+  "line": 269,
+  "func": "skb_dst_drop",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_dst_drop' sets signal field '(unnamed class/struct/union)._skb_refdst', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=_skb_refdst;offset=0\\] \\[oracle:assert=(unnamed class/struct/union)._skb_refdst stays within the domain its consumer's agreement governs;assume=producer sets _skb_refdst without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/dst.h",
+  "line": 276,
+  "func": "__skb_dst_copy",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__skb_dst_copy' sets signal field '(unnamed class/struct/union)._skb_refdst', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=_skb_refdst;offset=0\\] \\[oracle:assert=(unnamed class/struct/union)._skb_refdst stays within the domain its consumer's agreement governs;assume=producer sets _skb_refdst without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/dst.h",
+  "line": 314,
+  "func": "skb_dst_force",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_dst_force' sets signal field '(unnamed class/struct/union)._skb_refdst', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=_skb_refdst;offset=0\\] \\[oracle:assert=(unnamed class/struct/union)._skb_refdst stays within the domain its consumer's agreement governs;assume=producer sets _skb_refdst without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/dst.h",
+  "line": 434,
+  "func": "dst_set_expires",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'dst_set_expires' sets signal field 'dst_entry.expires', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=dst_entry;field=expires;offset=24\\] \\[oracle:assert=dst_entry.expires stays within the domain its consumer's agreement governs;assume=producer sets expires without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/netlink.h",
+  "line": 1017,
+  "func": "nlmsg_end",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'nlmsg_end' sets signal field 'nlmsghdr.nlmsg_len', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=nlmsghdr;field=nlmsg_len;offset=0\\] \\[oracle:assert=nlmsghdr.nlmsg_len stays within the domain its consumer's agreement governs;assume=producer sets nlmsg_len without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/netlink.h",
+  "line": 1140,
+  "func": "nl_dump_check_consistent",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'nl_dump_check_consistent' sets signal field 'netlink_callback.prev_seq', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=netlink_callback;field=prev_seq;offset=64\\] \\[oracle:assert=netlink_callback.prev_seq stays within the domain its consumer's agreement governs;assume=producer sets prev_seq without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 967,
+  "func": "sock_copy_flags",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sock_copy_flags' sets signal field '(unnamed class/struct/union).skc_flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=skc_flags;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).skc_flags stays within the domain its consumer's agreement governs;assume=producer sets skc_flags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1165,
+  "func": "sock_rps_save_rxhash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sock_rps_save_rxhash' sets signal field '(unnamed class/struct/union).skc_rxhash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=skc_rxhash;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).skc_rxhash stays within the domain its consumer's agreement governs;assume=producer sets skc_rxhash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1172,
+  "func": "sock_rps_reset_rxhash",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sock_rps_reset_rxhash' sets signal field '(unnamed class/struct/union).skc_rxhash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=skc_rxhash;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).skc_rxhash stays within the domain its consumer's agreement governs;assume=producer sets skc_rxhash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1650,
+  "func": "sk_mem_reclaim_final",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sk_mem_reclaim_final' sets signal field 'sock.sk_reserved_mem', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock;field=sk_reserved_mem;offset=596\\] \\[oracle:assert=sock.sk_reserved_mem stays within the domain its consumer's agreement governs;assume=producer sets sk_reserved_mem without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1989,
+  "func": "sk_tx_queue_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sk_tx_queue_set' sets signal field 'sock_common.skc_tx_queue_mapping', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock_common;field=skc_tx_queue_mapping;offset=120\\] \\[oracle:assert=sock_common.skc_tx_queue_mapping stays within the domain its consumer's agreement governs;assume=producer sets skc_tx_queue_mapping without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 1996,
+  "func": "sk_tx_queue_clear",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sk_tx_queue_clear' sets signal field 'sock_common.skc_tx_queue_mapping', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock_common;field=skc_tx_queue_mapping;offset=120\\] \\[oracle:assert=sock_common.skc_tx_queue_mapping stays within the domain its consumer's agreement governs;assume=producer sets skc_tx_queue_mapping without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2151,
+  "func": "__dst_negative_advice",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__dst_negative_advice' sets signal field 'sock.sk_dst_pending_confirm', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock;field=sk_dst_pending_confirm;offset=792\\] \\[oracle:assert=sock.sk_dst_pending_confirm stays within the domain its consumer's agreement governs;assume=producer sets sk_dst_pending_confirm without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2168,
+  "func": "__sk_dst_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): '__sk_dst_set' sets signal field 'sock.sk_dst_pending_confirm', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock;field=sk_dst_pending_confirm;offset=792\\] \\[oracle:assert=sock.sk_dst_pending_confirm stays within the domain its consumer's agreement governs;assume=producer sets sk_dst_pending_confirm without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2181,
+  "func": "sk_dst_set",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'sk_dst_set' sets signal field 'sock.sk_dst_pending_confirm', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock;field=sk_dst_pending_confirm;offset=792\\] \\[oracle:assert=sock.sk_dst_pending_confirm stays within the domain its consumer's agreement governs;assume=producer sets sk_dst_pending_confirm without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2242,
+  "func": "skb_do_copy_data_nocache",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_do_copy_data_nocache' sets signal field '(unnamed class/struct/union).csum', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=csum;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).csum stays within the domain its consumer's agreement governs;assume=producer sets csum without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2380,
+  "func": "skb_set_hash_from_sk",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_hash_from_sk' sets signal field '(unnamed class/struct/union).l4_hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=l4_hash;offset=1\\] \\[oracle:assert=(unnamed class/struct/union).l4_hash stays within the domain its consumer's agreement governs;assume=producer sets l4_hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2381,
+  "func": "skb_set_hash_from_sk",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_hash_from_sk' sets signal field '(unnamed class/struct/union).hash', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=hash;offset=0\\] \\[oracle:assert=(unnamed class/struct/union).hash stays within the domain its consumer's agreement governs;assume=producer sets hash without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2399,
+  "func": "skb_set_owner_r",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_owner_r' sets signal field '(unnamed class/struct/union).destructor', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=destructor;offset=8\\] \\[oracle:assert=(unnamed class/struct/union).destructor stays within the domain its consumer's agreement governs;assume=producer sets destructor without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2408,
+  "func": "skb_set_owner_sk_safe",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_set_owner_sk_safe' sets signal field '(unnamed class/struct/union).destructor', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=destructor;offset=8\\] \\[oracle:assert=(unnamed class/struct/union).destructor stays within the domain its consumer's agreement governs;assume=producer sets destructor without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/sock.h",
+  "line": 2820,
+  "func": "skb_steal_sock",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_steal_sock' sets signal field '(unnamed class/struct/union).destructor', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=(unnamed class/struct/union);field=destructor;offset=8\\] \\[oracle:assert=(unnamed class/struct/union).destructor stays within the domain its consumer's agreement governs;assume=producer sets destructor without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/xdp.h",
+  "line": 120,
+  "func": "xdp_init_buff",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xdp_init_buff' sets signal field 'xdp_buff.frame_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xdp_buff;field=frame_sz;offset=48\\] \\[oracle:assert=xdp_buff.frame_sz stays within the domain its consumer's agreement governs;assume=producer sets frame_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/xdp.h",
+  "line": 231,
+  "func": "xdp_update_skb_shared_info",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xdp_update_skb_shared_info' sets signal field 'skb_shared_info.nr_frags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=skb_shared_info;field=nr_frags;offset=2\\] \\[oracle:assert=skb_shared_info.nr_frags stays within the domain its consumer's agreement governs;assume=producer sets nr_frags without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "./include/net/xdp.h",
+  "line": 259,
+  "func": "xdp_convert_frame_to_buff",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'xdp_convert_frame_to_buff' sets signal field 'xdp_buff.frame_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=xdp_buff;field=frame_sz;offset=48\\] \\[oracle:assert=xdp_buff.frame_sz stays within the domain its consumer's agreement governs;assume=producer sets frame_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 146,
+  "func": "psmgr_compute_token",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_compute_token' sets signal field 'psmgr_desc.token', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_desc;field=token;offset=128\\] \\[oracle:assert=psmgr_desc.token stays within the domain its consumer's agreement governs;assume=producer sets token without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 317,
+  "func": "psmgr_process_ctrl",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_process_ctrl' sets signal field 'psmgr_session.next_seq', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=next_seq;offset=12\\] \\[oracle:assert=psmgr_session.next_seq stays within the domain its consumer's agreement governs;assume=producer sets next_seq without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 322,
+  "func": "psmgr_process_ctrl",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_process_ctrl' sets signal field 'psmgr_session.paused', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=paused;offset=7\\] \\[oracle:assert=psmgr_session.paused stays within the domain its consumer's agreement governs;assume=producer sets paused without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 326,
+  "func": "psmgr_process_ctrl",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_process_ctrl' sets signal field 'psmgr_session.paused', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=paused;offset=7\\] \\[oracle:assert=psmgr_session.paused stays within the domain its consumer's agreement governs;assume=producer sets paused without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 372,
+  "func": "psmgr_process_commit_req",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_process_commit_req' sets signal field 'psmgr_desc.handler', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_desc;field=handler;offset=136\\] \\[oracle:assert=psmgr_desc.handler stays within the domain its consumer's agreement governs;assume=producer sets handler without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 377,
+  "func": "psmgr_process_commit_req",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_process_commit_req' sets signal field 'psmgr_desc.write_count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_desc;field=write_count;offset=132\\] \\[oracle:assert=psmgr_desc.write_count stays within the domain its consumer's agreement governs;assume=producer sets write_count without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 485,
+  "func": "psmgr_sendmsg",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_sendmsg' sets signal field 'psmgr_proc_ctx.window_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=window_sz;offset=2\\] \\[oracle:assert=psmgr_proc_ctx.window_sz stays within the domain its consumer's agreement governs;assume=producer sets window_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 172,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'sock_common.skc_family', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=sock_common;field=skc_family;offset=16\\] \\[oracle:assert=sock_common.skc_family stays within the domain its consumer's agreement governs;assume=producer sets skc_family without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 175,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'socket.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=socket;field=state;offset=0\\] \\[oracle:assert=socket.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 187,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'psmgr_session.session_id', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=session_id;offset=0\\] \\[oracle:assert=psmgr_session.session_id stays within the domain its consumer's agreement governs;assume=producer sets session_id without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 188,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 189,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'psmgr_session.role', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=role;offset=5\\] \\[oracle:assert=psmgr_session.role stays within the domain its consumer's agreement governs;assume=producer sets role without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 190,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 191,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'psmgr_session.paused', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=paused;offset=7\\] \\[oracle:assert=psmgr_session.paused stays within the domain its consumer's agreement governs;assume=producer sets paused without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 192,
+  "func": "psmgr_create",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_create' sets signal field 'psmgr_session.next_seq', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=next_seq;offset=12\\] \\[oracle:assert=psmgr_session.next_seq stays within the domain its consumer's agreement governs;assume=producer sets next_seq without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 257,
+  "func": "psmgr_release",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_release' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 258,
+  "func": "psmgr_release",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_release' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 316,
+  "func": "psmgr_bind",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_bind' sets signal field 'socket.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=socket;field=state;offset=0\\] \\[oracle:assert=socket.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 419,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_proc_ctx.window_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=window_sz;offset=2\\] \\[oracle:assert=psmgr_proc_ctx.window_sz stays within the domain its consumer's agreement governs;assume=producer sets window_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 427,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 428,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 429,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 430,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 447,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_proc_ctx.window_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=window_sz;offset=2\\] \\[oracle:assert=psmgr_proc_ctx.window_sz stays within the domain its consumer's agreement governs;assume=producer sets window_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 455,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 456,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 457,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 458,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 474,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 475,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 476,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 477,
+  "func": "psmgr_connect",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_connect' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 533,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.role', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=role;offset=5\\] \\[oracle:assert=psmgr_session.role stays within the domain its consumer's agreement governs;assume=producer sets role without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 535,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 542,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 545,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 568,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_proc_ctx.xfrm_type', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=xfrm_type;offset=0\\] \\[oracle:assert=psmgr_proc_ctx.xfrm_type stays within the domain its consumer's agreement governs;assume=producer sets xfrm_type without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 569,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 591,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 627,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_proc_ctx.xfrm_type', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=xfrm_type;offset=0\\] \\[oracle:assert=psmgr_proc_ctx.xfrm_type stays within the domain its consumer's agreement governs;assume=producer sets xfrm_type without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 629,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_proc_ctx.window_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=window_sz;offset=2\\] \\[oracle:assert=psmgr_proc_ctx.window_sz stays within the domain its consumer's agreement governs;assume=producer sets window_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 631,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.validated', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=validated;offset=6\\] \\[oracle:assert=psmgr_session.validated stays within the domain its consumer's agreement governs;assume=producer sets validated without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 632,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=state;offset=4\\] \\[oracle:assert=psmgr_session.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 650,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_proc_ctx.window_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=window_sz;offset=2\\] \\[oracle:assert=psmgr_proc_ctx.window_sz stays within the domain its consumer's agreement governs;assume=producer sets window_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 654,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_proc_ctx.window_sz', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_proc_ctx;field=window_sz;offset=2\\] \\[oracle:assert=psmgr_proc_ctx.window_sz stays within the domain its consumer's agreement governs;assume=producer sets window_sz without enforcing the consumer's cross-field invariant\\]"
+ },
+ {
+  "file": "net/psmgr/psmgr_sock.c",
+  "line": 684,
+  "func": "psmgr_setsockopt",
+  "callee": "",
+  "detail": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_setsockopt' sets signal field 'psmgr_session.next_seq', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. \\[mechanism:unchecked-signal-field-set;indicates=WMI-1\\] \\[mem:struct=psmgr_session;field=next_seq;offset=12\\] \\[oracle:assert=psmgr_session.next_seq stays within the domain its consumer's agreement governs;assume=producer sets next_seq without enforcing the consumer's cross-field invariant\\]"
+ }
+]

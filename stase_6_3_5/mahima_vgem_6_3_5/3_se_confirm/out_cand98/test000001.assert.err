@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: (unsigned long)desc_count * DESC_SZ <= desc_buf_size
+File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand98_wmi2.c
+Line: 13
+assembly.ll line: 35
+State: 2
+Stack: 
+	#000000035 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand98_wmi2.c:13

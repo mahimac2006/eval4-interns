@@ -1,0 +1,75 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "dmamove_run_descs",
+  "target_file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "target_line": 591,
+  "target_cwe": "CWE-787",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "gep_variable_index",
+    "enclosing": "dmamove_run_descs"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+      "line": 591,
+      "func": "dmamove_run_descs",
+      "callee": "gep_variable_index"
+    }
+  ],
+  "trigger_api": "dmamove_ioctl",
+  "trigger_candidates": [
+    "dmamove_ioctl",
+    "dmamove_ioctl_exec"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "dmamove_ioctl:arg0",
+    "dmamove_ioctl:arg1",
+    "dmamove_ioctl:arg2",
+    "dmamove_ioctl_exec:arg0",
+    "dmamove_ioctl_exec:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "dmamove_ioctl",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "dmamove_ioctl",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "dmamove_ioctl",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "dmamove_ioctl_exec",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "dmamove_ioctl_exec",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "dmamove_ioctl",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "0 <= {dmamove_run_descs:%63} < sizeof({dmamove_run_descs:%61})"
+  ],
+  "concrete_params": []
+}

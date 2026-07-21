@@ -1,0 +1,95 @@
+{
+  "operation": {
+    "name": "copyMem_at_pipeline_open",
+    "parameters": [
+      "int job_count"
+    ],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_7756b3af",
+        "arguments": {
+          "destinations": [
+            "file.private_data@456"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun job_count () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  (_ bv0 32) (concat  (select  job_count (_ bv3 32) ) (concat  (select  job_count (_ bv2 32) ) (concat  (select  job_count (_ bv1 32) ) (select  job_count (_ bv0 32) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 293
+      }
+    ]
+  },
+  "trigger": {
+    "function": "pipeline_open",
+    "file": "vgem_pipeline.c",
+    "args": []
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ pipeline_open",
+  "metadata": {
+    "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "mechanism": "allocated-content-into-field",
+        "indicates": "WMI-3",
+        "file": "vgem_pipeline.c",
+        "line": 98
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_pipeline.c",
+      "line": 98,
+      "function": "pipeline_open"
+    },
+    "memory_layout": [
+      {
+        "name": "file.private_data@456",
+        "locations": [
+          {
+            "offset": 456,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "file.private_data@456",
+      "symbol": "pipeline_open"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "assertion": "private_data holds trusted, not attacker-determined, content",
+        "assumptions": [
+          "externally-originated content installed into the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "file.private_data@456",
+      "sa": "file.private_data@456",
+      "code": "file.private_data"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

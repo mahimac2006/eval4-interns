@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_release",
+  "target_file": "psmgr_sock.c",
+  "target_line": 245,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'lock' read through pointer of type psmgr_session in psmgr_release(). This type is freed in psmgr_create() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'lock' read through pointer of type psmgr_session in psmgr_release(). This type is freed in psmgr_session_put() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_release"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_sock.c",
+      "line": 245,
+      "func": "psmgr_release",
+      "callee": ""
+    }
+  ]
+}

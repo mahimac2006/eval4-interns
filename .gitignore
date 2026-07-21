@@ -1,0 +1,8 @@
+eval4_buildroot/
+eval4_linux/
+eval4_*/
+__pycache__/
+*.pyc
+
+# keep the pipeline scripts locally but exclude them from the repo
+stase_6_3_5/_tools/

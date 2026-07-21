@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "postproc_job_submit",
+  "target_file": "vgem_postproc.c",
+  "target_line": 425,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'lock' read through pointer of type postproc_ctx in postproc_job_submit(). This type is freed in vgem_postproc_ctx_free() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_job_submit"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 425,
+      "func": "postproc_job_submit",
+      "callee": ""
+    }
+  ]
+}

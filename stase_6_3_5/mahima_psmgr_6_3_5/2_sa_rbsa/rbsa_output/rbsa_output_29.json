@@ -1,0 +1,70 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "psmgr_handler_reduce",
+  "target_file": "net/psmgr/psmgr_pipeline.c",
+  "target_line": 52,
+  "target_cwe": "CWE-190",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_handler_reduce"
+  },
+  "discovered_sinks": [
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 52,
+      "func": "psmgr_handler_reduce",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "psmgr_setsockopt",
+  "trigger_candidates": [
+    "psmgr_setsockopt"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "psmgr_setsockopt:arg0",
+    "psmgr_setsockopt:arg1",
+    "psmgr_setsockopt:arg2",
+    "psmgr_setsockopt:arg5"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg5",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "psmgr_setsockopt",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "{psmgr_handler_reduce:%0} + {val_2065} <= TYPE_MAX"
+  ],
+  "concrete_params": []
+}

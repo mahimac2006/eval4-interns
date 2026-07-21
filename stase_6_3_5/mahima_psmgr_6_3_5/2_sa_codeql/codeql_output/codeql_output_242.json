@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_create",
+  "target_file": "psmgr_sock.c",
+  "target_line": 199,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'nonce' read through pointer of type psmgr_session in psmgr_create(). This type is freed in psmgr_session_put() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_create"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_sock.c",
+      "line": 199,
+      "func": "psmgr_create",
+      "callee": ""
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+(set-logic QF_AUFBV )
+(declare-fun copy_len () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun out_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun payload_len () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun write_limit () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  write_limit (_ bv3 32) ) (concat  (select  write_limit (_ bv2 32) ) (concat  (select  write_limit (_ bv1 32) ) (select  write_limit (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  out_offset (_ bv3 32) ) (concat  (select  out_offset (_ bv2 32) ) (concat  (select  out_offset (_ bv1 32) ) (select  out_offset (_ bv0 32) ) ) ) ) ) (?B3 (concat  (select  copy_len (_ bv3 32) ) (concat  (select  copy_len (_ bv2 32) ) (concat  (select  copy_len (_ bv1 32) ) (select  copy_len (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (and  (bvule  ?B3 (concat  (select  payload_len (_ bv3 32) ) (concat  (select  payload_len (_ bv2 32) ) (concat  (select  payload_len (_ bv1 32) ) (select  payload_len (_ bv0 32) ) ) ) ) ) (bvult  ?B2 ?B1 ) ) (bvule  ?B3 (bvsub  ?B1 ?B2 ) ) ) (bvult  (_ bv0 32) ?B3 ) ) (bvule  (bvadd  ?B2 ?B3 ) (_ bv128 32) ) ) ) )
+(check-sat)
+(exit)

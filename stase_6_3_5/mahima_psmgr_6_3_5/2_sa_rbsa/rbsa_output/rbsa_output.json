@@ -1,0 +1,544 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "psmgr_sendmsg",
+  "target_file": "net/psmgr/psmgr_pipeline.c",
+  "target_line": 518,
+  "target_cwe": "CWE-416",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_sendmsg"
+  },
+  "discovered_sinks": [
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 518,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 528,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 561,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 70,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 71,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 218,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 518,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 528,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 561,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 71,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 218,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 179,
+      "func": "psmgr_create",
+      "callee": "allocate_chunk"
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 183,
+      "func": "psmgr_create",
+      "callee": "allocate_chunk"
+    },
+    {
+      "file": "./include/net/netns/generic.h",
+      "line": 47,
+      "func": "net_generic",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr.h",
+      "line": 237,
+      "func": "psmgr_session_bucket",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 45,
+      "func": "psmgr_handler_verify",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 53,
+      "func": "psmgr_handler_reduce",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 59,
+      "func": "psmgr_handler_flush",
+      "callee": "memory_intrinsic"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 281,
+      "func": "psmgr_process_data",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 372,
+      "func": "psmgr_process_commit_req",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/linux/slab.h",
+      "line": 581,
+      "func": "kzalloc",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/asm-generic/bitops/generic-non-atomic.h",
+      "line": 31,
+      "func": "sock_set_flag",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/asm-generic/bitops/instrumented-non-atomic.h",
+      "line": 28,
+      "func": "sock_set_flag",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/linux/sockptr.h",
+      "line": 48,
+      "func": "copy_from_sockptr_offset",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/linux/sockptr.h",
+      "line": 49,
+      "func": "copy_from_sockptr_offset",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 225,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 44,
+      "func": "psmgr_handler_verify",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 45,
+      "func": "psmgr_handler_verify",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 52,
+      "func": "psmgr_handler_reduce",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 53,
+      "func": "psmgr_handler_reduce",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 79,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 94,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 97,
+      "func": "psmgr_check_seq",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 110,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 111,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 112,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 118,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 119,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 124,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 125,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 126,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 132,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 133,
+      "func": "compute_out_offset",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 168,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 269,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 285,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 286,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 339,
+      "func": "psmgr_process_ctrl",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 380,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 445,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 545,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 623,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "./include/linux/refcount.h",
+      "line": 200,
+      "func": "__refcount_add",
+      "callee": ""
+    },
+    {
+      "file": "./arch/x86/include/asm/atomic.h",
+      "line": 165,
+      "func": "psmgr_session_alloc_id",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 274,
+      "func": "psmgr_process_data",
+      "callee": ""
+    },
+    {
+      "file": "./include/linux/refcount.h",
+      "line": 282,
+      "func": "__refcount_sub_and_test",
+      "callee": ""
+    },
+    {
+      "file": "./include/net/netns/generic.h",
+      "line": 47,
+      "func": "net_generic",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 45,
+      "func": "psmgr_handler_verify",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 53,
+      "func": "psmgr_handler_reduce",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 281,
+      "func": "psmgr_process_data",
+      "callee": "memory_intrinsic"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 372,
+      "func": "psmgr_process_commit_req",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/linux/slab.h",
+      "line": 581,
+      "func": "kzalloc",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "./include/linux/sockptr.h",
+      "line": 49,
+      "func": "copy_from_sockptr_offset",
+      "callee": "memory_intrinsic"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 53,
+      "func": "psmgr_handler_reduce",
+      "callee": "gep_variable_index"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 59,
+      "func": "psmgr_handler_flush",
+      "callee": "memory_intrinsic"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 281,
+      "func": "psmgr_process_data",
+      "callee": "memory_intrinsic"
+    },
+    {
+      "file": "./include/linux/sockptr.h",
+      "line": 49,
+      "func": "copy_from_sockptr_offset",
+      "callee": "memory_intrinsic"
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 518,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 528,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 561,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 70,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 71,
+      "func": "psmgr_session_put",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 218,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "./include/linux/uaccess.h",
+      "line": 169,
+      "func": "psmgr_getsockopt",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 644,
+      "func": "psmgr_exec",
+      "callee": ""
+    },
+    {
+      "file": "./include/linux/poll.h",
+      "line": 49,
+      "func": "poll_wait",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr.h",
+      "line": 231,
+      "func": "psmgr_net",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 60,
+      "func": "psmgr_session_lookup",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 179,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 183,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 183,
+      "func": "psmgr_create",
+      "callee": ""
+    },
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 205,
+      "func": "psmgr_create",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "psmgr_sendmsg",
+  "trigger_candidates": [
+    "psmgr_sendmsg"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "psmgr_sendmsg:arg0",
+    "psmgr_sendmsg:arg2"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_sendmsg",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_sendmsg",
+      "name": "arg2",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "psmgr_sendmsg",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "!freed({psmgr_sendmsg:%224}) before access"
+  ],
+  "concrete_params": []
+}

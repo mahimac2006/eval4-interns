@@ -1,0 +1,10 @@
+array desc_count[4] : w32 -> w8 = symbolic
+array pixel_size[8] : w32 -> w8 = symbolic
+(query [(Eq N0:(ReadLSB w32 0 desc_count)
+             (Extract w32 0 N1:(UDiv w64 (Add w64 4095
+                                                  (ReadLSB w64 0 pixel_size))
+                                         4096)))
+         (Ule N0 1024)
+         (Eq false
+             (Eq N1 (ZExt w64 N0)))]
+        false)

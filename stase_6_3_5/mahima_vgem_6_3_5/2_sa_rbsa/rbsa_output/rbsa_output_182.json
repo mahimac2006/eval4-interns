@@ -1,0 +1,62 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "postproc_ioctl",
+  "target_file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "target_line": 742,
+  "target_cwe": "CWE-843",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_ioctl"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+      "line": 742,
+      "func": "postproc_ioctl",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "postproc_ioctl",
+  "trigger_candidates": [
+    "postproc_ioctl"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "postproc_ioctl:arg0",
+    "postproc_ioctl:arg1",
+    "postproc_ioctl:arg2"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "postproc_ioctl",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "postproc_ioctl",
+      "name": "arg2",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "postproc_ioctl",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "ASSERT({postproc_ioctl:%2})"
+  ],
+  "concrete_params": []
+}

@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "pipeline_release",
+  "target_file": "vgem_pipeline.c",
+  "target_line": 112,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'file.private_data' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:field-reinterpreted-as-2-types;indicates=WMI-2] [mem:struct=file;field=private_data;offset=456] [oracle:assert=file.private_data is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": "pipeline_release"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_pipeline.c",
+      "line": 112,
+      "func": "pipeline_release",
+      "callee": ""
+    }
+  ]
+}

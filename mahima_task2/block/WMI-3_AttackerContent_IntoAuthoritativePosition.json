@@ -1,0 +1,2172 @@
+[
+ {
+  "file": "./include/linux/backing-dev.h",
+  "line": 298,
+  "func": "unlocked_inode_to_wb_begin",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'wb_lock_cookie.flags' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=wb_lock_cookie;field=flags;offset=8\\] \\[oracle:assert=flags holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 294,
+  "func": "bio_first_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter.folio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=folio;offset=0\\] \\[oracle:assert=folio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 295,
+  "func": "bio_first_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter.offset' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=offset;offset=8\\] \\[oracle:assert=offset holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 298,
+  "func": "bio_first_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter.length' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=length;offset=16\\] \\[oracle:assert=length holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 299,
+  "func": "bio_first_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter._next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=_next;offset=24\\] \\[oracle:assert=_next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 307,
+  "func": "bio_next_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter.folio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=folio;offset=0\\] \\[oracle:assert=folio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 309,
+  "func": "bio_next_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter.length' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=length;offset=16\\] \\[oracle:assert=length holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 310,
+  "func": "bio_next_folio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'folio_iter._next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=folio_iter;field=_next;offset=24\\] \\[oracle:assert=_next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 562,
+  "func": "bio_list_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.head' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=head;offset=0\\] \\[oracle:assert=head holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 595,
+  "func": "bio_list_add_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio.bi_next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio;field=bi_next;offset=0\\] \\[oracle:assert=bi_next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 609,
+  "func": "bio_list_merge",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio.bi_next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio;field=bi_next;offset=0\\] \\[oracle:assert=bi_next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 611,
+  "func": "bio_list_merge",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.head' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=head;offset=0\\] \\[oracle:assert=head holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 613,
+  "func": "bio_list_merge",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.tail' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=tail;offset=8\\] \\[oracle:assert=tail holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 623,
+  "func": "bio_list_merge_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio.bi_next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio;field=bi_next;offset=0\\] \\[oracle:assert=bi_next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 625,
+  "func": "bio_list_merge_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.tail' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=tail;offset=8\\] \\[oracle:assert=tail holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 627,
+  "func": "bio_list_merge_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.head' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=head;offset=0\\] \\[oracle:assert=head holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 640,
+  "func": "bio_list_pop",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.head' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=head;offset=0\\] \\[oracle:assert=head holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bio.h",
+  "line": 654,
+  "func": "bio_list_get",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_list.head' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_list;field=head;offset=0\\] \\[oracle:assert=head holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/blk-mq.h",
+  "line": 960,
+  "func": "blk_rq_bio_prep",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'request.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=request;field=bio;offset=56\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/buffer_head.h",
+  "line": 364,
+  "func": "map_bh",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'buffer_head.b_bdev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=buffer_head;field=b_bdev;offset=48\\] \\[oracle:assert=b_bdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/bvec.h",
+  "line": 213,
+  "func": "bvec_advance",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_vec.bv_page' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_vec;field=bv_page;offset=0\\] \\[oracle:assert=bv_page holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/filter.h",
+  "line": 684,
+  "func": "bpf_compute_data_pointers",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bpf_skb_data_end.data_meta' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bpf_skb_data_end;field=data_meta;offset=32\\] \\[oracle:assert=data_meta holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/filter.h",
+  "line": 685,
+  "func": "bpf_compute_data_pointers",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bpf_skb_data_end.data_end' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bpf_skb_data_end;field=data_end;offset=40\\] \\[oracle:assert=data_end holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/filter.h",
+  "line": 697,
+  "func": "bpf_compute_and_save_data_end",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bpf_skb_data_end.data_end' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bpf_skb_data_end;field=data_end;offset=40\\] \\[oracle:assert=data_end holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/libata.h",
+  "line": 1805,
+  "func": "ata_tf_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ata_taskfile.ctl' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ata_taskfile;field=ctl;offset=9\\] \\[oracle:assert=ctl holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 244,
+  "func": "list_replace",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 246,
+  "func": "list_replace",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.prev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=prev;offset=8\\] \\[oracle:assert=prev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 327,
+  "func": "list_bulk_move_tail",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 328,
+  "func": "list_bulk_move_tail",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.prev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=prev;offset=8\\] \\[oracle:assert=prev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 331,
+  "func": "list_bulk_move_tail",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.prev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=prev;offset=8\\] \\[oracle:assert=prev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 458,
+  "func": "__list_cut_position",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 515,
+  "func": "list_cut_before",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 517,
+  "func": "list_cut_before",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.prev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=prev;offset=8\\] \\[oracle:assert=prev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 1071,
+  "func": "hlist_add_fake",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 1108,
+  "func": "hlist_move_list",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_head.first' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_head;field=first;offset=0\\] \\[oracle:assert=first holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list.h",
+  "line": 1110,
+  "func": "hlist_move_list",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list_bl.h",
+  "line": 84,
+  "func": "hlist_bl_add_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list_bl.h",
+  "line": 85,
+  "func": "hlist_bl_add_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list_bl.h",
+  "line": 96,
+  "func": "hlist_bl_add_before",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list_bl.h",
+  "line": 107,
+  "func": "hlist_bl_add_behind",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list_bl.h",
+  "line": 108,
+  "func": "hlist_bl_add_behind",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/list_bl.h",
+  "line": 112,
+  "func": "hlist_bl_add_behind",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/llist.h",
+  "line": 207,
+  "func": "__llist_add_batch",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'llist_node.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=llist_node;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/ptrace.h",
+  "line": 206,
+  "func": "ptrace_init_task",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'task_struct.parent' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=task_struct;field=parent;offset=2480\\] \\[oracle:assert=parent holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rbtree.h",
+  "line": 63,
+  "func": "rb_link_node",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rb_node.rb_left' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rb_node;field=rb_left;offset=16\\] \\[oracle:assert=rb_left holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rbtree.h",
+  "line": 72,
+  "func": "rb_link_node_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rb_node.rb_left' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rb_node;field=rb_left;offset=16\\] \\[oracle:assert=rb_left holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist.h",
+  "line": 200,
+  "func": "list_replace_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist.h",
+  "line": 201,
+  "func": "list_replace_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'list_head.prev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=list_head;field=prev;offset=8\\] \\[oracle:assert=prev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist.h",
+  "line": 625,
+  "func": "hlist_add_tail_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_node.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_node;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist.h",
+  "line": 681,
+  "func": "hlist_add_behind_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_node.next' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_node;field=next;offset=0\\] \\[oracle:assert=next holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist_bl.h",
+  "line": 81,
+  "func": "hlist_bl_add_head_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist_bl.h",
+  "line": 82,
+  "func": "hlist_bl_add_head_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_bl_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_bl_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist_nulls.h",
+  "line": 141,
+  "func": "hlist_nulls_add_tail_rcu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_nulls_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_nulls_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/rculist_nulls.h",
+  "line": 151,
+  "func": "hlist_nulls_add_fake",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_nulls_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hlist_nulls_node;field=pprev;offset=8\\] \\[oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/sched.h",
+  "line": 2391,
+  "func": "rseq_fork",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'task_struct.rseq' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=task_struct;field=rseq;offset=7344\\] \\[oracle:assert=rseq holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 2537,
+  "func": "skb_reset_tail_pointer",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'sk_buff.tail' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=tail;offset=200\\] \\[oracle:assert=tail holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/skbuff.h",
+  "line": 3527,
+  "func": "skb_frag_page_copy",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_vec.bv_page' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_vec;field=bv_page;offset=0\\] \\[oracle:assert=bv_page holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/spinlock.h",
+  "line": 518,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field '(unnamed class/struct/union).flags' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=(unnamed class/struct/union);field=flags;offset=0\\] \\[oracle:assert=flags holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/spinlock.h",
+  "line": 531,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field '(unnamed class/struct/union).flags' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=(unnamed class/struct/union);field=flags;offset=0\\] \\[oracle:assert=flags holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/srcu.h",
+  "line": 346,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field '(unnamed class/struct/union).idx' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=(unnamed class/struct/union);field=idx;offset=8\\] \\[oracle:assert=idx holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/linux/tcp.h",
+  "line": 524,
+  "func": "tcp_move_syn",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'tcp_sock.saved_syn' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=tcp_sock;field=saved_syn;offset=3064\\] \\[oracle:assert=saved_syn holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/net/ip.h",
+  "line": 188,
+  "func": "ip_fraglist_next",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ip_fraglist_iter.frag' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ip_fraglist_iter;field=frag;offset=0\\] \\[oracle:assert=frag holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/net/ipv6.h",
+  "line": 186,
+  "func": "ip6_fraglist_next",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ip6_fraglist_iter.frag' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ip6_fraglist_iter;field=frag;offset=8\\] \\[oracle:assert=frag holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/net/mptcp.h",
+  "line": 166,
+  "func": "mptcp_skb_ext_move",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'sk_buff.extensions' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=sk_buff;field=extensions;offset=232\\] \\[oracle:assert=extensions holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/net/sch_generic.h",
+  "line": 1022,
+  "func": "__qdisc_dequeue_head",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'qdisc_skb_head.head' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=qdisc_skb_head;field=head;offset=0\\] \\[oracle:assert=head holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/net/tcp.h",
+  "line": 2400,
+  "func": "bpf_skops_init_skb",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bpf_sock_ops_kern.skb_data_end' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bpf_sock_ops_kern;field=skb_data_end;offset=40\\] \\[oracle:assert=skb_data_end holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "./include/uapi/linux/virtio_ring.h",
+  "line": 205,
+  "func": "vring_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'vring.used' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=vring;field=used;offset=24\\] \\[oracle:assert=used holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/aoe/aoedev.c",
+  "line": 465,
+  "func": "aoedev_by_aoeaddr",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'aoedev.targets' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=aoedev;field=targets;offset=1784\\] \\[oracle:assert=targets holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'aoedev.targets' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=aoedev;field=targets;offset=1784\\] \\[oracle:assert=targets holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/aoe/aoedev.c",
+  "line": 480,
+  "func": "aoedev_by_aoeaddr",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'aoedev.tgt' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=aoedev;field=tgt;offset=1800\\] \\[oracle:assert=tgt holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'aoedev.tgt' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=aoedev;field=tgt;offset=1800\\] \\[oracle:assert=tgt holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/brd.c",
+  "line": 346,
+  "func": "brd_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_actlog.c",
+  "line": 359,
+  "func": "__al_write_transaction",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'al_transaction_on_disk.context_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=al_transaction_on_disk;field=context_size;offset=16\\] \\[oracle:assert=context_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_bitmap.c",
+  "line": 444,
+  "func": "drbd_bm_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.bitmap' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=bitmap;offset=1128\\] \\[oracle:assert=bitmap holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_bitmap.c",
+  "line": 1199,
+  "func": "bm_rw",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_bitmap.bm_set' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_bitmap;field=bm_set;offset=344\\] \\[oracle:assert=bm_set holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 979,
+  "func": "drbd_send_sizes",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'p_sizes.c_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=p_sizes;field=c_size;offset=16\\] \\[oracle:assert=c_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 1000,
+  "func": "drbd_send_current_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'p_state.state' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=p_state;field=state;offset=0\\] \\[oracle:assert=state holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 1354,
+  "func": "_drbd_send_ack",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'p_block_ack.seq_num' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=p_block_ack;field=seq_num;offset=20\\] \\[oracle:assert=seq_num holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2554,
+  "func": "drbd_create_resource",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_resource.name' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_resource;field=name;offset=0\\] \\[oracle:assert=name holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2629,
+  "func": "conn_create",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.resource' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=resource;offset=16\\] \\[oracle:assert=resource holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2705,
+  "func": "drbd_create_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.resource' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=resource;offset=0\\] \\[oracle:assert=resource holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2715,
+  "func": "drbd_create_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.vdisk' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=vdisk;offset=152\\] \\[oracle:assert=vdisk holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2716,
+  "func": "drbd_create_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_device.rq_queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=rq_queue;offset=144\\] \\[oracle:assert=rq_queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.rq_queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=rq_queue;offset=144\\] \\[oracle:assert=rq_queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2726,
+  "func": "drbd_create_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2765,
+  "func": "drbd_create_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_peer_device.connection' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_peer_device;field=connection;offset=24\\] \\[oracle:assert=connection holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 2766,
+  "func": "drbd_create_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_peer_device.device' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_peer_device;field=device;offset=16\\] \\[oracle:assert=device holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3004,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.la_size_sect' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=la_size_sect;offset=0\\] \\[oracle:assert=la_size_sect holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3007,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.flags' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=flags;offset=56\\] \\[oracle:assert=flags holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3010,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.md_size_sect' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=md_size_sect;offset=64\\] \\[oracle:assert=md_size_sect holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3011,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.al_offset' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=al_offset;offset=68\\] \\[oracle:assert=al_offset holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3012,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.al_nr_extents' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=al_nr_extents;offset=72\\] \\[oracle:assert=al_nr_extents holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3014,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.device_uuid' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=device_uuid;offset=40\\] \\[oracle:assert=device_uuid holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3016,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.bm_offset' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=bm_offset;offset=76\\] \\[oracle:assert=bm_offset holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3019,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.al_stripes' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=al_stripes;offset=88\\] \\[oracle:assert=al_stripes holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_main.c",
+  "line": 3020,
+  "func": "drbd_md_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'meta_data_on_disk.al_stripe_size_4k' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=meta_data_on_disk;field=al_stripe_size_4k;offset=92\\] \\[oracle:assert=al_stripe_size_4k holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 178,
+  "func": "drbd_adm_prepare",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_config_context.reply_dh' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_config_context;field=reply_dh;offset=40\\] \\[oracle:assert=reply_dh holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 234,
+  "func": "drbd_adm_prepare",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_config_context.resource' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_config_context;field=resource;offset=56\\] \\[oracle:assert=resource holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 258,
+  "func": "drbd_adm_prepare",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_config_context.connection' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_config_context;field=connection;offset=64\\] \\[oracle:assert=connection holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 289,
+  "func": "drbd_adm_prepare",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_config_context.resource' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_config_context;field=resource;offset=56\\] \\[oracle:assert=resource holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 1788,
+  "func": "drbd_adm_attach",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_backing_dev.disk_conf' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=disk_conf;offset=176\\] \\[oracle:assert=disk_conf holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 1882,
+  "func": "drbd_adm_attach",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_backing_dev.known_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=known_size;offset=184\\] \\[oracle:assert=known_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_backing_dev.known_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=known_size;offset=184\\] \\[oracle:assert=known_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 1973,
+  "func": "drbd_adm_attach",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.ldev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=ldev;offset=128\\] \\[oracle:assert=ldev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 1974,
+  "func": "drbd_adm_attach",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.resync' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=resync;offset=1144\\] \\[oracle:assert=resync holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 1975,
+  "func": "drbd_adm_attach",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.rs_plan_s' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=rs_plan_s;offset=2040\\] \\[oracle:assert=rs_plan_s holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2438,
+  "func": "drbd_adm_net_opts",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.csums_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=csums_tfm;offset=1136\\] \\[oracle:assert=csums_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2443,
+  "func": "drbd_adm_net_opts",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.verify_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=verify_tfm;offset=1144\\] \\[oracle:assert=verify_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2448,
+  "func": "drbd_adm_net_opts",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.integrity_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=integrity_tfm;offset=1120\\] \\[oracle:assert=integrity_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2454,
+  "func": "drbd_adm_net_opts",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.cram_hmac_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=cram_hmac_tfm;offset=1112\\] \\[oracle:assert=cram_hmac_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2600,
+  "func": "drbd_adm_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.cram_hmac_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=cram_hmac_tfm;offset=1112\\] \\[oracle:assert=cram_hmac_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2601,
+  "func": "drbd_adm_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.integrity_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=integrity_tfm;offset=1120\\] \\[oracle:assert=integrity_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2602,
+  "func": "drbd_adm_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.csums_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=csums_tfm;offset=1136\\] \\[oracle:assert=csums_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2603,
+  "func": "drbd_adm_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.verify_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=verify_tfm;offset=1144\\] \\[oracle:assert=verify_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2605,
+  "func": "drbd_adm_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.my_addr_len' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=my_addr_len;offset=560\\] \\[oracle:assert=my_addr_len holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2607,
+  "func": "drbd_adm_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.peer_addr_len' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=peer_addr_len;offset=696\\] \\[oracle:assert=peer_addr_len holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 2863,
+  "func": "drbd_adm_resize",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_backing_dev.known_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=known_size;offset=184\\] \\[oracle:assert=known_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_backing_dev.known_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=known_size;offset=184\\] \\[oracle:assert=known_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 3326,
+  "func": "device_to_statistics",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'device_statistics.dev_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=device_statistics;field=dev_size;offset=0\\] \\[oracle:assert=dev_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_nl.c",
+  "line": 3587,
+  "func": "peer_device_to_statistics",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'peer_device_statistics.peer_dev_flags' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=peer_device_statistics;field=peer_dev_flags;offset=48\\] \\[oracle:assert=peer_dev_flags holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 629,
+  "func": "drbd_try_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'sock.sk_rcvtimeo' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=sock;field=sk_rcvtimeo;offset=1176\\] \\[oracle:assert=sk_rcvtimeo holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 734,
+  "func": "prepare_listen_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'accept_wait_data.original_sk_state_change' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=accept_wait_data;field=original_sk_state_change;offset=112\\] \\[oracle:assert=original_sk_state_change holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 897,
+  "func": "drbd_connected",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_device.state_mutex' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=state_mutex;offset=2008\\] \\[oracle:assert=state_mutex holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1046,
+  "func": "conn_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'sock.sk_sndtimeo' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=sock;field=sk_sndtimeo;offset=800\\] \\[oracle:assert=sk_sndtimeo holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1131,
+  "func": "conn_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_connection.ack_sender' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=ack_sender;offset=1984\\] \\[oracle:assert=ack_sender holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1301,
+  "func": "submit_one_flush",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'one_flush_context.device' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=one_flush_context;field=device;offset=0\\] \\[oracle:assert=device holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1302,
+  "func": "submit_one_flush",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'one_flush_context.ctx' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=one_flush_context;field=ctx;offset=8\\] \\[oracle:assert=ctx holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1303,
+  "func": "submit_one_flush",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'bio.bi_private' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=bio;field=bi_private;offset=64\\] \\[oracle:assert=bi_private holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1767,
+  "func": "receive_Barrier",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_epoch.barrier_nr' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_epoch;field=barrier_nr;offset=24\\] \\[oracle:assert=barrier_nr holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1768,
+  "func": "receive_Barrier",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_epoch.connection' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_epoch;field=connection;offset=0\\] \\[oracle:assert=connection holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 1815,
+  "func": "receive_Barrier",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.current_epoch' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=current_epoch;offset=1168\\] \\[oracle:assert=current_epoch holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 2626,
+  "func": "receive_Data",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_peer_request.epoch' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_peer_request;field=epoch;offset=32\\] \\[oracle:assert=epoch holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 2898,
+  "func": "receive_DataRequest",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'digest_info.digest_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=digest_info;field=digest_size;offset=0\\] \\[oracle:assert=digest_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 2899,
+  "func": "receive_DataRequest",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'digest_info.digest' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=digest_info;field=digest;offset=8\\] \\[oracle:assert=digest holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 2932,
+  "func": "receive_DataRequest",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.ov_left' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=ov_left;offset=1120\\] \\[oracle:assert=ov_left holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 2933,
+  "func": "receive_DataRequest",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.rs_total' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=rs_total;offset=896\\] \\[oracle:assert=rs_total holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3756,
+  "func": "receive_protocol",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.peer_integrity_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=peer_integrity_tfm;offset=1128\\] \\[oracle:assert=peer_integrity_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3757,
+  "func": "receive_protocol",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.int_dig_in' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=int_dig_in;offset=1152\\] \\[oracle:assert=int_dig_in holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3758,
+  "func": "receive_protocol",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.int_dig_vv' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=int_dig_vv;offset=1160\\] \\[oracle:assert=int_dig_vv holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3906,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'disk_conf.resync_rate' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=disk_conf;field=resync_rate;offset=292\\] \\[oracle:assert=resync_rate holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3964,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'disk_conf.c_plan_ahead' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=disk_conf;field=c_plan_ahead;offset=304\\] \\[oracle:assert=c_plan_ahead holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3965,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'disk_conf.c_delay_target' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=disk_conf;field=c_delay_target;offset=308\\] \\[oracle:assert=c_delay_target holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3966,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'disk_conf.c_fill_target' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=disk_conf;field=c_fill_target;offset=312\\] \\[oracle:assert=c_fill_target holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3967,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'disk_conf.c_max_rate' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=disk_conf;field=c_max_rate;offset=316\\] \\[oracle:assert=c_max_rate holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3989,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'net_conf.verify_alg_len' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=net_conf;field=verify_alg_len;offset=268\\] \\[oracle:assert=verify_alg_len holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3991,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.verify_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=verify_tfm;offset=1144\\] \\[oracle:assert=verify_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3996,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'net_conf.csums_alg_len' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=net_conf;field=csums_alg_len;offset=336\\] \\[oracle:assert=csums_alg_len holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 3998,
+  "func": "receive_SyncParam",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_connection.csums_tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_connection;field=csums_tfm;offset=1136\\] \\[oracle:assert=csums_tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 4141,
+  "func": "receive_sizes",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.peer_max_bio_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=peer_max_bio_size;offset=2056\\] \\[oracle:assert=peer_max_bio_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 4202,
+  "func": "receive_sizes",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_backing_dev.known_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=known_size;offset=184\\] \\[oracle:assert=known_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_backing_dev.known_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_backing_dev;field=known_size;offset=184\\] \\[oracle:assert=known_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 4253,
+  "func": "receive_uuids",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.p_uuid' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=p_uuid;offset=1168\\] \\[oracle:assert=p_uuid holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 5392,
+  "func": "drbd_do_auth",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'shash_desc.tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=shash_desc;field=tfm;offset=0\\] \\[oracle:assert=tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'shash_desc.tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=shash_desc;field=tfm;offset=0\\] \\[oracle:assert=tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 5627,
+  "func": "got_PingAck",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'sock.sk_rcvtimeo' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=sock;field=sk_rcvtimeo;offset=1176\\] \\[oracle:assert=sk_rcvtimeo holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_receiver.c",
+  "line": 5892,
+  "func": "got_OVResult",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device_work.device' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device_work;field=device;offset=24\\] \\[oracle:assert=device holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_req.c",
+  "line": 272,
+  "func": "drbd_req_complete",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bio_and_error.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bio_and_error;field=bio;offset=0\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_req.c",
+  "line": 1220,
+  "func": "drbd_request_prepare",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_request.start_jif' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_request;field=start_jif;offset=160\\] \\[oracle:assert=start_jif holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_req.c",
+  "line": 1223,
+  "func": "drbd_request_prepare",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_request.private_bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_request;field=private_bio;offset=32\\] \\[oracle:assert=private_bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_req.c",
+  "line": 1360,
+  "func": "drbd_send_and_submit",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_request.epoch' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_request;field=epoch;offset=96\\] \\[oracle:assert=epoch holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 72,
+  "func": "alloc_state_change",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_state_change.devices' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_state_change;field=devices;offset=48\\] \\[oracle:assert=devices holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 73,
+  "func": "alloc_state_change",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_state_change.connections' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_state_change;field=connections;offset=56\\] \\[oracle:assert=connections holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_state_change.connections' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_state_change;field=connections;offset=56\\] \\[oracle:assert=connections holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 74,
+  "func": "alloc_state_change",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_state_change.peer_devices' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_state_change;field=peer_devices;offset=64\\] \\[oracle:assert=peer_devices holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_state_change.peer_devices' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_state_change;field=peer_devices;offset=64\\] \\[oracle:assert=peer_devices holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 1365,
+  "func": "_drbd_set_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.ov_start_sector' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=ov_start_sector;offset=1080\\] \\[oracle:assert=ov_start_sector holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 1375,
+  "func": "_drbd_set_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.rs_paused' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=rs_paused;offset=920\\] \\[oracle:assert=rs_paused holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 1477,
+  "func": "_drbd_set_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'after_state_chg_work.device' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=after_state_chg_work;field=device;offset=24\\] \\[oracle:assert=device holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 1478,
+  "func": "_drbd_set_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'after_state_chg_work.done' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=after_state_chg_work;field=done;offset=48\\] \\[oracle:assert=done holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 1479,
+  "func": "_drbd_set_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'after_state_chg_work.state_change' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=after_state_chg_work;field=state_change;offset=56\\] \\[oracle:assert=state_change holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 2358,
+  "func": "_conn_request_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'after_conn_state_chg_work.connection' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=after_conn_state_chg_work;field=connection;offset=40\\] \\[oracle:assert=connection holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_state.c",
+  "line": 2359,
+  "func": "_conn_request_state",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'after_conn_state_chg_work.state_change' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=after_conn_state_chg_work;field=state_change;offset=48\\] \\[oracle:assert=state_change holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_vli.h",
+  "line": 210,
+  "func": "bitstream_cursor_advance",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'bitstream_cursor.b' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=bitstream_cursor;field=b;offset=0\\] \\[oracle:assert=b holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_worker.c",
+  "line": 876,
+  "func": "drbd_resync_finished",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device_work.device' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device_work;field=device;offset=24\\] \\[oracle:assert=device holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_worker.c",
+  "line": 1208,
+  "func": "w_e_end_csum_rs_req",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'drbd_device.rs_same_csum' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_device;field=rs_same_csum;offset=928\\] \\[oracle:assert=rs_same_csum holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/drbd/drbd_worker.c",
+  "line": 1526,
+  "func": "w_restart_disk_io",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'drbd_request.private_bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=drbd_request;field=private_bio;offset=32\\] \\[oracle:assert=private_bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/floppy.c",
+  "line": 3113,
+  "func": "raw_cmd_copyin",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'floppy_raw_cmd.kernel_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=floppy_raw_cmd;field=kernel_data;offset=16\\] \\[oracle:assert=kernel_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/floppy.c",
+  "line": 3117,
+  "func": "raw_cmd_copyin",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'floppy_raw_cmd.buffer_length' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=floppy_raw_cmd;field=buffer_length;offset=48\\] \\[oracle:assert=buffer_length holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 415,
+  "func": "lo_rw_aio",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'loop_cmd.bvec' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=loop_cmd;field=bvec;offset=80\\] \\[oracle:assert=bvec holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 608,
+  "func": "loop_change_fd",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'loop_device.old_gfp_mask' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=loop_device;field=old_gfp_mask;offset=112\\] \\[oracle:assert=old_gfp_mask holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 744,
+  "func": "loop_sysfs_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'loop_device.sysfs_inited' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=loop_device;field=sysfs_inited;offset=489\\] \\[oracle:assert=sysfs_inited holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 871,
+  "func": "loop_queue_work",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'loop_worker.blkcg_css' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=loop_worker;field=blkcg_css;offset=144\\] \\[oracle:assert=blkcg_css holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'loop_worker.blkcg_css' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=loop_worker;field=blkcg_css;offset=144\\] \\[oracle:assert=blkcg_css holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 876,
+  "func": "loop_queue_work",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'loop_worker.lo' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=loop_worker;field=lo;offset=136\\] \\[oracle:assert=lo holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 1870,
+  "func": "loop_queue_rq",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'loop_cmd.blkcg_css' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=loop_cmd;field=blkcg_css;offset=88\\] \\[oracle:assert=blkcg_css holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 1873,
+  "func": "loop_queue_rq",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'loop_cmd.memcg_css' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=loop_cmd;field=memcg_css;offset=96\\] \\[oracle:assert=memcg_css holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 2037,
+  "func": "loop_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'loop_device.lo_queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=loop_device;field=lo_queue;offset=496\\] \\[oracle:assert=lo_queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'loop_device.lo_queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=loop_device;field=lo_queue;offset=496\\] \\[oracle:assert=lo_queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 2079,
+  "func": "loop_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/loop.c",
+  "line": 2080,
+  "func": "loop_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'gendisk.queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=queue;offset=152\\] \\[oracle:assert=queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=queue;offset=152\\] \\[oracle:assert=queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2277,
+  "func": "mtip_hw_debugfs_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'driver_data.dfs_node' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=driver_data;field=dfs_node;offset=376\\] \\[oracle:assert=dfs_node holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2618,
+  "func": "mtip_dma_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.block1' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=block1;offset=248\\] \\[oracle:assert=block1 holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2625,
+  "func": "mtip_dma_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.command_list' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=command_list;offset=216\\] \\[oracle:assert=command_list holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2637,
+  "func": "mtip_dma_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.rxfis' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=rxfis;offset=232\\] \\[oracle:assert=rxfis holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2639,
+  "func": "mtip_dma_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.identify' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=identify;offset=264\\] \\[oracle:assert=identify holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2641,
+  "func": "mtip_dma_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.log_buf' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=log_buf;offset=296\\] \\[oracle:assert=log_buf holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2643,
+  "func": "mtip_dma_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.smart_buf' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=smart_buf;offset=312\\] \\[oracle:assert=smart_buf holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2719,
+  "func": "mtip_hw_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'driver_data.mmio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=driver_data;field=mmio;offset=0\\] \\[oracle:assert=mmio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 2751,
+  "func": "mtip_hw_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_port.mmio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_port;field=mmio;offset=16\\] \\[oracle:assert=mmio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 3351,
+  "func": "mtip_init_cmd",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'mtip_cmd.command' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=mtip_cmd;field=command;offset=0\\] \\[oracle:assert=command holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/mtip32xx/mtip32xx.c",
+  "line": 3441,
+  "func": "mtip_block_initialize",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'driver_data.queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=driver_data;field=queue;offset=32\\] \\[oracle:assert=queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 298,
+  "func": "nbd_mark_nsock_dead",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'link_dead_args.index' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=link_dead_args;field=index;offset=80\\] \\[oracle:assert=index holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1175,
+  "func": "nbd_add_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nbd_config.socks' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_config;field=socks;offset=24\\] \\[oracle:assert=socks holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1180,
+  "func": "nbd_add_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nbd_sock.sock' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_sock;field=sock;offset=0\\] \\[oracle:assert=sock holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1227,
+  "func": "nbd_reconnect_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'sock.sk_sndtimeo' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=sock;field=sk_sndtimeo;offset=800\\] \\[oracle:assert=sk_sndtimeo holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1232,
+  "func": "nbd_reconnect_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nbd_sock.sock' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_sock;field=sock;offset=0\\] \\[oracle:assert=sock holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1236,
+  "func": "nbd_reconnect_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'recv_thread_args.nbd' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=recv_thread_args;field=nbd;offset=80\\] \\[oracle:assert=nbd holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1237,
+  "func": "nbd_reconnect_socket",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'recv_thread_args.nsock' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=recv_thread_args;field=nsock;offset=88\\] \\[oracle:assert=nsock holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1414,
+  "func": "nbd_start_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'sock.sk_sndtimeo' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=sock;field=sk_sndtimeo;offset=800\\] \\[oracle:assert=sk_sndtimeo holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1419,
+  "func": "nbd_start_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'recv_thread_args.nbd' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=recv_thread_args;field=nbd;offset=80\\] \\[oracle:assert=nbd holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1420,
+  "func": "nbd_start_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'recv_thread_args.nsock' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=recv_thread_args;field=nsock;offset=88\\] \\[oracle:assert=nsock holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'recv_thread_args.nsock' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=recv_thread_args;field=nsock;offset=88\\] \\[oracle:assert=nsock holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1576,
+  "func": "nbd_alloc_and_init_config",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nbd_device.config' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_device;field=config;offset=312\\] \\[oracle:assert=config holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1774,
+  "func": "nbd_init_request",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nbd_cmd.nbd' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_cmd;field=nbd;offset=0\\] \\[oracle:assert=nbd holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1834,
+  "func": "nbd_dev_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nbd_device.disk' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_device;field=disk;offset=480\\] \\[oracle:assert=disk holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1836,
+  "func": "nbd_dev_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nbd_device.recv_workq' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_device;field=recv_workq;offset=488\\] \\[oracle:assert=recv_workq holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 1868,
+  "func": "nbd_dev_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 2046,
+  "func": "nbd_genl_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nbd_config.dead_conn_timeout' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_config;field=dead_conn_timeout;offset=16\\] \\[oracle:assert=dead_conn_timeout holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 2051,
+  "func": "nbd_genl_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nbd_config.flags' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_config;field=flags;offset=0\\] \\[oracle:assert=flags holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 2112,
+  "func": "nbd_genl_connect",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nbd_device.backend' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_device;field=backend;offset=616\\] \\[oracle:assert=backend holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/nbd.c",
+  "line": 2265,
+  "func": "nbd_genl_reconfigure",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nbd_config.dead_conn_timeout' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nbd_config;field=dead_conn_timeout;offset=16\\] \\[oracle:assert=dead_conn_timeout holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/./trace.h",
+  "line": 33,
+  "func": "",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'trace_event_raw_nullb_zone_op.op' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=trace_event_raw_nullb_zone_op;field=op;offset=40\\] \\[oracle:assert=op holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 1103,
+  "func": "null_make_cache_space",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nullb.cache_flush_pos' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nullb;field=cache_flush_pos;offset=432\\] \\[oracle:assert=cache_flush_pos holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 1724,
+  "func": "null_queue_rq",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nullb_cmd.fake_timeout' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nullb_cmd;field=fake_timeout;offset=13\\] \\[oracle:assert=fake_timeout holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 1781,
+  "func": "null_init_queue",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nullb_queue.dev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nullb_queue;field=dev;offset=104\\] \\[oracle:assert=dev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 1882,
+  "func": "setup_commands",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nullb_queue.cmds' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nullb_queue;field=cmds;offset=208\\] \\[oracle:assert=cmds holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 1886,
+  "func": "setup_commands",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nullb_queue.tag_map' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nullb_queue;field=tag_map;offset=0\\] \\[oracle:assert=tag_map holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 1912,
+  "func": "setup_queues",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nullb.queue_depth' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nullb;field=queue_depth;offset=352\\] \\[oracle:assert=queue_depth holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'nullb.queue_depth' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=nullb;field=queue_depth;offset=352\\] \\[oracle:assert=queue_depth holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 2124,
+  "func": "null_add_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nullb.q' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nullb;field=q;offset=32\\] \\[oracle:assert=q holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/main.c",
+  "line": 2131,
+  "func": "null_add_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'nullb.q' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=nullb;field=q;offset=32\\] \\[oracle:assert=q holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/null_blk/zoned.c",
+  "line": 166,
+  "func": "null_register_zoned_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'gendisk.nr_zones' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=nr_zones;offset=1680\\] \\[oracle:assert=nr_zones holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 308,
+  "func": "pkt_sysfs_dev_new",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'pktcdvd_device.dev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=pktcdvd_device;field=dev;offset=776\\] \\[oracle:assert=dev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 499,
+  "func": "pkt_debugfs_dev_new",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'pktcdvd_device.dfs_d_root' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=pktcdvd_device;field=dfs_d_root;offset=784\\] \\[oracle:assert=dfs_d_root holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 503,
+  "func": "pkt_debugfs_dev_new",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'pktcdvd_device.dfs_f_info' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=pktcdvd_device;field=dfs_f_info;offset=792\\] \\[oracle:assert=dfs_f_info holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 2674,
+  "func": "pkt_setup_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'pktcdvd_device.disk' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=pktcdvd_device;field=disk;offset=760\\] \\[oracle:assert=disk holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 2681,
+  "func": "pkt_setup_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 2689,
+  "func": "pkt_setup_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'gendisk.events' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=events;offset=44\\] \\[oracle:assert=events holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.events' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=events;offset=44\\] \\[oracle:assert=events holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/pktcdvd.c",
+  "line": 2781,
+  "func": "pkt_get_status",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'pkt_ctrl_command.dev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=pkt_ctrl_command;field=dev;offset=8\\] \\[oracle:assert=dev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 717,
+  "func": "rbd_client_create",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_client.client' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_client;field=client;offset=0\\] \\[oracle:assert=client holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1039,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'ceph_snap_context.seq' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_snap_context;field=seq;offset=8\\] \\[oracle:assert=seq holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1079,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_image_header.object_prefix' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_image_header;field=object_prefix;offset=0\\] \\[oracle:assert=object_prefix holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1080,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_image_header.obj_order' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_image_header;field=obj_order;offset=8\\] \\[oracle:assert=obj_order holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1085,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_image_header.image_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_image_header;field=image_size;offset=48\\] \\[oracle:assert=image_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1086,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_image_header.snapc' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_image_header;field=snapc;offset=56\\] \\[oracle:assert=snapc holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1087,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_image_header.snap_names' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_image_header;field=snap_names;offset=64\\] \\[oracle:assert=snap_names holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1088,
+  "func": "rbd_header_from_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_image_header.snap_sizes' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_image_header;field=snap_sizes;offset=72\\] \\[oracle:assert=snap_sizes holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1228,
+  "func": "zero_bios",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ceph_bio_iter.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_bio_iter;field=bio;offset=0\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1229,
+  "func": "zero_bios",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ceph_bio_iter.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_bio_iter;field=bio;offset=0\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 1414,
+  "func": "rbd_osd_format_read",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ceph_osd_request.r_snapid' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_osd_request;field=r_snapid;offset=840\\] \\[oracle:assert=r_snapid holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 2510,
+  "func": "rbd_img_fill_request_nocopy",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_img_fill_ctx.iter' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_img_fill_ctx;field=iter;offset=16\\] \\[oracle:assert=iter holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 2562,
+  "func": "rbd_img_fill_request",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_img_fill_ctx.iter' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_img_fill_ctx;field=iter;offset=16\\] \\[oracle:assert=iter holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_img_fill_ctx.iter' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_img_fill_ctx;field=iter;offset=16\\] \\[oracle:assert=iter holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 2586,
+  "func": "rbd_img_fill_request",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_img_fill_ctx.iter' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_img_fill_ctx;field=iter;offset=16\\] \\[oracle:assert=iter holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_img_fill_ctx.iter' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_img_fill_ctx;field=iter;offset=16\\] \\[oracle:assert=iter holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 2621,
+  "func": "set_bio_pos",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ceph_bio_iter.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_bio_iter;field=bio;offset=0\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 2631,
+  "func": "count_bio_bvecs",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ceph_bio_iter.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_bio_iter;field=bio;offset=0\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 2644,
+  "func": "copy_bio_bvecs",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ceph_bio_iter.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ceph_bio_iter;field=bio;offset=0\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 3081,
+  "func": "setup_copyup_bvecs",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_obj_request.copyup_bvecs' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_obj_request;field=copyup_bvecs;offset=120\\] \\[oracle:assert=copyup_bvecs holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_obj_request.copyup_bvecs' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_obj_request;field=copyup_bvecs;offset=120\\] \\[oracle:assert=copyup_bvecs holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 4547,
+  "func": "rbd_register_watch",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_device.watch_cookie' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_device;field=watch_cookie;offset=544\\] \\[oracle:assert=watch_cookie holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 4649,
+  "func": "rbd_reregister_watch",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_device.watch_cookie' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_device;field=watch_cookie;offset=544\\] \\[oracle:assert=watch_cookie holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 5791,
+  "func": "rbd_dev_setup_parent",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_spec.pool_ns' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=pool_ns;offset=16\\] \\[oracle:assert=pool_ns holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 5794,
+  "func": "rbd_dev_setup_parent",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_spec.image_id' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=image_id;offset=24\\] \\[oracle:assert=image_id holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6299,
+  "func": "rbd_parse_param",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_spec.pool_ns' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=pool_ns;offset=16\\] \\[oracle:assert=pool_ns holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6470,
+  "func": "rbd_add_parse_args",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_spec.pool_name' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=pool_name;offset=8\\] \\[oracle:assert=pool_name holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6478,
+  "func": "rbd_add_parse_args",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_spec.image_name' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=image_name;offset=32\\] \\[oracle:assert=image_name holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6502,
+  "func": "rbd_add_parse_args",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_spec.snap_name' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=snap_name;offset=48\\] \\[oracle:assert=snap_name holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6628,
+  "func": "rbd_dev_image_id",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_device.image_format' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_device;field=image_format;offset=24\\] \\[oracle:assert=image_format holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_device.image_format' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_device;field=image_format;offset=24\\] \\[oracle:assert=image_format holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6674,
+  "func": "rbd_dev_image_id",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rbd_spec.image_id' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_spec;field=image_id;offset=24\\] \\[oracle:assert=image_id holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6763,
+  "func": "rbd_dev_probe_parent",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_device.rbd_client' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_device;field=rbd_client;offset=32\\] \\[oracle:assert=rbd_client holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rbd.c",
+  "line": 6764,
+  "func": "rbd_dev_probe_parent",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rbd_device.spec' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rbd_device;field=spec;offset=232\\] \\[oracle:assert=spec holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 335,
+  "func": "rnbd_get_iu",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_iu.permit' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_iu;field=permit;offset=8\\] \\[oracle:assert=permit holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 1123,
+  "func": "rnbd_queue_rq",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rnbd_iu.permit' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_iu;field=permit;offset=8\\] \\[oracle:assert=permit holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 1376,
+  "func": "rnbd_clt_setup_gen_disk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'gendisk.queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=queue;offset=152\\] \\[oracle:assert=queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 1412,
+  "func": "rnbd_client_setup_device",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rnbd_clt_dev.queue' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_clt_dev;field=queue;offset=256\\] \\[oracle:assert=queue holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 1435,
+  "func": "init_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'rnbd_clt_dev.hw_queues' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_clt_dev;field=hw_queues;offset=264\\] \\[oracle:assert=hw_queues holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_clt_dev.hw_queues' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_clt_dev;field=hw_queues;offset=264\\] \\[oracle:assert=hw_queues holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 1451,
+  "func": "init_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_clt_dev.pathname' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_clt_dev;field=pathname;offset=448\\] \\[oracle:assert=pathname holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-clt.c",
+  "line": 1458,
+  "func": "init_dev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_clt_dev.sess' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_clt_dev;field=sess;offset=248\\] \\[oracle:assert=sess holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-srv.c",
+  "line": 145,
+  "func": "process_rdma",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_io_private.sess_dev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_io_private;field=sess_dev;offset=8\\] \\[oracle:assert=sess_dev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-srv.c",
+  "line": 146,
+  "func": "process_rdma",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_io_private.id' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_io_private;field=id;offset=0\\] \\[oracle:assert=id holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-srv.c",
+  "line": 158,
+  "func": "process_rdma",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'bio.bi_private' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=bio;field=bi_private;offset=64\\] \\[oracle:assert=bi_private holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-srv.c",
+  "line": 279,
+  "func": "create_sess",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_srv_session.queue_depth' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_srv_session;field=queue_depth;offset=280\\] \\[oracle:assert=queue_depth holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/rnbd/rnbd-srv.c",
+  "line": 286,
+  "func": "create_sess",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'rnbd_srv_session.rtrs' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=rnbd_srv_session;field=rtrs;offset=16\\] \\[oracle:assert=rtrs holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/ublk_drv.c",
+  "line": 810,
+  "func": "ublk_copy_io_pages",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ublk_io_iter.bio' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ublk_io_iter;field=bio;offset=256\\] \\[oracle:assert=bio holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/ublk_drv.c",
+  "line": 813,
+  "func": "ublk_copy_io_pages",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ublk_io_iter.iter' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ublk_io_iter;field=iter;offset=264\\] \\[oracle:assert=iter holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/ublk_drv.c",
+  "line": 1366,
+  "func": "ublk_ch_mmap",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'ublk_device.mm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=ublk_device;field=mm;offset=2408\\] \\[oracle:assert=mm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/ublk_drv.c",
+  "line": 2069,
+  "func": "ublk_add_chdev",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'device.parent' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=device;field=parent;offset=248\\] \\[oracle:assert=parent holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/virtio_blk.c",
+  "line": 345,
+  "func": "virtblk_request_done",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'request.__sector' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=request;field=__sector;offset=48\\] \\[oracle:assert=__sector holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/virtio_blk.c",
+  "line": 919,
+  "func": "virtblk_getgeo",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hd_geometry.cylinders' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=hd_geometry;field=cylinders;offset=2\\] \\[oracle:assert=cylinders holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/virtio_blk.c",
+  "line": 1059,
+  "func": "init_vq",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'virtio_blk.vqs' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=virtio_blk;field=vqs;offset=576\\] \\[oracle:assert=vqs holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'virtio_blk.vqs' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=virtio_blk;field=vqs;offset=576\\] \\[oracle:assert=vqs holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/virtio_blk.c",
+  "line": 1342,
+  "func": "virtblk_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'virtio_device.priv' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=virtio_device;field=priv;offset=1688\\] \\[oracle:assert=priv holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/virtio_blk.c",
+  "line": 1350,
+  "func": "virtblk_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'virtio_blk.vdev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=virtio_blk;field=vdev;offset=160\\] \\[oracle:assert=vdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/virtio_blk.c",
+  "line": 1398,
+  "func": "virtblk_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/blkback.c",
+  "line": 468,
+  "func": "xen_vbd_translate",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'phys_req.bdev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=phys_req;field=bdev;offset=16\\] \\[oracle:assert=bdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/blkback.c",
+  "line": 793,
+  "func": "xen_blkbk_map",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'grant_page.page' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=grant_page;field=page;offset=0\\] \\[oracle:assert=page holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'grant_page.page' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=grant_page;field=page;offset=0\\] \\[oracle:assert=page holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/blkback.c",
+  "line": 794,
+  "func": "xen_blkbk_map",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'grant_page.persistent_gnt' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=grant_page;field=persistent_gnt;offset=8\\] \\[oracle:assert=persistent_gnt holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/blkback.c",
+  "line": 861,
+  "func": "xen_blkbk_map",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'persistent_gnt.page' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=persistent_gnt;field=page;offset=0\\] \\[oracle:assert=page holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/blkback.c",
+  "line": 868,
+  "func": "xen_blkbk_map",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'grant_page.persistent_gnt' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=grant_page;field=persistent_gnt;offset=8\\] \\[oracle:assert=persistent_gnt holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 134,
+  "func": "xen_blkif_alloc_rings",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'xen_blkif.rings' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=xen_blkif;field=rings;offset=256\\] \\[oracle:assert=rings holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 152,
+  "func": "xen_blkif_alloc_rings",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'xen_blkif_ring.blkif' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=xen_blkif_ring;field=blkif;offset=840\\] \\[oracle:assert=blkif holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 510,
+  "func": "xen_vbd_create",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'xen_vbd.size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=xen_vbd;field=size;offset=16\\] \\[oracle:assert=size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 642,
+  "func": "xen_blkbk_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'backend_info.dev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=backend_info;field=dev;offset=0\\] \\[oracle:assert=dev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 645,
+  "func": "xen_blkbk_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'backend_info.blkif' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=backend_info;field=blkif;offset=8\\] \\[oracle:assert=blkif holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 668,
+  "func": "xen_blkbk_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'xen_blkif.be' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=xen_blkif;field=be;offset=48\\] \\[oracle:assert=be holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkback/xenbus.c",
+  "line": 735,
+  "func": "backend_changed",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'backend_info.mode' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=backend_info;field=mode;offset=72\\] \\[oracle:assert=mode holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 327,
+  "func": "fill_grant_buffer",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'grant.page' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=grant;field=page;offset=8\\] \\[oracle:assert=page holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 631,
+  "func": "blkif_setup_rw_req_grant",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'setup_rw_req.segments' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=setup_rw_req;field=segments;offset=8\\] \\[oracle:assert=segments holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 1161,
+  "func": "xlvbd_alloc_gendisk",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.rq' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=rq;offset=208\\] \\[oracle:assert=rq holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 1784,
+  "func": "talk_to_blkback",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.bounce' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=bounce;offset=216\\] \\[oracle:assert=bounce holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'blkfront_info.bounce' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=bounce;offset=216\\] \\[oracle:assert=bounce holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 1911,
+  "func": "negotiate_mq",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.rinfo_size' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=rinfo_size;offset=548\\] \\[oracle:assert=rinfo_size holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 1990,
+  "func": "blkfront_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'blkfront_info.xbdev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=xbdev;offset=160\\] \\[oracle:assert=xbdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 1997,
+  "func": "blkfront_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.handle' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=handle;offset=196\\] \\[oracle:assert=handle holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]\nWMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'blkfront_info.handle' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=handle;offset=196\\] \\[oracle:assert=handle holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 2149,
+  "func": "blkfront_setup_discard",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.discard_granularity' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=discard_granularity;offset=220\\] \\[oracle:assert=discard_granularity holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 2152,
+  "func": "blkfront_setup_discard",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.discard_alignment' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=discard_alignment;offset=224\\] \\[oracle:assert=discard_alignment holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 2154,
+  "func": "blkfront_setup_discard",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.feature_secdiscard' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=feature_secdiscard;offset=216\\] \\[oracle:assert=feature_secdiscard holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/xen-blkfront.c",
+  "line": 2289,
+  "func": "blkfront_gather_backend_features",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'blkfront_info.feature_persistent' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=blkfront_info;field=feature_persistent;offset=216\\] \\[oracle:assert=feature_persistent holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zcomp.c",
+  "line": 51,
+  "func": "zcomp_strm_init",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'zcomp_strm.tfm' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=zcomp_strm;field=tfm;offset=64\\] \\[oracle:assert=tfm holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zcomp.c",
+  "line": 226,
+  "func": "zcomp_create",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'zcomp.name' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=zcomp;field=name;offset=8\\] \\[oracle:assert=name holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 528,
+  "func": "backing_dev_store",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'zram.bdev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=zram;field=bdev;offset=488\\] \\[oracle:assert=bdev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 529,
+  "func": "backing_dev_store",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'zram.backing_dev' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=zram;field=backing_dev;offset=392\\] \\[oracle:assert=backing_dev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 530,
+  "func": "backing_dev_store",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'zram.bitmap' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=zram;field=bitmap;offset=496\\] \\[oracle:assert=bitmap holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 923,
+  "func": "zram_debugfs_register",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'zram.debugfs_dir' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=zram;field=debugfs_dir;offset=512\\] \\[oracle:assert=debugfs_dir holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 1236,
+  "func": "zram_meta_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'zram.table' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=zram;field=table;offset=0\\] \\[oracle:assert=table holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 1240,
+  "func": "zram_meta_alloc",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'zram.mem_pool' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:attacker-pointer-into-field;indicates=WMI-3\\] \\[mem:struct=zram;field=mem_pool;offset=8\\] \\[oracle:assert=mem_pool holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ },
+ {
+  "file": "drivers/block/zram/zram_drv.c",
+  "line": 2215,
+  "func": "zram_add",
+  "callee": "",
+  "detail": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'gendisk.private_data' \u2014 the position the confused consumer later follows as a trusted reference. \\[mechanism:allocated-content-into-field;indicates=WMI-3\\] \\[mem:struct=gendisk;field=private_data;offset=160\\] \\[oracle:assert=private_data holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field\\]"
+ }
+]

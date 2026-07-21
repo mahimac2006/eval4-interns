@@ -1,0 +1,9 @@
+array desc_count[4] : w32 -> w8 = symbolic
+array state_desc_count[4] : w32 -> w8 = symbolic
+(query [(Ule N0:(ReadLSB w32 0 desc_count)
+              64)
+         (Eq false (Eq 0 N0))
+         (Eq false
+             (Ule (ReadLSB w32 0 state_desc_count)
+                  N0))]
+        false)

@@ -1,0 +1,135 @@
+[
+ {
+  "file": "drivers/usb/class/cdc-wdm.c",
+  "line": 223,
+  "func": "wdm_in_callback",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('length') into object 'struct wdm_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=wdm_device;field=length;offset=?\\] \\[oracle:assert=length stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('ubuf') into object 'struct wdm_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=wdm_device;field=ubuf;offset=?\\] \\[oracle:assert=ubuf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/dwc3/gadget.c",
+  "line": 4519,
+  "func": "dwc3_check_event_buf",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('cache') into object 'struct dwc3_event_buffer' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=dwc3_event_buffer;field=cache;offset=?\\] \\[oracle:assert=cache stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('lpos') into object 'struct dwc3_event_buffer' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=dwc3_event_buffer;field=lpos;offset=?\\] \\[oracle:assert=lpos stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/gadget/function/f_midi2.c",
+  "line": 966,
+  "func": "fill_midi1_pending_buf",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('buf') into object 'struct f_midi2_midi1_port' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=f_midi2_midi1_port;field=buf;offset=?\\] \\[oracle:assert=buf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('pending') into object 'struct f_midi2_midi1_port' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=f_midi2_midi1_port;field=pending;offset=?\\] \\[oracle:assert=pending stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/gadget/function/f_uac1_legacy.c",
+  "line": 348,
+  "func": "f_audio_out_ep_complete",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('buf') into object 'struct f_audio_buf' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=f_audio_buf;field=buf;offset=?\\] \\[oracle:assert=buf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('actual') into object 'struct f_audio_buf' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=f_audio_buf;field=actual;offset=?\\] \\[oracle:assert=actual stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/host/fhci-sched.c",
+  "line": 54,
+  "func": "fhci_transaction_confirm",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('data') into object 'struct td' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=td;field=data;offset=?\\] \\[oracle:assert=data stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('actual_len') into object 'struct td' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=td;field=actual_len;offset=?\\] \\[oracle:assert=actual_len stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 689,
+  "func": "adu_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('in_end_size') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=in_end_size;offset=?\\] \\[oracle:assert=in_end_size stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_primary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_primary;offset=?\\] \\[oracle:assert=read_buffer_primary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 690,
+  "func": "adu_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_primary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_primary;offset=?\\] \\[oracle:assert=read_buffer_primary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 691,
+  "func": "adu_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_primary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_primary;offset=?\\] \\[oracle:assert=read_buffer_primary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 699,
+  "func": "adu_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('in_end_size') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=in_end_size;offset=?\\] \\[oracle:assert=in_end_size stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_secondary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_secondary;offset=?\\] \\[oracle:assert=read_buffer_secondary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 700,
+  "func": "adu_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_secondary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_secondary;offset=?\\] \\[oracle:assert=read_buffer_secondary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 701,
+  "func": "adu_probe",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_secondary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_secondary;offset=?\\] \\[oracle:assert=read_buffer_secondary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/adutux.c",
+  "line": 181,
+  "func": "adu_interrupt_in_callback",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_primary') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_primary;offset=?\\] \\[oracle:assert=read_buffer_primary stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_buffer_length') into object 'struct adu_device' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=adu_device;field=read_buffer_length;offset=?\\] \\[oracle:assert=read_buffer_length stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/misc/iowarrior.c",
+  "line": 204,
+  "func": "iowarrior_callback",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('offset') into object 'struct iowarrior' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=iowarrior;field=offset;offset=?\\] \\[oracle:assert=offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('read_queue') into object 'struct iowarrior' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=iowarrior;field=read_queue;offset=?\\] \\[oracle:assert=read_queue stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/serial/cyberjack.c",
+  "line": 188,
+  "func": "cyberjack_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('wrfilled') into object 'struct cyberjack_private' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=cyberjack_private;field=wrfilled;offset=?\\] \\[oracle:assert=wrfilled stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('wrbuf') into object 'struct cyberjack_private' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=cyberjack_private;field=wrbuf;offset=?\\] \\[oracle:assert=wrbuf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/serial/digi_acceleport.c",
+  "line": 469,
+  "func": "digi_write_inb_command",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('dp_out_buf_len') into object 'struct digi_port' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=digi_port;field=dp_out_buf_len;offset=?\\] \\[oracle:assert=dp_out_buf_len stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct digi_port' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=digi_port;field=computed_offset;offset=?\\] \\[oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/serial/garmin_gps.c",
+  "line": 607,
+  "func": "gsp_send",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('k') into object 'struct garmin_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=garmin_data;field=k;offset=?\\] \\[oracle:assert=k stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('outbuffer') into object 'struct garmin_data' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=garmin_data;field=outbuffer;offset=?\\] \\[oracle:assert=outbuffer stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/serial/iuu_phoenix.c",
+  "line": 711,
+  "func": "iuu_uart_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('writebuf') into object 'struct iuu_private' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=iuu_private;field=writebuf;offset=?\\] \\[oracle:assert=writebuf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('writelen') into object 'struct iuu_private' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=iuu_private;field=writelen;offset=?\\] \\[oracle:assert=writelen stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/serial/kobil_sct.c",
+  "line": 314,
+  "func": "kobil_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('buf') into object 'struct kobil_private' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=kobil_private;field=buf;offset=?\\] \\[oracle:assert=buf stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('filled') into object 'struct kobil_private' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=kobil_private;field=filled;offset=?\\] \\[oracle:assert=filled stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ },
+ {
+  "file": "drivers/usb/typec/ucsi/ucsi_acpi.c",
+  "line": 69,
+  "func": "ucsi_acpi_async_write",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('offset') into object 'struct ucsi_acpi' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=ucsi_acpi;field=offset;offset=?\\] \\[oracle:assert=offset stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('base') into object 'struct ucsi_acpi' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). \\[mechanism:write-at-attacker-offset;indicates=WMI-3\\] \\[mem:struct=ucsi_acpi;field=base;offset=?\\] \\[oracle:assert=base stays within the object's declared buffer;assume=external content written at a variable offset into the object\\]"
+ }
+]

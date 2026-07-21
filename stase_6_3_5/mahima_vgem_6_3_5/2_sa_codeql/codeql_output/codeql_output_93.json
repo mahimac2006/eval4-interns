@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "dmamove_ioctl_validate",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 1164,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'move_desc.length' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2] [mem:struct=move_desc;field=length;offset=16] [oracle:assert=move_desc.length is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": "dmamove_ioctl_validate"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 1164,
+      "func": "dmamove_ioctl_validate",
+      "callee": ""
+    }
+  ]
+}

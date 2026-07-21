@@ -1,0 +1,37 @@
+version: 1
+creator: klee
+pid: 28425
+cmd: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand45.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fl=/tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand45_wmi1.c
+fn=main
+13 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+14 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+15 10 1 0 0 0 1 0 0 0 0 1 0 0 0 
+16 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+17 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+18 11 1 0 0 0 1 0 0 0 0 2 0 0 0 
+19 12 1 0 0 0 1 0 0 0 0 1 0 0 0 
+20 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+21 12 1 1 0 0 1 0 0 0 0 1 2 0 256809 
+24 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+27 12 1 0 0 0 1 0 0 0 0 1 0 0 0 
+28 12 0 0 0 0 0 0 0 0 0 0 0 0 0 
+31 13 1 0 0 0 1 0 0 0 0 1 0 0 0 

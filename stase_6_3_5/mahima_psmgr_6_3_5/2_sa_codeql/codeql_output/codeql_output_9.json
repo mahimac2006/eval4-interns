@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_process_commit_req",
+  "target_file": "psmgr_pipeline.c",
+  "target_line": 372,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_process_commit_req' sets signal field 'psmgr_desc.handler', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=psmgr_desc;field=handler;offset=136] [oracle:assert=psmgr_desc.handler stays within the domain its consumer's agreement governs;assume=producer sets handler without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_process_commit_req"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 372,
+      "func": "psmgr_process_commit_req",
+      "callee": ""
+    }
+  ]
+}

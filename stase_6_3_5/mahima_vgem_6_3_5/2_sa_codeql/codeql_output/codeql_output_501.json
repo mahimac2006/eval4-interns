@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "postproc_update_buf_state",
+  "target_file": "vgem_postproc.c",
+  "target_line": 213,
+  "target_cwe": null,
+  "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+  "wmi_index": null,
+  "message": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'vgem_buf_state.has_ring' \u2014 the position the confused consumer later follows as a trusted reference. [mechanism:attacker-pointer-into-field;indicates=WMI-3] [mem:struct=vgem_buf_state;field=has_ring;offset=2] [oracle:assert=has_ring holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_update_buf_state"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 213,
+      "func": "postproc_update_buf_state",
+      "callee": ""
+    }
+  ]
+}
