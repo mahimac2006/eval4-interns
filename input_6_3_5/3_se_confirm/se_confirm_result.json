@@ -1,20 +1,246 @@
 {
-  "stage": "STASE SAILOR run_se_confirm",
-  "kernel": "6.3.5",
-  "module": "drivers/input",
-  "wmi": 3,
-  "static_inputs": {
-    "codeql_wmi3_records": 1,
-    "rbsa_wmi3_records": 8
-  },
-  "result": "CONFIRMED (SA invariant violated)",
+  "ok": true,
+  "stage": "3_se_confirm",
+  "scope": "drivers/input Linux 6.3.5 WMI-3",
+  "candidate_count": 9,
   "ran_klee": true,
-  "witness": [
-    "object 0: int : 16843009",
-    "object 1: int : 1"
-  ],
-  "source_sa_rule": "CodeQL WMI-3 + RbSA WMI-3 aggregated oracle",
-  "slice": "wmi3.c",
-  "klee_output": "out3",
-  "oracle_note": "Neither imported SA record supplied machine-readable symbols/assume_c/assert_c. STASE therefore used its documented WMI-3 archetype fallback (attacker_controlled, authoritative; assume authoritative == 1; assert attacker_controlled == 0)."
+  "runtime": "official klee/klee:3.1 Linux container",
+  "method": "one KLEE run per static-analysis candidate",
+  "oracle_limit": "Each run uses STASE's WMI-3 archetype fallback because the SA records contain no source-level symbolic constraints or ABI harness. These are not reachability or concrete-PoC proofs.",
+  "per_candidate": [
+    {
+      "candidate": 1,
+      "wmi": 3,
+      "engine": "codeql",
+      "rule": "sailor/wmi-3-arbitrary-free-stale-traversal",
+      "function": "psmouse_smbus_cleanup",
+      "location": "drivers/input/mouse/psmouse-smbus.c:227",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand1_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand1.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand1",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand1/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand1/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand1/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 2,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "joydev_open",
+      "location": "drivers/input/joydev.c:276",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand2_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand2.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand2",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand2/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand2/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand2/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 3,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "mousedev_open",
+      "location": "drivers/input/mousedev.c:560",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand3_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand3.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand3",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand3/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand3/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand3/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 4,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "mousedev_create",
+      "location": "drivers/input/mousedev.c:890",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand4_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand4.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand4",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand4/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand4/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand4/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 5,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "serio_raw_open",
+      "location": "drivers/input/serio/serio_raw.c:102",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand5_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand5.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand5",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand5/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand5/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand5/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 6,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "uinput_open",
+      "location": "drivers/input/misc/uinput.c:391",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand6_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand6.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand6",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand6/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand6/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand6/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 7,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "userio_char_open",
+      "location": "drivers/input/serio/userio.c:88",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand7_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand7.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand7",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand7/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand7/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand7/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 8,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "userio_char_open",
+      "location": "drivers/input/serio/userio.c:95",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand8_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand8.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand8",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand8/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand8/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand8/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    },
+    {
+      "candidate": 9,
+      "wmi": 3,
+      "engine": "rbsa",
+      "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+      "function": "userio_char_open",
+      "location": "drivers/input/serio/userio.c:97",
+      "source": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand9_wmi3.c",
+      "bitcode": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/cand9.bc",
+      "output": "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand9",
+      "oracle_kind": "wmi3_archetype_fallback",
+      "source_level_harness": false,
+      "result": "template_oracle_assertion_violated",
+      "klee_exit_code": 0,
+      "assertion_errors": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand9/test000002.assert.err"
+      ],
+      "ktests": [
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand9/test000001.ktest",
+        "/Users/katelyndang/Documents/New project/github-eval4-interns/input_6_3_5/3_se_confirm/out_cand9/test000002.ktest"
+      ],
+      "witness": [
+        "object 0: int : 16843009",
+        "object 1: int : 1"
+      ]
+    }
+  ]
 }
