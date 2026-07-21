@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x725a4e200000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7257ce200000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7157ce200000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7137ce200000 size=128 GiB)
+KLEE: ERROR: /results/psmgr_6_12_28/3_se_confirm/cand81_wmi2.c:16: ASSERTION FAIL: view_a == view_b
+KLEE: NOTE: now ignoring this error at this location

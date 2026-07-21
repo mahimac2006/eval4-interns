@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "unix_bpf.c",
+  "target_line": 96394,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'inetpeer_set_addr_v6' sets signal field 'inetpeer_addr.family', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=inetpeer_addr;field=family;offset=16] [oracle:assert=inetpeer_addr.family stays within the domain its consumer's agreement governs;assume=producer sets family without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "unix_bpf.c",
+      "line": 96394,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

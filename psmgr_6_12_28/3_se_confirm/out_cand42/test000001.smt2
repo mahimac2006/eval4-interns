@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun len () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun payload_len () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  len (_ bv3 32) ) (concat  (select  len (_ bv2 32) ) (concat  (select  len (_ bv1 32) ) (select  len (_ bv0 32) ) ) ) ) ) ) (and  (and  (bvule  (_ bv8 32) ?B1 ) (bvule  ?B1 (_ bv4096 32) ) ) (bvule  (concat  (select  payload_len (_ bv3 32) ) (concat  (select  payload_len (_ bv2 32) ) (concat  (select  payload_len (_ bv1 32) ) (select  payload_len (_ bv0 32) ) ) ) ) (bvadd  (_ bv4294967288 32) ?B1 ) ) ) ) )
+(check-sat)
+(exit)

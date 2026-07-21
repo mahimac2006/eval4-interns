@@ -1,0 +1,38 @@
+version: 1
+creator: klee
+pid: 3702
+cmd: /results/psmgr_6_12_28/3_se_confirm/cand63.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fl=/results/psmgr_6_12_28/3_se_confirm/cand63_wmi2.c
+fn=main
+14 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+15 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+16 11 1 0 0 0 1 0 0 0 0 1 0 0 0 
+17 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+18 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+19 12 1 0 0 0 1 0 0 0 0 2 0 0 0 
+20 13 1 0 0 0 1 0 0 0 0 1 0 0 0 
+21 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+22 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+23 13 1 1 0 0 1 0 0 0 0 1 2 0 14851 
+26 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+29 13 1 0 0 0 1 0 0 0 0 1 0 0 0 
+30 13 0 0 0 0 0 0 0 0 0 0 0 0 0 
+33 14 1 0 0 0 1 0 0 0 0 1 0 0 0 

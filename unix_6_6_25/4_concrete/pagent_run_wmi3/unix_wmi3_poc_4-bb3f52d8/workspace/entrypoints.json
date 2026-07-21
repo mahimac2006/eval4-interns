@@ -1,0 +1,50 @@
+{
+  "mode": "kernel",
+  "guest": {
+    "arch": "x86_64",
+    "exec_model": "The PoC is a single userspace C program cross-compiled into the guest rootfs and run as root inside QEMU. A KASAN report on the kernel log is the crash signal.",
+    "reference_packages_dir": ""
+  },
+  "entrypoints": [
+    {
+      "id": "unix_copy_peercred",
+      "subsystem": "net/unix",
+      "interface": "AF_UNIX SOCK_STREAM socket, connect(2)",
+      "driver": "Create two AF_UNIX SOCK_STREAM sockets, bind one to a path, listen, connect from the other, accept — triggers unix_stream_connect → copy_peercred which installs sk_peer_pid and sk_peer_cred.",
+      "reaches": ["copy_peercred"],
+      "vuln_file": "net/unix/af_unix.c",
+      "finding_id": "6be79974-a514-4e43-8d98-e23bdd46b13d",
+      "notes": "Installs sk_peer_pid at af_unix.c:715 and sk_peer_cred at af_unix.c:716 inside copy_peercred()."
+    },
+    {
+      "id": "unix_peek_fds",
+      "subsystem": "net/unix",
+      "interface": "AF_UNIX SOCK_STREAM socket, sendmsg(2) with SCM_RIGHTS then recvmsg(2) with MSG_PEEK",
+      "driver": "Send a message with SCM_RIGHTS ancillary data (file descriptors), then recvmsg with MSG_PEEK — triggers unix_stream_recvmsg → unix_peek_fds which installs scm_cookie.fp.",
+      "reaches": ["unix_peek_fds"],
+      "vuln_file": "net/unix/af_unix.c",
+      "finding_id": "82329ed3-38ad-48be-b8b3-812bca4a92e2",
+      "notes": "Installs scm_cookie.fp at af_unix.c:1777 inside unix_peek_fds()."
+    },
+    {
+      "id": "unix_detach_fds",
+      "subsystem": "net/unix",
+      "interface": "AF_UNIX SOCK_STREAM socket, recvmsg(2) without MSG_PEEK after SCM_RIGHTS send",
+      "driver": "After sendmsg with SCM_RIGHTS and a MSG_PEEK recvmsg, do a normal recvmsg (flags=0) — triggers unix_stream_recvmsg → unix_detach_fds which installs scm_cookie.fp.",
+      "reaches": ["unix_detach_fds"],
+      "vuln_file": "net/unix/scm.c",
+      "finding_id": "9bdb0cab-44bf-474c-b317-24172fa17402",
+      "notes": "Installs scm_cookie.fp at scm.c:131 inside unix_detach_fds()."
+    },
+    {
+      "id": "unix_copy_peercred_2",
+      "subsystem": "net/unix",
+      "interface": "AF_UNIX SOCK_STREAM socket, connect(2)",
+      "driver": "Same as unix_copy_peercred — copy_peercred installs both sk_peer_pid (af_unix.c:715) and sk_peer_cred (af_unix.c:716) in a single connect call.",
+      "reaches": ["copy_peercred"],
+      "vuln_file": "net/unix/af_unix.c",
+      "finding_id": "e2653564-91dd-40f6-96d5-2afa76b4e44f",
+      "notes": "Covers af_unix.c:716 (sk_peer_cred install) specifically."
+    }
+  ]
+}

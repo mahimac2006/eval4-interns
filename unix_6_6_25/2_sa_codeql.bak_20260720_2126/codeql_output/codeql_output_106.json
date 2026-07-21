@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "af_unix.c",
+  "target_line": 65584,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'dma_set_max_seg_size' sets signal field 'device_dma_parameters.max_segment_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=device_dma_parameters;field=max_segment_size;offset=0] [oracle:assert=device_dma_parameters.max_segment_size stays within the domain its consumer's agreement governs;assume=producer sets max_segment_size without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "af_unix.c",
+      "line": 65584,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "af_unix.c",
+  "target_line": 16729,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'class_spinlock_irqsave_constructor' sets signal field '(unnamed class/struct/union).flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=(unnamed class/struct/union);field=flags;offset=0] [oracle:assert=(unnamed class/struct/union).flags stays within the domain its consumer's agreement governs;assume=producer sets flags without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "af_unix.c",
+      "line": 16729,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

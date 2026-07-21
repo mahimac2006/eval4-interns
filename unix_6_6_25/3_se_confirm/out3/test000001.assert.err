@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: content_trusted == 1
+File: /results/unix_6_6_25/3_se_confirm/wmi3.c
+Line: 17
+assembly.ll line: 58
+State: 2
+Stack: 
+	#000000058 in main() at /results/unix_6_6_25/3_se_confirm/wmi3.c:17

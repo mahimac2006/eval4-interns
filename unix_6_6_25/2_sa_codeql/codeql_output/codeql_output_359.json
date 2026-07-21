@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "garbage.c",
+  "target_line": 30978,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_advance' sets signal field 'xa_state.xa_index', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=xa_state;field=xa_index;offset=8] [oracle:assert=xa_state.xa_index stays within the domain its consumer's agreement governs;assume=producer sets xa_index without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "garbage.c",
+      "line": 30978,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

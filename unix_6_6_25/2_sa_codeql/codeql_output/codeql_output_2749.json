@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "garbage.c",
+  "target_line": 77754,
+  "target_cwe": null,
+  "rule": "WMI-3b_AttackerContent_OffsetControlledWrite",
+  "wmi_index": null,
+  "message": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('computed_offset') into object 'struct sk_buff' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). [mechanism:write-at-attacker-offset;indicates=WMI-3] [mem:struct=sk_buff;field=computed_offset;offset=?] [oracle:assert=computed_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "garbage.c",
+      "line": 77754,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

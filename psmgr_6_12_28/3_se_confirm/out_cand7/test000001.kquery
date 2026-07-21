@@ -1,0 +1,11 @@
+array out_offset[4] : w32 -> w8 = symbolic
+array token_init[4] : w32 -> w8 = symbolic
+array write_count[4] : w32 -> w8 = symbolic
+(query [(Ule 256
+              (ReadLSB w32 0 write_count))
+         (Eq 0
+             (ReadLSB w32 0 token_init))
+         (Eq false
+             (Ult (ReadLSB w32 0 out_offset)
+                  4096))]
+        false)

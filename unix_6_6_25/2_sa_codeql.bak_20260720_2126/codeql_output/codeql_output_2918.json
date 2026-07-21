@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "scm.c",
+  "target_line": 65247,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'cgroup.level' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:array-index-from-field;indicates=WMI-4] [mem:struct=cgroup;field=level;offset=208] [oracle:assert=level governs a bounded, trusted in-bounds array index;assume=access index loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "scm.c",
+      "line": 65247,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

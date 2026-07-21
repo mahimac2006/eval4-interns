@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun peer_sk () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun sk_change_fn () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  false (=  (_ bv0 64) (concat  (select  peer_sk (_ bv7 32) ) (concat  (select  peer_sk (_ bv6 32) ) (concat  (select  peer_sk (_ bv5 32) ) (concat  (select  peer_sk (_ bv4 32) ) (concat  (select  peer_sk (_ bv3 32) ) (concat  (select  peer_sk (_ bv2 32) ) (concat  (select  peer_sk (_ bv1 32) ) (select  peer_sk (_ bv0 32) ) ) ) ) ) ) ) ) ) ) (=  false (=  (_ bv0 64) (concat  (select  sk_change_fn (_ bv7 32) ) (concat  (select  sk_change_fn (_ bv6 32) ) (concat  (select  sk_change_fn (_ bv5 32) ) (concat  (select  sk_change_fn (_ bv4 32) ) (concat  (select  sk_change_fn (_ bv3 32) ) (concat  (select  sk_change_fn (_ bv2 32) ) (concat  (select  sk_change_fn (_ bv1 32) ) (select  sk_change_fn (_ bv0 32) ) ) ) ) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

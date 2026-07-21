@@ -1,0 +1,1416 @@
+{
+  "ran": "SE-PROXY",
+  "note": "concrete_filter.json (native replay) never ran for this output dir -- toolchain unavailable. This 'kept' tier is SE-CONFIRMED SITES (KLEE found a real witness violating the candidate-specific assert), NOT native-replay-confirmed or boot/PoC-confirmed.",
+  "totals": {
+    "oracles": 113,
+    "kept": 113,
+    "dropped": 0,
+    "errored": 0
+  },
+  "by_wmi": {
+    "1": {
+      "kept": [
+        "se_site_1_psmgr_core.c:146",
+        "se_site_1_psmgr_core.c:319",
+        "se_site_1_psmgr_core.c:324",
+        "se_site_1_psmgr_core.c:328",
+        "se_site_1_psmgr_core.c:374",
+        "se_site_1_psmgr_core.c:379",
+        "se_site_1_psmgr_core.c:487",
+        "se_site_1_psmgr_sock.c:257",
+        "se_site_1_psmgr_sock.c:258",
+        "se_site_1_psmgr_sock.c:316",
+        "se_site_1_psmgr_sock.c:419",
+        "se_site_1_psmgr_sock.c:427",
+        "se_site_1_psmgr_sock.c:428",
+        "se_site_1_psmgr_sock.c:429",
+        "se_site_1_psmgr_sock.c:430",
+        "se_site_1_psmgr_sock.c:447",
+        "se_site_1_psmgr_sock.c:455",
+        "se_site_1_psmgr_sock.c:456",
+        "se_site_1_psmgr_sock.c:457",
+        "se_site_1_psmgr_sock.c:458",
+        "se_site_1_psmgr_sock.c:474",
+        "se_site_1_psmgr_sock.c:475",
+        "se_site_1_psmgr_sock.c:476",
+        "se_site_1_psmgr_sock.c:477",
+        "se_site_1_psmgr_sock.c:533",
+        "se_site_1_psmgr_sock.c:535",
+        "se_site_1_psmgr_sock.c:542",
+        "se_site_1_psmgr_sock.c:545",
+        "se_site_1_psmgr_sock.c:568",
+        "se_site_1_psmgr_sock.c:569",
+        "se_site_1_psmgr_sock.c:591",
+        "se_site_1_psmgr_sock.c:627",
+        "se_site_1_psmgr_sock.c:629",
+        "se_site_1_psmgr_sock.c:631",
+        "se_site_1_psmgr_sock.c:632",
+        "se_site_1_psmgr_sock.c:650",
+        "se_site_1_psmgr_sock.c:654",
+        "se_site_1_psmgr_sock.c:684"
+      ],
+      "dropped": [],
+      "errored": []
+    },
+    "2": {
+      "kept": [
+        "se_site_2_psmgr_core.c:167",
+        "se_site_2_psmgr_core.c:171",
+        "se_site_2_psmgr_core.c:190",
+        "se_site_2_psmgr_core.c:196",
+        "se_site_2_psmgr_core.c:220",
+        "se_site_2_psmgr_core.c:254",
+        "se_site_2_psmgr_core.c:261",
+        "se_site_2_psmgr_core.c:270",
+        "se_site_2_psmgr_core.c:313",
+        "se_site_2_psmgr_core.c:352",
+        "se_site_2_psmgr_core.c:353",
+        "se_site_2_psmgr_core.c:354",
+        "se_site_2_psmgr_core.c:361",
+        "se_site_2_psmgr_core.c:405",
+        "se_site_2_psmgr_core.c:409",
+        "se_site_2_psmgr_core.c:430",
+        "se_site_2_psmgr_core.c:437",
+        "se_site_2_psmgr_core.c:443",
+        "se_site_2_psmgr_core.c:458",
+        "se_site_2_psmgr_core.c:471",
+        "se_site_2_psmgr_core.c:588",
+        "se_site_2_psmgr_core.c:78",
+        "se_site_2_psmgr_core.c:91",
+        "se_site_2_psmgr_sock.c:310",
+        "se_site_2_psmgr_sock.c:313",
+        "se_site_2_psmgr_sock.c:354",
+        "se_site_2_psmgr_sock.c:356",
+        "se_site_2_psmgr_sock.c:373",
+        "se_site_2_psmgr_sock.c:382",
+        "se_site_2_psmgr_sock.c:385",
+        "se_site_2_psmgr_sock.c:388",
+        "se_site_2_psmgr_sock.c:393",
+        "se_site_2_psmgr_sock.c:394",
+        "se_site_2_psmgr_sock.c:397",
+        "se_site_2_psmgr_sock.c:407",
+        "se_site_2_psmgr_sock.c:438",
+        "se_site_2_psmgr_sock.c:488",
+        "se_site_2_psmgr_sock.c:530",
+        "se_site_2_psmgr_sock.c:561",
+        "se_site_2_psmgr_sock.c:562",
+        "se_site_2_psmgr_sock.c:583",
+        "se_site_2_psmgr_sock.c:584",
+        "se_site_2_psmgr_sock.c:602",
+        "se_site_2_psmgr_sock.c:603",
+        "se_site_2_psmgr_sock.c:61",
+        "se_site_2_psmgr_sock.c:644",
+        "se_site_2_psmgr_sock.c:645",
+        "se_site_2_psmgr_sock.c:646",
+        "se_site_2_psmgr_sock.c:662",
+        "se_site_2_psmgr_sock.c:676",
+        "se_site_2_psmgr_sock.c:678"
+      ],
+      "dropped": [],
+      "errored": []
+    },
+    "3": {
+      "kept": [
+        "se_site_3_psmgr_core.c:283",
+        "se_site_3_psmgr_core.c:361"
+      ],
+      "dropped": [],
+      "errored": []
+    },
+    "4": {
+      "kept": [
+        "se_site_4_psmgr_core.c:318",
+        "se_site_4_psmgr_core.c:455",
+        "se_site_4_psmgr_core.c:477",
+        "se_site_4_psmgr_core.c:518",
+        "se_site_4_psmgr_core.c:596",
+        "se_site_4_psmgr_core.c:602",
+        "se_site_4_psmgr_core.c:624",
+        "se_site_4_psmgr_core.c:646",
+        "se_site_4_psmgr_core.c:649",
+        "se_site_4_psmgr_sock.c:683"
+      ],
+      "dropped": [],
+      "errored": []
+    }
+  },
+  "detail": {
+    "1": {
+      "kept": [
+        {
+          "cand": "se_site_1_psmgr_core.c:146",
+          "wmi": 1,
+          "func": "psmgr_compute_token",
+          "site": "psmgr_core.c:146",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_core.c:319",
+          "wmi": 1,
+          "func": "psmgr_process_ctrl",
+          "site": "psmgr_core.c:319",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_core.c:324",
+          "wmi": 1,
+          "func": "psmgr_process_ctrl",
+          "site": "psmgr_core.c:324",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_core.c:328",
+          "wmi": 1,
+          "func": "psmgr_process_ctrl",
+          "site": "psmgr_core.c:328",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_core.c:374",
+          "wmi": 1,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:374",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_core.c:379",
+          "wmi": 1,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:379",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_core.c:487",
+          "wmi": 1,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:487",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:257",
+          "wmi": 1,
+          "func": "psmgr_release",
+          "site": "psmgr_sock.c:257",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:258",
+          "wmi": 1,
+          "func": "psmgr_release",
+          "site": "psmgr_sock.c:258",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:316",
+          "wmi": 1,
+          "func": "psmgr_bind",
+          "site": "psmgr_sock.c:316",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:419",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:419",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:427",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:427",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:428",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:428",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:429",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:429",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:430",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:430",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:447",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:447",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:455",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:455",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:456",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:456",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:457",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:457",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:458",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:458",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:474",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:474",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:475",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:475",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:476",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:476",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:477",
+          "wmi": 1,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:477",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:533",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:533",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:535",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:535",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:542",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:542",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:545",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:545",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:568",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:568",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:569",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:569",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:591",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:591",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:627",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:627",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:629",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:629",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:631",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:631",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:632",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:632",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:650",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:650",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:654",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:654",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_1_psmgr_sock.c:684",
+          "wmi": 1,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:684",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        }
+      ],
+      "dropped": [],
+      "errored": []
+    },
+    "2": {
+      "kept": [
+        {
+          "cand": "se_site_2_psmgr_core.c:167",
+          "wmi": 2,
+          "func": "psmgr_write_count_update",
+          "site": "psmgr_core.c:167",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:171",
+          "wmi": 2,
+          "func": "psmgr_write_count_update",
+          "site": "psmgr_core.c:171",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:190",
+          "wmi": 2,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:190",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:196",
+          "wmi": 2,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:196",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:220",
+          "wmi": 2,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:220",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:254",
+          "wmi": 2,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:254",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:261",
+          "wmi": 2,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:261",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:270",
+          "wmi": 2,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:270",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:313",
+          "wmi": 2,
+          "func": "psmgr_process_ctrl",
+          "site": "psmgr_core.c:313",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:352",
+          "wmi": 2,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:352",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:353",
+          "wmi": 2,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:353",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:354",
+          "wmi": 2,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:354",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:361",
+          "wmi": 2,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:361",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:405",
+          "wmi": 2,
+          "func": "psmgr_poll",
+          "site": "psmgr_core.c:405",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:409",
+          "wmi": 2,
+          "func": "psmgr_poll",
+          "site": "psmgr_core.c:409",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:430",
+          "wmi": 2,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:430",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:437",
+          "wmi": 2,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:437",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:443",
+          "wmi": 2,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:443",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:458",
+          "wmi": 2,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:458",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:471",
+          "wmi": 2,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:471",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:588",
+          "wmi": 2,
+          "func": "psmgr_recvmsg",
+          "site": "psmgr_core.c:588",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:78",
+          "wmi": 2,
+          "func": "psmgr_check_seq",
+          "site": "psmgr_core.c:78",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_core.c:91",
+          "wmi": 2,
+          "func": "psmgr_check_seq",
+          "site": "psmgr_core.c:91",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:310",
+          "wmi": 2,
+          "func": "psmgr_bind",
+          "site": "psmgr_sock.c:310",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:313",
+          "wmi": 2,
+          "func": "psmgr_bind",
+          "site": "psmgr_sock.c:313",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:354",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:354",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:356",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:356",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:373",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:373",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:382",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:382",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:385",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:385",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:388",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:388",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:393",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:393",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:394",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:394",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:397",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:397",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:407",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:407",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:438",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:438",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:488",
+          "wmi": 2,
+          "func": "psmgr_connect",
+          "site": "psmgr_sock.c:488",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:530",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:530",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:561",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:561",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:562",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:562",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:583",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:583",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:584",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:584",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:602",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:602",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:603",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:603",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:61",
+          "wmi": 2,
+          "func": "psmgr_session_lookup",
+          "site": "psmgr_sock.c:61",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:644",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:644",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:645",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:645",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:646",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:646",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:662",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:662",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:676",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:676",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_2_psmgr_sock.c:678",
+          "wmi": 2,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:678",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        }
+      ],
+      "dropped": [],
+      "errored": []
+    },
+    "3": {
+      "kept": [
+        {
+          "cand": "se_site_3_psmgr_core.c:283",
+          "wmi": 3,
+          "func": "psmgr_process_data",
+          "site": "psmgr_core.c:283",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_3_psmgr_core.c:361",
+          "wmi": 3,
+          "func": "psmgr_process_commit_req",
+          "site": "psmgr_core.c:361",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        }
+      ],
+      "dropped": [],
+      "errored": []
+    },
+    "4": {
+      "kept": [
+        {
+          "cand": "se_site_4_psmgr_core.c:318",
+          "wmi": 4,
+          "func": "psmgr_process_ctrl",
+          "site": "psmgr_core.c:318",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:455",
+          "wmi": 4,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:455",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:477",
+          "wmi": 4,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:477",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:518",
+          "wmi": 4,
+          "func": "psmgr_sendmsg",
+          "site": "psmgr_core.c:518",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": false
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:596",
+          "wmi": 4,
+          "func": "psmgr_recvmsg",
+          "site": "psmgr_core.c:596",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:602",
+          "wmi": 4,
+          "func": "psmgr_recvmsg",
+          "site": "psmgr_core.c:602",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:624",
+          "wmi": 4,
+          "func": "psmgr_exec",
+          "site": "psmgr_core.c:624",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:646",
+          "wmi": 4,
+          "func": "psmgr_exec",
+          "site": "psmgr_core.c:646",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_4_psmgr_core.c:649",
+          "wmi": 4,
+          "func": "psmgr_exec",
+          "site": "psmgr_core.c:649",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        },
+        {
+          "cand": "se_site_4_psmgr_sock.c:683",
+          "wmi": 4,
+          "func": "psmgr_setsockopt",
+          "site": "psmgr_sock.c:683",
+          "oracle_source": "se-confirmed (native replay unavailable)",
+          "chain_core": true
+        }
+      ],
+      "dropped": [],
+      "errored": []
+    }
+  },
+  "cooccurrence": {
+    "chain_roles": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "chain_complete": true,
+    "wma_host": true,
+    "object_roles": {
+      "psmgr_desc": [
+        1,
+        3,
+        4
+      ],
+      "psmgr_proc_ctx": [
+        1
+      ],
+      "psmgr_session": [
+        1,
+        4
+      ],
+      "socket": [
+        1
+      ]
+    },
+    "authoritative_objects": [
+      "psmgr_desc",
+      "psmgr_session"
+    ],
+    "chain_core": [
+      {
+        "cand": "se_site_1_psmgr_core.c:146",
+        "wmi": 1,
+        "func": "psmgr_compute_token"
+      },
+      {
+        "cand": "se_site_1_psmgr_core.c:319",
+        "wmi": 1,
+        "func": "psmgr_process_ctrl"
+      },
+      {
+        "cand": "se_site_1_psmgr_core.c:324",
+        "wmi": 1,
+        "func": "psmgr_process_ctrl"
+      },
+      {
+        "cand": "se_site_1_psmgr_core.c:328",
+        "wmi": 1,
+        "func": "psmgr_process_ctrl"
+      },
+      {
+        "cand": "se_site_1_psmgr_core.c:374",
+        "wmi": 1,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_1_psmgr_core.c:379",
+        "wmi": 1,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:257",
+        "wmi": 1,
+        "func": "psmgr_release"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:258",
+        "wmi": 1,
+        "func": "psmgr_release"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:419",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:427",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:428",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:429",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:430",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:447",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:455",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:456",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:457",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:458",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:474",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:475",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:476",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:477",
+        "wmi": 1,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:533",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:535",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:542",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:545",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:568",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:569",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:591",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:627",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:629",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:631",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:632",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:650",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:654",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_1_psmgr_sock.c:684",
+        "wmi": 1,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:190",
+        "wmi": 2,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:196",
+        "wmi": 2,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:220",
+        "wmi": 2,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:254",
+        "wmi": 2,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:261",
+        "wmi": 2,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:270",
+        "wmi": 2,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:313",
+        "wmi": 2,
+        "func": "psmgr_process_ctrl"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:352",
+        "wmi": 2,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:353",
+        "wmi": 2,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:354",
+        "wmi": 2,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:361",
+        "wmi": 2,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_2_psmgr_core.c:588",
+        "wmi": 2,
+        "func": "psmgr_recvmsg"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:354",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:356",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:373",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:382",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:385",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:388",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:393",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:394",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:397",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:407",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:438",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:488",
+        "wmi": 2,
+        "func": "psmgr_connect"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:530",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:561",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:562",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:583",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:584",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:602",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:603",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:644",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:645",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:646",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:662",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:676",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_2_psmgr_sock.c:678",
+        "wmi": 2,
+        "func": "psmgr_setsockopt"
+      },
+      {
+        "cand": "se_site_3_psmgr_core.c:283",
+        "wmi": 3,
+        "func": "psmgr_process_data"
+      },
+      {
+        "cand": "se_site_3_psmgr_core.c:361",
+        "wmi": 3,
+        "func": "psmgr_process_commit_req"
+      },
+      {
+        "cand": "se_site_4_psmgr_core.c:318",
+        "wmi": 4,
+        "func": "psmgr_process_ctrl"
+      },
+      {
+        "cand": "se_site_4_psmgr_core.c:596",
+        "wmi": 4,
+        "func": "psmgr_recvmsg"
+      },
+      {
+        "cand": "se_site_4_psmgr_core.c:602",
+        "wmi": 4,
+        "func": "psmgr_recvmsg"
+      },
+      {
+        "cand": "se_site_4_psmgr_core.c:624",
+        "wmi": 4,
+        "func": "psmgr_exec"
+      },
+      {
+        "cand": "se_site_4_psmgr_core.c:646",
+        "wmi": 4,
+        "func": "psmgr_exec"
+      },
+      {
+        "cand": "se_site_4_psmgr_core.c:649",
+        "wmi": 4,
+        "func": "psmgr_exec"
+      },
+      {
+        "cand": "se_site_4_psmgr_sock.c:683",
+        "wmi": 4,
+        "func": "psmgr_setsockopt"
+      }
+    ],
+    "n_core": 82,
+    "n_peripheral": 19
+  }
+}

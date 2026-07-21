@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "garbage.c",
+  "target_line": 76441,
+  "target_cwe": null,
+  "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+  "wmi_index": null,
+  "message": "WMI-3 attacker content into authoritative position (attacker-pointer-into-field): content is installed into struct field 'hlist_nulls_node.pprev' \u2014 the position the confused consumer later follows as a trusted reference. [mechanism:attacker-pointer-into-field;indicates=WMI-3] [mem:struct=hlist_nulls_node;field=pprev;offset=8] [oracle:assert=pprev holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "garbage.c",
+      "line": 76441,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

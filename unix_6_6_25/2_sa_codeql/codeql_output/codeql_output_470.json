@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "scm.c",
+  "target_line": 31045,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'xas_next_marked' sets signal field 'xa_state.xa_offset', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=xa_state;field=xa_offset;offset=18] [oracle:assert=xa_state.xa_offset stays within the domain its consumer's agreement governs;assume=producer sets xa_offset without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "scm.c",
+      "line": 31045,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

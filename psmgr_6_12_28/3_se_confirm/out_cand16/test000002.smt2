@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun proc_param () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvule  (concat  (select  proc_param (_ bv3 32) ) (concat  (select  proc_param (_ bv2 32) ) (concat  (select  proc_param (_ bv1 32) ) (select  proc_param (_ bv0 32) ) ) ) ) (_ bv127 32) ) )
+(check-sat)
+(exit)

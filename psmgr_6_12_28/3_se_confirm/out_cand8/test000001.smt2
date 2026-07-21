@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun xfrm_type () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (bvult  (concat  (select  xfrm_type (_ bv3 32) ) (concat  (select  xfrm_type (_ bv2 32) ) (concat  (select  xfrm_type (_ bv1 32) ) (select  xfrm_type (_ bv0 32) ) ) ) ) (_ bv8 32) ) ) )
+(check-sat)
+(exit)

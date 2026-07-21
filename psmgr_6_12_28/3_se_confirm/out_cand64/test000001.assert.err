@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: proc_param * MAX_MULT <= DATA_SZ
+File: /results/psmgr_6_12_28/3_se_confirm/cand64_wmi2.c
+Line: 13
+assembly.ll line: 29
+State: 2
+Stack: 
+	#000000029 in main() at /results/psmgr_6_12_28/3_se_confirm/cand64_wmi2.c:13

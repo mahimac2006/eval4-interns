@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_process_data",
+  "target_file": "psmgr_core.c",
+  "target_line": 220,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'psmgr_proc_ctx.xfrm_type' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2] [mem:struct=psmgr_proc_ctx;field=xfrm_type;offset=0] [oracle:assert=psmgr_proc_ctx.xfrm_type is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_process_data"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_core.c",
+      "line": 220,
+      "func": "psmgr_process_data",
+      "callee": ""
+    }
+  ]
+}

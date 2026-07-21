@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "scm.c",
+  "target_line": 61975,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_gso_reset' sets signal field 'skb_shared_info.gso_size', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=skb_shared_info;field=gso_size;offset=4] [oracle:assert=skb_shared_info.gso_size stays within the domain its consumer's agreement governs;assume=producer sets gso_size without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "scm.c",
+      "line": 61975,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+klee --write-smt2s --output-dir=/results/psmgr_6_12_28/3_se_confirm/out_cand30 /results/psmgr_6_12_28/3_se_confirm/cand30.bc
+PID: 3416
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2026-07-17 18:16:37
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2026-07-17 18:16:37
+Elapsed: 00:00:00
+KLEE: done: explored paths = 2
+KLEE: done: avg. constructs per query = 7
+KLEE: done: total queries = 2
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 2
+KLEE: done: query cex = 2
+
+KLEE: done: total instructions = 20
+KLEE: done: completed paths = 1
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 2

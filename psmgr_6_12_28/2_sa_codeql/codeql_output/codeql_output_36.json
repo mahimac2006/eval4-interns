@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_bind",
+  "target_file": "psmgr_sock.c",
+  "target_line": 316,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'psmgr_bind' sets signal field 'socket.state', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=socket;field=state;offset=0] [oracle:assert=socket.state stays within the domain its consumer's agreement governs;assume=producer sets state without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_bind"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_sock.c",
+      "line": 316,
+      "func": "psmgr_bind",
+      "callee": ""
+    }
+  ]
+}

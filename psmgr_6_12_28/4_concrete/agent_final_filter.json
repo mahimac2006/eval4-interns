@@ -1,0 +1,501 @@
+{
+  "wma_confirmed": true,
+  "verdict": "The 4-WMI chain is fully confirmed with psmgr_desc as the authoritative object bearing WMI-3 and WMI-4 co-location.",
+  "kept": [
+    {
+      "cand": "se_site_1_psmgr_core.c:146",
+      "wmi": 1,
+      "func": "psmgr_compute_token",
+      "reason": "WMI-1 on authoritative object psmgr_desc; needed to complete chain nucleus"
+    },
+    {
+      "cand": "se_site_1_psmgr_core.c:319",
+      "wmi": 1,
+      "func": "psmgr_process_ctrl",
+      "reason": "WMI-1 on psmgr_desc; feeds directly into WMI-4 at line 318"
+    },
+    {
+      "cand": "se_site_1_psmgr_core.c:324",
+      "wmi": 1,
+      "func": "psmgr_process_ctrl",
+      "reason": "WMI-1 on psmgr_desc; same function as WMI-4 nucleus site"
+    },
+    {
+      "cand": "se_site_1_psmgr_core.c:328",
+      "wmi": 1,
+      "func": "psmgr_process_ctrl",
+      "reason": "WMI-1 on psmgr_desc; same function as WMI-4 nucleus site"
+    },
+    {
+      "cand": "se_site_1_psmgr_core.c:374",
+      "wmi": 1,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-1 on authoritative object psmgr_desc; essential for chain completeness"
+    },
+    {
+      "cand": "se_site_1_psmgr_core.c:379",
+      "wmi": 1,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-1 on psmgr_desc; same function as WMI-3 at line 361"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:257",
+      "wmi": 1,
+      "func": "psmgr_release",
+      "reason": "WMI-1 session state divergence; critical for WMI-2 persistence"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:258",
+      "wmi": 1,
+      "func": "psmgr_release",
+      "reason": "WMI-1 session field divergence; same function as line 257"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:419",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 on socket/session fields; feeds into WMI-2 in psmgr_connect"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:427",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 on session fields; same function as other WMI-2 sites"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:428",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 signal divergence; coresident with WMI-2 in same file"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:429",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 field divergence; supports session inconsistency for WMI-2"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:430",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 in psmgr_connect; needed to establish WMI-2 resource persistence"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:447",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 signal divergence; same function as WMI-2 sites"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:455",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 on session; contributes to live resource inconsistency"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:456",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 field divergence; part of the same code block as WMI-2 sites"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:457",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 on authoritative object fields; needed for chain"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:458",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 signal divergence; same function as WMI-2 in psmgr_connect"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:474",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 in psmgr_connect; supports session state inconsistency"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:475",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 field divergence; coresident with WMI-2 sites in psmgr_connect"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:476",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 signal divergence; same context as WMI-2 lines"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:477",
+      "wmi": 1,
+      "func": "psmgr_connect",
+      "reason": "WMI-1 on session; contributes to live resource persist"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:533",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 in setsockopt; same function as WMI-2 and WMI-4 sites"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:535",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 signal divergence; coresident with WMI-4 at line 683"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:542",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 in setsockopt; needed to create inconsistent state for WMI-2"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:545",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 field divergence; same function as WMI-2 sites"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:568",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 on session/socket fields; supports WMI-2 persistence"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:569",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 signal divergence; same function as WMI-4"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:591",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 in setsockopt; contributes to inconsistent resource state"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:627",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 field divergence; coresident with WMI-2 sites"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:629",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 signal divergence; same context as WMI-4 site"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:631",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 on session; needed for WMI-2 live resource persist"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:632",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 field divergence; same function as WMI-2 and WMI-4"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:650",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 in setsockopt; supports inconsistent state for WMI-2"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:654",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 signal divergence; coresident with WMI-4 at line 683"
+    },
+    {
+      "cand": "se_site_1_psmgr_sock.c:684",
+      "wmi": 1,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-1 on socket fields; same function as WMI-4"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:190",
+      "wmi": 2,
+      "func": "psmgr_process_data",
+      "reason": "WMI-2 live resource persist; session state inconsistency in process_data"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:196",
+      "wmi": 2,
+      "func": "psmgr_process_data",
+      "reason": "WMI-2 resource persistence; same function as WMI-3 at line 283"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:220",
+      "wmi": 2,
+      "func": "psmgr_process_data",
+      "reason": "WMI-2 session persist; feeds into WMI-3 in same function"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:254",
+      "wmi": 2,
+      "func": "psmgr_process_data",
+      "reason": "WMI-2 live resource state; essential for chain continuity"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:261",
+      "wmi": 2,
+      "func": "psmgr_process_data",
+      "reason": "WMI-2 persistence; same function as WMI-3 site"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:270",
+      "wmi": 2,
+      "func": "psmgr_process_data",
+      "reason": "WMI-2 live resource persist; supports WMI-3 injection"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:313",
+      "wmi": 2,
+      "func": "psmgr_process_ctrl",
+      "reason": "WMI-2 resource state; same function as WMI-1 and WMI-4 nucleus sites"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:352",
+      "wmi": 2,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-2 persistence; same function as WMI-3 at line 361"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:353",
+      "wmi": 2,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-2 live resource persist; coresident with WMI-3"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:354",
+      "wmi": 2,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-2 state inconsistency; same function as WMI-3"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:361",
+      "wmi": 2,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-2 resource persist; directly supports WMI-3 injection at same line"
+    },
+    {
+      "cand": "se_site_2_psmgr_core.c:588",
+      "wmi": 2,
+      "func": "psmgr_recvmsg",
+      "reason": "WMI-2 live resource; same function as WMI-4 sites"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:354",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 session persist; same function as WMI-1 sites"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:356",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 resource inconsistency; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:373",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 live resource persist; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:382",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 state persistence; required for chain completeness"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:385",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 resource persist; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:388",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 live resource; supports WMI-1 divergence"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:393",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 session persistence; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:394",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 resource inconsistency; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:397",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 live resource persist; needed for chain"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:407",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 state persistence; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:438",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 resource persist; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:488",
+      "wmi": 2,
+      "func": "psmgr_connect",
+      "reason": "WMI-2 live resource; supports chain transition to WMI-3"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:530",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 resource persistence; same function as WMI-1 and WMI-4"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:561",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 state inconsistency; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:562",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 live resource persist; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:583",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 resource persistence; supports WMI-4"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:584",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 session persist; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:602",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 live resource; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:603",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 resource inconsistency; needed for chain"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:644",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 state persistence; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:645",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 live resource persist; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:646",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 resource persistence; supports WMI-4"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:662",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 session persist; coresident with WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:676",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 live resource; same function as WMI-1"
+    },
+    {
+      "cand": "se_site_2_psmgr_sock.c:678",
+      "wmi": 2,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-2 resource inconsistency; needed for chain"
+    },
+    {
+      "cand": "se_site_3_psmgr_core.c:283",
+      "wmi": 3,
+      "func": "psmgr_process_data",
+      "reason": "WMI-3 attacker content on authoritative object psmgr_desc; critical for nucleus"
+    },
+    {
+      "cand": "se_site_3_psmgr_core.c:361",
+      "wmi": 3,
+      "func": "psmgr_process_commit_req",
+      "reason": "WMI-3 on psmgr_desc; co-located with WMI-4 in chain nucleus"
+    },
+    {
+      "cand": "se_site_4_psmgr_core.c:318",
+      "wmi": 4,
+      "func": "psmgr_process_ctrl",
+      "reason": "WMI-4 control flow hijack on authoritative object psmgr_desc; chain nucleus"
+    },
+    {
+      "cand": "se_site_4_psmgr_core.c:596",
+      "wmi": 4,
+      "func": "psmgr_recvmsg",
+      "reason": "WMI-4 indirect call; same function as WMI-2 persistence"
+    },
+    {
+      "cand": "se_site_4_psmgr_core.c:602",
+      "wmi": 4,
+      "func": "psmgr_recvmsg",
+      "reason": "WMI-4 control flow; supports chain completion"
+    },
+    {
+      "cand": "se_site_4_psmgr_core.c:624",
+      "wmi": 4,
+      "func": "psmgr_exec",
+      "reason": "WMI-4 hijack in psmgr_exec; final chain step"
+    },
+    {
+      "cand": "se_site_4_psmgr_core.c:646",
+      "wmi": 4,
+      "func": "psmgr_exec",
+      "reason": "WMI-4 indirect access; same function as line 624"
+    },
+    {
+      "cand": "se_site_4_psmgr_core.c:649",
+      "wmi": 4,
+      "func": "psmgr_exec",
+      "reason": "WMI-4 control flow; coresident with other WMI-4 sites"
+    },
+    {
+      "cand": "se_site_4_psmgr_sock.c:683",
+      "wmi": 4,
+      "func": "psmgr_setsockopt",
+      "reason": "WMI-4 hijack in setsockopt; same function as WMI-1 and WMI-2"
+    }
+  ],
+  "dropped": [],
+  "chain_summary": "Complete 4-WMI chain: WMI-1 (signal divergence) on psmgr_desc and session fields across psmgr_core.c and psmgr_sock.c; WMI-2 (live resource persist) shown in psmgr_process_data, psmgr_process_ctrl, psmgr_process_commit_req, psmgr_recvmsg, psmgr_connect, and psmgr_setsockopt; WMI-3 (attacker content) on psmgr_desc at psmgr_core.c:283 and psmgr_core.c:361; WMI-4 (control flow hijack) on psmgr_desc at psmgr_core.c:318 (process_ctrl), psmgr_recvmsg, psmgr_exec, and psmgr_sock.c:683 (setsockopt). The authoritative object psmgr_desc serves as the nucleus with WMI-3 and WMI-4 co-location.",
+  "ran": true
+}

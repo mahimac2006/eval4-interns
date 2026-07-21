@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun role () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun sock_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  false (=  (_ bv2 32) (concat  (select  role (_ bv3 32) ) (concat  (select  role (_ bv2 32) ) (concat  (select  role (_ bv1 32) ) (select  role (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv3 32) (concat  (select  sock_state (_ bv3 32) ) (concat  (select  sock_state (_ bv2 32) ) (concat  (select  sock_state (_ bv1 32) ) (select  sock_state (_ bv0 32) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

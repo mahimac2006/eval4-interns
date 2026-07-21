@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "unix_bpf.c",
+  "target_line": 86593,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'qdisc_class_get' sets signal field 'Qdisc_class_common.filter_cnt', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=Qdisc_class_common;field=filter_cnt;offset=4] [oracle:assert=Qdisc_class_common.filter_cnt stays within the domain its consumer's agreement governs;assume=producer sets filter_cnt without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "unix_bpf.c",
+      "line": 86593,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

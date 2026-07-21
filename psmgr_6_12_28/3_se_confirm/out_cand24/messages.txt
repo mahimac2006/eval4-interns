@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7b8d6a000000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7b8aea000000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7a8aea000000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7a6aea000000 size=128 GiB)
+KLEE: ERROR: /results/psmgr_6_12_28/3_se_confirm/cand24_wmi1.c:15: ASSERTION FAIL: enc_mode < PSMGR_ENC_MODE_MAX && window_sz > 0 && window_sz <= PSMGR_WINDOW_MAX
+KLEE: NOTE: now ignoring this error at this location

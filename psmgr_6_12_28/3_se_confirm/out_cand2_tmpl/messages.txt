@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7f943d000000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7f91bd000000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x7e91bd000000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7e71bd000000 size=128 GiB)
+KLEE: ERROR: /results/psmgr_6_12_28/3_se_confirm/cand2_tmpl.c:14: ASSERTION FAIL: producer_view == consumer_view
+KLEE: NOTE: now ignoring this error at this location

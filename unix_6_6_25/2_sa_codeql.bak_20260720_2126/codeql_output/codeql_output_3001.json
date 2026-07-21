@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "unix_bpf.c",
+  "target_line": 88815,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'net_device.addr_len' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:copy-references-field;indicates=WMI-4] [mem:struct=net_device;field=addr_len;offset=573] [oracle:assert=addr_len governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "unix_bpf.c",
+      "line": 88815,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "unix_bpf.c",
+  "target_line": 58866,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (bookkeeping-field-threshold-gate): the resource's bookkeeping-value field 'bio_vec.bv_len' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:bookkeeping-field-threshold-gate;indicates=WMI-2] [mem:struct=bio_vec;field=bv_len;offset=8] [oracle:assert=bio_vec.bv_len is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "unix_bpf.c",
+      "line": 58866,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

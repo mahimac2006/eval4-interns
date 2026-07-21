@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun ctx_enc_mode () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun sess_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  (_ bv2 32) (concat  (select  sess_state (_ bv3 32) ) (concat  (select  sess_state (_ bv2 32) ) (concat  (select  sess_state (_ bv1 32) ) (select  sess_state (_ bv0 32) ) ) ) ) ) (bvult  (concat  (select  ctx_enc_mode (_ bv3 32) ) (concat  (select  ctx_enc_mode (_ bv2 32) ) (concat  (select  ctx_enc_mode (_ bv1 32) ) (select  ctx_enc_mode (_ bv0 32) ) ) ) ) (_ bv8 32) ) ) )
+(check-sat)
+(exit)

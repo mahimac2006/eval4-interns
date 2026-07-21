@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: sock_state != SS_CONNECTED
+File: /results/psmgr_6_12_28/3_se_confirm/cand36_wmi1.c
+Line: 15
+assembly.ll line: 38
+State: 2
+Stack: 
+	#000000038 in main() at /results/psmgr_6_12_28/3_se_confirm/cand36_wmi1.c:15

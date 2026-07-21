@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun out_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun token_init () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun write_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (and  (bvule  (_ bv256 32) (concat  (select  write_count (_ bv3 32) ) (concat  (select  write_count (_ bv2 32) ) (concat  (select  write_count (_ bv1 32) ) (select  write_count (_ bv0 32) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  token_init (_ bv3 32) ) (concat  (select  token_init (_ bv2 32) ) (concat  (select  token_init (_ bv1 32) ) (select  token_init (_ bv0 32) ) ) ) ) ) ) (=  false (bvult  (concat  (select  out_offset (_ bv3 32) ) (concat  (select  out_offset (_ bv2 32) ) (concat  (select  out_offset (_ bv1 32) ) (select  out_offset (_ bv0 32) ) ) ) ) (_ bv4096 32) ) ) ) )
+(check-sat)
+(exit)

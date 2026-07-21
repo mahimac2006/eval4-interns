@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: handler_idx < HANDLER_MAX
+File: /results/psmgr_6_12_28/3_se_confirm/cand50_wmi2.c
+Line: 19
+assembly.ll line: 54
+State: 2
+Stack: 
+	#000000054 in main() at /results/psmgr_6_12_28/3_se_confirm/cand50_wmi2.c:19

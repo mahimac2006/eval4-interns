@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "unix_bpf.c",
+  "target_line": 90793,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'sock.__sk_common' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:copy-references-field;indicates=WMI-4] [mem:struct=sock;field=__sk_common;offset=0] [oracle:assert=__sk_common governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "unix_bpf.c",
+      "line": 90793,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

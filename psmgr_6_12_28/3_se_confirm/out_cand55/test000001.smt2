@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun out_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun role () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  out_offset (_ bv3 32) ) (concat  (select  out_offset (_ bv2 32) ) (concat  (select  out_offset (_ bv1 32) ) (select  out_offset (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (=  false (=  (_ bv4294967295 32) ?B1 ) ) (=  false (=  (_ bv1 32) (concat  (select  role (_ bv3 32) ) (concat  (select  role (_ bv2 32) ) (concat  (select  role (_ bv1 32) ) (select  role (_ bv0 32) ) ) ) ) ) ) ) (bvult  ?B1 (_ bv144 32) ) ) (=  false (bvult  ?B1 (_ bv128 32) ) ) ) ) )
+(check-sat)
+(exit)

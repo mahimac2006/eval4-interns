@@ -1,0 +1,33 @@
+{
+  "wma_confirmed": false,
+  "verdict": "Incomplete chain: only WMI-3 candidates found, missing WMI-1, WMI-2, and WMI-4 roles; no chain nucleus identified.",
+  "kept": [
+    {
+      "cand": "af_unix.c:94684",
+      "wmi": 3,
+      "func": "af_unix",
+      "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+    },
+    {
+      "cand": "af_unix.c:93650",
+      "wmi": 3,
+      "func": "af_unix",
+      "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+    },
+    {
+      "cand": "af_unix.c:93651",
+      "wmi": 3,
+      "func": "af_unix",
+      "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+    },
+    {
+      "cand": "scm.c:83261",
+      "wmi": 3,
+      "func": "scm",
+      "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+    }
+  ],
+  "dropped": [],
+  "chain_summary": "Found 4 WMI-3 candidates in af_unix and scm, but no WMI-1 (signal divergence), WMI-2 (live resource persist with inconsistent state), or WMI-4 (control flow hijack) candidates. Chain incomplete: cannot form the 4-WMI abstraction without all four roles present.",
+  "ran": true
+}

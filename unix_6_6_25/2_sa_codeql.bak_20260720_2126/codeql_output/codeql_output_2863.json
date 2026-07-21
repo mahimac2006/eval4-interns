@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "garbage.c",
+  "target_line": 81418,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'proto.inuse_idx' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:array-index-from-field;indicates=WMI-4] [mem:struct=proto;field=inuse_idx;offset=208] [oracle:assert=inuse_idx governs a bounded, trusted in-bounds array index;assume=access index loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "garbage.c",
+      "line": 81418,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: new_window_sz < PSMGR_BUF_DATA_SZ
+File: /results/psmgr_6_12_28/3_se_confirm/cand1_wmi1.c
+Line: 14
+assembly.ll line: 38
+State: 2
+Stack: 
+	#000000038 in main() at /results/psmgr_6_12_28/3_se_confirm/cand1_wmi1.c:14

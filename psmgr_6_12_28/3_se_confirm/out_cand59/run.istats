@@ -1,0 +1,50 @@
+version: 1
+creator: klee
+pid: 3641
+cmd: /results/psmgr_6_12_28/3_se_confirm/cand59.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fl=/results/psmgr_6_12_28/3_se_confirm/cand59_wmi2.c
+fn=main
+16 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+17 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+18 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+19 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+20 11 1 0 0 0 1 0 0 0 0 1 0 0 0 
+21 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+22 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+23 12 1 0 0 0 1 0 0 0 0 2 0 0 0 
+24 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+25 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+26 13 1 0 0 0 1 0 0 0 0 2 0 0 0 
+27 14 1 0 0 0 1 0 0 0 0 0 0 0 0 
+28 14 1 0 0 0 1 0 0 0 0 0 0 0 0 
+29 14 1 0 0 0 1 0 0 0 0 2 0 0 0 
+30 15 1 0 0 0 1 0 0 0 0 1 0 0 0 
+31 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+32 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+33 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+34 15 1 0 0 0 1 0 0 0 0 1 1 0 2482 
+35 16 1 0 0 0 1 0 0 0 0 1 0 0 0 
+36 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+37 16 1 1 0 0 1 0 0 0 0 1 1 0 10888 
+40 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+43 16 1 0 0 0 1 0 0 0 0 1 0 0 0 
+44 16 0 0 0 0 0 0 0 0 0 0 0 0 0 
+47 17 1 0 0 0 1 0 0 0 0 1 0 0 0 

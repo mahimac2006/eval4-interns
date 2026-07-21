@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x702320600000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x7020a0600000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x6f20a0600000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x6f00a0600000 size=128 GiB)
+KLEE: ERROR: /results/psmgr_6_12_28/3_se_confirm/cand38_wmi1.c:13: ASSERTION FAIL: sk_change_fn != 0
+KLEE: NOTE: now ignoring this error at this location

@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: role < NUM_ROLES
+File: /results/psmgr_6_12_28/3_se_confirm/cand13_wmi1.c
+Line: 12
+assembly.ll line: 28
+State: 2
+Stack: 
+	#000000028 in main() at /results/psmgr_6_12_28/3_se_confirm/cand13_wmi1.c:12

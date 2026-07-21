@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x73a76a600000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x73a4ea600000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x72a4ea600000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x7284ea600000 size=128 GiB)
+KLEE: ERROR: /results/psmgr_6_12_28/3_se_confirm/cand68_wmi2.c:15: ASSERTION FAIL: ctx_enc_mode < ENC_MODE_TABLE_SZ
+KLEE: NOTE: now ignoring this error at this location

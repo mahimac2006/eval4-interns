@@ -1,0 +1,11 @@
+array out_offset[4] : w32 -> w8 = symbolic
+array role[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 4294967295
+                 N0:(ReadLSB w32 0 out_offset)))
+         (Eq false
+             (Eq 1
+                 (ReadLSB w32 0 role)))
+         (Ult N0 144)
+         (Eq false (Ult N0 128))]
+        false)

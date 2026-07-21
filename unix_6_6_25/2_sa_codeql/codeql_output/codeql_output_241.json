@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "diag.c",
+  "target_line": 36717,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'clear_tsk_restore_sigmask' sets signal field 'task_struct.restore_sigmask', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=task_struct;field=restore_sigmask;offset=1240] [oracle:assert=task_struct.restore_sigmask stays within the domain its consumer's agreement governs;assume=producer sets restore_sigmask without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "diag.c",
+      "line": 36717,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

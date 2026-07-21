@@ -1,0 +1,134 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_psmgr_process_commit_req",
+    "parameters": [
+      "int resource_live",
+      "int resource_inconsistent",
+      "int content_attacker",
+      "int content_trusted"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_48252d79",
+        "arguments": {
+          "locations": [
+            "psmgr_desc.handler@136"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 1200
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 1188
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_process_commit_req",
+    "file": "psmgr_core.c",
+    "args": [
+      {
+        "name": "resource_live",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "resource_inconsistent",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "content_attacker",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "content_trusted",
+        "type": "int",
+        "value_le_hex": "0x00000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ psmgr_process_commit_req",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "psmgr_core.c",
+        "line": 361
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_core.c",
+      "line": 361,
+      "function": "psmgr_process_commit_req"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_desc.handler@136",
+        "locations": [
+          {
+            "offset": 136,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_desc.handler@136",
+      "symbol": "psmgr_process_commit_req"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "psmgr_desc.handler is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_desc.handler@136",
+      "sa": "psmgr_desc.handler@136",
+      "code": "psmgr_desc.handler"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun peer_null () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun peer_sk_null () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun role () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (and  (=  (_ bv3 32) (concat  (select  role (_ bv3 32) ) (concat  (select  role (_ bv2 32) ) (concat  (select  role (_ bv1 32) ) (select  role (_ bv0 32) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  peer_null (_ bv3 32) ) (concat  (select  peer_null (_ bv2 32) ) (concat  (select  peer_null (_ bv1 32) ) (select  peer_null (_ bv0 32) ) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  peer_sk_null (_ bv3 32) ) (concat  (select  peer_sk_null (_ bv2 32) ) (concat  (select  peer_sk_null (_ bv1 32) ) (select  peer_sk_null (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

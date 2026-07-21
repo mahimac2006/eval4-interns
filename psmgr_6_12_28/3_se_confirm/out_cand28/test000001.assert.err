@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: enc_mode < PSMGR_ENC_MODE_MAX && window_sz > 0 && window_sz <= PSMGR_WINDOW_MAX
+File: /results/psmgr_6_12_28/3_se_confirm/cand28_wmi1.c
+Line: 15
+assembly.ll line: 48
+State: 2
+Stack: 
+	#000000048 in main() at /results/psmgr_6_12_28/3_se_confirm/cand28_wmi1.c:15

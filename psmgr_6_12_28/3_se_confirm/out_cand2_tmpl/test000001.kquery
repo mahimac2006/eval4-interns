@@ -1,0 +1,9 @@
+array attacker_input[4] : w32 -> w8 = symbolic
+array consumer_view[4] : w32 -> w8 = symbolic
+array producer_view[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 attacker_input))
+         (Eq false
+             (Eq (ReadLSB w32 0 producer_view)
+                 (ReadLSB w32 0 consumer_view)))]
+        false)

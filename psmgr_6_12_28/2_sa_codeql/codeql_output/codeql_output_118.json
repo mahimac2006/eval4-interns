@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_exec",
+  "target_file": "psmgr_core.c",
+  "target_line": 624,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'psmgr_desc.data' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:copy-references-field;indicates=WMI-4] [mem:struct=psmgr_desc;field=data;offset=0] [oracle:assert=data governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_exec"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_core.c",
+      "line": 624,
+      "func": "psmgr_exec",
+      "callee": ""
+    }
+  ]
+}

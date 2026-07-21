@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "sysctl_net_unix.c",
+  "target_line": 58807,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'skb_dst_set' sets signal field '(unnamed class/struct/union)._skb_refdst', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=(unnamed class/struct/union);field=_skb_refdst;offset=0] [oracle:assert=(unnamed class/struct/union)._skb_refdst stays within the domain its consumer's agreement governs;assume=producer sets _skb_refdst without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "sysctl_net_unix.c",
+      "line": 58807,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

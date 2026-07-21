@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "af_unix.c",
+  "target_line": 93248,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'unix_create_addr' sets signal field 'unix_address.len', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=unix_address;field=len;offset=4] [oracle:assert=unix_address.len stays within the domain its consumer's agreement governs;assume=producer sets len without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "af_unix.c",
+      "line": 93248,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

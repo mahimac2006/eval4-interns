@@ -1,0 +1,1061 @@
+{
+  "out_root": "/results/unix_6_6_25",
+  "target": "net_unix",
+  "stages": {
+    "cooccurrence": {
+      "skipped": "single component (module-scoped); triage not needed",
+      "component": "/tmp/tmp.LHjiRN6YsO"
+    },
+    "sa_codeql": {
+      "ok": true,
+      "index": "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output.json",
+      "per_finding": [
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_1.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_2.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_3.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_4.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_5.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_6.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_7.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_8.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_9.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_10.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_11.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_12.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_13.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_14.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_15.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_16.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_17.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_18.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_19.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_20.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_21.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_22.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_23.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_24.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_25.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_26.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_27.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_28.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_29.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_30.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_31.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_32.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_33.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_34.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_35.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_36.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_37.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_38.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_39.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_40.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_41.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_42.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_43.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_44.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_45.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_46.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_47.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_48.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_49.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_50.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_51.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_52.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_53.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_54.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_55.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_56.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_57.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_58.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_59.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_60.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_61.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_62.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_63.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_64.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_65.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_66.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_67.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_68.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_69.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_70.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_71.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_72.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_73.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_74.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_75.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_76.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_77.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_78.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_79.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_80.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_81.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_82.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_83.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_84.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_85.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_86.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_87.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_88.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_89.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_90.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_91.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_92.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_93.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_94.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_95.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_96.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_97.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_98.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_99.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_100.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_101.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_102.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_103.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_104.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_105.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_106.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_107.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_108.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_109.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_110.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_111.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_112.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_113.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_114.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_115.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_116.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_117.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_118.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_119.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_120.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_121.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_122.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_123.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_124.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_125.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_126.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_127.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_128.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_129.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_130.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_131.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_132.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_133.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_134.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_135.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_136.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_137.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_138.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_139.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_140.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_141.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_142.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_143.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_144.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_145.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_146.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_147.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_148.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_149.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_150.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_151.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_152.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_153.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_154.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_155.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_156.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_157.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_158.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_159.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_160.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_161.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_162.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_163.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_164.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_165.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_166.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_167.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_168.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_169.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_170.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_171.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_172.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_173.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_174.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_175.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_176.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_177.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_178.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_179.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_180.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_181.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_182.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_183.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_184.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_185.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_186.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_187.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_188.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_189.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_190.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_191.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_192.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_193.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_194.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_195.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_196.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_197.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_198.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_199.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_200.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_201.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_202.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_203.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_204.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_205.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_206.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_207.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_208.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_209.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_210.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_211.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_212.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_213.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_214.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_215.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_216.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_217.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_218.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_219.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_220.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_221.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_222.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_223.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_224.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_225.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_226.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_227.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_228.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_229.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_230.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_231.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_232.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_233.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_234.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_235.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_236.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_237.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_238.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_239.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_240.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_241.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_242.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_243.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_244.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_245.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_246.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_247.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_248.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_249.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_250.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_251.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_252.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_253.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_254.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_255.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_256.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_257.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_258.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_259.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_260.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_261.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_262.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_263.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_264.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_265.json",
+        "/results/unix_6_6_25/2_sa_codeql/codeql_output/codeql_output_266.json"
+      ],
+      "count": 266
+    },
+    "reachability": {
+      "kept": 4,
+      "dropped": 262,
+      "reachable_functions": 511
+    },
+    "se_sweep": {
+      "ok": true,
+      "ran_klee": true,
+      "total_candidates": 4,
+      "agent_keys": 0,
+      "transfer_keys": 3,
+      "confirmed": 4,
+      "discarded": 0,
+      "errored": 0,
+      "per_candidate": [
+        {
+          "candidate": 1,
+          "wmi": 3,
+          "mechanism": "attacker-pointer-into-field",
+          "site": "af_unix.c:94684",
+          "slice": "/results/unix_6_6_25/3_se_confirm/cand1_wmi3.c",
+          "oracle_source": "template",
+          "result": "CONFIRMED",
+          "oracle_spec": {
+            "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+            "assertion": "fp holds trusted, not attacker-determined, content",
+            "assumptions": [
+              "externally-originated content installed into the field"
+            ],
+            "precondition": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ],
+            "guarantee": [
+              "content_authoritative == 1",
+              "content_attacker == 1"
+            ],
+            "assert_c": "content_trusted == 1",
+            "symbols": {
+              "resource_live": "int",
+              "resource_inconsistent": "int",
+              "content_attacker": "int",
+              "content_trusted": "int"
+            },
+            "assume_c": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ]
+          },
+          "out": "/results/unix_6_6_25/3_se_confirm/out_cand1",
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        {
+          "candidate": 2,
+          "wmi": 3,
+          "mechanism": "attacker-pointer-into-field",
+          "site": "af_unix.c:93650",
+          "slice": "/results/unix_6_6_25/3_se_confirm/cand2_wmi3.c",
+          "oracle_source": "template",
+          "result": "CONFIRMED",
+          "oracle_spec": {
+            "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+            "assertion": "sk_peer_pid holds trusted, not attacker-determined, content",
+            "assumptions": [
+              "externally-originated content installed into the field"
+            ],
+            "precondition": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ],
+            "guarantee": [
+              "content_authoritative == 1",
+              "content_attacker == 1"
+            ],
+            "assert_c": "content_trusted == 1",
+            "symbols": {
+              "resource_live": "int",
+              "resource_inconsistent": "int",
+              "content_attacker": "int",
+              "content_trusted": "int"
+            },
+            "assume_c": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ]
+          },
+          "out": "/results/unix_6_6_25/3_se_confirm/out_cand2",
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        {
+          "candidate": 3,
+          "wmi": 3,
+          "mechanism": "attacker-pointer-into-field",
+          "site": "af_unix.c:93651",
+          "slice": "/results/unix_6_6_25/3_se_confirm/cand3_wmi3.c",
+          "oracle_source": "template",
+          "result": "CONFIRMED",
+          "oracle_spec": {
+            "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+            "assertion": "sk_peer_cred holds trusted, not attacker-determined, content",
+            "assumptions": [
+              "externally-originated content installed into the field"
+            ],
+            "precondition": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ],
+            "guarantee": [
+              "content_authoritative == 1",
+              "content_attacker == 1"
+            ],
+            "assert_c": "content_trusted == 1",
+            "symbols": {
+              "resource_live": "int",
+              "resource_inconsistent": "int",
+              "content_attacker": "int",
+              "content_trusted": "int"
+            },
+            "assume_c": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ]
+          },
+          "out": "/results/unix_6_6_25/3_se_confirm/out_cand3",
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        {
+          "candidate": 4,
+          "wmi": 3,
+          "mechanism": "attacker-pointer-into-field",
+          "site": "scm.c:83261",
+          "slice": "/results/unix_6_6_25/3_se_confirm/cand4_wmi3.c",
+          "oracle_source": "template",
+          "result": "CONFIRMED",
+          "oracle_spec": {
+            "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+            "assertion": "fp holds trusted, not attacker-determined, content",
+            "assumptions": [
+              "externally-originated content installed into the field"
+            ],
+            "precondition": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ],
+            "guarantee": [
+              "content_authoritative == 1",
+              "content_attacker == 1"
+            ],
+            "assert_c": "content_trusted == 1",
+            "symbols": {
+              "resource_live": "int",
+              "resource_inconsistent": "int",
+              "content_attacker": "int",
+              "content_trusted": "int"
+            },
+            "assume_c": [
+              "resource_live == 1",
+              "resource_inconsistent == 1",
+              "content_attacker == 1"
+            ]
+          },
+          "out": "/results/unix_6_6_25/3_se_confirm/out_cand4",
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        }
+      ],
+      "survivors_by_wmi": {
+        "3": [
+          {
+            "candidate": 1,
+            "wmi": 3,
+            "mechanism": "attacker-pointer-into-field",
+            "site": "af_unix.c:94684",
+            "slice": "/results/unix_6_6_25/3_se_confirm/cand1_wmi3.c",
+            "oracle_source": "template",
+            "result": "CONFIRMED",
+            "oracle_spec": {
+              "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+              "assertion": "fp holds trusted, not attacker-determined, content",
+              "assumptions": [
+                "externally-originated content installed into the field"
+              ],
+              "precondition": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ],
+              "guarantee": [
+                "content_authoritative == 1",
+                "content_attacker == 1"
+              ],
+              "assert_c": "content_trusted == 1",
+              "symbols": {
+                "resource_live": "int",
+                "resource_inconsistent": "int",
+                "content_attacker": "int",
+                "content_trusted": "int"
+              },
+              "assume_c": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ]
+            },
+            "out": "/results/unix_6_6_25/3_se_confirm/out_cand1",
+            "preconditions": [
+              {
+                "name": "test000001",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": true,
+                "format": "smt2"
+              },
+              {
+                "name": "test000002",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": false,
+                "format": "smt2"
+              }
+            ],
+            "parameters": [
+              "int resource_live",
+              "int resource_inconsistent",
+              "int content_attacker",
+              "int content_trusted"
+            ],
+            "witness_args": [
+              {
+                "name": "resource_live",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "resource_inconsistent",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_attacker",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_trusted",
+                "size_bytes": 4,
+                "value_le_hex": "0x00000000"
+              }
+            ]
+          },
+          {
+            "candidate": 2,
+            "wmi": 3,
+            "mechanism": "attacker-pointer-into-field",
+            "site": "af_unix.c:93650",
+            "slice": "/results/unix_6_6_25/3_se_confirm/cand2_wmi3.c",
+            "oracle_source": "template",
+            "result": "CONFIRMED",
+            "oracle_spec": {
+              "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+              "assertion": "sk_peer_pid holds trusted, not attacker-determined, content",
+              "assumptions": [
+                "externally-originated content installed into the field"
+              ],
+              "precondition": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ],
+              "guarantee": [
+                "content_authoritative == 1",
+                "content_attacker == 1"
+              ],
+              "assert_c": "content_trusted == 1",
+              "symbols": {
+                "resource_live": "int",
+                "resource_inconsistent": "int",
+                "content_attacker": "int",
+                "content_trusted": "int"
+              },
+              "assume_c": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ]
+            },
+            "out": "/results/unix_6_6_25/3_se_confirm/out_cand2",
+            "preconditions": [
+              {
+                "name": "test000001",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": true,
+                "format": "smt2"
+              },
+              {
+                "name": "test000002",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": false,
+                "format": "smt2"
+              }
+            ],
+            "parameters": [
+              "int resource_live",
+              "int resource_inconsistent",
+              "int content_attacker",
+              "int content_trusted"
+            ],
+            "witness_args": [
+              {
+                "name": "resource_live",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "resource_inconsistent",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_attacker",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_trusted",
+                "size_bytes": 4,
+                "value_le_hex": "0x00000000"
+              }
+            ]
+          },
+          {
+            "candidate": 3,
+            "wmi": 3,
+            "mechanism": "attacker-pointer-into-field",
+            "site": "af_unix.c:93651",
+            "slice": "/results/unix_6_6_25/3_se_confirm/cand3_wmi3.c",
+            "oracle_source": "template",
+            "result": "CONFIRMED",
+            "oracle_spec": {
+              "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+              "assertion": "sk_peer_cred holds trusted, not attacker-determined, content",
+              "assumptions": [
+                "externally-originated content installed into the field"
+              ],
+              "precondition": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ],
+              "guarantee": [
+                "content_authoritative == 1",
+                "content_attacker == 1"
+              ],
+              "assert_c": "content_trusted == 1",
+              "symbols": {
+                "resource_live": "int",
+                "resource_inconsistent": "int",
+                "content_attacker": "int",
+                "content_trusted": "int"
+              },
+              "assume_c": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ]
+            },
+            "out": "/results/unix_6_6_25/3_se_confirm/out_cand3",
+            "preconditions": [
+              {
+                "name": "test000001",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": true,
+                "format": "smt2"
+              },
+              {
+                "name": "test000002",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": false,
+                "format": "smt2"
+              }
+            ],
+            "parameters": [
+              "int resource_live",
+              "int resource_inconsistent",
+              "int content_attacker",
+              "int content_trusted"
+            ],
+            "witness_args": [
+              {
+                "name": "resource_live",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "resource_inconsistent",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_attacker",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_trusted",
+                "size_bytes": 4,
+                "value_le_hex": "0x00000000"
+              }
+            ]
+          },
+          {
+            "candidate": 4,
+            "wmi": 3,
+            "mechanism": "attacker-pointer-into-field",
+            "site": "scm.c:83261",
+            "slice": "/results/unix_6_6_25/3_se_confirm/cand4_wmi3.c",
+            "oracle_source": "template",
+            "result": "CONFIRMED",
+            "oracle_spec": {
+              "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+              "assertion": "fp holds trusted, not attacker-determined, content",
+              "assumptions": [
+                "externally-originated content installed into the field"
+              ],
+              "precondition": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ],
+              "guarantee": [
+                "content_authoritative == 1",
+                "content_attacker == 1"
+              ],
+              "assert_c": "content_trusted == 1",
+              "symbols": {
+                "resource_live": "int",
+                "resource_inconsistent": "int",
+                "content_attacker": "int",
+                "content_trusted": "int"
+              },
+              "assume_c": [
+                "resource_live == 1",
+                "resource_inconsistent == 1",
+                "content_attacker == 1"
+              ]
+            },
+            "out": "/results/unix_6_6_25/3_se_confirm/out_cand4",
+            "preconditions": [
+              {
+                "name": "test000001",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": true,
+                "format": "smt2"
+              },
+              {
+                "name": "test000002",
+                "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+                "is_bug_witness": false,
+                "format": "smt2"
+              }
+            ],
+            "parameters": [
+              "int resource_live",
+              "int resource_inconsistent",
+              "int content_attacker",
+              "int content_trusted"
+            ],
+            "witness_args": [
+              {
+                "name": "resource_live",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "resource_inconsistent",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_attacker",
+                "size_bytes": 4,
+                "value_le_hex": "0x01000000"
+              },
+              {
+                "name": "content_trusted",
+                "size_bytes": 4,
+                "value_le_hex": "0x00000000"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "se_confirm": {
+      "ok": true,
+      "per_wmi": [
+        {
+          "wmi": 3,
+          "slice": "/results/unix_6_6_25/3_se_confirm/wmi3.c",
+          "result": "CONFIRMED (SA invariant violated)",
+          "witness": [
+            "object 0: int : 1",
+            "object 1: int : 1",
+            "object 2: int : 1",
+            "object 3: int : 0"
+          ],
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "out": "/results/unix_6_6_25/3_se_confirm/out3"
+        }
+      ],
+      "count": 1,
+      "ran_klee": true
+    },
+    "concrete_filter": {
+      "ran": false,
+      "note": "replay toolchain unavailable (cc=True libkleeRuntest=False)",
+      "se_dir": "/results/unix_6_6_25/3_se_confirm"
+    },
+    "agent_final_filter": {
+      "wma_confirmed": false,
+      "verdict": "Incomplete chain: only WMI-3 candidates found, missing WMI-1, WMI-2, and WMI-4 roles; no chain nucleus identified.",
+      "kept": [
+        {
+          "cand": "af_unix.c:94684",
+          "wmi": 3,
+          "func": "af_unix",
+          "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+        },
+        {
+          "cand": "af_unix.c:93650",
+          "wmi": 3,
+          "func": "af_unix",
+          "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+        },
+        {
+          "cand": "af_unix.c:93651",
+          "wmi": 3,
+          "func": "af_unix",
+          "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+        },
+        {
+          "cand": "scm.c:83261",
+          "wmi": 3,
+          "func": "scm",
+          "reason": "Only confirmed WMI-3 candidate; potential attacker content into authoritative position."
+        }
+      ],
+      "dropped": [],
+      "chain_summary": "Found 4 WMI-3 candidates in af_unix and scm, but no WMI-1 (signal divergence), WMI-2 (live resource persist with inconsistent state), or WMI-4 (control flow hijack) candidates. Chain incomplete: cannot form the 4-WMI abstraction without all four roles present.",
+      "ran": true
+    },
+    "deliverable": {
+      "ok": true,
+      "findings": [
+        "/results/unix_6_6_25/1_wmi_findings/findings/wmi-3/9bdb0cab-44bf-474c-b317-24172fa17402/wmi.json",
+        "/results/unix_6_6_25/1_wmi_findings/findings/wmi-3/82329ed3-38ad-48be-b8b3-812bca4a92e2/wmi.json",
+        "/results/unix_6_6_25/1_wmi_findings/findings/wmi-3/e2653564-91dd-40f6-96d5-2afa76b4e44f/wmi.json",
+        "/results/unix_6_6_25/1_wmi_findings/findings/wmi-3/6be79974-a514-4e43-8d98-e23bdd46b13d/wmi.json"
+      ],
+      "count": 4,
+      "witnessed": [],
+      "target": "net_unix"
+    }
+  },
+  "auto_wmis": [
+    {
+      "wmi": 3,
+      "file": "af_unix.c",
+      "line": 94684,
+      "func": "unix_peek_fds",
+      "memory": {
+        "struct": "scm_cookie",
+        "field": "fp",
+        "code": "scm_cookie.fp",
+        "offset": 8
+      },
+      "oracle_spec": {
+        "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "assertion": "fp holds trusted, not attacker-determined, content",
+        "assumptions": [
+          "externally-originated content installed into the field"
+        ],
+        "precondition": [
+          "resource_live == 1",
+          "resource_inconsistent == 1",
+          "content_attacker == 1"
+        ],
+        "guarantee": [
+          "content_authoritative == 1",
+          "content_attacker == 1"
+        ],
+        "assert_c": "content_trusted == 1",
+        "symbols": {
+          "resource_live": "int",
+          "resource_inconsistent": "int",
+          "content_attacker": "int",
+          "content_trusted": "int"
+        },
+        "assume_c": [
+          "resource_live == 1",
+          "resource_inconsistent == 1",
+          "content_attacker == 1"
+        ]
+      },
+      "concrete_oracle_kind": "state-witness"
+    }
+  ],
+  "ok": true,
+  "module": "",
+  "n_sinks": 266,
+  "reachable_functions": 511
+}

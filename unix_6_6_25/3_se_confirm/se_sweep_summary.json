@@ -1,0 +1,621 @@
+{
+  "by_wmi": {
+    "3": {
+      "confirmed": 4,
+      "discarded": 0,
+      "errored": 0,
+      "confirmed_sites": [
+        "af_unix.c:94684",
+        "af_unix.c:93650",
+        "af_unix.c:93651",
+        "scm.c:83261"
+      ],
+      "discarded_sites": [],
+      "site_oracles": {
+        "af_unix.c:94684": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "fp holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        },
+        "af_unix.c:93650": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "sk_peer_pid holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        },
+        "af_unix.c:93651": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "sk_peer_cred holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        },
+        "scm.c:83261": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "fp holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        }
+      },
+      "site_klee": {
+        "af_unix.c:94684": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        "af_unix.c:93650": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        "af_unix.c:93651": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        "scm.c:83261": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "by_mechanism": {
+    "WMI-3|attacker-pointer-into-field": {
+      "confirmed": 4,
+      "discarded": 0,
+      "errored": 0,
+      "confirmed_sites": [
+        "af_unix.c:94684",
+        "af_unix.c:93650",
+        "af_unix.c:93651",
+        "scm.c:83261"
+      ],
+      "discarded_sites": [],
+      "site_oracles": {
+        "af_unix.c:94684": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "fp holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        },
+        "af_unix.c:93650": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "sk_peer_pid holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        },
+        "af_unix.c:93651": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "sk_peer_cred holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        },
+        "scm.c:83261": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "fp holds trusted, not attacker-determined, content",
+          "assumptions": [
+            "externally-originated content installed into the field"
+          ],
+          "precondition": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ],
+          "guarantee": [
+            "content_authoritative == 1",
+            "content_attacker == 1"
+          ],
+          "assert_c": "content_trusted == 1",
+          "symbols": {
+            "resource_live": "int",
+            "resource_inconsistent": "int",
+            "content_attacker": "int",
+            "content_trusted": "int"
+          },
+          "assume_c": [
+            "resource_live == 1",
+            "resource_inconsistent == 1",
+            "content_attacker == 1"
+          ]
+        }
+      },
+      "site_klee": {
+        "af_unix.c:94684": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        "af_unix.c:93650": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        "af_unix.c:93651": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        },
+        "scm.c:83261": {
+          "preconditions": [
+            {
+              "name": "test000001",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": true,
+              "format": "smt2"
+            },
+            {
+              "name": "test000002",
+              "path_constraint_smt": "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+              "is_bug_witness": false,
+              "format": "smt2"
+            }
+          ],
+          "parameters": [
+            "int resource_live",
+            "int resource_inconsistent",
+            "int content_attacker",
+            "int content_trusted"
+          ],
+          "witness_args": [
+            {
+              "name": "resource_live",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "resource_inconsistent",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_attacker",
+              "size_bytes": 4,
+              "value_le_hex": "0x01000000"
+            },
+            {
+              "name": "content_trusted",
+              "size_bytes": 4,
+              "value_le_hex": "0x00000000"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "total": {
+    "total_candidates": 4,
+    "confirmed": 4,
+    "discarded": 0,
+    "errored": 0,
+    "agent_keys": 0
+  }
+}

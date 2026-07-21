@@ -1,0 +1,5 @@
+array enc_mode[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Ult (ReadLSB w32 0 enc_mode)
+                  16))]
+        false)

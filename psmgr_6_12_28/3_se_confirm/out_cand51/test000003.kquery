@@ -1,0 +1,10 @@
+array token[4] : w32 -> w8 = symbolic
+array write_count[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 4294967295
+                 N0:(ReadLSB w32 0 write_count)))
+         (Eq false (Ult N0 1))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w32 0 token)))]
+        false)

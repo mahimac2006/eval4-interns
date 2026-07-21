@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: write_count == 0 || write_count == PSMGR_BUF_COMMITTED
+File: /results/psmgr_6_12_28/3_se_confirm/cand47_wmi2.c
+Line: 13
+assembly.ll line: 39
+State: 3
+Stack: 
+	#000000039 in main() at /results/psmgr_6_12_28/3_se_confirm/cand47_wmi2.c:13

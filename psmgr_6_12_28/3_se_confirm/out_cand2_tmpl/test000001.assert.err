@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: producer_view == consumer_view
+File: /results/psmgr_6_12_28/3_se_confirm/cand2_tmpl.c
+Line: 14
+assembly.ll line: 44
+State: 2
+Stack: 
+	#000000044 in main() at /results/psmgr_6_12_28/3_se_confirm/cand2_tmpl.c:14

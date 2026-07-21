@@ -1,0 +1,126 @@
+{
+  "operation": {
+    "name": "write_at_psmgr_connect",
+    "parameters": [
+      "unsigned int window_sz",
+      "unsigned int enc_mode",
+      "unsigned int proc_param"
+    ],
+    "effects": [
+      {
+        "type": "write",
+        "id": "e_f3dabd39",
+        "arguments": {
+          "destinations": [
+            "psmgr_session.state@4"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun window_sz () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  false (bvule  (concat  (select  window_sz (_ bv3 32) ) (concat  (select  window_sz (_ bv2 32) ) (concat  (select  window_sz (_ bv1 32) ) (select  window_sz (_ bv0 32) ) ) ) ) (_ bv4096 32) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun window_sz () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (bvule  (concat  (select  window_sz (_ bv3 32) ) (concat  (select  window_sz (_ bv2 32) ) (concat  (select  window_sz (_ bv1 32) ) (select  window_sz (_ bv0 32) ) ) ) ) (_ bv4096 32) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 312
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 300
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_connect",
+    "file": "psmgr_sock.c",
+    "args": [
+      {
+        "name": "window_sz",
+        "type": "unsigned int",
+        "value_le_hex": "0xffffffff",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "enc_mode",
+        "type": "unsigned int",
+        "value_le_hex": "0x00000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "proc_param",
+        "type": "unsigned int",
+        "value_le_hex": "0x00000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-1: Shared State Divergence @ psmgr_connect",
+  "metadata": {
+    "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "mechanism": "unchecked-signal-field-set",
+        "indicates": "WMI-1",
+        "file": "psmgr_sock.c",
+        "line": 458
+      }
+    ],
+    "bug_type": "WMI-1 Shared State Divergence",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_sock.c",
+      "line": 458,
+      "function": "psmgr_connect"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_session.state@4",
+        "locations": [
+          {
+            "offset": 4,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_session.state@4",
+      "symbol": "psmgr_connect"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "assertion": "psmgr_session.state stays within the domain its consumer's agreement governs",
+        "assumptions": [
+          "producer sets state without enforcing the consumer's cross-field invariant"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_session.state@4",
+      "sa": "psmgr_session.state@4",
+      "code": "psmgr_session.state"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 1,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

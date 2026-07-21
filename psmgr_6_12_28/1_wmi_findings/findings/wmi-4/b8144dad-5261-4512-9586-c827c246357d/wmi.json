@@ -1,0 +1,134 @@
+{
+  "operation": {
+    "name": "copyPtr_at_psmgr_exec",
+    "parameters": [
+      "int content_authoritative",
+      "int content_attacker",
+      "int access_index",
+      "int bound"
+    ],
+    "effects": [
+      {
+        "type": "copyPtr",
+        "id": "e_8f489ebd",
+        "arguments": {
+          "destinations": [
+            "psmgr_desc.data@0"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun access_index () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun bound () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_authoritative () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  access_index (_ bv3 32) ) (concat  (select  access_index (_ bv2 32) ) (concat  (select  access_index (_ bv1 32) ) (select  access_index (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  bound (_ bv3 32) ) (concat  (select  bound (_ bv2 32) ) (concat  (select  bound (_ bv1 32) ) (select  bound (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (and  (=  (_ bv1 32) (concat  (select  content_authoritative (_ bv3 32) ) (concat  (select  content_authoritative (_ bv2 32) ) (concat  (select  content_authoritative (_ bv1 32) ) (select  content_authoritative (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (bvsle  (_ bv1 32) ?B2 ) ) (bvsle  (_ bv0 32) ?B1 ) ) (=  false (bvslt  ?B1 ?B2 ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun access_index () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun bound () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_authoritative () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  access_index (_ bv3 32) ) (concat  (select  access_index (_ bv2 32) ) (concat  (select  access_index (_ bv1 32) ) (select  access_index (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  bound (_ bv3 32) ) (concat  (select  bound (_ bv2 32) ) (concat  (select  bound (_ bv1 32) ) (select  bound (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (and  (=  (_ bv1 32) (concat  (select  content_authoritative (_ bv3 32) ) (concat  (select  content_authoritative (_ bv2 32) ) (concat  (select  content_authoritative (_ bv1 32) ) (select  content_authoritative (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (bvsle  (_ bv1 32) ?B2 ) ) (bvsle  (_ bv0 32) ?B1 ) ) (bvslt  ?B1 ?B2 ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 1212
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 1200
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_exec",
+    "file": "psmgr_core.c",
+    "args": [
+      {
+        "name": "content_authoritative",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "content_attacker",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "access_index",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "bound",
+        "type": "int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-4: Attacker-Shaped Data to Arbitrary Memory Access (RWX) @ psmgr_exec",
+  "metadata": {
+    "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+        "mechanism": "copy-references-field",
+        "indicates": "WMI-4",
+        "file": "psmgr_core.c",
+        "line": 624
+      }
+    ],
+    "bug_type": "WMI-4 Attacker-Shaped Data to Arbitrary Memory Access (RWX)",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_core.c",
+      "line": 624,
+      "function": "psmgr_exec"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_desc.data@0",
+        "locations": [
+          {
+            "offset": 0,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_desc.data@0",
+      "symbol": "psmgr_exec"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+        "assertion": "data governs a bounded, trusted referenced operand",
+        "assumptions": [
+          "access extent/source/dest loaded from the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_desc.data@0",
+      "sa": "psmgr_desc.data@0",
+      "code": "psmgr_desc.data"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 4,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

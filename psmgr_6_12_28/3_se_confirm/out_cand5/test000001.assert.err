@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: handler == 0
+File: /results/psmgr_6_12_28/3_se_confirm/cand5_wmi1.c
+Line: 18
+assembly.ll line: 54
+State: 2
+Stack: 
+	#000000054 in main() at /results/psmgr_6_12_28/3_se_confirm/cand5_wmi1.c:18

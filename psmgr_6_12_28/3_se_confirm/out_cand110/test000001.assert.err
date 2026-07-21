@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: access_index < bound
+File: /results/psmgr_6_12_28/3_se_confirm/cand110_wmi4.c
+Line: 18
+assembly.ll line: 64
+State: 2
+Stack: 
+	#000000064 in main() at /results/psmgr_6_12_28/3_se_confirm/cand110_wmi4.c:18

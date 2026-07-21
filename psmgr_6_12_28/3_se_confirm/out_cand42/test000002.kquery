@@ -1,0 +1,9 @@
+array len[4] : w32 -> w8 = symbolic
+array payload_len[4] : w32 -> w8 = symbolic
+(query [(Ule 8
+              N0:(ReadLSB w32 0 len))
+         (Ule N0 4096)
+         (Eq false
+             (Ule (ReadLSB w32 0 payload_len)
+                  (Add w32 4294967288 N0)))]
+        false)

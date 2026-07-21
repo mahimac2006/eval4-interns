@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: peer_state != PSMGR_STATE_CLOSING
+File: /results/psmgr_6_12_28/3_se_confirm/cand37_wmi1.c
+Line: 13
+assembly.ll line: 33
+State: 2
+Stack: 
+	#000000033 in main() at /results/psmgr_6_12_28/3_se_confirm/cand37_wmi1.c:13

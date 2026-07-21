@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun peer_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (_ bv2 32) (concat  (select  peer_state (_ bv3 32) ) (concat  (select  peer_state (_ bv2 32) ) (concat  (select  peer_state (_ bv1 32) ) (select  peer_state (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: out_offset < PSMGR_BUF_DATA_SZ
+File: /results/psmgr_6_12_28/3_se_confirm/cand7_wmi1.c
+Line: 17
+assembly.ll line: 48
+State: 2
+Stack: 
+	#000000048 in main() at /results/psmgr_6_12_28/3_se_confirm/cand7_wmi1.c:17

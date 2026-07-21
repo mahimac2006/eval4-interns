@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "af_unix.c",
+  "target_line": 83774,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): '__vlan_hwaccel_copy_tag' sets signal field '(unnamed class/struct/union).vlan_all', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=(unnamed class/struct/union);field=vlan_all;offset=0] [oracle:assert=(unnamed class/struct/union).vlan_all stays within the domain its consumer's agreement governs;assume=producer sets vlan_all without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "af_unix.c",
+      "line": 83774,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

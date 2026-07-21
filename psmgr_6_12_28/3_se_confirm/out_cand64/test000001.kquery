@@ -1,0 +1,6 @@
+array proc_param[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Ule (Mul w32 8
+                           (ReadLSB w32 0 proc_param))
+                  256))]
+        false)

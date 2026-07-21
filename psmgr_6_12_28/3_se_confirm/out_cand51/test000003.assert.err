@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: write_count == PSMGR_BUF_COMMITTED || write_count < PSMGR_BUF_WRITE_THRESH || token == 0
+File: /results/psmgr_6_12_28/3_se_confirm/cand51_wmi2.c
+Line: 14
+assembly.ll line: 44
+State: 4
+Stack: 
+	#000000044 in main() at /results/psmgr_6_12_28/3_se_confirm/cand51_wmi2.c:14

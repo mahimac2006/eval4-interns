@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: payload_len <= len - PSMGR_MSGHDR_SZ
+File: /results/psmgr_6_12_28/3_se_confirm/cand42_wmi2.c
+Line: 16
+assembly.ll line: 45
+State: 2
+Stack: 
+	#000000045 in main() at /results/psmgr_6_12_28/3_se_confirm/cand42_wmi2.c:16

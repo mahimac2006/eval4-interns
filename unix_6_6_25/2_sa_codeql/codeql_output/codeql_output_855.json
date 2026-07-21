@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "af_unix.c",
+  "target_line": 87495,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (field-reinterpreted-as-2-types): the resource's carrier field 'sk_buff.cb' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:field-reinterpreted-as-2-types;indicates=WMI-2] [mem:struct=sk_buff;field=cb;offset=40] [oracle:assert=sk_buff.cb is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "af_unix.c",
+      "line": 87495,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

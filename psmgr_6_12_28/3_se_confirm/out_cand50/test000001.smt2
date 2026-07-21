@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun handler_idx () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun token () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun write_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  write_count (_ bv3 32) ) (concat  (select  write_count (_ bv2 32) ) (concat  (select  write_count (_ bv1 32) ) (select  write_count (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (=  false (=  (_ bv4294967295 32) ?B1 ) ) (bvule  (_ bv1 32) ?B1 ) ) (=  false (=  (_ bv0 32) (concat  (select  token (_ bv3 32) ) (concat  (select  token (_ bv2 32) ) (concat  (select  token (_ bv1 32) ) (select  token (_ bv0 32) ) ) ) ) ) ) ) (=  false (bvult  (concat  (select  handler_idx (_ bv3 32) ) (concat  (select  handler_idx (_ bv2 32) ) (concat  (select  handler_idx (_ bv1 32) ) (select  handler_idx (_ bv0 32) ) ) ) ) (_ bv16 32) ) ) ) ) )
+(check-sat)
+(exit)

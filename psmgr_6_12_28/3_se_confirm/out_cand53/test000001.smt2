@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun write_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  write_count (_ bv3 32) ) (concat  (select  write_count (_ bv2 32) ) (concat  (select  write_count (_ bv1 32) ) (select  write_count (_ bv0 32) ) ) ) ) ) ) (and  (=  false (=  (_ bv65535 32) ?B1 ) ) (bvult  ?B1 (_ bv32 32) ) ) ) )
+(check-sat)
+(exit)

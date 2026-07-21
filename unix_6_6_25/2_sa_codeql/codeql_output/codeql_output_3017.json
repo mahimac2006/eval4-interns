@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "unix_bpf.c",
+  "target_line": 69039,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (indirect-call-via-field): the access target is loaded from struct field 'sk_buff.(unknown field)' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:indirect-call-via-field;indicates=WMI-4] [mem:struct=sk_buff;field=(unknown field);offset=0] [oracle:assert=(unknown field) governs a bounded, trusted call target;assume=access target loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "unix_bpf.c",
+      "line": 69039,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+array out_offset[4] : w32 -> w8 = symbolic
+(query [(Ult N0:(ReadLSB w32 0 out_offset)
+              144)
+         (Eq false (Ult N0 128))]
+        false)

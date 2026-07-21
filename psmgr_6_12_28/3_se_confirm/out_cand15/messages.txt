@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: SAT solver: MiniSat
+KLEE: Deterministic allocator: Using quarantine queue size 8
+KLEE: Deterministic allocator: globals (start-address=0x7785fee00000 size=10 GiB)
+KLEE: Deterministic allocator: constants (start-address=0x77837ee00000 size=10 GiB)
+KLEE: Deterministic allocator: heap (start-address=0x76837ee00000 size=1024 GiB)
+KLEE: Deterministic allocator: stack (start-address=0x76637ee00000 size=128 GiB)
+KLEE: ERROR: /results/psmgr_6_12_28/3_se_confirm/cand15_wmi1.c:12: ASSERTION FAIL: opt_role < PSMGR_ROLE_MAX
+KLEE: NOTE: now ignoring this error at this location

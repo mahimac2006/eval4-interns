@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: out_offset < BUF_DATA_SZ
+File: /results/psmgr_6_12_28/3_se_confirm/cand55_wmi2.c
+Line: 18
+assembly.ll line: 53
+State: 3
+Stack: 
+	#000000053 in main() at /results/psmgr_6_12_28/3_se_confirm/cand55_wmi2.c:18

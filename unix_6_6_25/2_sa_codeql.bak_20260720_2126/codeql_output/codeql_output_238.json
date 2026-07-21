@@ -1,0 +1,23 @@
+{
+  "project": "net_unix",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": "diag.c",
+  "target_line": 36808,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'sas_ss_reset' sets signal field 'task_struct.sas_ss_flags', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=task_struct;field=sas_ss_flags;offset=1976] [oracle:assert=task_struct.sas_ss_flags stays within the domain its consumer's agreement governs;assume=producer sets sas_ss_flags without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": null
+  },
+  "discovered_sinks": [
+    {
+      "file": "diag.c",
+      "line": 36808,
+      "func": null,
+      "callee": ""
+    }
+  ]
+}

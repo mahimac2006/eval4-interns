@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun token () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun write_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  write_count (_ bv3 32) ) (concat  (select  write_count (_ bv2 32) ) (concat  (select  write_count (_ bv1 32) ) (select  write_count (_ bv0 32) ) ) ) ) ) ) (and  (and  (=  false (=  (_ bv65535 32) ?B1 ) ) (=  false (bvult  ?B1 (_ bv32 32) ) ) ) (=  false (=  (_ bv0 32) (concat  (select  token (_ bv3 32) ) (concat  (select  token (_ bv2 32) ) (concat  (select  token (_ bv1 32) ) (select  token (_ bv0 32) ) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

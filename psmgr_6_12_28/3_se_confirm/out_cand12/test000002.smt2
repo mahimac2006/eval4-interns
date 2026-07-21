@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun opt_role () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvult  (concat  (select  opt_role (_ bv3 32) ) (concat  (select  opt_role (_ bv2 32) ) (concat  (select  opt_role (_ bv1 32) ) (select  opt_role (_ bv0 32) ) ) ) ) (_ bv4 32) ) )
+(check-sat)
+(exit)
