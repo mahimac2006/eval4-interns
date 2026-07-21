@@ -1,0 +1,22 @@
+{
+  "project": "linux-6.3.5-drivers-input",
+  "engine": "rbsa",
+  "target_func": "userio_char_open",
+  "target_file": "drivers/input/serio/userio.c",
+  "target_line": 95,
+  "target_cwe": "CWE-822",
+  "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+  "wmi_index": 3,
+  "sink": {
+    "callee": "",
+    "enclosing": "userio_char_open"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/input/serio/userio.c",
+      "line": 95,
+      "func": "userio_char_open",
+      "callee": ""
+    }
+  ]
+}

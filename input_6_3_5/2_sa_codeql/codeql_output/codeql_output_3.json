@@ -1,0 +1,22 @@
+{
+  "project": "linux-6.3.5-drivers-input",
+  "engine": "rbsa",
+  "target_func": "mousedev_open",
+  "target_file": "drivers/input/mousedev.c",
+  "target_line": 560,
+  "target_cwe": "CWE-822",
+  "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+  "wmi_index": 3,
+  "sink": {
+    "callee": "",
+    "enclosing": "mousedev_open"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/input/mousedev.c",
+      "line": 560,
+      "func": "mousedev_open",
+      "callee": ""
+    }
+  ]
+}

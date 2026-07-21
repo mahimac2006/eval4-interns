@@ -1,0 +1,20 @@
+{
+  "stage": "STASE SAILOR run_se_confirm",
+  "kernel": "6.3.5",
+  "module": "drivers/input",
+  "wmi": 3,
+  "static_inputs": {
+    "codeql_wmi3_records": 1,
+    "rbsa_wmi3_records": 8
+  },
+  "result": "CONFIRMED (SA invariant violated)",
+  "ran_klee": true,
+  "witness": [
+    "object 0: int : 16843009",
+    "object 1: int : 1"
+  ],
+  "source_sa_rule": "CodeQL WMI-3 + RbSA WMI-3 aggregated oracle",
+  "slice": "wmi3.c",
+  "klee_output": "out3",
+  "oracle_note": "Neither imported SA record supplied machine-readable symbols/assume_c/assert_c. STASE therefore used its documented WMI-3 archetype fallback (attacker_controlled, authoritative; assume authoritative == 1; assert attacker_controlled == 0)."
+}

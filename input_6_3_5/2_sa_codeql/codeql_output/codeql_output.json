@@ -1,0 +1,65 @@
+{
+  "project": "linux-6.3.5-drivers-input",
+  "engine": "codeql+rbsa",
+  "target_func": null,
+  "target_file": null,
+  "target_line": null,
+  "sink": null,
+  "discovered_sinks": [
+    {
+      "file": "drivers/input/mouse/psmouse-smbus.c",
+      "line": 227,
+      "func": "psmouse_smbus_cleanup",
+      "callee": "kfree"
+    },
+    {
+      "file": "drivers/input/joydev.c",
+      "line": 276,
+      "func": "joydev_open",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/mousedev.c",
+      "line": 560,
+      "func": "mousedev_open",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/mousedev.c",
+      "line": 890,
+      "func": "mousedev_create",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/serio/serio_raw.c",
+      "line": 102,
+      "func": "serio_raw_open",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/misc/uinput.c",
+      "line": 391,
+      "func": "uinput_open",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/serio/userio.c",
+      "line": 88,
+      "func": "userio_char_open",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/serio/userio.c",
+      "line": 95,
+      "func": "userio_char_open",
+      "callee": ""
+    },
+    {
+      "file": "drivers/input/serio/userio.c",
+      "line": 97,
+      "func": "userio_char_open",
+      "callee": ""
+    }
+  ],
+  "note": "Combined WMI3 static-analysis candidates: one CodeQL finding and eight RbSA findings. Each codeql_output_<n>.json preserves its originating engine."
+}
