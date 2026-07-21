@@ -1,0 +1,17 @@
+{
+  "project": "linux-6.3.5-drivers-input",
+  "engine": "codeql",
+  "target_func": null,
+  "target_file": null,
+  "target_line": null,
+  "sink": null,
+  "discovered_sinks": [
+    {
+      "file": "drivers/input/mouse/psmouse-smbus.c",
+      "line": 227,
+      "func": "psmouse_smbus_cleanup",
+      "callee": "kfree"
+    }
+  ],
+  "note": "codeql candidates (recall-biased); one codeql_output_<n>.json per finding."
+}
