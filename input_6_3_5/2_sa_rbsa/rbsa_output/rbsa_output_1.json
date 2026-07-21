@@ -1,0 +1,22 @@
+{
+  "project": "linux-6.3.5-drivers-input",
+  "engine": "rbsa",
+  "target_func": "joydev_open",
+  "target_file": "drivers/input/joydev.c",
+  "target_line": 276,
+  "target_cwe": "CWE-822",
+  "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+  "wmi_index": 3,
+  "sink": {
+    "callee": "",
+    "enclosing": "joydev_open"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/input/joydev.c",
+      "line": 276,
+      "func": "joydev_open",
+      "callee": ""
+    }
+  ]
+}
