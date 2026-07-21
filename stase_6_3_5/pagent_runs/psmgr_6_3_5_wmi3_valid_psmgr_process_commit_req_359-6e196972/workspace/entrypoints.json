@@ -1,0 +1,38 @@
+{
+  "_comment": "PAGENT kernel-mode entrypoint catalog for net/psmgr on Linux 6.3.5, scoped to WMI-3 findings. Advisory only: kernel-mode PoCs are freeform C programs run in the QEMU guest.",
+  "mode": "kernel",
+  "guest": {
+    "arch": "x86_64",
+    "exec_model": "PoC is one userspace C program compiled into the guest rootfs and run as root in QEMU; KASAN/KMSAN/UBSAN or a matching kernel report is the crash signal.",
+    "available_libs": ["raw syscalls", "AF_PSMGR sockets"]
+  },
+  "entrypoints": [
+    {
+      "id": "psmgr_socket_create",
+      "subsystem": "net/psmgr",
+      "interface": "socket(AF_PSMGR, SOCK_SEQPACKET, PSMGR_PROTO)",
+      "driver": "Create AF_PSMGR sockets. Creation reaches psmgr_create and allocates/initializes psmgr_session and psmgr_desc.",
+      "reaches": ["psmgr_create"],
+      "vuln_file": "net/psmgr/psmgr_sock.c",
+      "notes": "Covers WMI-3 psmgr_create findings, including desc/session authoritative content."
+    },
+    {
+      "id": "psmgr_managed_sendmsg_data",
+      "subsystem": "net/psmgr",
+      "interface": "AF_PSMGR SOCK_SEQPACKET plus setsockopt(PSMGR_SOL, PSMGR_OPT_SET_ROLE/LOCAL_CTX) and sendmsg(2)",
+      "driver": "Create a MANAGED AF_PSMGR socket, set role with PSMGR_OPT_SET_ROLE, install local context with PSMGR_OPT_LOCAL_CTX, then send crafted psmgr_msghdr payloads to drive psmgr_sendmsg -> psmgr_process_data.",
+      "reaches": ["psmgr_setsockopt", "psmgr_sendmsg", "psmgr_process_data"],
+      "vuln_file": "net/psmgr/psmgr_pipeline.c",
+      "notes": "Covers the WMI-3 psmgr_process_data finding."
+    },
+    {
+      "id": "psmgr_commit_request",
+      "subsystem": "net/psmgr",
+      "interface": "AF_PSMGR SOCK_SEQPACKET; primary/secondary or managed setup followed by sendmsg of PSMGR_MSG_COMMIT_REQ",
+      "driver": "Establish a PSMGR session using setsockopt negotiation, then send a message with type PSMGR_MSG_COMMIT_REQ to drive psmgr_sendmsg -> psmgr_process_commit_req.",
+      "reaches": ["psmgr_setsockopt", "psmgr_connect", "psmgr_sendmsg", "psmgr_process_commit_req"],
+      "vuln_file": "net/psmgr/psmgr_pipeline.c",
+      "notes": "Covers the WMI-3 psmgr_process_commit_req finding."
+    }
+  ]
+}
