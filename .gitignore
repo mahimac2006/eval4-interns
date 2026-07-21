@@ -5,4 +5,7 @@ __pycache__/
 *.pyc
 
 # keep the pipeline scripts locally but exclude them from the repo
-stase_6_3_5/_tools/
+mahima_6_3_5/_tools/
+
+# keep task2 artifacts locally but exclude them from the repo
+mahima_task2/
