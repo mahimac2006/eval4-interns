@@ -1,0 +1,69 @@
+{
+  "operation": {
+    "name": "copyMem_at_psmouse_smbus_cleanup",
+    "parameters": [],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_deba4693",
+        "arguments": {
+          "destinations": [
+            null
+          ]
+        }
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmouse_smbus_cleanup",
+    "file": "drivers/input/mouse/psmouse-smbus.c",
+    "args": []
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ psmouse_smbus_cleanup",
+  "metadata": {
+    "rule": "sailor/wmi-3-arbitrary-free-stale-traversal",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "sailor/wmi-3-arbitrary-free-stale-traversal",
+        "mechanism": null,
+        "indicates": "WMI-3",
+        "file": "drivers/input/mouse/psmouse-smbus.c",
+        "line": 227
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "static_candidate",
+    "crash_location": {
+      "file": "drivers/input/mouse/psmouse-smbus.c",
+      "line": 227,
+      "function": "psmouse_smbus_cleanup"
+    },
+    "memory_layout": [
+      {
+        "name": null,
+        "locations": [
+          {
+            "offset": 0,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": null,
+      "symbol": "psmouse_smbus_cleanup"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": null,
+    "memory": {
+      "name": null
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}
