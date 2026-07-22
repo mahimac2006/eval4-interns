@@ -1,0 +1,119 @@
+{
+  "available": true,
+  "kind": "gcov",
+  "totals": {
+    "files_reached": 200,
+    "subsystems_reached": 2
+  },
+  "subsystems": {
+    "init": {
+      "files_reached": 6,
+      "files": [
+        "init/calibrate.gcda",
+        "init/do_mounts.gcda",
+        "init/do_mounts_initrd.gcda",
+        "init/initramfs.gcda",
+        "init/main.gcda",
+        "init/version.gcda"
+      ]
+    },
+    "kernel": {
+      "files_reached": 194,
+      "files": [
+        "kernel/acct.gcda",
+        "kernel/async.gcda",
+        "kernel/audit.gcda",
+        "kernel/audit_fsnotify.gcda",
+        "kernel/audit_tree.gcda",
+        "kernel/audit_watch.gcda",
+        "kernel/auditfilter.gcda",
+        "kernel/auditsc.gcda",
+        "kernel/capability.gcda",
+        "kernel/cgroup/cgroup-v1.gcda",
+        "kernel/cgroup/cgroup.gcda",
+        "kernel/cgroup/cpuset.gcda",
+        "kernel/cgroup/debug.gcda",
+        "kernel/cgroup/freezer.gcda",
+        "kernel/cgroup/legacy_freezer.gcda",
+        "kernel/cgroup/misc.gcda",
+        "kernel/cgroup/namespace.gcda",
+        "kernel/cgroup/pids.gcda",
+        "kernel/cgroup/rdma.gcda",
+        "kernel/cgroup/rstat.gcda",
+        "kernel/compat.gcda",
+        "kernel/cpu.gcda",
+        "kernel/crash_core.gcda",
+        "kernel/cred.gcda",
+        "kernel/delayacct.gcda",
+        "kernel/dma.gcda",
+        "kernel/dma/direct.gcda",
+        "kernel/dma/dummy.gcda",
+        "kernel/dma/mapping.gcda",
+        "kernel/dma/ops_helpers.gcda",
+        "kernel/dma/remap.gcda",
+        "kernel/dma/swiotlb.gcda",
+        "kernel/entry/common.gcda",
+        "kernel/entry/syscall_user_dispatch.gcda",
+        "kernel/exec_domain.gcda",
+        "kernel/exit.gcda",
+        "kernel/extable.gcda",
+        "kernel/fork.gcda",
+        "kernel/freezer.gcda",
+        "kernel/futex/core.gcda"
+      ]
+    }
+  },
+  "truncated": false,
+  "note": "200 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+  "functions_by_file": {
+    "scm.c": {
+      "functions_total": 9,
+      "functions_reached": 8,
+      "reached": [
+        {
+          "name": "scm_destroy",
+          "calls": 4,
+          "bb": "3/4"
+        },
+        {
+          "name": "unix_destruct_scm",
+          "calls": 4,
+          "bb": "4/5"
+        },
+        {
+          "name": "unix_get_socket",
+          "calls": 4,
+          "bb": "2/6"
+        },
+        {
+          "name": "unix_inflight",
+          "calls": 2,
+          "bb": "5/16"
+        },
+        {
+          "name": "unix_notinflight",
+          "calls": 2,
+          "bb": "5/17"
+        },
+        {
+          "name": "too_many_unix_fds",
+          "calls": 1,
+          "bb": "2/8"
+        },
+        {
+          "name": "unix_attach_fds",
+          "calls": 1,
+          "bb": "9/9"
+        },
+        {
+          "name": "unix_detach_fds",
+          "calls": 1,
+          "bb": "5/5"
+        }
+      ],
+      "not_reached": [
+        "io_uring_destruct_scm"
+      ]
+    }
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "verdict": "FAIL",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": false,
+  "exit_code": 0,
+  "timed_out": false,
+  "binary": "test_poc",
+  "duration_s": 121.7,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": 121.7,
+    "entrypoint": "test_poc",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": " /poc/test_poc\r\r\nSent SCM_RIGHTS with fd=5\r\r\nPEEK recvmsg returned 64 (errno=0)\r\r\nRECV recvmsg returned 64 (errno=0)\r\r\nDone.\r\r\n\n dmesg | tail -200\r\r\n[   11.984766] ACPI: PCI: Interrupt link LNKA configured for IRQ 10\r\r\n[   12.017191] ACPI: PCI: Interrupt link LNKB configured for IRQ 10\r\r\n[   12.050098] ACPI: PCI: Interrupt link LNKC configured for IRQ 11\r\r\n[   12.081564] ACPI: PCI: Interrupt link LNKD configured for IRQ 11\r\r\n[   12.114522] ACPI: PCI: Interrupt link LNKE configured for IRQ 10\r\r\n[   12.148887] ACPI: PCI: Interrupt link LNKF configured for IRQ 10\r\r\n[   12.181668] ACPI: PCI: Interrupt link LNKG configured for IRQ 11\r\r\n[   12.214505] ACPI: PCI: Interrupt link LNKH configured for IRQ 11\r\r\n[   12.222744] ACPI: PCI: Interrupt link GSIA configured for IRQ 16\r\r\n[   12.228648] ACPI: PCI: Interrupt link GSIB configured for IRQ 17\r\r\n[   12.234282] ACPI: PCI: Interrupt link GSIC configured for IRQ 18\r\r\n[   12.239597] ACPI: PCI: Interrupt link GSID configured for IRQ 19\r\r\n[   12.244883] ACPI: PCI: Interrupt link GSIE configured for IRQ 20[   82.129449] hrtimer: interrupt took 2625970 ns\r\r\n\r\r\n[   12.250734] ACPI: PCI: Interrupt link GSIF configured for IRQ 21\r\r\n[   12.256131] ACPI: PCI: Interrupt link GSIG configured for IRQ 22\r\r\n[   12.261645] ACPI: PCI: Interrupt link GSIH configured for IRQ 23\r\r\n[   12.310888] iommu: Default domain type: Translated\r\r\n[   12.312559] iommu: DMA domain TLB invalidation policy: lazy mode\r\r\n[   12.328748] SCSI subsystem initialized\r\r\n[   12.335912] libata version 3.00 loaded.\r\r\n[   12.347128] ACPI: bus type USB registered\r\r\n[   12.355168] usbcore: registered new interface driver usbfs\r\r\n[   12.360156] usbcore: registered new interface driver hub\r\r\n[   12.364902] usbcore: registered new device driver usb\r\r\n[   12.374082] pps_core: LinuxPPS API ver. 1 registered\r\r\n[   12.375616] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>\r\r\n[   12.379160] PTP clock support registered\r\r\n[   12.397002] Advanced Linux Sound Architecture Driver Initialized.\r\r\n[   12.436709] NetLabel: Initializing\r\r\n[   12.438392] NetLabel:  domain hash size = 128\r\r\n[   12.439405] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO\r\r\n[   12.445247] NetLabel:  unlabeled traffic allowed by default\r\r\n[   12.463884] PCI: Using ACPI for IRQ routing\r\r\n[   12.471778] PCI: pci_cache_line_size set to 64 bytes\r\r\n[   12.472633] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]\r\r\n[   12.473123] e820: reserve RAM buffer [mem 0x7ffdc000-0x7fffffff]\r\r\n[   12.478029] pci 0000:00:01.0: vgaarb: setting as boot VGA device\r\r\n[   12.478352] pci 0000:00:01.0: vgaarb: bridge control possible\r\r\n[   12.478352] pci 0000:00:01.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none\r\r\n[   12.478451] vgaarb: loaded\r\r\n[   12.486159] hpet: 3 channels of 0 reserved for per-cpu timers\r\r\n[   12.486950] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0\r\r\n[   12.488405] hpet0: 3 comparators, 64-bit 100.000000 MHz counter\r\r\n[   12.495827] clocksource: Switched to clocksource hpet\r\r\n[   12.524418] VFS: Disk quotas dquot_6.6.0\r\r\n[   12.526347] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)\r\r\n[   12.542272] pnp: PnP ACPI init\r\r\n[   12.595557] system 00:05: [mem 0xb0000000-0xbfffffff window] has been reserved\r\r\n[   12.697772] pnp: PnP ACPI: found 6 devices\r\r\n[   13.035269] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns\r\r\n[   13.041910] NET: Registered PF_INET protocol family\r\r\n[   13.058353] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)\r\r\n[   13.125055] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)\r\r\n[   13.128524] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\r\n[   13.131287] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)\r\r\n[   13.142595] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)\r\r\n[   13.172766] TCP: Hash tables configured (established 65536 bind 65536)\r\r\n[   13.179609] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)\r\r\n[   13.183588] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)\r\r\n[   13.191891] NET: Registered PF_UNIX/PF_LOCAL protocol family\r\r\n[   13.211029] RPC: Registered named UNIX socket transport module.\r\r\n[   13.212806] RPC: Registered udp transport module.\r\r\n[   13.214416] RPC: Registered tcp transport module.\r\r\n[   13.215584] RPC: Registered tcp-with-tls transport module.\r\r\n[   13.216706] RPC: Registered tcp NFSv4.1 backchannel transport module.\r\r\n[   13.281541] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]\r\r\n[   13.283725] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]\r\r\n[   13.285746] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]\r\r\n[   13.288383] pci_bus 0000:00: resource 7 [mem 0x80000000-0xafffffff window]\r\r\n[   13.290622] pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]\r\r\n[   13.292549] pci_bus 0000:00: resource 9 [mem 0x280000000-0xa7fffffff window]\r\r\n[   13.303114] PCI: CLS 0 bytes, default 64\r\r\n[   13.306682] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)\r\r\n[   13.309920] software IO TLB: mapped [mem 0x000000007bfdc000-0x000000007ffdc000] (64MB)\r\r\n[   52.521455] Initialise system trusted keyrings\r\r\n[   52.560641] workingset: timestamp_bits=56 max_order=21 bucket_order=0\r\r\n[   52.617465] NFS: Registering the id_resolver key type\r\r\n[   52.620715] Key type id_resolver registered\r\r\n[   52.621981] Key type id_legacy registered\r\r\n[   52.630814] 9p: Installing v9fs 9p2000 file system support\r\r\n[   52.787620] Key type asymmetric registered\r\r\n[   52.788634] Asymmetric key parser 'x509' registered\r\r\n[   52.791256] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)\r\r\n[   52.794281] io scheduler mq-deadline registered\r\r\n[   52.794972] io scheduler kyber registered\r\r\n[   52.812035] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0\r\r\n[   52.824822] ACPI: button: Power Button [PWRF]\r\r\n[   53.106107] ACPI: \\_SB_.GSIG: Enabled at IRQ 22\r\r\n[   53.390818] ACPI: \\_SB_.GSIH: Enabled at IRQ 23\r\r\n[   53.673877] ACPI: \\_SB_.GSIE: Enabled at IRQ 20\r\r\n[   53.692553] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled\r\r\n[   53.709085] 00:03: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A\r\r\n[   53.778561] Non-volatile memory driver v1.3\r\r\n[   53.779602] Linux agpgart interface v0.103\r\r\n[   53.787116] ACPI: bus type drm_connector registered\r\r\n[   54.027451] loop: module loaded\r\r\n[   54.030540] virtio_blk virtio2: 2/0/0 default/read/poll queues\r\r\n[   54.070453] virtio_blk virtio2: [vda] 1048576 512-byte logical blocks (537 MB/512 MiB)\r\r\n[   54.141931] ahci 0000:00:1f.2: version 3.0\r\r\n[   54.410098] ACPI: \\_SB_.GSIA: Enabled at IRQ 16\r\r\n[   54.427517] ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 6 ports 1.5 Gbps 0x3f impl SATA mode\r\r\n[   54.429696] ahci 0000:00:1f.2: flags: 64bit ncq only \r\r\n[   54.543648] scsi host0: ahci\r\r\n[   54.571106] scsi host1: ahci\r\r\n[   54.596459] scsi host2: ahci\r\r\n[   54.620452] scsi host3: ahci\r\r\n[   54.646105] scsi host4: ahci\r\r\n[   54.670986] scsi host5: ahci\r\r\n[   54.684154] ata1: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94100 irq 27\r\r\n[   54.685607] ata2: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94180 irq 27\r\r\n[   54.687332] ata3: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94200 irq 27\r\r\n[   54.688936] ata4: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94280 irq 27\r\r\n[   54.690112] ata5: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94300 irq 27\r\r\n[   54.691928] ata6: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94380 irq 27\r\r\n[   54.869906] e100: Intel(R) PRO/100 Network Driver\r\r\n[   54.871831] e100: Copyright(c) 1999-2006 Intel Corporation\r\r\n[   54.876594] e1000: Intel(R) PRO/1000 Network Driver\r\r\n[   54.878442] e1000: Copyright (c) 1999-2006 Intel Corporation.\r\r\n[   54.882750] e1000e: Intel(R) PRO/1000 Network Driver\r\r\n[   54.884522] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.\r\r\n[   54.888996] sky2: driver version 1.30\r\r\n[   54.920096] usbcore: registered new interface driver usblp\r\r\n[   54.923671] usbcore: registered new interface driver usb-storage\r\r\n[   54.930079] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12\r\r\n[   54.942902] serio: i8042 KBD port at 0x60,0x64 irq 1\r\r\n[   54.945290] serio: i8042 AUX port at 0x60,0x64 irq 12\r\r\n[   54.973906] rtc_cmos 00:04: RTC can wake from S4\r\r\n[   54.983132] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1\r\r\n[   55.009850] ata2: SATA link down (SStatus 0 SControl 300)\r\r\n[   55.015755] ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)\r\r\n[   55.022659] ata4: SATA link down (SStatus 0 SControl 300)\r\r\n[   55.025047] ata1: SATA link down (SStatus 0 SControl 300)\r\r\n[   55.027534] ata5: SATA link down (SStatus 0 SControl 300)\r\r\n[   55.029608] ata6: SATA link down (SStatus 0 SControl 300)\r\r\n[   55.033808] rtc_cmos 00:04: registered as rtc0\r\r\n[   55.038931] ata3.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100\r\r\n[   55.041422] ata3.00: applying bridge limits\r\r\n[   55.042486] rtc_cmos 00:04: alarms up to one day, y3k, 242 bytes nvram, hpet irqs\r\r\n[   55.046047] ata3.00: configured for UDMA/100\r\r\n[   55.051297] fail to initialize ptp_kvm\r\r\n[   55.060540] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com\r\r\n[   55.067786] hid: raw HID events driver (C) Jiri Kosina\r\r\n[   55.093916] scsi 2:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5\r\r\n[   55.099492] usbcore: registered new interface driver usbhid\r\r\n[   55.101394] usbhid: USB HID core driver\r\r\n[   55.153085] sr 2:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray\r\r\n[   55.156077] cdrom: Uniform CD-ROM driver Revision: 3.20\r\r\n[   55.156330] Initializing XFRM netlink socket\r\r\n[   55.161472] NET: Registered PF_INET6 protocol family\r\r\n[   55.170488] sr 2:0:0:0: [sr0] Hmm, seems the drive doesn't support multisession CD's\r\r\n[   55.227846] Segment Routing with IPv6\r\r\n[   55.234641] In-situ OAM (IOAM) with IPv6\r\r\n[   55.247930] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver\r\r\n[   55.274775] sr 2:0:0:0: Attached scsi CD-ROM sr0\r\r\n[   55.301874] sr 2:0:0:0: Attached scsi generic sg0 type 5\r\r\n[   55.335054] NET: Registered PF_PACKET protocol family\r\r\n[   55.345415] 9pnet: Installing 9P2000 support\r\r\n[   55.383394] Key type dns_resolver registered\r\r\n[   55.418927] IPI shorthand broadcast: enabled\r\r\n[   55.461852] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt\r\r\n[   55.477524] i2c i2c-0: 1/1 memory slots populated (from DMI)\r\r\n[   55.479776] i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD\r\r\n[   55.670909] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3\r\r\n[   56.451252] registered taskstats version 1\r\r\n[   56.452382] Loading compiled-in X.509 certificates\r\r\n[   57.562574] PM:   Magic number: 2:702:321\r\r\n[   57.564808] bdi 253:0: hash matches\r\r\n[   57.565872] port 00:03:0.0: hash matches\r\r\n[   57.566951] tty tty46: hash matches\r\r\n[   57.568655] virtio-pci 0000:00:02.0: hash matches\r\r\n[   57.571783] printk: console [netcon0] enabled\r\r\n[   57.573106] netconsole: network logging started\r\r\n[   57.590061] cfg80211: Loading compiled-in X.509 certificates for regulatory database\r\r\n[   57.877851] modprobe (64) used greatest stack depth: 26704 bytes left\r\r\n[   58.026739] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'\r\r\n[   58.037490] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'\r\r\n[   58.044029] Unstable clock detected, switching default tracing clock to \"global\"\r\r\n[   58.044029] If you want to keep using the local clock, then add:\r\r\n[   58.044029]   \"trace_clock=local\"\r\r\n[   58.044029] on the kernel command line\r\r\n[   58.055040] ALSA device list:\r\r\n[   58.056865]   No soundcards found.\r\r\n[   58.060420] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2\r\r\n[   58.065685] cfg80211: failed to load regulatory.db\r\r\n[   58.205143] Freeing unused kernel image (initmem) memory: 26652K\r\r\n[   58.207911] Write protecting the kernel read-only data: 53248k\r\r\n[   58.219265] Freeing unused kernel image (rodata/data gap) memory: 1212K\r\r\n[   59.082810] x86/mm: Checked W+X mappings: passed, no W+X pages found.\r\r\n[   59.087008] Run /init as init process\r\r\n[   59.089070]   with arguments:\r\r\n[   59.089283]     /init\r\r\n[   59.089378]   with environment:\r\r\n[   59.089487]     HOME=/\r\r\n[   59.089577]     TERM=linux\r\r\n[   59.965821] mount (72) used greatest stack depth: 26600 bytes left\r\r\n[   62.299674] udevd[100]: starting version 3.2.11\r\r\n[   62.669825] random: crng init done\r\r\n[   62.780077] udevd[101]: starting eudev-3.2.11\r\r\n[   68.483101] udevadm (115) used greatest stack depth: 26568 bytes left\r\r\n[   77.176949] S98dummy_hcd (167) used greatest stack depth: 26504 bytes left\r\r\n",
+  "coverage": {
+    "available": true,
+    "kind": "gcov",
+    "totals": {
+      "files_reached": 200,
+      "subsystems_reached": 2
+    },
+    "subsystems": {
+      "init": {
+        "files_reached": 6,
+        "files": [
+          "init/calibrate.gcda",
+          "init/do_mounts.gcda",
+          "init/do_mounts_initrd.gcda",
+          "init/initramfs.gcda",
+          "init/main.gcda",
+          "init/version.gcda"
+        ]
+      },
+      "kernel": {
+        "files_reached": 194,
+        "files": [
+          "kernel/acct.gcda",
+          "kernel/async.gcda",
+          "kernel/audit.gcda",
+          "kernel/audit_fsnotify.gcda",
+          "kernel/audit_tree.gcda",
+          "kernel/audit_watch.gcda",
+          "kernel/auditfilter.gcda",
+          "kernel/auditsc.gcda",
+          "kernel/capability.gcda",
+          "kernel/cgroup/cgroup-v1.gcda",
+          "kernel/cgroup/cgroup.gcda",
+          "kernel/cgroup/cpuset.gcda",
+          "kernel/cgroup/debug.gcda",
+          "kernel/cgroup/freezer.gcda",
+          "kernel/cgroup/legacy_freezer.gcda",
+          "kernel/cgroup/misc.gcda",
+          "kernel/cgroup/namespace.gcda",
+          "kernel/cgroup/pids.gcda",
+          "kernel/cgroup/rdma.gcda",
+          "kernel/cgroup/rstat.gcda",
+          "kernel/compat.gcda",
+          "kernel/cpu.gcda",
+          "kernel/crash_core.gcda",
+          "kernel/cred.gcda",
+          "kernel/delayacct.gcda",
+          "kernel/dma.gcda",
+          "kernel/dma/direct.gcda",
+          "kernel/dma/dummy.gcda",
+          "kernel/dma/mapping.gcda",
+          "kernel/dma/ops_helpers.gcda",
+          "kernel/dma/remap.gcda",
+          "kernel/dma/swiotlb.gcda",
+          "kernel/entry/common.gcda",
+          "kernel/entry/syscall_user_dispatch.gcda",
+          "kernel/exec_domain.gcda",
+          "kernel/exit.gcda",
+          "kernel/extable.gcda",
+          "kernel/fork.gcda",
+          "kernel/freezer.gcda",
+          "kernel/futex/core.gcda"
+        ]
+      }
+    },
+    "truncated": false,
+    "note": "200 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+    "functions_by_file": {
+      "scm.c": {
+        "functions_total": 9,
+        "functions_reached": 8,
+        "reached": [
+          {
+            "name": "scm_destroy",
+            "calls": 4,
+            "bb": "3/4"
+          },
+          {
+            "name": "unix_destruct_scm",
+            "calls": 4,
+            "bb": "4/5"
+          },
+          {
+            "name": "unix_get_socket",
+            "calls": 2,
+            "bb": "2/6"
+          },
+          {
+            "name": "too_many_unix_fds",
+            "calls": 1,
+            "bb": "2/8"
+          },
+          {
+            "name": "unix_attach_fds",
+            "calls": 1,
+            "bb": "9/9"
+          },
+          {
+            "name": "unix_detach_fds",
+            "calls": 1,
+            "bb": "5/5"
+          },
+          {
+            "name": "unix_inflight",
+            "calls": 1,
+            "bb": "5/16"
+          },
+          {
+            "name": "unix_notinflight",
+            "calls": 1,
+            "bb": "5/17"
+          }
+        ],
+        "not_reached": [
+          "io_uring_destruct_scm"
+        ]
+      }
+    }
+  },
+  "coverage_summary": "call-path: unix_detach_fds \u2713(1) | 8/9 in scm.c",
+  "variants": {
+    "kernel": {
+      "verdict": "FAIL",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": [],
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": {
+        "available": true,
+        "kind": "gcov",
+        "totals": {
+          "files_reached": 200,
+          "subsystems_reached": 2
+        },
+        "subsystems": {
+          "init": {
+            "files_reached": 6,
+            "files": [
+              "init/calibrate.gcda",
+              "init/do_mounts.gcda",
+              "init/do_mounts_initrd.gcda",
+              "init/initramfs.gcda",
+              "init/main.gcda",
+              "init/version.gcda"
+            ]
+          },
+          "kernel": {
+            "files_reached": 194,
+            "files": [
+              "kernel/acct.gcda",
+              "kernel/async.gcda",
+              "kernel/audit.gcda",
+              "kernel/audit_fsnotify.gcda",
+              "kernel/audit_tree.gcda",
+              "kernel/audit_watch.gcda",
+              "kernel/auditfilter.gcda",
+              "kernel/auditsc.gcda",
+              "kernel/capability.gcda",
+              "kernel/cgroup/cgroup-v1.gcda",
+              "kernel/cgroup/cgroup.gcda",
+              "kernel/cgroup/cpuset.gcda",
+              "kernel/cgroup/debug.gcda",
+              "kernel/cgroup/freezer.gcda",
+              "kernel/cgroup/legacy_freezer.gcda",
+              "kernel/cgroup/misc.gcda",
+              "kernel/cgroup/namespace.gcda",
+              "kernel/cgroup/pids.gcda",
+              "kernel/cgroup/rdma.gcda",
+              "kernel/cgroup/rstat.gcda",
+              "kernel/compat.gcda",
+              "kernel/cpu.gcda",
+              "kernel/crash_core.gcda",
+              "kernel/cred.gcda",
+              "kernel/delayacct.gcda",
+              "kernel/dma.gcda",
+              "kernel/dma/direct.gcda",
+              "kernel/dma/dummy.gcda",
+              "kernel/dma/mapping.gcda",
+              "kernel/dma/ops_helpers.gcda",
+              "kernel/dma/remap.gcda",
+              "kernel/dma/swiotlb.gcda",
+              "kernel/entry/common.gcda",
+              "kernel/entry/syscall_user_dispatch.gcda",
+              "kernel/exec_domain.gcda",
+              "kernel/exit.gcda",
+              "kernel/extable.gcda",
+              "kernel/fork.gcda",
+              "kernel/freezer.gcda",
+              "kernel/futex/core.gcda"
+            ]
+          }
+        },
+        "truncated": false,
+        "note": "200 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+        "functions_by_file": {
+          "scm.c": {
+            "functions_total": 9,
+            "functions_reached": 8,
+            "reached": [
+              {
+                "name": "scm_destroy",
+                "calls": 4,
+                "bb": "3/4"
+              },
+              {
+                "name": "unix_destruct_scm",
+                "calls": 4,
+                "bb": "4/5"
+              },
+              {
+                "name": "unix_get_socket",
+                "calls": 2,
+                "bb": "2/6"
+              },
+              {
+                "name": "too_many_unix_fds",
+                "calls": 1,
+                "bb": "2/8"
+              },
+              {
+                "name": "unix_attach_fds",
+                "calls": 1,
+                "bb": "9/9"
+              },
+              {
+                "name": "unix_detach_fds",
+                "calls": 1,
+                "bb": "5/5"
+              },
+              {
+                "name": "unix_inflight",
+                "calls": 1,
+                "bb": "5/16"
+              },
+              {
+                "name": "unix_notinflight",
+                "calls": 1,
+                "bb": "5/17"
+              }
+            ],
+            "not_reached": [
+              "io_uring_destruct_scm"
+            ]
+          }
+        }
+      },
+      "error": null
+    }
+  }
+}

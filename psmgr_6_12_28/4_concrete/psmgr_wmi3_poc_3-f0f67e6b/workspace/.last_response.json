@@ -1,0 +1,45 @@
+{
+  "verdict": "ERROR",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": null,
+  "exit_code": null,
+  "timed_out": null,
+  "binary": "try_insmod",
+  "duration_s": null,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": null,
+    "entrypoint": "try_insmod",
+    "exit_code": null,
+    "timed_out": null
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": "[dv-runner] QEMU boot failed",
+  "coverage": null,
+  "coverage_summary": null,
+  "variants": {
+    "kernel": {
+      "verdict": "ERROR",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": null,
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": null,
+      "error": "QEMU boot failed"
+    }
+  }
+}

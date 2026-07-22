@@ -1,0 +1,45 @@
+{
+  "verdict": "ERROR",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": null,
+  "exit_code": null,
+  "timed_out": null,
+  "binary": "poc_psmgr",
+  "duration_s": null,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": null,
+    "entrypoint": "poc_psmgr",
+    "exit_code": null,
+    "timed_out": null
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": "[dv-runner] PoC build failed: Command failed: make dv_poc\nrc/eval3_buildroot-main/buildroot/output/build/dv_poc-1.0.0/dv_poc.c:83:5: note: \u2018uint16_t\u2019 is defined in header \u2018<stdint.h>\u2019; did you forget to \u2018#include <stdint.h>\u2019?\n/src/eval3_buildroot-main/buildroot/output/build/dv_poc-1.0.0/dv_poc.c:92:18: warning: variable \u2018iov\u2019 set but not used [-Wunused-but-set-variable]\n   92 |     struct iovec iov[2];\n      |                  ^~~\nmake: *** [package/pkg-generic.mk:293: /src/eval3_buildroot-main/buildroot/output/build/dv_poc-1.0.0/.stamp_built] Error 1\n",
+  "coverage": null,
+  "coverage_summary": null,
+  "variants": {
+    "kernel": {
+      "verdict": "ERROR",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": null,
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": null,
+      "error": "PoC build failed: Command failed: make dv_poc\nrc/eval3_buildroot-main/buildroot/output/build/dv_poc-1.0.0/dv_poc.c:83:5: note: \u2018uint16_t\u2019 is defined in header \u2018<stdint.h>\u2019; did you forget to \u2018#include <stdint.h>\u2019?\n/src/eval3_buildroot-main/buildroot/output/build/dv_poc-1.0.0/dv_poc.c:92:18: warning: variable \u2018iov\u2019 set but not used [-Wunused-but-set-variable]\n   92 |     struct iovec iov[2];\n      |                  ^~~\nmake: *** [package/pkg-generic.mk:293: /src/eval3_buildroot-main/buildroot/output/build/dv_poc-1.0.0/.stamp_built] Error 1\n"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "mode": "kernel",
+  "guest": {
+    "arch": "x86_64",
+    "exec_model": "The PoC is a single userspace C program cross-compiled into the guest rootfs and run as root inside QEMU. A KASAN report on the kernel log is the crash signal."
+  },
+  "entrypoints": [
+    {
+      "id": "psmgr_process_data_overflow",
+      "subsystem": "net/psmgr",
+      "interface": "AF_PSMGR SOCK_SEQPACKET socket, sendmsg DATA message",
+      "driver": "socket(AF_PSMGR=46, SOCK_SEQPACKET, 0), bind, setsockopt MANAGED role + WINDOW/LINEAR/proc_param=127, send DATA message",
+      "reaches": ["psmgr_process_data"],
+      "vuln_file": "net/psmgr/psmgr_core.c",
+      "finding_id": "4b1decbf-d2d2-4b77-a3ea-086ef8f0ab93",
+      "notes": "Heap buffer overflow at psmgr_core.c:283"
+    },
+    {
+      "id": "psmgr_process_commit_req_handler",
+      "subsystem": "net/psmgr",
+      "interface": "AF_PSMGR SOCK_SEQPACKET socket, sendmsg COMMIT_REQ",
+      "driver": "Send COMMIT_REQ with pre-installed handler to trigger psmgr_core.c:361",
+      "reaches": ["psmgr_process_commit_req"],
+      "vuln_file": "net/psmgr/psmgr_core.c",
+      "finding_id": "f21206f6-d4c2-41d2-94d8-9c05f75eee73",
+      "notes": "Pre-installed pointer gate at psmgr_core.c:361"
+    }
+  ]
+}

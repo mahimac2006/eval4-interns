@@ -1,0 +1,401 @@
+{
+  "available": true,
+  "kind": "gcov",
+  "totals": {
+    "files_reached": 199,
+    "subsystems_reached": 2
+  },
+  "subsystems": {
+    "init": {
+      "files_reached": 6,
+      "files": [
+        "init/calibrate.gcda",
+        "init/do_mounts.gcda",
+        "init/do_mounts_initrd.gcda",
+        "init/initramfs.gcda",
+        "init/main.gcda",
+        "init/version.gcda"
+      ]
+    },
+    "kernel": {
+      "files_reached": 193,
+      "files": [
+        "kernel/acct.gcda",
+        "kernel/async.gcda",
+        "kernel/audit.gcda",
+        "kernel/audit_fsnotify.gcda",
+        "kernel/audit_tree.gcda",
+        "kernel/audit_watch.gcda",
+        "kernel/auditfilter.gcda",
+        "kernel/auditsc.gcda",
+        "kernel/capability.gcda",
+        "kernel/cgroup/cgroup-v1.gcda",
+        "kernel/cgroup/cgroup.gcda",
+        "kernel/cgroup/cpuset.gcda",
+        "kernel/cgroup/debug.gcda",
+        "kernel/cgroup/freezer.gcda",
+        "kernel/cgroup/legacy_freezer.gcda",
+        "kernel/cgroup/misc.gcda",
+        "kernel/cgroup/namespace.gcda",
+        "kernel/cgroup/pids.gcda",
+        "kernel/cgroup/rdma.gcda",
+        "kernel/cgroup/rstat.gcda",
+        "kernel/compat.gcda",
+        "kernel/cpu.gcda",
+        "kernel/crash_core.gcda",
+        "kernel/cred.gcda",
+        "kernel/delayacct.gcda",
+        "kernel/dma.gcda",
+        "kernel/dma/direct.gcda",
+        "kernel/dma/dummy.gcda",
+        "kernel/dma/mapping.gcda",
+        "kernel/dma/ops_helpers.gcda",
+        "kernel/dma/remap.gcda",
+        "kernel/dma/swiotlb.gcda",
+        "kernel/entry/common.gcda",
+        "kernel/entry/syscall_user_dispatch.gcda",
+        "kernel/exec_domain.gcda",
+        "kernel/exit.gcda",
+        "kernel/extable.gcda",
+        "kernel/fork.gcda",
+        "kernel/freezer.gcda",
+        "kernel/futex/core.gcda"
+      ]
+    }
+  },
+  "truncated": false,
+  "note": "199 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+  "functions_by_file": {
+    "af_unix.c": {
+      "functions_total": 131,
+      "functions_reached": 48,
+      "reached": [
+        {
+          "name": "sock_flag",
+          "calls": 15,
+          "bb": "7/11"
+        },
+        {
+          "name": "__refcount_add",
+          "calls": 11,
+          "bb": "7/10"
+        },
+        {
+          "name": "__refcount_sub_and_test",
+          "calls": 7,
+          "bb": "9/11"
+        },
+        {
+          "name": "sock_put",
+          "calls": 7,
+          "bb": "4/4"
+        },
+        {
+          "name": "__unix_dgram_recvmsg",
+          "calls": 5,
+          "bb": "44/55"
+        },
+        {
+          "name": "refcount_inc",
+          "calls": 5,
+          "bb": "2/2"
+        },
+        {
+          "name": "unix_dgram_recvmsg",
+          "calls": 5,
+          "bb": "2/2"
+        },
+        {
+          "name": "__scm_recv_common",
+          "calls": 4,
+          "bb": "24/36"
+        },
+        {
+          "name": "scm_destroy",
+          "calls": 4,
+          "bb": "4/4"
+        },
+        {
+          "name": "scm_recv_unix",
+          "calls": 4,
+          "bb": "9/13"
+        },
+        {
+          "name": "scm_set_cred",
+          "calls": 4,
+          "bb": "5/5"
+        },
+        {
+          "name": "maybe_add_creds",
+          "calls": 3,
+          "bb": "8/8"
+        },
+        {
+          "name": "scm_passec",
+          "calls": 3,
+          "bb": "5/12"
+        },
+        {
+          "name": "scm_send",
+          "calls": 3,
+          "bb": "5/6"
+        },
+        {
+          "name": "scm_stat_add",
+          "calls": 3,
+          "bb": "6/6"
+        },
+        {
+          "name": "scm_stat_del",
+          "calls": 3,
+          "bb": "6/6"
+        },
+        {
+          "name": "sk_wake_async",
+          "calls": 3,
+          "bb": "3/7"
+        },
+        {
+          "name": "unix_copy_addr",
+          "calls": 3,
+          "bb": "3/4"
+        },
+        {
+          "name": "unix_dgram_sendmsg",
+          "calls": 3,
+          "bb": "53/135"
+        },
+        {
+          "name": "unix_passcred_enabled",
+          "calls": 3,
+          "bb": "14/28"
+        },
+        {
+          "name": "unix_peer_get",
+          "calls": 3,
+          "bb": "6/6"
+        },
+        {
+          "name": "unix_scm_to_skb",
+          "calls": 3,
+          "bb": "5/7"
+        },
+        {
+          "name": "unix_writable",
+          "calls": 3,
+          "bb": "4/5"
+        },
+        {
+          "name": "unix_write_space",
+          "calls": 3,
+          "bb": "11/12"
+        },
+        {
+          "name": "__refcount_dec",
+          "calls": 2,
+          "bb": "5/7"
+        },
+        {
+          "name": "get_new_cred",
+          "calls": 2,
+          "bb": "3/3"
+        },
+        {
+          "name": "init_peercred",
+          "calls": 2,
+          "bb": "10/10"
+        },
+        {
+          "name": "put_cred",
+          "calls": 2,
+          "bb": "2/6"
+        },
+        {
+          "name": "refcount_dec",
+          "calls": 2,
+          "bb": "2/2"
+        },
+        {
+          "name": "sk_add_node",
+          "calls": 2,
+          "bb": "3/4"
+        },
+        {
+          "name": "sk_del_node_init",
+          "calls": 2,
+          "bb": "7/9"
+        },
+        {
+          "name": "sock_orphan",
+          "calls": 2,
+          "bb": "4/4"
+        },
+        {
+          "name": "sock_poll_wait",
+          "calls": 2,
+          "bb": "4/7"
+        },
+        {
+          "name": "sock_set_flag",
+          "calls": 2,
+          "bb": "6/9"
+        },
+        {
+          "name": "unix_close",
+          "calls": 2,
+          "bb": "1/1"
+        },
+        {
+          "name": "unix_create",
+          "calls": 2,
+          "bb": "6/10"
+        },
+        {
+          "name": "unix_create1",
+          "calls": 2,
+          "bb": "17/23"
+        },
+        {
+          "name": "unix_dgram_peer_wake_disconnect",
+          "calls": 2,
+          "bb": "4/5"
+        },
+        {
+          "name": "unix_dgram_poll",
+          "calls": 2,
+          "bb": "13/38"
+        },
+        {
+          "name": "unix_insert_unbound_socket",
+          "calls": 2,
+          "bb": "4/4"
+        },
+        {
+          "name": "unix_release",
+          "calls": 2,
+          "bb": "5/5"
+        },
+        {
+          "name": "unix_release_sock",
+          "calls": 2,
+          "bb": "18/33"
+        },
+        {
+          "name": "unix_remove_bsd_socket",
+          "calls": 2,
+          "bb": "2/7"
+        },
+        {
+          "name": "unix_remove_socket",
+          "calls": 2,
+          "bb": "4/4"
+        },
+        {
+          "name": "unix_sock_destructor",
+          "calls": 2,
+          "bb": "9/12"
+        },
+        {
+          "name": "scm_has_secdata",
+          "calls": 1,
+          "bb": "4/7"
+        },
+        {
+          "name": "unix_peek_fds",
+          "calls": 1,
+          "bb": "4/4"
+        },
+        {
+          "name": "unix_socketpair",
+          "calls": 1,
+          "bb": "5/5"
+        }
+      ],
+      "not_reached": [
+        "__add_wait_queue",
+        "__unix_find_socket_byname",
+        "__unix_set_addr_hash",
+        "__unix_stream_recvmsg",
+        "af_unix_exit",
+        "af_unix_init",
+        "copy_peercred",
+        "kzalloc",
+        "manage_oob",
+        "path_permission",
+        "poll_wait",
+        "queue_oob",
+        "scm_pidfd_recv",
+        "signal_pending",
+        "sk_clear_bit",
+        "sk_set_bit",
+        "sock_error",
+        "sock_graft",
+        "test_ti_thread_flag",
+        "unix_abstract_hash",
+        "unix_accept",
+        "unix_autobind",
+        "unix_bind",
+        "unix_bind_abstract",
+        "unix_bind_bsd",
+        "unix_bpf_bypass_getsockopt",
+        "unix_compat_ioctl",
+        "unix_count_nr_fds",
+        "unix_create_addr",
+        "unix_dgram_connect",
+        "unix_dgram_disconnected",
+        "unix_dgram_peer_wake_connect",
+        "unix_dgram_peer_wake_disconnect_wakeup",
+        "unix_dgram_peer_wake_me",
+        "unix_dgram_peer_wake_relay",
+        "unix_find_abstract",
+        "unix_find_bsd",
+        "unix_find_other",
+        "unix_find_socket_byinode",
+        "unix_find_socket_byname",
+        "unix_from_bucket",
+        "unix_get_first",
+        "unix_get_next",
+        "unix_getname",
+        "unix_inq_len",
+        "unix_insert_bsd_socket",
+        "unix_ioctl",
+        "unix_listen",
+        "unix_mkname_bsd",
+        "unix_net_exit",
+        "unix_net_init",
+        "unix_open_file",
+        "unix_outq_len",
+        "unix_poll",
+        "unix_read_skb",
+        "unix_release_addr",
+        "unix_seq_next",
+        "unix_seq_show",
+        "unix_seq_start",
+        "unix_seq_stop",
+        "unix_seqpacket_recvmsg",
+        "unix_seqpacket_sendmsg",
+        "unix_set_peek_off",
+        "unix_show_fdinfo",
+        "unix_shutdown",
+        "unix_skb_scm_eq",
+        "unix_sock_inherit_flags",
+        "unix_state_double_lock",
+        "unix_state_double_unlock",
+        "unix_stream_connect",
+        "unix_stream_data_wait",
+        "unix_stream_read_actor",
+        "unix_stream_read_generic",
+        "unix_stream_read_skb",
+        "unix_stream_recv_urg",
+        "unix_stream_recvmsg",
+        "unix_stream_sendmsg",
+        "unix_stream_splice_actor",
+        "unix_stream_splice_read",
+        "unix_table_double_lock",
+        "unix_table_double_unlock",
+        "unix_unhash",
+        "unix_wait_for_peer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,845 @@
+{
+  "verdict": "FAIL",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": false,
+  "exit_code": 0,
+  "timed_out": false,
+  "binary": "poc_final_submit",
+  "duration_s": 117.806,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": 117.806,
+    "entrypoint": "poc_final_submit",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": " /poc/poc_final_submit\r\r\n\n dmesg | tail -200\r\r\n[    3.735514] pci 0000:00:1f.2: reg 0x20: [io  0xc120-0xc13f]\r\r\n[    3.737263] pci 0000:00:1f.2: reg 0x24: [mem 0xfeb94000-0xfeb94fff]\r\r\n[    3.747618] pci 0000:00:1f.3: [8086:2930] type 00 class 0x0c0500\r\r\n[    3.750585] pci 0000:00:1f.3: reg 0x20: [io  0x0700-0x073f]\r\r\n[    3.875324] ACPI: PCI: Interrupt link LNKA configured for IRQ 10\r\r\n[    3.909760] ACPI: PCI: Interrupt link LNKB configured for IRQ 10\r\r\n[    3.941442] ACPI: PCI: Interrupt link LNKC configured for IRQ 11\r\r\n[    3.973739] ACPI: PCI: Interrupt link LNKD configured for IRQ 11\r\r\n[    4.005569] ACPI: PCI: Interrupt link LNKE configured for IRQ 10\r\r\n[    4.037053] ACPI: PCI: Interrupt link LNKF configured for IRQ 10\r\r\n[    4.069045] ACPI: PCI: Interrupt link LNKG configured for IRQ 11\r\r\n[    4.101118] ACPI: PCI: Interrupt link LNKH configured for IRQ 11\r\r\n[    4.109575] ACPI: PCI: Interrupt link GSIA configured for IRQ 16\r\r\n[    4.114491] ACPI: PCI: Interrupt link GSIB configured for IRQ 17\r\r\n[    4.120107] ACPI: PCI: Interrupt link GSIC configured for IRQ 18\r\r\n[    4.125634] ACPI: PCI: Interrupt link GSID configured for IRQ 19\r\r\n[    4.131249] ACPI: PCI: Interrupt link GSIE configured for IRQ 20\r\r\n[    4.136253] ACPI: PCI: Interrupt link GSIF configured for IRQ 21\r\r\n[    4.141746] ACPI: PCI: Interrupt link GSIG configured for IRQ 22\r\r\n[    4.148966] ACPI: PCI: Interrupt link GSIH configured for IRQ 23\r\r\n[    4.199117] iommu: Default domain type: Translated\r\r\n[    4.200275] iommu: DMA domain TLB invalidation policy: lazy mode\r\r\n[    4.216235] SCSI subsystem initialized\r\r\n[    4.221310] libata version 3.00 loaded.\r\r\n[    4.226785] ACPI: bus type USB registered\r\r\n[    4.230687] usbcore: registered new interface driver usbfs\r\r\n[    4.233726] usbcore: registered new interface driver hub\r\r\n[    4.236294] usbcore: registered new device driver usb\r\r\n[    4.240235] pps_core: LinuxPPS API ver. 1 registered\r\r\n[    4.241150] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>\r\r\n[    4.243960] PTP clock support registered\r\r\n[    4.256121] Advanced Linux Sound Architecture Driver Initialized.\r\r\n[    4.295296] NetLabel: Initializing\r\r\n[    4.296051] NetLabel:  domain hash size = 128\r\r\n[    4.297328] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO\r\r\n[    4.303192] NetLabel:  unlabeled traffic allowed by default\r\r\n[    4.314794] PCI: Using ACPI for IRQ routing\r\r\n[    4.322004] PCI: pci_cache_line_size set to 64 bytes\r\r\n[    4.322761] e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]\r\r\n[    4.323340] e820: reserve RAM buffer [mem 0x7ffdc000-0x7fffffff]\r\r\n[    4.328010] pci 0000:00:01.0: vgaarb: setting as boot VGA device\r\r\n[    4.328192] pci 0000:00:01.0: vgaarb: bridge control possible\r\r\n[    4.328192] pci 0000:00:01.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none\r\r\n[    4.329266] vgaarb: loaded\r\r\n[    4.337221] hpet: 3 channels of 0 reserved for per-cpu timers\r\r\n[    4.338597] hpet0: at MMIO 0xfed00000, IRQs 2, 8, 0\r\r\n[    4.339372] hpet0: 3 comparators, 64-bit 100.000000 MHz counter\r\r\n[    4.403007] clocksource: Switched to clocksource hpet\r\r\n[    4.429138] VFS: Disk quotas dquot_6.6.0\r\r\n[    4.430912] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)\r\r\n[    4.445028] pnp: PnP ACPI init\r\r\n[    4.487638] system 00:05: [mem 0xb0000000-0xbfffffff window] has been reserved\r\r\n[    4.578038] pnp: PnP ACPI: found 6 devices\r\r\n[    4.836959] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns\r\r\n[    4.843633] NET: Registered PF_INET protocol family\r\r\n[    4.855676] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)\r\r\n[    4.912344] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)\r\r\n[    4.916049] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)\r\r\n[    4.920487] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)\r\r\n[    4.929350] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)\r\r\n[    4.995936] TCP: Hash tables configured (established 65536 bind 65536)\r\r\n[    5.002149] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)\r\r\n[    5.029662] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)\r\r\n[    5.040775] NET: Registered PF_UNIX/PF_LOCAL protocol family\r\r\n[    5.056204] RPC: Registered named UNIX socket transport module.\r\r\n[    5.057923] RPC: Registered udp transport module.\r\r\n[    5.059514] RPC: Registered tcp transport module.\r\r\n[    5.060182] RPC: Registered tcp-with-tls transport module.\r\r\n[    5.061162] RPC: Registered tcp NFSv4.1 backchannel transport module.\r\r\n[    5.095495] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]\r\r\n[    5.097559] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]\r\r\n[    5.099445] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]\r\r\n[    5.100892] pci_bus 0000:00: resource 7 [mem 0x80000000-0xafffffff window]\r\r\n[    5.102974] pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]\r\r\n[    5.105762] pci_bus 0000:00: resource 9 [mem 0x280000000-0xa7fffffff window]\r\r\n[    5.111760] PCI: CLS 0 bytes, default 64\r\r\n[    5.113652] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)\r\r\n[    5.115474] software IO TLB: mapped [mem 0x000000007bfdc000-0x000000007ffdc000] (64MB)\r\r\n[   43.526448] Initialise system trusted keyrings\r\r\n[   43.534146] workingset: timestamp_bits=56 max_order=21 bucket_order=0\r\r\n[   43.585863] NFS: Registering the id_resolver key type\r\r\n[   43.588773] Key type id_resolver registered\r\r\n[   43.590512] Key type id_legacy registered\r\r\n[   43.598149] 9p: Installing v9fs 9p2000 file system support\r\r\n[   43.804621] Key type asymmetric registered\r\r\n[   43.807863] Asymmetric key parser 'x509' registered\r\r\n[   43.812939] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)\r\r\n[   43.818778] io scheduler mq-deadline registered\r\r\n[   43.821522] io scheduler kyber registered\r\r\n[   43.857006] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0\r\r\n[   43.886610] ACPI: button: Power Button [PWRF]\r\r\n[   44.189682] ACPI: \\_SB_.GSIG: Enabled at IRQ 22\r\r\n[   44.481981] ACPI: \\_SB_.GSIH: Enabled at IRQ 23\r\r\n[   44.768061] ACPI: \\_SB_.GSIE: Enabled at IRQ 20\r\r\n[   44.785368] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled\r\r\n[   44.804006] 00:03: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A\r\r\n[   44.910905] Non-volatile memory driver v1.3\r\r\n[   44.912532] Linux agpgart interface v0.103\r\r\n[   44.920728] ACPI: bus type drm_connector registered\r\r\n[   45.171555] loop: module loaded\r\r\n[   45.174910] virtio_blk virtio2: 2/0/0 default/read/poll queues\r\r\n[   45.292729] virtio_blk virtio2: [vda] 1048576 512-byte logical blocks (537 MB/512 MiB)\r\r\n[   45.369414] ahci 0000:00:1f.2: version 3.0\r\r\n[   45.643534] ACPI: \\_SB_.GSIA: Enabled at IRQ 16\r\r\n[   45.660822] ahci 0000:00:1f.2: AHCI 0001.0000 32 slots 6 ports 1.5 Gbps 0x3f impl SATA mode\r\r\n[   45.664520] ahci 0000:00:1f.2: flags: 64bit ncq only \r\r\n[   45.786579] scsi host0: ahci\r\r\n[   45.828399] scsi host1: ahci\r\r\n[   45.866191] scsi host2: ahci\r\r\n[   45.905983] scsi host3: ahci\r\r\n[   45.945558] scsi host4: ahci\r\r\n[   45.984032] scsi host5: ahci\r\r\n[   46.010712] ata1: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94100 irq 27\r\r\n[   46.013115] ata2: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94180 irq 27\r\r\n[   46.016844] ata3: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94200 irq 27\r\r\n[   46.019775] ata4: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94280 irq 27\r\r\n[   46.022746] ata5: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94300 irq 27\r\r\n[   46.024922] ata6: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94380 irq 27\r\r\n[   46.137853] e100: Intel(R) PRO/100 Network Driver\r\r\n[   46.139153] e100: Copyright(c) 1999-2006 Intel Corporation\r\r\n[   46.142829] e1000: Intel(R) PRO/1000 Network Driver\r\r\n[   46.144186] e1000: Copyright (c) 1999-2006 Intel Corporation.\r\r\n[   46.148131] e1000e: Intel(R) PRO/1000 Network Driver\r\r\n[   46.150003] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.\r\r\n[   46.155772] sky2: driver version 1.30\r\r\n[   46.196543] usbcore: registered new interface driver usblp\r\r\n[   46.200863] usbcore: registered new interface driver usb-storage\r\r\n[   46.211760] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12\r\r\n[   46.229569] serio: i8042 KBD port at 0x60,0x64 irq 1\r\r\n[   46.232143] serio: i8042 AUX port at 0x60,0x64 irq 12\r\r\n[   46.250491] rtc_cmos 00:04: RTC can wake from S4\r\r\n[   46.278863] rtc_cmos 00:04: registered as rtc0\r\r\n[   46.285106] rtc_cmos 00:04: alarms up to one day, y3k, 242 bytes nvram, hpet irqs\r\r\n[   46.291572] fail to initialize ptp_kvm\r\r\n[   46.299411] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@redhat.com\r\r\n[   46.306495] hid: raw HID events driver (C) Jiri Kosina\r\r\n[   46.337129] usbcore: registered new interface driver usbhid\r\r\n[   46.339668] usbhid: USB HID core driver\r\r\n[   46.349577] ata4: SATA link down (SStatus 0 SControl 300)\r\r\n[   46.354406] ata5: SATA link down (SStatus 0 SControl 300)\r\r\n[   46.356067] ata2: SATA link down (SStatus 0 SControl 300)\r\r\n[   46.359066] ata6: SATA link down (SStatus 0 SControl 300)\r\r\n[   46.362023] ata1: SATA link down (SStatus 0 SControl 300)\r\r\n[   46.366913] ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)\r\r\n[   46.380713] ata3.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100\r\r\n[   46.383181] ata3.00: applying bridge limits\r\r\n[   46.408800] ata3.00: configured for UDMA/100\r\r\n[   46.426404] Initializing XFRM netlink socket\r\r\n[   46.430906] NET: Registered PF_INET6 protocol family\r\r\n[   46.449424] scsi 2:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5\r\r\n[   46.497042] sr 2:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray\r\r\n[   46.499857] Segment Routing with IPv6\r\r\n[   46.501176] cdrom: Uniform CD-ROM driver Revision: 3.20\r\r\n[   46.503326] In-situ OAM (IOAM) with IPv6\r\r\n[   46.509768] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver\r\r\n[   46.520068] sr 2:0:0:0: [sr0] Hmm, seems the drive doesn't support multisession CD's\r\r\n[   46.537785] NET: Registered PF_PACKET protocol family\r\r\n[   46.543993] 9pnet: Installing 9P2000 support\r\r\n[   46.570529] Key type dns_resolver registered\r\r\n[   46.602872] IPI shorthand broadcast: enabled\r\r\n[   46.650120] sr 2:0:0:0: Attached scsi CD-ROM sr0\r\r\n[   46.676121] sr 2:0:0:0: Attached scsi generic sg0 type 5\r\r\n[   46.772690] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt\r\r\n[   46.785957] i2c i2c-0: 1/1 memory slots populated (from DMI)\r\r\n[   46.788499] i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD\r\r\n[   46.893960] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input2\r\r\n[   46.922006] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3\r\r\n[   47.605067] registered taskstats version 1\r\r\n[   47.606492] Loading compiled-in X.509 certificates\r\r\n[   48.764011] PM:   Magic number: 2:283:848\r\r\n[   48.768107] printk: console [netcon0] enabled\r\r\n[   48.770671] netconsole: network logging started\r\r\n[   48.788748] cfg80211: Loading compiled-in X.509 certificates for regulatory database\r\r\n[   48.990598] modprobe (65) used greatest stack depth: 26704 bytes left\r\r\n[   49.093765] modprobe (66) used greatest stack depth: 26600 bytes left\r\r\n[   49.119011] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'\r\r\n[   49.131566] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'\r\r\n[   49.138985] Unstable clock detected, switching default tracing clock to \"global\"\r\r\n[   49.138985] If you want to keep using the local clock, then add:\r\r\n[   49.138985]   \"trace_clock=local\"\r\r\n[   49.138985] on the kernel command line\r\r\n[   49.148711] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2\r\r\n[   49.153007] cfg80211: failed to load regulatory.db\r\r\n[   49.156826] ALSA device list:\r\r\n[   49.158126]   No soundcards found.\r\r\n[   49.297355] Freeing unused kernel image (initmem) memory: 26652K\r\r\n[   49.299714] Write protecting the kernel read-only data: 53248k\r\r\n[   49.310878] Freeing unused kernel image (rodata/data gap) memory: 1212K\r\r\n[   50.180035] x86/mm: Checked W+X mappings: passed, no W+X pages found.\r\r\n[   50.183924] Run /init as init process\r\r\n[   50.185178]   with arguments:\r\r\n[   50.185351]     /init\r\r\n[   50.185431]   with environment:\r\r\n[   50.185479]     HOME=/\r\r\n[   50.185536]     TERM=linux\r\r\n[   51.439687] ln (78) used greatest stack depth: 26584 bytes left\r\r\n[   53.017375] xargs (93) used greatest stack depth: 26568 bytes left\r\r\n[   53.515058] udevd[101]: starting version 3.2.11\r\r\n[   53.889033] random: crng init done\r\r\n[   54.013104] udevd[102]: starting eudev-3.2.11\r\r\n",
+  "coverage": {
+    "available": true,
+    "kind": "gcov",
+    "totals": {
+      "files_reached": 199,
+      "subsystems_reached": 2
+    },
+    "subsystems": {
+      "init": {
+        "files_reached": 6,
+        "files": [
+          "init/calibrate.gcda",
+          "init/do_mounts.gcda",
+          "init/do_mounts_initrd.gcda",
+          "init/initramfs.gcda",
+          "init/main.gcda",
+          "init/version.gcda"
+        ]
+      },
+      "kernel": {
+        "files_reached": 193,
+        "files": [
+          "kernel/acct.gcda",
+          "kernel/async.gcda",
+          "kernel/audit.gcda",
+          "kernel/audit_fsnotify.gcda",
+          "kernel/audit_tree.gcda",
+          "kernel/audit_watch.gcda",
+          "kernel/auditfilter.gcda",
+          "kernel/auditsc.gcda",
+          "kernel/capability.gcda",
+          "kernel/cgroup/cgroup-v1.gcda",
+          "kernel/cgroup/cgroup.gcda",
+          "kernel/cgroup/cpuset.gcda",
+          "kernel/cgroup/debug.gcda",
+          "kernel/cgroup/freezer.gcda",
+          "kernel/cgroup/legacy_freezer.gcda",
+          "kernel/cgroup/misc.gcda",
+          "kernel/cgroup/namespace.gcda",
+          "kernel/cgroup/pids.gcda",
+          "kernel/cgroup/rdma.gcda",
+          "kernel/cgroup/rstat.gcda",
+          "kernel/compat.gcda",
+          "kernel/cpu.gcda",
+          "kernel/crash_core.gcda",
+          "kernel/cred.gcda",
+          "kernel/delayacct.gcda",
+          "kernel/dma.gcda",
+          "kernel/dma/direct.gcda",
+          "kernel/dma/dummy.gcda",
+          "kernel/dma/mapping.gcda",
+          "kernel/dma/ops_helpers.gcda",
+          "kernel/dma/remap.gcda",
+          "kernel/dma/swiotlb.gcda",
+          "kernel/entry/common.gcda",
+          "kernel/entry/syscall_user_dispatch.gcda",
+          "kernel/exec_domain.gcda",
+          "kernel/exit.gcda",
+          "kernel/extable.gcda",
+          "kernel/fork.gcda",
+          "kernel/freezer.gcda",
+          "kernel/futex/core.gcda"
+        ]
+      }
+    },
+    "truncated": false,
+    "note": "199 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+    "functions_by_file": {
+      "af_unix.c": {
+        "functions_total": 131,
+        "functions_reached": 48,
+        "reached": [
+          {
+            "name": "sock_flag",
+            "calls": 15,
+            "bb": "7/11"
+          },
+          {
+            "name": "__refcount_add",
+            "calls": 11,
+            "bb": "7/10"
+          },
+          {
+            "name": "__refcount_sub_and_test",
+            "calls": 7,
+            "bb": "9/11"
+          },
+          {
+            "name": "sock_put",
+            "calls": 7,
+            "bb": "4/4"
+          },
+          {
+            "name": "__unix_dgram_recvmsg",
+            "calls": 5,
+            "bb": "44/55"
+          },
+          {
+            "name": "refcount_inc",
+            "calls": 5,
+            "bb": "2/2"
+          },
+          {
+            "name": "unix_dgram_recvmsg",
+            "calls": 5,
+            "bb": "2/2"
+          },
+          {
+            "name": "__scm_recv_common",
+            "calls": 4,
+            "bb": "24/36"
+          },
+          {
+            "name": "scm_destroy",
+            "calls": 4,
+            "bb": "4/4"
+          },
+          {
+            "name": "scm_recv_unix",
+            "calls": 4,
+            "bb": "9/13"
+          },
+          {
+            "name": "scm_set_cred",
+            "calls": 4,
+            "bb": "5/5"
+          },
+          {
+            "name": "maybe_add_creds",
+            "calls": 3,
+            "bb": "8/8"
+          },
+          {
+            "name": "scm_passec",
+            "calls": 3,
+            "bb": "5/12"
+          },
+          {
+            "name": "scm_send",
+            "calls": 3,
+            "bb": "5/6"
+          },
+          {
+            "name": "scm_stat_add",
+            "calls": 3,
+            "bb": "6/6"
+          },
+          {
+            "name": "scm_stat_del",
+            "calls": 3,
+            "bb": "6/6"
+          },
+          {
+            "name": "sk_wake_async",
+            "calls": 3,
+            "bb": "3/7"
+          },
+          {
+            "name": "unix_copy_addr",
+            "calls": 3,
+            "bb": "3/4"
+          },
+          {
+            "name": "unix_dgram_sendmsg",
+            "calls": 3,
+            "bb": "53/135"
+          },
+          {
+            "name": "unix_passcred_enabled",
+            "calls": 3,
+            "bb": "14/28"
+          },
+          {
+            "name": "unix_peer_get",
+            "calls": 3,
+            "bb": "6/6"
+          },
+          {
+            "name": "unix_scm_to_skb",
+            "calls": 3,
+            "bb": "5/7"
+          },
+          {
+            "name": "unix_writable",
+            "calls": 3,
+            "bb": "4/5"
+          },
+          {
+            "name": "unix_write_space",
+            "calls": 3,
+            "bb": "11/12"
+          },
+          {
+            "name": "__refcount_dec",
+            "calls": 2,
+            "bb": "5/7"
+          },
+          {
+            "name": "get_new_cred",
+            "calls": 2,
+            "bb": "3/3"
+          },
+          {
+            "name": "init_peercred",
+            "calls": 2,
+            "bb": "10/10"
+          },
+          {
+            "name": "put_cred",
+            "calls": 2,
+            "bb": "2/6"
+          },
+          {
+            "name": "refcount_dec",
+            "calls": 2,
+            "bb": "2/2"
+          },
+          {
+            "name": "sk_add_node",
+            "calls": 2,
+            "bb": "3/4"
+          },
+          {
+            "name": "sk_del_node_init",
+            "calls": 2,
+            "bb": "7/9"
+          },
+          {
+            "name": "sock_orphan",
+            "calls": 2,
+            "bb": "4/4"
+          },
+          {
+            "name": "sock_poll_wait",
+            "calls": 2,
+            "bb": "4/7"
+          },
+          {
+            "name": "sock_set_flag",
+            "calls": 2,
+            "bb": "6/9"
+          },
+          {
+            "name": "unix_close",
+            "calls": 2,
+            "bb": "1/1"
+          },
+          {
+            "name": "unix_create",
+            "calls": 2,
+            "bb": "6/10"
+          },
+          {
+            "name": "unix_create1",
+            "calls": 2,
+            "bb": "17/23"
+          },
+          {
+            "name": "unix_dgram_peer_wake_disconnect",
+            "calls": 2,
+            "bb": "4/5"
+          },
+          {
+            "name": "unix_dgram_poll",
+            "calls": 2,
+            "bb": "13/38"
+          },
+          {
+            "name": "unix_insert_unbound_socket",
+            "calls": 2,
+            "bb": "4/4"
+          },
+          {
+            "name": "unix_release",
+            "calls": 2,
+            "bb": "5/5"
+          },
+          {
+            "name": "unix_release_sock",
+            "calls": 2,
+            "bb": "18/33"
+          },
+          {
+            "name": "unix_remove_bsd_socket",
+            "calls": 2,
+            "bb": "2/7"
+          },
+          {
+            "name": "unix_remove_socket",
+            "calls": 2,
+            "bb": "4/4"
+          },
+          {
+            "name": "unix_sock_destructor",
+            "calls": 2,
+            "bb": "9/12"
+          },
+          {
+            "name": "scm_has_secdata",
+            "calls": 1,
+            "bb": "4/7"
+          },
+          {
+            "name": "unix_peek_fds",
+            "calls": 1,
+            "bb": "4/4"
+          },
+          {
+            "name": "unix_socketpair",
+            "calls": 1,
+            "bb": "5/5"
+          }
+        ],
+        "not_reached": [
+          "__add_wait_queue",
+          "__unix_find_socket_byname",
+          "__unix_set_addr_hash",
+          "__unix_stream_recvmsg",
+          "af_unix_exit",
+          "af_unix_init",
+          "copy_peercred",
+          "kzalloc",
+          "manage_oob",
+          "path_permission",
+          "poll_wait",
+          "queue_oob",
+          "scm_pidfd_recv",
+          "signal_pending",
+          "sk_clear_bit",
+          "sk_set_bit",
+          "sock_error",
+          "sock_graft",
+          "test_ti_thread_flag",
+          "unix_abstract_hash",
+          "unix_accept",
+          "unix_autobind",
+          "unix_bind",
+          "unix_bind_abstract",
+          "unix_bind_bsd",
+          "unix_bpf_bypass_getsockopt",
+          "unix_compat_ioctl",
+          "unix_count_nr_fds",
+          "unix_create_addr",
+          "unix_dgram_connect",
+          "unix_dgram_disconnected",
+          "unix_dgram_peer_wake_connect",
+          "unix_dgram_peer_wake_disconnect_wakeup",
+          "unix_dgram_peer_wake_me",
+          "unix_dgram_peer_wake_relay",
+          "unix_find_abstract",
+          "unix_find_bsd",
+          "unix_find_other",
+          "unix_find_socket_byinode",
+          "unix_find_socket_byname",
+          "unix_from_bucket",
+          "unix_get_first",
+          "unix_get_next",
+          "unix_getname",
+          "unix_inq_len",
+          "unix_insert_bsd_socket",
+          "unix_ioctl",
+          "unix_listen",
+          "unix_mkname_bsd",
+          "unix_net_exit",
+          "unix_net_init",
+          "unix_open_file",
+          "unix_outq_len",
+          "unix_poll",
+          "unix_read_skb",
+          "unix_release_addr",
+          "unix_seq_next",
+          "unix_seq_show",
+          "unix_seq_start",
+          "unix_seq_stop",
+          "unix_seqpacket_recvmsg",
+          "unix_seqpacket_sendmsg",
+          "unix_set_peek_off",
+          "unix_show_fdinfo",
+          "unix_shutdown",
+          "unix_skb_scm_eq",
+          "unix_sock_inherit_flags",
+          "unix_state_double_lock",
+          "unix_state_double_unlock",
+          "unix_stream_connect",
+          "unix_stream_data_wait",
+          "unix_stream_read_actor",
+          "unix_stream_read_generic",
+          "unix_stream_read_skb",
+          "unix_stream_recv_urg",
+          "unix_stream_recvmsg",
+          "unix_stream_sendmsg",
+          "unix_stream_splice_actor",
+          "unix_stream_splice_read",
+          "unix_table_double_lock",
+          "unix_table_double_unlock",
+          "unix_unhash",
+          "unix_wait_for_peer"
+        ]
+      }
+    }
+  },
+  "coverage_summary": "call-path: unix_peek_fds \u2713(1) | 48/131 in af_unix.c",
+  "variants": {
+    "kernel": {
+      "verdict": "FAIL",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": [],
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": {
+        "available": true,
+        "kind": "gcov",
+        "totals": {
+          "files_reached": 199,
+          "subsystems_reached": 2
+        },
+        "subsystems": {
+          "init": {
+            "files_reached": 6,
+            "files": [
+              "init/calibrate.gcda",
+              "init/do_mounts.gcda",
+              "init/do_mounts_initrd.gcda",
+              "init/initramfs.gcda",
+              "init/main.gcda",
+              "init/version.gcda"
+            ]
+          },
+          "kernel": {
+            "files_reached": 193,
+            "files": [
+              "kernel/acct.gcda",
+              "kernel/async.gcda",
+              "kernel/audit.gcda",
+              "kernel/audit_fsnotify.gcda",
+              "kernel/audit_tree.gcda",
+              "kernel/audit_watch.gcda",
+              "kernel/auditfilter.gcda",
+              "kernel/auditsc.gcda",
+              "kernel/capability.gcda",
+              "kernel/cgroup/cgroup-v1.gcda",
+              "kernel/cgroup/cgroup.gcda",
+              "kernel/cgroup/cpuset.gcda",
+              "kernel/cgroup/debug.gcda",
+              "kernel/cgroup/freezer.gcda",
+              "kernel/cgroup/legacy_freezer.gcda",
+              "kernel/cgroup/misc.gcda",
+              "kernel/cgroup/namespace.gcda",
+              "kernel/cgroup/pids.gcda",
+              "kernel/cgroup/rdma.gcda",
+              "kernel/cgroup/rstat.gcda",
+              "kernel/compat.gcda",
+              "kernel/cpu.gcda",
+              "kernel/crash_core.gcda",
+              "kernel/cred.gcda",
+              "kernel/delayacct.gcda",
+              "kernel/dma.gcda",
+              "kernel/dma/direct.gcda",
+              "kernel/dma/dummy.gcda",
+              "kernel/dma/mapping.gcda",
+              "kernel/dma/ops_helpers.gcda",
+              "kernel/dma/remap.gcda",
+              "kernel/dma/swiotlb.gcda",
+              "kernel/entry/common.gcda",
+              "kernel/entry/syscall_user_dispatch.gcda",
+              "kernel/exec_domain.gcda",
+              "kernel/exit.gcda",
+              "kernel/extable.gcda",
+              "kernel/fork.gcda",
+              "kernel/freezer.gcda",
+              "kernel/futex/core.gcda"
+            ]
+          }
+        },
+        "truncated": false,
+        "note": "199 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+        "functions_by_file": {
+          "af_unix.c": {
+            "functions_total": 131,
+            "functions_reached": 48,
+            "reached": [
+              {
+                "name": "sock_flag",
+                "calls": 15,
+                "bb": "7/11"
+              },
+              {
+                "name": "__refcount_add",
+                "calls": 11,
+                "bb": "7/10"
+              },
+              {
+                "name": "__refcount_sub_and_test",
+                "calls": 7,
+                "bb": "9/11"
+              },
+              {
+                "name": "sock_put",
+                "calls": 7,
+                "bb": "4/4"
+              },
+              {
+                "name": "__unix_dgram_recvmsg",
+                "calls": 5,
+                "bb": "44/55"
+              },
+              {
+                "name": "refcount_inc",
+                "calls": 5,
+                "bb": "2/2"
+              },
+              {
+                "name": "unix_dgram_recvmsg",
+                "calls": 5,
+                "bb": "2/2"
+              },
+              {
+                "name": "__scm_recv_common",
+                "calls": 4,
+                "bb": "24/36"
+              },
+              {
+                "name": "scm_destroy",
+                "calls": 4,
+                "bb": "4/4"
+              },
+              {
+                "name": "scm_recv_unix",
+                "calls": 4,
+                "bb": "9/13"
+              },
+              {
+                "name": "scm_set_cred",
+                "calls": 4,
+                "bb": "5/5"
+              },
+              {
+                "name": "maybe_add_creds",
+                "calls": 3,
+                "bb": "8/8"
+              },
+              {
+                "name": "scm_passec",
+                "calls": 3,
+                "bb": "5/12"
+              },
+              {
+                "name": "scm_send",
+                "calls": 3,
+                "bb": "5/6"
+              },
+              {
+                "name": "scm_stat_add",
+                "calls": 3,
+                "bb": "6/6"
+              },
+              {
+                "name": "scm_stat_del",
+                "calls": 3,
+                "bb": "6/6"
+              },
+              {
+                "name": "sk_wake_async",
+                "calls": 3,
+                "bb": "3/7"
+              },
+              {
+                "name": "unix_copy_addr",
+                "calls": 3,
+                "bb": "3/4"
+              },
+              {
+                "name": "unix_dgram_sendmsg",
+                "calls": 3,
+                "bb": "53/135"
+              },
+              {
+                "name": "unix_passcred_enabled",
+                "calls": 3,
+                "bb": "14/28"
+              },
+              {
+                "name": "unix_peer_get",
+                "calls": 3,
+                "bb": "6/6"
+              },
+              {
+                "name": "unix_scm_to_skb",
+                "calls": 3,
+                "bb": "5/7"
+              },
+              {
+                "name": "unix_writable",
+                "calls": 3,
+                "bb": "4/5"
+              },
+              {
+                "name": "unix_write_space",
+                "calls": 3,
+                "bb": "11/12"
+              },
+              {
+                "name": "__refcount_dec",
+                "calls": 2,
+                "bb": "5/7"
+              },
+              {
+                "name": "get_new_cred",
+                "calls": 2,
+                "bb": "3/3"
+              },
+              {
+                "name": "init_peercred",
+                "calls": 2,
+                "bb": "10/10"
+              },
+              {
+                "name": "put_cred",
+                "calls": 2,
+                "bb": "2/6"
+              },
+              {
+                "name": "refcount_dec",
+                "calls": 2,
+                "bb": "2/2"
+              },
+              {
+                "name": "sk_add_node",
+                "calls": 2,
+                "bb": "3/4"
+              },
+              {
+                "name": "sk_del_node_init",
+                "calls": 2,
+                "bb": "7/9"
+              },
+              {
+                "name": "sock_orphan",
+                "calls": 2,
+                "bb": "4/4"
+              },
+              {
+                "name": "sock_poll_wait",
+                "calls": 2,
+                "bb": "4/7"
+              },
+              {
+                "name": "sock_set_flag",
+                "calls": 2,
+                "bb": "6/9"
+              },
+              {
+                "name": "unix_close",
+                "calls": 2,
+                "bb": "1/1"
+              },
+              {
+                "name": "unix_create",
+                "calls": 2,
+                "bb": "6/10"
+              },
+              {
+                "name": "unix_create1",
+                "calls": 2,
+                "bb": "17/23"
+              },
+              {
+                "name": "unix_dgram_peer_wake_disconnect",
+                "calls": 2,
+                "bb": "4/5"
+              },
+              {
+                "name": "unix_dgram_poll",
+                "calls": 2,
+                "bb": "13/38"
+              },
+              {
+                "name": "unix_insert_unbound_socket",
+                "calls": 2,
+                "bb": "4/4"
+              },
+              {
+                "name": "unix_release",
+                "calls": 2,
+                "bb": "5/5"
+              },
+              {
+                "name": "unix_release_sock",
+                "calls": 2,
+                "bb": "18/33"
+              },
+              {
+                "name": "unix_remove_bsd_socket",
+                "calls": 2,
+                "bb": "2/7"
+              },
+              {
+                "name": "unix_remove_socket",
+                "calls": 2,
+                "bb": "4/4"
+              },
+              {
+                "name": "unix_sock_destructor",
+                "calls": 2,
+                "bb": "9/12"
+              },
+              {
+                "name": "scm_has_secdata",
+                "calls": 1,
+                "bb": "4/7"
+              },
+              {
+                "name": "unix_peek_fds",
+                "calls": 1,
+                "bb": "4/4"
+              },
+              {
+                "name": "unix_socketpair",
+                "calls": 1,
+                "bb": "5/5"
+              }
+            ],
+            "not_reached": [
+              "__add_wait_queue",
+              "__unix_find_socket_byname",
+              "__unix_set_addr_hash",
+              "__unix_stream_recvmsg",
+              "af_unix_exit",
+              "af_unix_init",
+              "copy_peercred",
+              "kzalloc",
+              "manage_oob",
+              "path_permission",
+              "poll_wait",
+              "queue_oob",
+              "scm_pidfd_recv",
+              "signal_pending",
+              "sk_clear_bit",
+              "sk_set_bit",
+              "sock_error",
+              "sock_graft",
+              "test_ti_thread_flag",
+              "unix_abstract_hash",
+              "unix_accept",
+              "unix_autobind",
+              "unix_bind",
+              "unix_bind_abstract",
+              "unix_bind_bsd",
+              "unix_bpf_bypass_getsockopt",
+              "unix_compat_ioctl",
+              "unix_count_nr_fds",
+              "unix_create_addr",
+              "unix_dgram_connect",
+              "unix_dgram_disconnected",
+              "unix_dgram_peer_wake_connect",
+              "unix_dgram_peer_wake_disconnect_wakeup",
+              "unix_dgram_peer_wake_me",
+              "unix_dgram_peer_wake_relay",
+              "unix_find_abstract",
+              "unix_find_bsd",
+              "unix_find_other",
+              "unix_find_socket_byinode",
+              "unix_find_socket_byname",
+              "unix_from_bucket",
+              "unix_get_first",
+              "unix_get_next",
+              "unix_getname",
+              "unix_inq_len",
+              "unix_insert_bsd_socket",
+              "unix_ioctl",
+              "unix_listen",
+              "unix_mkname_bsd",
+              "unix_net_exit",
+              "unix_net_init",
+              "unix_open_file",
+              "unix_outq_len",
+              "unix_poll",
+              "unix_read_skb",
+              "unix_release_addr",
+              "unix_seq_next",
+              "unix_seq_show",
+              "unix_seq_start",
+              "unix_seq_stop",
+              "unix_seqpacket_recvmsg",
+              "unix_seqpacket_sendmsg",
+              "unix_set_peek_off",
+              "unix_show_fdinfo",
+              "unix_shutdown",
+              "unix_skb_scm_eq",
+              "unix_sock_inherit_flags",
+              "unix_state_double_lock",
+              "unix_state_double_unlock",
+              "unix_stream_connect",
+              "unix_stream_data_wait",
+              "unix_stream_read_actor",
+              "unix_stream_read_generic",
+              "unix_stream_read_skb",
+              "unix_stream_recv_urg",
+              "unix_stream_recvmsg",
+              "unix_stream_sendmsg",
+              "unix_stream_splice_actor",
+              "unix_stream_splice_read",
+              "unix_table_double_lock",
+              "unix_table_double_unlock",
+              "unix_unhash",
+              "unix_wait_for_peer"
+            ]
+          }
+        }
+      },
+      "error": null
+    }
+  }
+}

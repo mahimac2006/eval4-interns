@@ -1,0 +1,82 @@
+{
+  "verdict": "FAIL",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": false,
+  "exit_code": 1,
+  "timed_out": false,
+  "binary": "poc_psmgr",
+  "duration_s": 106.572,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": 106.572,
+    "entrypoint": "poc_psmgr",
+    "exit_code": 1,
+    "timed_out": false
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": true,
+  "crash_type": "global-out-of-bounds",
+  "crash_location": "mmzone.h:valid_section:1945",
+  "top_app_frames": [
+    "mmzone.h:valid_section:1945",
+    "mmzone.h:pfn_valid:2044",
+    "physaddr.c:__virt_addr_valid:65",
+    "socket.c:sock_register:3248",
+    "af_psmgr.c:psmgr_init:272",
+    "af_psmgr.c:psmgr_init:293"
+  ],
+  "crashes": [
+    {
+      "crash_type": "global-out-of-bounds",
+      "location": "mmzone.h:valid_section:1945",
+      "top_frames": [
+        "mmzone.h:valid_section:1945",
+        "mmzone.h:pfn_valid:2044",
+        "physaddr.c:__virt_addr_valid:65",
+        "socket.c:sock_register:3248"
+      ]
+    }
+  ],
+  "signature_required": true,
+  "signature_match": {
+    "matched": false,
+    "reason": "type matched but no SA function (psmgr_process_data) or file:line found in kernel backtrace",
+    "finding": null
+  },
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": "3\r\r\n[   37.898797] Hardware name: QEMU Standard PC (Q35 + ICH9, 2009), BIOS 1.15.0-1 04/01/2014\r\r\n[   37.898797] Call Trace:\r\r\n[   37.898797]  <TASK>\r\r\n[   37.898797]  dump_stack_lvl+0xa4/0x130\r\r\n[   37.898797]  print_report+0x126/0x920\r\r\n[   37.898797]  ? __virt_addr_valid+0x16b/0x330\r\r\n[   37.898797]  ? sock_register+0x8c/0x120\r\r\n[   37.898797]  kasan_report+0xc1/0x120\r\r\n[   37.898797]  ? sock_register+0x8c/0x120\r\r\n[   37.898797]  __asan_load8+0xa5/0x150\r\r\n[   37.898797]  sock_register+0x8c/0x120\r\r\n[   37.898797]  ? __pfx_psmgr_init+0x10/0x10\r\r\n[   37.898797]  psmgr_init+0x5a/0x1b0\r\r\n[   37.898797]  do_one_initcall+0xb2/0x490\r\r\n[   37.898797]  ? __pfx_do_one_initcall+0x10/0x10\r\r\n[   37.898797]  ? __pfx_parse_args+0x10/0x10\r\r\n[   37.898797]  ? kasan_save_track+0x1c/0x40\r\r\n[   37.898797]  ? kasan_save_alloc_info+0x47/0x80\r\r\n[   37.898797]  ? __kasan_kmalloc+0xe0/0xf0\r\r\n[   37.898797]  kernel_init_freeable+0x3f1/0x540\r\r\n[   37.898797]  ? __pfx_kernel_init+0x10/0x10\r\r\n[   37.898797]  kernel_init+0x2a/0x260\r\r\n[   37.898797]  ret_from_fork+0x54/0x70\r\r\n[   37.898797]  ? __pfx_kernel_init+0x10/0x10\r\r\n[   37.898797]  ret_from_fork_asm+0x1a/0x30\r\r\n[   37.898797]  </TASK>\r\r\n[   37.898797] \r\r\n[   37.898797] The buggy address belongs to the variable:\r\r\n[   37.898797]  pf_family_names+0x170/0x1a0\r\r\n[   37.898797] \r\r\n[   37.898797] The buggy address belongs to the physical page:\r\r\n[   37.898797] page: refcount:1 mapcount:0 mapping:0000000000000000 index:0x0 pfn:0x17f12b\r\r\n[   37.898797] flags: 0x200000000002000(reserved|node=0|zone=2)\r\r\n[   37.898797] raw: 0200000000002000 ffffea0005fc4ac8 ffffea0005fc4ac8 0000000000000000\r\r\n[   37.898797] raw: 0000000000000000 0000000000000000 00000001ffffffff 0000000000000000\r\r\n[   37.898797] page dumped because: kasan: bad access detected\r\r\n[   37.898797] \r\r\n[   37.898797] Memory state around the buggy address:\r\r\n[   37.898797]  ffffffffb332b480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\r\n[   37.898797]  ffffffffb332b500: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\r\n[   37.898797] >ffffffffb332b580: 00 00 00 00 00 00 00 00 00 00 f9 f9 f9 f9 f9 f9\r\r\n[   37.898797]                                                  ^\r\r\n[   37.898797]  ffffffffb332b600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\r\n[   37.898797]  ffffffffb332b680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00\r\r\n[   37.898797] ==================================================================\r\r\n[   37.950211] Disabling lock debugging due to kernel taint\r\r\n[   37.952300] NET: Registered (null) protocol family\r\r\n[   37.954241] psmgr: AF_PSMGR (46) registered\r\r\n[   37.977435] IPI shorthand broadcast: enabled\r\r\n[   39.133525] registered taskstats version 1\r\r\n[   39.134637] Loading compiled-in X.509 certificates\r\r\n[   39.731987] Demotion targets for Node 0: null\r\r\n[   39.747160] PM:   Magic number: 2:894:660\r\r\n[   39.750529] printk: legacy console [netcon0] enabled\r\r\n[   39.752315] netconsole: network logging started\r\r\n[   39.766314] cfg80211: Loading compileddmesg | grep -A 80 'BUG: KASAN' | head -120\r\r\n-in X.509 certificates for regulatory database\r\r\n[   40.029626] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'\r\r\n[   40.043382] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'\r\r\n[   40.050375] Unstable clock detected, switching default tracing clock to \"global\"\r\r\n[   40.050375] If you want to keep using the local clock, then add:\r\r\n[   40.050375]   \"trace_clock=local\"\r\r\n[   40.050375] on the kernel command line\r\r\n[   40.070083] ALSA device list:\r\r\n[   40.070975] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2\r\r\n[   40.075510]   No soundcards found.\r\r\n[   40.075993] cfg80211: failed to load regulatory.db\r\r\n[   40.246519] Freeing unused kernel image (initmem) memory: 29836K\r\r\n[   40.249115] Write protecting the kernel read-only data: 59392k\r\r\n[   40.263345] Freeing unused kernel image (rodata/data gap) memory: 1268K\r\r\n[   41.121331] x86/mm: Checked W+X mappings: passed, no W+X pages found.\r\r\n[   41.125257] Run /init as init process\r\r\n[   41.126086]   with arguments:\r\r\n[   41.126223]     /init\r\r\n[   41.126300]   with environment:\r\r\n[   41.126353]     HOME=/\r\r\n[   41.126409]     TERM=linux\r\r\n[   43.360019] S02klogd (97) used greatest stack depth: 26472 bytes left\r\r\n[   44.164623] xargs (104) used greatest stack depth: 26456 bytes left\r\r\n[   44.343493] logger (106) used greatest stack depth: 26424 bytes left\r\r\n[   44.675629] udevd[112]: starting version 3.2.11\r\r\n[   45.071578] random: crng init done\r\r\n[   45.208980] udevd[113]: starting eudev-3.2.11\r\r\n[   45.212291] udevd (112) used greatest stack depth: 25832 bytes left\r\r\n\n /poc/poc_psmgr\r\r\nbind failed: 98\r\r\n\n dmesg | tail -200\r\r\n[    5.574704] NET: Registered PF_UNIX/PF_LOCAL protocol family\r\r\n[    5.593214] RPC: Registered named UNIX socket transport module.\r\r\n[    5.595641] RPC: Registered udp transport module.\r\r\n[    5.597908] RPC: Registered tcp transport module.\r\r\n[    5.598820] RPC: Registered tcp-with-tls transport module.\r\r\n[    5.599992] RPC: Registered tcp NFSv4.1 backchannel transport module.\r\r\n[    5.635195] pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]\r\r\n[    5.637442] pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]\r\r\n[    5.639876] pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]\r\r\n[    5.642003] pci_bus 0000:00: resource 7 [mem 0x80000000-0xafffffff window]\r\r\n[    5.644053] pci_bus 0000:00: resource 8 [mem 0xc0000000-0xfebfffff window]\r\r\n[    5.646527] pci_bus 0000:00: resource 9 [mem 0x280000000-0xa7fffffff window]\r\r\n[    5.652975] PCI: CLS 0 bytes, default 64\r\r\n[    5.657012] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)\r\r\n[    5.658977] software IO TLB: mapped [mem 0x000000007bfdc000-0x000000007ffdc000] (64MB)\r\r\n[   34.237992] Initialise system trusted keyrings\r\r\n[   34.245085] workingset: timestamp_bits=56 max_order=21 bucket_order=0\r\r\n[   34.287227] NFS: Registering the id_resolver key type\r\r\n[   34.290067] Key type id_resolver registered\r\r\n[   34.291122] Key type id_legacy registered\r\r\n[   34.298402] 9p: Installing v9fs 9p2000 file system support\r\r\n[   34.487126] NET: Registered PF_ALG protocol family\r\r\n[   34.489027] Key type asymmetric registered\r\r\n[   34.490168] Asymmetric key parser 'x509' registered\r\r\n[   34.494847] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 251)\r\r\n[   34.498638] io scheduler mq-deadline registered\r\r\n[   34.500025] io scheduler kyber registered\r\r\n[   34.535928] input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0\r\r\n[   34.552078] ACPI: button: Power Button [PWRF]\r\r\n[   34.895546] ACPI: \\_SB_.GSIG: Enabled at IRQ 22\r\r\n[   35.218539] ACPI: \\_SB_.GSIH: Enabled at IRQ 23\r\r\n[   35.549168] ACPI: \\_SB_.GSIE: Enabled at IRQ 20\r\r\n[   35.570118] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled\r\r\n[   35.590663] 00:03: ttyS0 at I/O 0x3f8 (irq = 4, base_baud = 115200) is a 16550A\r\r\n[   35.693272] Non-volatile memory driver v1.3\r\r\n[   35.694941] Linux agpgart interface v0.103\r\r\n[   35.707473] ACPI: bus type drm_connector registered\r\r\n[   35.739570] [drm] Initialized vgem 1.0.0 for vgem on minor 0\r\r\n[   36.006305] loop: module loaded\r\r\n[   36.009573] virtio_blk virtio2: 2/0/0 default/read/poll queues\r\r\n[   36.058863] virtio_blk virtio2: [vda] 1048576 512-byte logical blocks (537 MB/512 MiB)\r\r\n[   36.151231] ahci 0000:00:1f.2: version 3.0\r\r\n[   36.453559] ACPI: \\_SB_.GSIA: Enabled at IRQ 16\r\r\n[   36.475035] ahci 0000:00:1f.2: AHCI vers 0001.0000, 32 command slots, 1.5 Gbps, SATA mode\r\r\n[   36.476698] ahci 0000:00:1f.2: 6/6 ports implemented (port mask 0x3f)\r\r\n[   36.478574] ahci 0000:00:1f.2: flags: 64bit ncq only \r\r\n[   36.613090] scsi host0: ahci\r\r\n[   36.641317] scsi host1: ahci\r\r\n[   36.667243] scsi host2: ahci\r\r\n[   36.694496] scsi host3: ahci\r\r\n[   36.720270] scsi host4: ahci\r\r\n[   36.746084] scsi host5: ahci\r\r\n[   36.761367] ata1: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94100 irq 27 lpm-pol 0\r\r\n[   36.763478] ata2: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94180 irq 27 lpm-pol 0\r\r\n[   36.766494] ata3: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94200 irq 27 lpm-pol 0\r\r\n[   36.769000] ata4: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94280 irq 27 lpm-pol 0\r\r\n[   36.770980] ata5: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94300 irq 27 lpm-pol 0\r\r\n[   36.772991] ata6: SATA max UDMA/133 abar m4096@0xfeb94000 port 0xfeb94380 irq 27 lpm-pol 0\r\r\n[   36.921929] e100: Intel(R) PRO/100 Network Driver\r\r\n[   36.923395] e100: Copyright(c) 1999-2006 Intel Corporation\r\r\n[   36.927583] e1000: Intel(R) PRO/1000 Network Driver\r\r\n[   36.929038] e1000: Copyright (c) 1999-2006 Intel Corporation.\r\r\n[   36.932643] e1000e: Intel(R) PRO/1000 Network Driver\r\r\n[   36.934228] e1000e: Copyright(c) 1999 - 2015 Intel Corporation.\r\r\n[   36.939443] sky2: driver version 1.30\r\r\n[   36.974868] usbcore: registered new interface driver usblp\r\r\n[   36.979312] usbcore: registered new interface driver usb-storage\r\r\n[   36.987993] i8042: PNP: PS/2 Controller [PNP0303:KBD,PNP0f13:MOU] at 0x60,0x64 irq 1,12\r\r\n[   37.002065] serio: i8042 KBD port at 0x60,0x64 irq 1\r\r\n[   37.005097] serio: i8042 AUX port at 0x60,0x64 irq 12\r\r\n[   37.036003] input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input1\r\r\n[   37.037044] rtc_cmos 00:04: RTC can wake from S4\r\r\n[   37.076104] rtc_cmos 00:04: registered as rtc0\r\r\n[   37.085061] rtc_cmos 00:04: alarms up to one day, y3k, 242 bytes nvram, hpet irqs\r\r\n[   37.091002] ata3: SATA link up 1.5 Gbps (SStatus 113 SControl 300)\r\r\n[   37.098231] ata4: SATA link down (SStatus 0 SControl 300)\r\r\n[   37.102243] ata6: SATA link down (SStatus 0 SControl 300)\r\r\n[   37.108163] ata5: SATA link down (SStatus 0 SControl 300)\r\r\n[   37.113442] ata2: SATA link down (SStatus 0 SControl 300)\r\r\n[   37.116984] ata1: SATA link down (SStatus 0 SControl 300)\r\r\n[   37.122363] ata3.00: ATAPI: QEMU DVD-ROM, 2.5+, max UDMA/100\r\r\n[   37.125212] ata3.00: applying bridge limits\r\r\n[   37.130132] ata3.00: configured for UDMA/100\r\r\n[   37.146472] device-mapper: ioctl: 4.48.0-ioctl (2023-03-01) initialised: dm-devel@lists.linux.dev\r\r\n[   37.152570] amd_pstate: the _CPC object is not present in SBIOS or ACPI disabled\r\r\n[   37.158877] hid: raw HID events driver (C) Jiri Kosina\r\r\n[   37.183090] scsi 2:0:0:0: CD-ROM            QEMU     QEMU DVD-ROM     2.5+ PQ: 0 ANSI: 5\r\r\n[   37.224360] usbcore: registered new interface driver usbhid\r\r\n[   37.226885] usbhid: USB HID core driver\r\r\n[   37.234489] sr 2:0:0:0: [sr0] scsi3-mmc drive: 4x/4x cd/rw xa/form2 tray\r\r\n[   37.238413] cdrom: Uniform CD-ROM driver Revision: 3.20\r\r\n[   37.244557] sr 2:0:0:0: [sr0] Hmm, seems the drive doesn't support multisession CD's\r\r\n[   37.258853] vgem_dma: vgem software DMA move engine loaded\r\r\n[   37.280129] vgem_pp: vgem CPU post-processing pipeline stage loaded\r\r\n[   37.288593] vgem_pipe: vgem unified pipeline context loaded\r\r\n[   37.359567] sr 2:0:0:0: Attached scsi CD-ROM sr0\r\r\n[   37.374579] sr 2:0:0:0: Attached scsi generic sg0 type 5\r\r\n[   37.408224] Initializing XFRM netlink socket\r\r\n[   37.413238] NET: Registered PF_INET6 protocol family\r\r\n[   37.460933] Segment Routing with IPv6\r\r\n[   37.464433] In-situ OAM (IOAM) with IPv6\r\r\n[   37.471051] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver\r\r\n[   37.500214] NET: Registered PF_PACKET protocol family\r\r\n[   37.581144] i801_smbus 0000:00:1f.3: SMBus using PCI interrupt\r\r\n[   37.597201] i2c i2c-0: Memory type 0x07 not supported yet, not instantiating SPD\r\r\n[   37.615397] input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input3\r\r\n[   37.749402] modprobe (73) used greatest stack depth: 26488 bytes left\r\r\n[   37.867577] NET: Registered PF_RXRPC protocol family\r\r\n[   37.869277] Key type rxrpc registered\r\r\n[   37.870651] Key type rxrpc_s registered\r\r\n[   37.874331] 9pnet: Installing 9P2000 support\r\r\n[   37.896583] Key type dns_resolver registered\r\r\n[   37.898550] ==================================================================\r\r\n[   37.898797] BUG: KASAN: global-out-of-bounds in sock_register+0x8c/0x120\r\r\n[   37.898797] Read of size 8 at addr ffffffffb332b5d0 by task swapper/0/1\r\r\n[   37.898797] \r\r\n[   37.898797] CPU: 1 UID: 0 PID: 1 Comm: swapper/0 Not tainted 6.12.28 ",
+  "coverage": null,
+  "coverage_summary": null,
+  "variants": {
+    "kernel": {
+      "verdict": "FAIL",
+      "sanitizer_fired": true,
+      "crash_type": "global-out-of-bounds",
+      "crash_location": "mmzone.h:valid_section:1945",
+      "crashes": [
+        {
+          "crash_type": "global-out-of-bounds",
+          "location": "mmzone.h:valid_section:1945",
+          "top_frames": [
+            "mmzone.h:valid_section:1945",
+            "mmzone.h:pfn_valid:2044",
+            "physaddr.c:__virt_addr_valid:65",
+            "socket.c:sock_register:3248"
+          ]
+        }
+      ],
+      "signature_match": {
+        "matched": false,
+        "reason": "type matched but no SA function (psmgr_process_data) or file:line found in kernel backtrace",
+        "finding": null
+      },
+      "reproducible": null,
+      "coverage": null,
+      "error": null
+    }
+  }
+}

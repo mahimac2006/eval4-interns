@@ -1,0 +1,32 @@
+INFO:     172.17.0.1:47984 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:46112 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59166 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:41492 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:44492 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57062 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49268 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48318 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:37874 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:41104 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40186 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42922 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47160 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47164 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:42178 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51230 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:36030 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:33396 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52308 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43972 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:35456 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:35548 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47748 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:34684 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57304 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38148 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48292 - "POST /validate HTTP/1.1" 200 OK
+[INFO] validator up: mode=kernel backend=qemu-local image=None binary=None signatures=1
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8650 (Press CTRL+C to quit)

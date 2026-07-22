@@ -1,0 +1,45 @@
+{
+  "verdict": "ERROR",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": null,
+  "exit_code": null,
+  "timed_out": null,
+  "binary": "poc_psmgr",
+  "duration_s": null,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": null,
+    "entrypoint": "poc_psmgr",
+    "exit_code": null,
+    "timed_out": null
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": "[dv-runner] PoC build failed: Command failed: support/scripts/br2-external -d output \"/src/eval3_buildroot-main/external_packages/dv_poc\"\n/bin/sh: 1: support/scripts/br2-external: not found\n",
+  "coverage": null,
+  "coverage_summary": null,
+  "variants": {
+    "kernel": {
+      "verdict": "ERROR",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": null,
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": null,
+      "error": "PoC build failed: Command failed: support/scripts/br2-external -d output \"/src/eval3_buildroot-main/external_packages/dv_poc\"\n/bin/sh: 1: support/scripts/br2-external: not found\n"
+    }
+  }
+}

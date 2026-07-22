@@ -1,0 +1,5 @@
+{
+  "result": "NO_POC",
+  "mode": "kernel",
+  "note": "No PoC mapped to the reported region in this run. INCONCLUSIVE \u2014 not a refutation of the finding: a longer run, a different prompt/agent, or a human may still find one. Only a PASS soundly confirms it."
+}

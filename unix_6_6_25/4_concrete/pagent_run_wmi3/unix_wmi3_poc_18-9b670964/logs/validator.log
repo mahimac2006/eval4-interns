@@ -1,0 +1,41 @@
+INFO:     172.17.0.1:49924 - "GET /health HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53342 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38294 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49448 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60870 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:43572 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:54736 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51490 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49260 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40534 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:45072 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58882 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:55162 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48720 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:48728 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58160 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52120 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53050 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:53798 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:38382 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51280 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:49888 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57710 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:52500 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:40062 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39000 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:39562 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:51376 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:47452 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:41976 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:57454 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:45520 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:58060 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60208 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:59970 - "POST /validate HTTP/1.1" 200 OK
+INFO:     172.17.0.1:60960 - "POST /validate HTTP/1.1" 200 OK
+[INFO] validator up: mode=kernel backend=qemu-local image=None binary=None signatures=1
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8650 (Press CTRL+C to quit)

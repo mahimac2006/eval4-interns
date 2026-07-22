@@ -1,0 +1,53 @@
+{
+  "verdict": "FAIL",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": false,
+  "exit_code": 0,
+  "timed_out": false,
+  "binary": "poc_small",
+  "duration_s": 8628.645,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": 8628.645,
+    "entrypoint": "poc_small",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": " /poc/poc_small\r\r\n[+] Connected - copy_peercred called\r\r\nsendmsg: No such process\r\r\n\n /poc/poc_small\r\r\n[+] Connected - copy_peercred called\r\r\nsendmsg: No such process\r\r\necho EXIT_CODE=$?\r\r\ndmesg | tail -200\r\r\n",
+  "coverage": {
+    "available": false,
+    "kind": "gcov",
+    "note": "no gcov data (kernel may lack CONFIG_GCOV_KERNEL=y, or the PoC crashed before coverage could be read)"
+  },
+  "coverage_summary": "call-path: copy_peercred \u2717 | NOT reached: copy_peercred",
+  "variants": {
+    "kernel": {
+      "verdict": "FAIL",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": [],
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": {
+        "available": false,
+        "kind": "gcov",
+        "note": "no gcov data (kernel may lack CONFIG_GCOV_KERNEL=y, or the PoC crashed before coverage could be read)"
+      },
+      "error": null
+    }
+  }
+}

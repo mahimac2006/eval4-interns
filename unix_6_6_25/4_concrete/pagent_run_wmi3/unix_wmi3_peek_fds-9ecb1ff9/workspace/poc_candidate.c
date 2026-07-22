@@ -1,0 +1,113 @@
+/*
+ * PoC for WMI-3: unix_peek_fds
+ * Trigger unix_peek_fds via:
+ *   - Create AF_UNIX SOCK_DGRAM pair
+ *   - sendmsg with SCM_RIGHTS (a file descriptor)
+ *   - recvmsg with MSG_PEEK
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/socket.h>
+#include <sys/un.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
+#define SCM_MAX_FD 253
+
+int main(int argc, char *argv[])
+{
+    int sv[2];  /* socket pair */
+    int fd_to_send;
+    struct msghdr msg = {0};
+    struct iovec iov;
+    char buf[64];
+    char cmsg_buf[CMSG_SPACE(sizeof(int))];
+    struct cmsghdr *cmsg;
+    int ret;
+
+    /* Create a socket pair */
+    if (socketpair(AF_UNIX, SOCK_DGRAM, 0, sv) < 0) {
+        perror("socketpair");
+        return 1;
+    }
+
+    /* Open a file to send as SCM_RIGHTS */
+    fd_to_send = open("/etc/passwd", O_RDONLY);
+    if (fd_to_send < 0) {
+        perror("open");
+        return 1;
+    }
+
+    /* Prepare data */
+    memset(buf, 0x41, sizeof(buf));
+
+    /* Send message with SCM_RIGHTS */
+    iov.iov_base = buf;
+    iov.iov_len = sizeof(buf);
+
+    msg.msg_name = NULL;
+    msg.msg_namelen = 0;
+    msg.msg_iov = &iov;
+    msg.msg_iovlen = 1;
+    msg.msg_control = cmsg_buf;
+    msg.msg_controllen = sizeof(cmsg_buf);
+    msg.msg_flags = 0;
+
+    cmsg = CMSG_FIRSTHDR(&msg);
+    cmsg->cmsg_level = SOL_SOCKET;
+    cmsg->cmsg_type = SCM_RIGHTS;
+    cmsg->cmsg_len = CMSG_LEN(sizeof(int));
+    *(int *)CMSG_DATA(cmsg) = fd_to_send;
+
+    ret = sendmsg(sv[0], &msg, 0);
+    if (ret < 0) {
+        perror("sendmsg");
+        return 1;
+    }
+    printf("sendmsg succeeded, sent %d bytes\n", ret);
+
+    /* Now recvmsg with MSG_PEEK to trigger unix_peek_fds */
+    memset(&msg, 0, sizeof(msg));
+    memset(cmsg_buf, 0, sizeof(cmsg_buf));
+    iov.iov_base = buf;
+    iov.iov_len = sizeof(buf);
+    msg.msg_iov = &iov;
+    msg.msg_iovlen = 1;
+    msg.msg_control = cmsg_buf;
+    msg.msg_controllen = sizeof(cmsg_buf);
+
+    ret = recvmsg(sv[1], &msg, MSG_PEEK);
+    if (ret < 0) {
+        perror("recvmsg (peek)");
+        return 1;
+    }
+    printf("recvmsg (peek) succeeded, got %d bytes\n", ret);
+
+    /* Now do another recvmsg without PEEK to consume */
+    memset(&msg, 0, sizeof(msg));
+    memset(cmsg_buf, 0, sizeof(cmsg_buf));
+    iov.iov_base = buf;
+    iov.iov_len = sizeof(buf);
+    msg.msg_iov = &iov;
+    msg.msg_iovlen = 1;
+    msg.msg_control = cmsg_buf;
+    msg.msg_controllen = sizeof(cmsg_buf);
+
+    ret = recvmsg(sv[1], &msg, 0);
+    if (ret < 0) {
+        perror("recvmsg (consume)");
+        return 1;
+    }
+    printf("recvmsg (consume) succeeded, got %d bytes\n", ret);
+
+    close(fd_to_send);
+    close(sv[0]);
+    close(sv[1]);
+
+    printf("PoC completed successfully\n");
+    return 0;
+}
