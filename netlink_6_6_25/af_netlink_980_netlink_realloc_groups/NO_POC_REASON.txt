@@ -1,0 +1,18 @@
+NO-PoC: WMI-3 netlink_realloc_groups (af_netlink.c:980)
+
+Vulnerability type: WMI-3 Attacker-Determined Content in an
+Authoritative Position (semantic data-flow / invariant violation)
+
+No KASAN-detectable memory corruption exists in this code path.
+
+The STASE/KLEE finding flags that krealloc preserves attacker-controlled
+group data through netlink_realloc_groups into the authoritative
+nlk->groups bitmask. This is a data-provenance issue: the memset at
+line 980 only zeroes newly allocated bytes, while attacker-determined
+group bits (written via nladdr->nl_groups in bind(), or the group
+number in NETLINK_ADD_MEMBERSHIP) survive the realloc and remain in
+the authoritative position.
+
+All memory operations in this function are bounded, synchronized via
+netlink_table_grab(), and properly handled — no out-of-bounds access,
+use-after-free, or uninitialized read exists that KASAN could observe.

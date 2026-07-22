@@ -1,0 +1,35 @@
+PAGENT submit attempts for af_netlink.c:980 / netlink_realloc_groups
+
+Run directory:
+stase_6_3_5/pagent_runs/netlink_6_6_25_wmi3_af_netlink_980_netlink_realloc_groups-6b24ed30
+
+1. bash submit.sh poc.c --name wmi3_netlink_v1 --sanitizer kasan 2>&1
+   Result: ERROR
+   Reason: PoC build failed. The compiler reported that uint32_t was defined in
+   <stdint.h>, which the first candidate had not included.
+
+2. bash submit.sh poc.c --name wmi3_netlink_v2 --sanitizer kasan 2>&1
+   Result: FAIL
+   sanitizer_variant: kernel
+   exec_time_s: 382.788
+   exit_code: 0
+   timed_out: false
+   sanitizer/crash: none
+   coverage_summary: call-path: netlink_realloc_groups x | NOT reached: netlink_realloc_groups
+
+3. bash submit.sh poc.c --name wmi3_netlink_v3 --sanitizer ubsan 2>&1
+   Wrapper note: unsupported sanitizer 'ubsan' was ignored; run was pinned to kasan.
+   Result: FAIL
+   sanitizer_variant: kernel
+   exec_time_s: 417.563
+   exit_code: 0
+   timed_out: false
+   sanitizer/crash: none
+   coverage_summary: call-path: netlink_realloc_groups x | NOT reached: netlink_realloc_groups
+
+4. bash submit.sh NO_POC_REASON.txt 2>&1
+   Result: ERROR
+   Reason: accidental infrastructure submission. PAGENT submitted the text
+   explanation file as the validator entrypoint; the validator tried to compile
+   prose as C and failed. This is the reason last_response.json contains an
+   ERROR even though the top-level result.json records NO_POC.

@@ -1,0 +1,136 @@
+[
+  {
+    "operation": {
+      "name": "copyMem_at_netlink_realloc_groups",
+      "parameters": [
+        "int resource_live",
+        "int resource_inconsistent",
+        "int content_attacker",
+        "int content_trusted"
+      ],
+      "effects": [
+        {
+          "type": "copyMem",
+          "id": "e_534e8942",
+          "arguments": {
+            "destinations": [
+              "net_ops.setsockopt"
+            ]
+          }
+        }
+      ],
+      "preconditions": [
+        "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+        "(set-logic QF_AUFBV )\n(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+      ],
+      "preconditions_meta": [
+        {
+          "name": "test000001",
+          "is_bug_witness": true,
+          "format": "smt2",
+          "size_chars": 1200
+        },
+        {
+          "name": "test000002",
+          "is_bug_witness": false,
+          "format": "smt2",
+          "size_chars": 1188
+        }
+      ]
+    },
+    "trigger": {
+      "function": "netlink_realloc_groups",
+      "file": "af_netlink.c",
+      "args": [
+        {
+          "name": "resource_live",
+          "type": "int",
+          "value_le_hex": "0x01000000",
+          "size_bytes": 4,
+          "source": "klee_witness"
+        },
+        {
+          "name": "resource_inconsistent",
+          "type": "int",
+          "value_le_hex": "0x01000000",
+          "size_bytes": 4,
+          "source": "klee_witness"
+        },
+        {
+          "name": "content_attacker",
+          "type": "int",
+          "value_le_hex": "0x01000000",
+          "size_bytes": 4,
+          "source": "klee_witness"
+        },
+        {
+          "name": "content_trusted",
+          "type": "int",
+          "value_le_hex": "0x00000000",
+          "size_bytes": 4,
+          "source": "klee_witness"
+        }
+      ]
+    },
+    "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ netlink_realloc_groups",
+    "metadata": {
+      "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+      "detected_by": [
+        {
+          "engine": "codeql",
+          "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "mechanism": "attacker-content-in-authoritative-position",
+          "indicates": "WMI-3",
+          "file": "af_netlink.c",
+          "line": 980
+        }
+      ],
+      "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+      "verdict_kind": "symex_explored",
+      "crash_location": {
+        "file": "af_netlink.c",
+        "line": 980,
+        "function": "netlink_realloc_groups"
+      },
+      "memory_layout": [
+        {
+          "name": "net_ops.setsockopt",
+          "locations": [
+            {
+              "offset": 0,
+              "size": 8
+            }
+          ]
+        }
+      ],
+      "memory_relation": {
+        "segment": "net_ops.setsockopt",
+        "symbol": "netlink_realloc_groups"
+      },
+      "concrete_oracle": null,
+      "symex_oracle": {
+        "oracle": "klee",
+        "confirms_sa_candidate": true,
+        "oracle_spec": {
+          "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+          "assertion": "authoritative content remains trusted and not attacker-determined",
+          "assumptions": [
+            "attacker-controlled netlink request reaches the authoritative sink"
+          ]
+        },
+        "result": "CONFIRMED (SA invariant violated)"
+      },
+      "memory": {
+        "name": "net_ops.setsockopt",
+        "sa": "net_ops.setsockopt",
+        "code": "net_ops.setsockopt"
+      },
+      "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+      "wmi_index": 3,
+      "relational_witness": null,
+      "derivation_witness": null,
+      "witness_passed": false,
+      "produced_by": "stase3"
+    }
+  }
+]
