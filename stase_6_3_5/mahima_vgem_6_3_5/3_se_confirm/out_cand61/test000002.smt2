@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun pd0_length () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun pd1_length () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (=  (_ bv0 32) (concat  (select  pd0_length (_ bv3 32) ) (concat  (select  pd0_length (_ bv2 32) ) (concat  (select  pd0_length (_ bv1 32) ) (select  pd0_length (_ bv0 32) ) ) ) ) ) (=  false (bvule  (concat  (select  pd1_length (_ bv3 32) ) (concat  (select  pd1_length (_ bv2 32) ) (concat  (select  pd1_length (_ bv1 32) ) (select  pd1_length (_ bv0 32) ) ) ) ) (_ bv65536 32) ) ) ) )
-(check-sat)
-(exit)

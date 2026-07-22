@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun handler_ptr () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun is_valid_handler () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (=  false (=  (_ bv0 64) (concat  (select  handler_ptr (_ bv7 32) ) (concat  (select  handler_ptr (_ bv6 32) ) (concat  (select  handler_ptr (_ bv5 32) ) (concat  (select  handler_ptr (_ bv4 32) ) (concat  (select  handler_ptr (_ bv3 32) ) (concat  (select  handler_ptr (_ bv2 32) ) (concat  (select  handler_ptr (_ bv1 32) ) (select  handler_ptr (_ bv0 32) ) ) ) ) ) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  is_valid_handler (_ bv3 32) ) (concat  (select  is_valid_handler (_ bv2 32) ) (concat  (select  is_valid_handler (_ bv1 32) ) (select  is_valid_handler (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

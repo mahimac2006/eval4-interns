@@ -1,8 +1,0 @@
-array pixel_size[8] : w32 -> w8 = symbolic
-(query [(Ule (URem w64 N0:(UDiv w64 (Add w64 4095
-                                              (ReadLSB w64 0 pixel_size))
-                                     4096)
-                        4294967296)
-              1024)
-         (Eq false (Ule N0 1024))]
-        false)

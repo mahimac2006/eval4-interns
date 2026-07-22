@@ -1,0 +1,63 @@
+version: 1
+creator: klee
+pid: 28359
+cmd: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand35.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fl=/tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand35_wmi1.c
+fn=main
+15 13 1 0 0 0 1 42 0 0 0 0 0 0 0 
+16 13 1 0 0 0 1 41 0 0 0 0 0 0 0 
+17 13 1 0 0 0 1 40 0 0 0 0 0 0 0 
+18 13 1 0 0 0 1 39 0 0 0 0 0 0 0 
+19 13 1 0 0 0 1 38 0 0 0 1 0 0 0 
+20 14 1 0 0 0 1 37 0 0 0 0 0 0 0 
+21 14 1 0 0 0 1 35 0 0 0 0 0 0 0 
+22 14 1 0 0 0 1 34 0 0 0 2 0 0 0 
+23 15 1 0 0 0 1 32 0 0 0 0 0 0 0 
+24 15 1 0 0 0 1 30 0 0 0 0 0 0 0 
+25 15 1 0 0 0 1 29 0 0 0 2 0 0 0 
+26 16 1 0 0 0 1 27 0 0 0 0 0 0 0 
+27 16 1 0 0 0 1 25 0 0 0 0 0 0 0 
+28 16 1 0 0 0 1 24 0 0 0 2 0 0 0 
+29 17 1 0 0 0 1 22 0 0 0 1 0 0 0 
+30 17 1 0 0 0 1 21 0 0 0 0 0 0 0 
+31 17 1 0 0 0 1 20 0 0 0 0 0 0 0 
+32 17 1 0 0 0 1 19 0 0 0 0 0 0 0 
+33 17 1 0 0 0 1 18 0 0 0 1 1 0 100140 
+34 18 1 0 0 0 1 16 0 0 0 1 0 0 0 
+35 18 1 0 0 0 1 15 0 0 0 0 0 0 0 
+36 18 1 0 0 0 1 14 0 0 0 0 0 0 0 
+37 18 1 0 0 0 1 13 0 0 0 0 0 0 0 
+38 18 1 0 0 0 1 12 0 0 0 1 1 0 70511 
+39 19 1 0 0 0 1 10 0 0 0 1 0 0 0 
+40 19 1 0 0 0 1 9 0 0 0 0 0 0 0 
+41 19 1 0 0 0 1 8 0 0 0 0 0 0 0 
+42 19 1 0 0 0 1 7 0 0 0 0 0 0 0 
+43 19 1 0 0 0 1 6 0 0 0 1 1 0 66015 
+44 20 1 0 0 0 1 4 0 0 0 1 0 0 0 
+45 20 1 0 0 0 1 3 0 0 0 0 0 0 0 
+46 20 1 0 0 0 1 2 0 0 0 1 0 0 0 
+49 20 1 0 0 0 1 4 0 0 0 1 0 0 0 
+50 20 1 0 0 0 1 3 0 0 0 0 0 0 0 
+51 20 1 0 0 0 1 2 0 0 0 1 0 0 0 
+54 20 0 0 0 0 0 1 0 0 1 0 0 0 0 
+57 20 1 0 0 0 1 0 0 0 0 1 0 0 0 
+58 20 0 0 0 0 0 0 0 0 0 0 0 0 0 
+61 21 0 0 0 0 0 1 0 0 1 0 0 0 0 

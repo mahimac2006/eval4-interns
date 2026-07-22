@@ -1,0 +1,118 @@
+{
+  "operation": {
+    "name": "write_at_vgem_postproc_ctx_alloc",
+    "parameters": [
+      "unsigned int desc_count",
+      "unsigned int completions_cap"
+    ],
+    "effects": [
+      {
+        "type": "write",
+        "id": "e_df18774f",
+        "arguments": {
+          "destinations": [
+            "postproc_ctx.job_count@256"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun completions_cap () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  false (bvule  (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) (concat  (select  completions_cap (_ bv3 32) ) (concat  (select  completions_cap (_ bv2 32) ) (concat  (select  completions_cap (_ bv1 32) ) (select  completions_cap (_ bv0 32) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun completions_cap () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (bvule  (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) (concat  (select  completions_cap (_ bv3 32) ) (concat  (select  completions_cap (_ bv2 32) ) (concat  (select  completions_cap (_ bv1 32) ) (select  completions_cap (_ bv0 32) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 558
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 546
+      }
+    ]
+  },
+  "trigger": {
+    "function": "vgem_postproc_ctx_alloc",
+    "file": "vgem_postproc.c",
+    "args": [
+      {
+        "name": "desc_count",
+        "type": "unsigned int",
+        "value_le_hex": "0x01000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "completions_cap",
+        "type": "unsigned int",
+        "value_le_hex": "0x00000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-1: Shared State Divergence @ vgem_postproc_ctx_alloc",
+  "metadata": {
+    "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "mechanism": "unchecked-signal-field-set",
+        "indicates": "WMI-1",
+        "file": "vgem_postproc.c",
+        "line": 350
+      }
+    ],
+    "bug_type": "WMI-1 Shared State Divergence",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_postproc.c",
+      "line": 350,
+      "function": "vgem_postproc_ctx_alloc"
+    },
+    "memory_layout": [
+      {
+        "name": "postproc_ctx.job_count@256",
+        "locations": [
+          {
+            "offset": 256,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "postproc_ctx.job_count@256",
+      "symbol": "vgem_postproc_ctx_alloc"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-1_SignalDivergence_UngovernedSignal",
+        "assertion": "postproc_ctx.job_count stays within the domain its consumer's agreement governs",
+        "assumptions": [
+          "producer sets job_count without enforcing the consumer's cross-field invariant"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "postproc_ctx.job_count@256",
+      "sa": "postproc_ctx.job_count@256",
+      "code": "postproc_ctx.job_count"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 1,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

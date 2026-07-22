@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "vgem_dmamove_token_alloc",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 124,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'vgem_dmamove_token_alloc' sets signal field 'dmamove_token_slot.tag', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=dmamove_token_slot;field=tag;offset=8] [oracle:assert=dmamove_token_slot.tag stays within the domain its consumer's agreement governs;assume=producer sets tag without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_dmamove_token_alloc"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 124,
+      "func": "vgem_dmamove_token_alloc",
+      "callee": ""
+    }
+  ]
+}

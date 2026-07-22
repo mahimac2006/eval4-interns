@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun param_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun sess_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  (_ bv2 32) (concat  (select  sess_state (_ bv3 32) ) (concat  (select  sess_state (_ bv2 32) ) (concat  (select  sess_state (_ bv1 32) ) (select  sess_state (_ bv0 32) ) ) ) ) ) (=  false (bvule  (concat  (select  param_count (_ bv3 32) ) (concat  (select  param_count (_ bv2 32) ) (concat  (select  param_count (_ bv1 32) ) (select  param_count (_ bv0 32) ) ) ) ) (_ bv8 32) ) ) ) )
+(check-sat)
+(exit)

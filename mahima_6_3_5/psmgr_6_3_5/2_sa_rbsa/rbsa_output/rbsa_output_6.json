@@ -1,0 +1,75 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "psmgr_create",
+  "target_file": "net/psmgr/psmgr_sock.c",
+  "target_line": 218,
+  "target_cwe": "CWE-416",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_create"
+  },
+  "discovered_sinks": [
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 218,
+      "func": "psmgr_create",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "psmgr_create",
+  "trigger_candidates": [
+    "psmgr_create"
+  ],
+  "setup_api": "psmgr_init",
+  "setup_candidates": [
+    "psmgr_init"
+  ],
+  "symbolic_params": [
+    "psmgr_create:arg0",
+    "psmgr_create:arg1",
+    "psmgr_create:arg2",
+    "psmgr_create:arg3"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_create",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg3",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "setup",
+      "api": "psmgr_init",
+      "capture": []
+    },
+    {
+      "name": "trigger",
+      "api": "psmgr_create",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "!freed({psmgr_create:%78}) before access"
+  ],
+  "concrete_params": []
+}

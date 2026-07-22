@@ -1,0 +1,50 @@
+NO_POC_REASON — WMI-3 @ netlink_getname (af_netlink.c:1157)
+
+Verdict: This WMI-3 (Attacker-Determined Content in an Authoritative Position)
+finding cannot trigger a KASAN/UBSAN sanitizer crash.  Below is the concrete
+blocker analysis.
+
+1. What the bug is
+   STASE flagged that at netlink_getname:1157 in the non-peer (getsockname)
+   branch, the kernel writes out nlk->groups[0] — which was set by userspace
+   during bind() — into the authoritative getsockname output buffer.  This is
+   a correct data-flow / semantic finding: attacker-determined content appears
+   where the kernel is supposed to provide authoritative state.  But it is NOT
+   a memory-safety violation.
+
+2. Why KASAN cannot fire
+   - The only memory read at line 1157 is nlk->groups[0].  The groups buffer
+     is allocated by krealloc() in netlink_realloc_groups() with size
+     NLGRPSZ(nl_table[proto].groups).  For every registered protocol, groups
+     >= 32 → NLGRPSZ(32) = 8 bytes = sizeof(unsigned long).  So groups[0] is
+     exactly a single in-bounds unsigned long read.
+   - The groups pointer is set to NULL after kfree in deferred_put_nlk_sk()
+     (the RCU callback).  The NULL check at line 1157 (nlk->groups ? ... : 0)
+     prevents use of a freed pointer after the callback runs.
+   - A concurrent read vs. close() race is impossible because fdget() inside
+     the getsockname(2) syscall holds a file reference, preventing __fput →
+     netlink_release from running until the syscall returns.  Even with dup'd
+     fds, at least one reference stays alive during the syscall.
+   - No out-of-bounds: the allocation tile of the slab is at least 8 bytes,
+     matching sizeof(unsigned long); groups[0] reads exactly those 8 bytes.
+   - No uninitialized read: netlink_realloc_groups() memsets the entire new
+     allocation after krealloc(NULL, ...) (= kmalloc) on first call.
+   - No arithmetic or shift undefined behavior at line 1157.
+
+3. Expected-result demonstration (provided in the PoC)
+   A working PoC was submitted that creates an AF_NETLINK socket, binds with
+   0xdeadbeef as nl_groups, and then calls getsockname().  The kernel returns
+   0xdeadbeef — confirming the attacker-determined→authoritative flow.  This
+   is the correct expected-result pattern for a WMI-3 finding, but the
+   validator's pattern gate is disabled (pattern_gate_enabled: false), and
+   no sanitizer crash can be produced.
+
+4. Why the crash family is "unknown"
+   The STASE metadata confirms crash_family = "unknown" and witness_passed =
+   false.  The abstract model found the invariant violation (attacker content
+   in authoritative position) but no concrete memory-safety crash exists on
+   this code path.
+
+In summary: this is a pure semantic / information-flow finding with no
+KASAN-observable memory corruption.  No amount of heap grooming, threading,
+or ioctl sequences can cause a KASAN fault at netlink_getname:1157.

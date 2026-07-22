@@ -1,0 +1,15 @@
+#include "klee.h"
+#include <assert.h>
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef unsigned long long u64; typedef signed char s8; typedef short s16; typedef int s32;
+typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t;
+typedef unsigned long long uint64_t; typedef long long int64_t; typedef int int32_t;
+typedef unsigned long uintptr_t; typedef unsigned long size_t; typedef long ssize_t;
+/* WMI-1 vgem_dmamove_token_alloc — SE oracle from SA rule WMI-1_SignalDivergence_UngovernedSignal */
+#define TOKEN_SLOT_MASK 255
+#define TOKEN_TABLE_SIZE 64
+int main(void){
+  unsigned int slot; klee_make_symbolic(&slot, sizeof(slot), "slot");
+  klee_assume(slot <= TOKEN_SLOT_MASK);
+  assert(slot < TOKEN_TABLE_SIZE);
+  return 0;}

@@ -1,8 +1,0 @@
-KLEE: Using Z3 solver backend
-KLEE: Deterministic allocator: Using quarantine queue size 8
-KLEE: Deterministic allocator: globals (start-address=0x749d69c00000 size=10 GiB)
-KLEE: Deterministic allocator: constants (start-address=0x749ae9c00000 size=10 GiB)
-KLEE: Deterministic allocator: heap (start-address=0x739ae9c00000 size=1024 GiB)
-KLEE: Deterministic allocator: stack (start-address=0x737ae9c00000 size=128 GiB)
-KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand30_tmpl.c:14: ASSERTION FAIL: producer_view == consumer_view
-KLEE: NOTE: now ignoring this error at this location

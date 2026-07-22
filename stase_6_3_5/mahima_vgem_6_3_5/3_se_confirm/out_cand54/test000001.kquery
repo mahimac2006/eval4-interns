@@ -1,8 +1,0 @@
-array intermediate_pending[4] : w32 -> w8 = symbolic
-array state_val[4] : w32 -> w8 = symbolic
-(query [(Eq 3
-             (ReadLSB w32 0 state_val))
-         (Eq false
-             (Ult 0
-                  (ReadLSB w32 0 intermediate_pending)))]
-        false)

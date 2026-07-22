@@ -1,5 +1,0 @@
-array job_id[4] : w32 -> w8 = symbolic
-(query [(Eq false
-             (Ult (ReadLSB w32 0 job_id)
-                  256))]
-        false)

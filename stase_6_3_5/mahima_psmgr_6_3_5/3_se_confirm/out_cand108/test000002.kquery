@@ -1,8 +1,0 @@
-array handler_ptr[8] : w32 -> w8 = symbolic
-array is_valid_handler[4] : w32 -> w8 = symbolic
-(query [(Eq false
-             (Eq 0
-                 (ReadLSB w64 0 handler_ptr)))
-         (Eq 0
-             (ReadLSB w32 0 is_valid_handler))]
-        false)

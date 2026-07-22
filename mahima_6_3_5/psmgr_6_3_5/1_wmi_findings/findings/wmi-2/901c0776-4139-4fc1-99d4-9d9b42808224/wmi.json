@@ -1,0 +1,118 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_psmgr_connect",
+    "parameters": [
+      "unsigned int nego_offset",
+      "unsigned int nego_len"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_6b960e52",
+        "arguments": {
+          "locations": [
+            "psmgr_session.role@5"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun nego_len () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun nego_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  false (bvule  (bvadd  (concat  (select  nego_offset (_ bv3 32) ) (concat  (select  nego_offset (_ bv2 32) ) (concat  (select  nego_offset (_ bv1 32) ) (select  nego_offset (_ bv0 32) ) ) ) ) (concat  (select  nego_len (_ bv3 32) ) (concat  (select  nego_len (_ bv2 32) ) (concat  (select  nego_len (_ bv1 32) ) (select  nego_len (_ bv0 32) ) ) ) ) ) (_ bv128 32) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun nego_len () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun nego_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (bvule  (bvadd  (concat  (select  nego_offset (_ bv3 32) ) (concat  (select  nego_offset (_ bv2 32) ) (concat  (select  nego_offset (_ bv1 32) ) (select  nego_offset (_ bv0 32) ) ) ) ) (concat  (select  nego_len (_ bv3 32) ) (concat  (select  nego_len (_ bv2 32) ) (concat  (select  nego_len (_ bv1 32) ) (select  nego_len (_ bv0 32) ) ) ) ) ) (_ bv128 32) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 551
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 539
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_connect",
+    "file": "psmgr_sock.c",
+    "args": [
+      {
+        "name": "nego_offset",
+        "type": "unsigned int",
+        "value_le_hex": "0x84000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "nego_len",
+        "type": "unsigned int",
+        "value_le_hex": "0x00000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ psmgr_connect",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "psmgr_sock.c",
+        "line": 354
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_sock.c",
+      "line": 354,
+      "function": "psmgr_connect"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_session.role@5",
+        "locations": [
+          {
+            "offset": 5,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_session.role@5",
+      "symbol": "psmgr_connect"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "psmgr_session.role is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_session.role@5",
+      "sa": "psmgr_session.role@5",
+      "code": "psmgr_session.role"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

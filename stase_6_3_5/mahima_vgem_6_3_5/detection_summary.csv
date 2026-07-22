@@ -1,8 +1,0 @@
-module,wmi,mechanism,rule_ql,n_sa_detected,se_assertion,n_se_confirmed,n_se_discarded,agent_real,agent_false_positive,agent_unclear,n_concrete_validated,n_findings,poc_status
-drivers_vgem,WMI-1,unchecked-signal-field-set,WMI-1_SignalDivergence_UngovernedSignal.ql,44,assert(producer_view == consumer_view),44,0,9,13,22,33,44,pending PAGENT
-drivers_vgem,WMI-2,bookkeeping-field-threshold-gate,WMI-2_LiveResourceInconsistency.ql,67,assert(view_a == view_b),67,0,9,36,22,42,67,pending PAGENT
-drivers_vgem,WMI-2,field-controlled-alloc-size,WMI-2_LiveResourceInconsistency.ql,6,assert(view_a == view_b),6,0,0,5,1,42,6,pending PAGENT
-drivers_vgem,WMI-2,field-reinterpreted-as-2-types,WMI-2_LiveResourceInconsistency.ql,8,assert(view_a == view_b),8,0,2,2,4,42,8,pending PAGENT
-drivers_vgem,WMI-3,allocated-content-into-field,WMI-3_AttackerContent_IntoAuthoritativePosition.ql,4,assert(content_trusted == 1),4,0,0,3,1,3,4,pending PAGENT
-drivers_vgem,WMI-3,attacker-pointer-into-field,WMI-3_AttackerContent_IntoAuthoritativePosition.ql,3,assert(content_trusted == 1),3,0,0,0,3,3,3,pending PAGENT
-drivers_vgem,WMI-4,copy-references-field,WMI-4_ArbitraryAccess_TargetOrExtentFromField.ql,1,assert(access_index < bound),1,0,0,1,0,0,1,pending PAGENT

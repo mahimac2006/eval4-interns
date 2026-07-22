@@ -1,0 +1,23 @@
+klee --write-smt2s --output-dir=/tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/out_cand40 /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand40.bc
+PID: 36996
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2026-07-16 18:13:47
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2026-07-16 18:13:48
+Elapsed: 00:00:01
+KLEE: done: explored paths = 3
+KLEE: done: avg. constructs per query = 13
+KLEE: done: total queries = 3
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 3
+KLEE: done: query cex = 3
+
+KLEE: done: total instructions = 21
+KLEE: done: completed paths = 2
+KLEE: done: partially completed paths = 1
+KLEE: done: generated tests = 3

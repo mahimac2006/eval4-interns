@@ -1,0 +1,3 @@
+module	abi_user_interfaces
+drivers/vgem	ioctl_ops:dmamove_fops[slots=ioctl,open,release],ioctl_ops:dmamove_miscdev[slots=ioctl,open,release],ioctl_ops:pipeline_fops[slots=ioctl,open,release],ioctl_ops:pipeline_miscdev[slots=ioctl,open,release],ioctl_ops:postproc_fops[slots=ioctl,open,release],ioctl_ops:postproc_miscdev[slots=ioctl,open,release]
+net/psmgr	socket_ops:psmgr_ops[slots=accept,bind,connect,getname,getsockopt,ioctl,listen,mmap,...]

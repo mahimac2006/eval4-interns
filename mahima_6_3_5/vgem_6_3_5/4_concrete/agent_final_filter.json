@@ -1,0 +1,478 @@
+{
+  "wma_confirmed": false,
+  "verdict": "Chain incomplete: WMI-1/2/3 cluster consistently on dmamove_job, postproc_job, and vgem_buf_state, but zero candidates confirm WMI-4 (control-flow hijack) anywhere in the evidence, so the chain cannot close.",
+  "kept": [
+    {
+      "cand": "cand116",
+      "wmi": 2,
+      "func": "postproc_job_submit",
+      "reason": "Live-resource-persist evidence directly in postproc_job_submit, which operates on authoritative object postproc_job (WMI-1+3 co-located per object_roles) \u2014 same-function nucleus feed."
+    },
+    {
+      "cand": "cand117",
+      "wmi": 2,
+      "func": "postproc_job_submit",
+      "reason": "Second WMI-2 site in the same nucleus-feeding function postproc_job_submit; corroborates persistence of postproc_job across the call."
+    },
+    {
+      "cand": "cand62",
+      "wmi": 2,
+      "func": "dmamove_fetch_ring",
+      "reason": "WMI-2 persistence site in dmamove_fetch_ring, an immediate dataflow step into authoritative object dmamove_job."
+    },
+    {
+      "cand": "cand73",
+      "wmi": 2,
+      "func": "dmamove_job_execute",
+      "reason": "WMI-2 persistence directly in dmamove_job_execute, which operates on the dmamove_job nucleus (WMI-1+3+4 co-located structurally)."
+    },
+    {
+      "cand": "cand89",
+      "wmi": 2,
+      "func": "dmamove_job_exec",
+      "reason": "WMI-2 persistence in dmamove_job_exec, a second nucleus-adjacent execute path for dmamove_job."
+    },
+    {
+      "cand": "cand90",
+      "wmi": 2,
+      "func": "dmamove_job_exec",
+      "reason": "Second WMI-2 site in dmamove_job_exec corroborating job persistence on dmamove_job."
+    },
+    {
+      "cand": "cand10",
+      "wmi": 1,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Signal divergence confirmed in vgem_dmamove_buf_state_get, which directly reads/writes authoritative object vgem_buf_state (WMI-1+3 co-located)."
+    },
+    {
+      "cand": "cand12",
+      "wmi": 1,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Additional WMI-1 site in the same nucleus-touching function; only-site confirmation for the signal-divergence role on vgem_buf_state."
+    },
+    {
+      "cand": "cand17",
+      "wmi": 1,
+      "func": "dmamove_fetch_ring",
+      "reason": "WMI-1 divergence in dmamove_fetch_ring, the immediate dataflow step feeding dmamove_job."
+    },
+    {
+      "cand": "cand18",
+      "wmi": 1,
+      "func": "dmamove_fetch_ring",
+      "reason": "Corroborating WMI-1 site in the same nucleus-feeding function dmamove_fetch_ring."
+    },
+    {
+      "cand": "cand19",
+      "wmi": 1,
+      "func": "dmamove_job_execute",
+      "reason": "WMI-1 divergence directly in dmamove_job_execute, operating on the dmamove_job nucleus."
+    },
+    {
+      "cand": "cand20",
+      "wmi": 1,
+      "func": "dmamove_job_execute",
+      "reason": "Second WMI-1 site in dmamove_job_execute, same nucleus function."
+    },
+    {
+      "cand": "cand26",
+      "wmi": 1,
+      "func": "dmamove_job_exec",
+      "reason": "WMI-1 divergence in dmamove_job_exec, a nucleus-adjacent execute path for dmamove_job."
+    },
+    {
+      "cand": "cand27",
+      "wmi": 1,
+      "func": "dmamove_job_exec",
+      "reason": "Corroborating WMI-1 site in dmamove_job_exec."
+    },
+    {
+      "cand": "cand39",
+      "wmi": 1,
+      "func": "postproc_update_buf_state",
+      "reason": "WMI-1 divergence in postproc_update_buf_state, an immediate dataflow step updating the postproc_job/buf-state nucleus."
+    },
+    {
+      "cand": "cand40",
+      "wmi": 1,
+      "func": "postproc_update_buf_state",
+      "reason": "Second WMI-1 site in the same nucleus-feeding function postproc_update_buf_state."
+    },
+    {
+      "cand": "cand43",
+      "wmi": 1,
+      "func": "postproc_job_submit",
+      "reason": "WMI-1 divergence directly in postproc_job_submit, operating on authoritative object postproc_job."
+    },
+    {
+      "cand": "cand44",
+      "wmi": 1,
+      "func": "postproc_job_submit",
+      "reason": "Corroborating WMI-1 site in postproc_job_submit."
+    },
+    {
+      "cand": "cand5",
+      "wmi": 1,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "WMI-1 divergence on nucleus function vgem_dmamove_buf_state_get touching vgem_buf_state."
+    },
+    {
+      "cand": "cand6",
+      "wmi": 1,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Corroborating WMI-1 site in the same nucleus function."
+    },
+    {
+      "cand": "cand8",
+      "wmi": 1,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Corroborating WMI-1 site in the same nucleus function."
+    },
+    {
+      "cand": "cand9",
+      "wmi": 1,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Corroborating WMI-1 site in the same nucleus function, rounding out the vgem_buf_state divergence evidence."
+    },
+    {
+      "cand": "cand126",
+      "wmi": 3,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Only confirmed WMI-3 (attacker content) site landing directly in the vgem_buf_state nucleus function \u2014 required to complete the co-located WMI-3 role on this authoritative object."
+    },
+    {
+      "cand": "cand128",
+      "wmi": 3,
+      "func": "vgem_dmamove_buf_state_get",
+      "reason": "Second WMI-3 site in the same nucleus function, corroborating attacker-controlled content reaching vgem_buf_state."
+    },
+    {
+      "cand": "cand132",
+      "wmi": 3,
+      "func": "postproc_job_submit",
+      "reason": "Only confirmed WMI-3 site in postproc_job_submit \u2014 required to satisfy the attacker-content role on the postproc_job authoritative object."
+    }
+  ],
+  "dropped": [
+    {
+      "cand": "cand14",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "WMI-1 site not attributed to vgem_buf_state/dmamove_job/postproc_job or their direct feeder functions; struct-level role is role-1-only (dmamove_ctx/pipeline_ctx/pipeline_job/move_desc/postproc_ctx/postproc_comp_entry/dmamove_token_slot class) with no shown dataflow into the nucleus, and WMI-1 is already covered by kept nucleus findings."
+    },
+    {
+      "cand": "cand15",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand16",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand1",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand21",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand28",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand2",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand31",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand32",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand33",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand34",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand35",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand36",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand38",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand3",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand42",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand4",
+      "wmi": 1,
+      "func": "unspecified (non-nucleus struct per object_roles)",
+      "reason": "Same as cand14: no structural/dataflow path to an authoritative object shown; role-1 already satisfied on the nucleus."
+    },
+    {
+      "cand": "cand102",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "WMI-2 site not attributed to dmamove_fetch_ring/dmamove_job_execute/dmamove_job_exec/postproc_job_submit; no shown structural or dataflow path to an authoritative object, and WMI-2 is already satisfied by kept nucleus findings."
+    },
+    {
+      "cand": "cand107",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand108",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand109",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand110",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand111",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand114",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand115",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand118",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand123",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand125",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand54",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand57",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand58",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand59",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand60",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand61",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand63",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand64",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand65",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand67",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand69",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand70",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand74",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand83",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand84",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand85",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand86",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand91",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand92",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand93",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand95",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand96",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand97",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand98",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    },
+    {
+      "cand": "cand99",
+      "wmi": 2,
+      "func": "unspecified (non-nucleus function)",
+      "reason": "Same as cand102: no shown path to an authoritative object; role already covered on the nucleus."
+    }
+  ],
+  "chain_summary": "Structural (static) evidence flags dmamove_job, postproc_job and vgem_buf_state as candidate nuclei since only these co-locate WMI-3 (and dmamove_job also WMI-4) roles. Symbolic execution concretely confirms WMI-1 (signal divergence) and WMI-2 (live persist) heavily in the feeder functions vgem_dmamove_buf_state_get, dmamove_fetch_ring, dmamove_job_execute, dmamove_job_exec, postproc_update_buf_state and postproc_job_submit, and confirms WMI-3 (attacker content reaching the resource) only twice, both landing directly on the nucleus (vgem_dmamove_buf_state_get, postproc_job_submit). However, the SE sweep shows zero confirmed WMI-4 (control-flow hijack) candidates anywhere, and the co-occurrence anchor reports chain_complete=False, wma_host=False. Per rule, an incomplete role set forces wma_confirmed=false regardless of the strength of roles 1-3. Of the 78 concrete-replay-kept candidates, 25 sit on or immediately feed the candidate nucleus and are kept; the remaining 53 belong to peripheral structs/functions (dmamove_ctx, dmamove_token_slot, move_desc, pipeline_ctx, pipeline_job, postproc_comp_entry, postproc_ctx, and unattributed WMI-2 sites) with no shown dataflow into the nucleus and are dropped as redundant with roles already confirmed there.",
+  "ran": true
+}

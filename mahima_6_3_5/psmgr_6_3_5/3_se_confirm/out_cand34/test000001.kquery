@@ -1,0 +1,10 @@
+array cur_state[4] : w32 -> w8 = symbolic
+array enc_xfrm_validated[4] : w32 -> w8 = symbolic
+array role[4] : w32 -> w8 = symbolic
+(query [(Eq 0
+             (ReadLSB w32 0 cur_state))
+         (Eq 2
+             (ReadLSB w32 0 role))
+         (Eq 0
+             (ReadLSB w32 0 enc_xfrm_validated))]
+        false)

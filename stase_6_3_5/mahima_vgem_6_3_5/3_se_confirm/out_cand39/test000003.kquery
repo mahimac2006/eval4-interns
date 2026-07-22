@@ -1,8 +1,0 @@
-array job_desc_buf_nonnull[4] : w32 -> w8 = symbolic
-array job_desc_count[4] : w32 -> w8 = symbolic
-(query [(Eq 0
-             (ReadLSB w32 0 job_desc_buf_nonnull))
-         (Eq false
-             (Eq 0
-                 (ReadLSB w32 0 job_desc_count)))]
-        false)

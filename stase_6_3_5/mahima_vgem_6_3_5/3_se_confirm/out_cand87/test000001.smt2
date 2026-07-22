@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun active_imports () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (bvult  (_ bv0 32) (concat  (select  active_imports (_ bv3 32) ) (concat  (select  active_imports (_ bv2 32) ) (concat  (select  active_imports (_ bv1 32) ) (select  active_imports (_ bv0 32) ) ) ) ) ) )
-(check-sat)
-(exit)

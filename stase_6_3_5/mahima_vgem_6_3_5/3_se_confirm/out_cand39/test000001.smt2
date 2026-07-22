@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun job_desc_buf_nonnull () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  job_desc_buf_nonnull (_ bv3 32) ) (concat  (select  job_desc_buf_nonnull (_ bv2 32) ) (concat  (select  job_desc_buf_nonnull (_ bv1 32) ) (select  job_desc_buf_nonnull (_ bv0 32) ) ) ) ) ) ) (and  (bvule  ?B1 (_ bv1 32) ) (=  false (=  (_ bv0 32) ?B1 ) ) ) ) )
-(check-sat)
-(exit)

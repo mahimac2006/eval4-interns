@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun enc_mode () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (=  false (bvult  (concat  (select  enc_mode (_ bv3 32) ) (concat  (select  enc_mode (_ bv2 32) ) (concat  (select  enc_mode (_ bv1 32) ) (select  enc_mode (_ bv0 32) ) ) ) ) (_ bv8 32) ) ) )
-(check-sat)
-(exit)

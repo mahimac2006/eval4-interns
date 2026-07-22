@@ -1,8 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun access_index () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun bound () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun content_authoritative () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  content_authoritative (_ bv3 32) ) (concat  (select  content_authoritative (_ bv2 32) ) (concat  (select  content_authoritative (_ bv1 32) ) (select  content_authoritative (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (bvsle  (_ bv1 32) (concat  (select  bound (_ bv3 32) ) (concat  (select  bound (_ bv2 32) ) (concat  (select  bound (_ bv1 32) ) (select  bound (_ bv0 32) ) ) ) ) ) ) (bvsle  (_ bv0 32) (concat  (select  access_index (_ bv3 32) ) (concat  (select  access_index (_ bv2 32) ) (concat  (select  access_index (_ bv1 32) ) (select  access_index (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

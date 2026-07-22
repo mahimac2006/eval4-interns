@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "vgem_dmamove_buf_state_get",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 272,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'state' read through pointer of type vgem_buf_entry in vgem_dmamove_buf_state_get(). This type is freed in dmamove_exit() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_dmamove_buf_state_get"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 272,
+      "func": "vgem_dmamove_buf_state_get",
+      "callee": ""
+    }
+  ]
+}

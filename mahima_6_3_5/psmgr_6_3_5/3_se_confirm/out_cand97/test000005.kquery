@@ -1,0 +1,11 @@
+array enc_mode[4] : w32 -> w8 = symbolic
+array proc_param[4] : w32 -> w8 = symbolic
+array xfrm_type[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 xfrm_type))
+         (Eq 1
+             (ReadLSB w32 0 enc_mode))
+         (Eq false
+             (Ule (ReadLSB w32 0 proc_param)
+                  63))]
+        false)

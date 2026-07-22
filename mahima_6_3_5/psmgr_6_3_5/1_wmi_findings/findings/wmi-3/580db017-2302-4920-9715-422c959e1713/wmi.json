@@ -1,0 +1,96 @@
+{
+  "operation": {
+    "name": "copyMem_at_psmgr_create",
+    "parameters": [
+      "unsigned long desc_alloc_size",
+      "unsigned long desc_access_size"
+    ],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_742472f8",
+        "arguments": {
+          "destinations": [
+            "psmgr_sock.session@1368"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun desc_access_size () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun desc_alloc_size () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  (concat  (select  desc_alloc_size (_ bv7 32) ) (concat  (select  desc_alloc_size (_ bv6 32) ) (concat  (select  desc_alloc_size (_ bv5 32) ) (concat  (select  desc_alloc_size (_ bv4 32) ) (concat  (select  desc_alloc_size (_ bv3 32) ) (concat  (select  desc_alloc_size (_ bv2 32) ) (concat  (select  desc_alloc_size (_ bv1 32) ) (select  desc_alloc_size (_ bv0 32) ) ) ) ) ) ) ) ) (concat  (select  desc_access_size (_ bv7 32) ) (concat  (select  desc_access_size (_ bv6 32) ) (concat  (select  desc_access_size (_ bv5 32) ) (concat  (select  desc_access_size (_ bv4 32) ) (concat  (select  desc_access_size (_ bv3 32) ) (concat  (select  desc_access_size (_ bv2 32) ) (concat  (select  desc_access_size (_ bv1 32) ) (select  desc_access_size (_ bv0 32) ) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 968
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_create",
+    "file": "psmgr_sock.c",
+    "args": []
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ psmgr_create",
+  "metadata": {
+    "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "mechanism": "allocated-content-into-field",
+        "indicates": "WMI-3",
+        "file": "psmgr_sock.c",
+        "line": 205
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_sock.c",
+      "line": 205,
+      "function": "psmgr_create"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_sock.session@1368",
+        "locations": [
+          {
+            "offset": 1368,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_sock.session@1368",
+      "symbol": "psmgr_create"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "assertion": "session holds trusted, not attacker-determined, content",
+        "assumptions": [
+          "externally-originated content installed into the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_sock.session@1368",
+      "sa": "psmgr_sock.session@1368",
+      "code": "psmgr_sock.session"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

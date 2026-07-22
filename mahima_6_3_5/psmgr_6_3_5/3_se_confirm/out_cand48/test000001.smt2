@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun data_sz () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun write_count_off () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (concat  (select  write_count_off (_ bv3 32) ) (concat  (select  write_count_off (_ bv2 32) ) (concat  (select  write_count_off (_ bv1 32) ) (select  write_count_off (_ bv0 32) ) ) ) ) (bvadd  (_ bv4 32) (concat  (select  data_sz (_ bv3 32) ) (concat  (select  data_sz (_ bv2 32) ) (concat  (select  data_sz (_ bv1 32) ) (select  data_sz (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

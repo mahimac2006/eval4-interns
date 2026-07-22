@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun nego_len () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun nego_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (bvule  (bvadd  (concat  (select  nego_offset (_ bv3 32) ) (concat  (select  nego_offset (_ bv2 32) ) (concat  (select  nego_offset (_ bv1 32) ) (select  nego_offset (_ bv0 32) ) ) ) ) (concat  (select  nego_len (_ bv3 32) ) (concat  (select  nego_len (_ bv2 32) ) (concat  (select  nego_len (_ bv1 32) ) (select  nego_len (_ bv0 32) ) ) ) ) ) (_ bv128 32) ) ) )
+(check-sat)
+(exit)

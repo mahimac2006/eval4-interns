@@ -1,0 +1,63 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "pipeline_release",
+  "target_file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "target_line": 130,
+  "target_cwe": "CWE-590",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "pipeline_release"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+      "line": 130,
+      "func": "pipeline_release",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "pipeline_release",
+  "trigger_candidates": [
+    "pipeline_release"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "pipeline_release:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "pipeline_release",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [
+    "pipeline_open"
+  ],
+  "producers": [
+    {
+      "api": "pipeline_open",
+      "type": "",
+      "out": ""
+    }
+  ],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "pipeline_open",
+      "api": "pipeline_open",
+      "capture": []
+    },
+    {
+      "name": "trigger",
+      "api": "pipeline_release",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "is_heap_allocated({pipeline_release:%17})"
+  ],
+  "concrete_params": []
+}

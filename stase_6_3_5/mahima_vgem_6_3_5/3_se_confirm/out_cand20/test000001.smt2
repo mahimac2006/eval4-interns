@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun completion_token () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun dst_buf_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  completion_token (_ bv7 32) ) (concat  (select  completion_token (_ bv6 32) ) (concat  (select  completion_token (_ bv5 32) ) (concat  (select  completion_token (_ bv4 32) ) (concat  (select  completion_token (_ bv3 32) ) (concat  (select  completion_token (_ bv2 32) ) (concat  (select  completion_token (_ bv1 32) ) (select  completion_token (_ bv0 32) ) ) ) ) ) ) ) ) ) ) (and  (=  false (=  (_ bv0 64) ?B1 ) ) (=  false (bvult  ?B1 (concat  (select  dst_buf_size (_ bv7 32) ) (concat  (select  dst_buf_size (_ bv6 32) ) (concat  (select  dst_buf_size (_ bv5 32) ) (concat  (select  dst_buf_size (_ bv4 32) ) (concat  (select  dst_buf_size (_ bv3 32) ) (concat  (select  dst_buf_size (_ bv2 32) ) (concat  (select  dst_buf_size (_ bv1 32) ) (select  dst_buf_size (_ bv0 32) ) ) ) ) ) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

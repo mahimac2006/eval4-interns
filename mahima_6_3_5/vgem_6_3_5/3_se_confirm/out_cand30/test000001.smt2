@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun job_count_before () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvult  (concat  (select  job_count_before (_ bv3 32) ) (concat  (select  job_count_before (_ bv2 32) ) (concat  (select  job_count_before (_ bv1 32) ) (select  job_count_before (_ bv0 32) ) ) ) ) (_ bv64 32) ) )
+(check-sat)
+(exit)

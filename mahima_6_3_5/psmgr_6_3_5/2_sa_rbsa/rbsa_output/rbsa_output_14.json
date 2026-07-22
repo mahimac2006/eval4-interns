@@ -1,0 +1,134 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "net_generic",
+  "target_file": "./include/net/netns/generic.h",
+  "target_line": 47,
+  "target_cwe": "CWE-787",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "gep_variable_index",
+    "enclosing": "net_generic"
+  },
+  "discovered_sinks": [
+    {
+      "file": "./include/net/netns/generic.h",
+      "line": 47,
+      "func": "net_generic",
+      "callee": "gep_variable_index"
+    }
+  ],
+  "trigger_api": "psmgr_connect",
+  "trigger_candidates": [
+    "psmgr_connect",
+    "psmgr_create",
+    "psmgr_release",
+    "psmgr_setsockopt"
+  ],
+  "setup_api": "psmgr_init",
+  "setup_candidates": [
+    "psmgr_init"
+  ],
+  "symbolic_params": [
+    "psmgr_connect:arg0",
+    "psmgr_connect:arg1",
+    "psmgr_connect:arg2",
+    "psmgr_connect:arg3",
+    "psmgr_create:arg0",
+    "psmgr_create:arg1",
+    "psmgr_create:arg2",
+    "psmgr_create:arg3",
+    "psmgr_release:arg0",
+    "psmgr_setsockopt:arg0",
+    "psmgr_setsockopt:arg1",
+    "psmgr_setsockopt:arg2",
+    "psmgr_setsockopt:arg5"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_connect",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_connect",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "psmgr_connect",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_connect",
+      "name": "arg3",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_create",
+      "name": "arg3",
+      "type": ""
+    },
+    {
+      "function": "psmgr_release",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_setsockopt",
+      "name": "arg5",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "setup",
+      "api": "psmgr_init",
+      "capture": []
+    },
+    {
+      "name": "trigger",
+      "api": "psmgr_connect",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "0 <= {net_generic:%idxprom} < sizeof({net_generic:%ptr4})"
+  ],
+  "concrete_params": []
+}

@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun desc_access_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun desc_alloc_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  (concat  (select  desc_alloc_size (_ bv7 32) ) (concat  (select  desc_alloc_size (_ bv6 32) ) (concat  (select  desc_alloc_size (_ bv5 32) ) (concat  (select  desc_alloc_size (_ bv4 32) ) (concat  (select  desc_alloc_size (_ bv3 32) ) (concat  (select  desc_alloc_size (_ bv2 32) ) (concat  (select  desc_alloc_size (_ bv1 32) ) (select  desc_alloc_size (_ bv0 32) ) ) ) ) ) ) ) ) (concat  (select  desc_access_size (_ bv7 32) ) (concat  (select  desc_access_size (_ bv6 32) ) (concat  (select  desc_access_size (_ bv5 32) ) (concat  (select  desc_access_size (_ bv4 32) ) (concat  (select  desc_access_size (_ bv3 32) ) (concat  (select  desc_access_size (_ bv2 32) ) (concat  (select  desc_access_size (_ bv1 32) ) (select  desc_access_size (_ bv0 32) ) ) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun completion_token () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (=  (_ bv0 64) (concat  (select  completion_token (_ bv7 32) ) (concat  (select  completion_token (_ bv6 32) ) (concat  (select  completion_token (_ bv5 32) ) (concat  (select  completion_token (_ bv4 32) ) (concat  (select  completion_token (_ bv3 32) ) (concat  (select  completion_token (_ bv2 32) ) (concat  (select  completion_token (_ bv1 32) ) (select  completion_token (_ bv0 32) ) ) ) ) ) ) ) ) ) ) )
+(check-sat)
+(exit)

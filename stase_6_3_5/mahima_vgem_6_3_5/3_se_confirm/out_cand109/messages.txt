@@ -1,8 +1,0 @@
-KLEE: Using Z3 solver backend
-KLEE: Deterministic allocator: Using quarantine queue size 8
-KLEE: Deterministic allocator: globals (start-address=0x762153600000 size=10 GiB)
-KLEE: Deterministic allocator: constants (start-address=0x761ed3600000 size=10 GiB)
-KLEE: Deterministic allocator: heap (start-address=0x751ed3600000 size=1024 GiB)
-KLEE: Deterministic allocator: stack (start-address=0x74fed3600000 size=128 GiB)
-KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand109_wmi2.c:13: ASSERTION FAIL: job_type == JOB_TYPE_PP || job_type == JOB_TYPE_DMA
-KLEE: NOTE: now ignoring this error at this location

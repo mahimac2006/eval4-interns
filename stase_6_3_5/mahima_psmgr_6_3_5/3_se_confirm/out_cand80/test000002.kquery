@@ -1,8 +1,0 @@
-array param_count[4] : w32 -> w8 = symbolic
-array sess_state[4] : w32 -> w8 = symbolic
-(query [(Eq 2
-             (ReadLSB w32 0 sess_state))
-         (Eq false
-             (Ule (ReadLSB w32 0 param_count)
-                  8))]
-        false)

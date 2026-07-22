@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "pipeline_ioctl_query_all",
+  "target_file": "vgem_pipeline.c",
+  "target_line": 310,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'module_job_id' read through pointer of type pipeline_job in pipeline_ioctl_query_all(). This type is freed in pipeline_ioctl_reap_all() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'module_job_id' read through pointer of type pipeline_job in pipeline_ioctl_query_all(). This type is freed in pipeline_ioctl_reap() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'module_job_id' read through pointer of type pipeline_job in pipeline_ioctl_query_all(). This type is freed in pipeline_ioctl_submit_dma() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'module_job_id' read through pointer of type pipeline_job in pipeline_ioctl_query_all(). This type is freed in pipeline_ioctl_submit_pp() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'module_job_id' read through pointer of type pipeline_job in pipeline_ioctl_query_all(). This type is freed in pipeline_release() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "pipeline_ioctl_query_all"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_pipeline.c",
+      "line": 310,
+      "func": "pipeline_ioctl_query_all",
+      "callee": ""
+    }
+  ]
+}

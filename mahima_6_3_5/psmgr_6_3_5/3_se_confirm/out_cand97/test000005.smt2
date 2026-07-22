@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun enc_mode () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun proc_param () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun xfrm_type () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (and  (=  (_ bv1 32) (concat  (select  xfrm_type (_ bv3 32) ) (concat  (select  xfrm_type (_ bv2 32) ) (concat  (select  xfrm_type (_ bv1 32) ) (select  xfrm_type (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  enc_mode (_ bv3 32) ) (concat  (select  enc_mode (_ bv2 32) ) (concat  (select  enc_mode (_ bv1 32) ) (select  enc_mode (_ bv0 32) ) ) ) ) ) ) (=  false (bvule  (concat  (select  proc_param (_ bv3 32) ) (concat  (select  proc_param (_ bv2 32) ) (concat  (select  proc_param (_ bv1 32) ) (select  proc_param (_ bv0 32) ) ) ) ) (_ bv63 32) ) ) ) )
+(check-sat)
+(exit)

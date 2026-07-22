@@ -1,0 +1,9 @@
+[
+ {
+  "file": "net/psmgr/psmgr_pipeline.c",
+  "line": 359,
+  "func": "psmgr_process_commit_req",
+  "callee": "",
+  "detail": "WMI-3 attacker content in authoritative position (preinstalled-pointer-gate): struct field 'psmgr_desc.handler' is used directly when non-null, bypassing the else-branch validation (validated assignment at line 84122). An attacker who pre-installs this field escapes the table-bounds check. \\[mechanism:preinstalled-pointer-gate;indicates=WMI-3\\] \\[mem:struct=psmgr_desc;field=handler;offset=136\\] \\[oracle:assert=handler holds a table-validated pointer, not attacker-pre-installed content;assume=attacker has pre-written an arbitrary function pointer into the field\\]"
+ }
+]

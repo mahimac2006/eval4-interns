@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun desc_buf_capacity () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvule  (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) (concat  (select  desc_buf_capacity (_ bv3 32) ) (concat  (select  desc_buf_capacity (_ bv2 32) ) (concat  (select  desc_buf_capacity (_ bv1 32) ) (select  desc_buf_capacity (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun opt_enc_mode () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun sess_enc_class () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  opt_enc_mode (_ bv3 32) ) (concat  (select  opt_enc_mode (_ bv2 32) ) (concat  (select  opt_enc_mode (_ bv1 32) ) (select  opt_enc_mode (_ bv0 32) ) ) ) ) ) ) (and  (and  (bvult  ?B1 (_ bv16 32) ) (=  (_ bv0 32) (concat  (select  sess_enc_class (_ bv3 32) ) (concat  (select  sess_enc_class (_ bv2 32) ) (concat  (select  sess_enc_class (_ bv1 32) ) (select  sess_enc_class (_ bv0 32) ) ) ) ) ) ) (=  false (bvult  ?B1 (_ bv4 32) ) ) ) ) )
-(check-sat)
-(exit)

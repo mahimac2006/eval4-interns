@@ -1,0 +1,16 @@
+INFO:     127.0.0.1:40004 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60036 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52512 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53310 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41804 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60922 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60316 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36370 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35880 - "POST /validate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54058 - "POST /validate HTTP/1.1" 200 OK
+[INFO] validator up: mode=kernel backend=qemu-local image=None binary=None signatures=1
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8761 (Press CTRL+C to quit)

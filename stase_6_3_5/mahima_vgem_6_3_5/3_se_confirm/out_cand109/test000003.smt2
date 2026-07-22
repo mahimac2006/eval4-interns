@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun job_type () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  job_type (_ bv3 32) ) (concat  (select  job_type (_ bv2 32) ) (concat  (select  job_type (_ bv1 32) ) (select  job_type (_ bv0 32) ) ) ) ) ) ) (and  (=  false (=  (_ bv0 32) ?B1 ) ) (=  false (=  (_ bv1 32) ?B1 ) ) ) ) )
-(check-sat)
-(exit)

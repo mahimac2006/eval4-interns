@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: attacker_controlled == 0
+File: cand2_wmi3.c
+Line: 8
+assembly.ll line: 38
+State: 2
+Stack: 
+	#000000038 in main() at cand2_wmi3.c:8

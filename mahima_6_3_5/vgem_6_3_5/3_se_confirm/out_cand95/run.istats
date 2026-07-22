@@ -1,0 +1,61 @@
+version: 1
+creator: klee
+pid: 36725
+cmd: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand95.bc
+
+
+positions: instr line
+event: Icov : CoveredInstructions
+event: Forks : Forks
+event: Ireal : InstructionRealTimes
+event: Itime : InstructionTimes
+event: I : Instructions
+event: UCdist : MinDistToUncovered
+event: Rtime : ResolveTime
+event: States : States
+event: Iuncov : UncoveredInstructions
+event: Q : Queries
+event: Qiv : QueriesInvalid
+event: Qv : QueriesValid
+event: Qtime : QueryTime
+events: Icov Forks Ireal Itime I UCdist Rtime States Iuncov Q Qiv Qv Qtime 
+ob=assembly.ll
+fl=/tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand95_wmi2.c
+fn=main
+15 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+16 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+17 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+18 10 1 0 0 0 1 0 0 0 0 0 0 0 0 
+19 10 1 0 0 0 1 0 0 0 0 1 0 0 0 
+20 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+21 11 1 0 0 0 1 0 0 0 0 0 0 0 0 
+22 11 1 0 0 0 1 0 0 0 0 2 0 0 0 
+23 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+24 12 1 0 0 0 1 0 0 0 0 0 0 0 0 
+25 12 1 0 0 0 1 0 0 0 0 2 0 0 0 
+26 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+27 13 1 0 0 0 1 0 0 0 0 0 0 0 0 
+28 13 1 0 0 0 1 0 0 0 0 2 0 0 0 
+29 14 1 0 0 0 1 0 0 0 0 1 0 0 0 
+30 14 1 0 0 0 1 0 0 0 0 1 0 0 0 
+31 14 1 0 0 0 1 0 0 0 0 0 0 0 0 
+32 14 1 0 0 0 1 0 0 0 0 0 0 0 0 
+33 14 1 0 0 0 1 0 0 0 0 0 0 0 0 
+34 14 1 0 0 0 1 0 0 0 0 0 0 0 0 
+35 14 1 0 0 0 1 0 0 0 0 1 1 0 178285 
+36 15 1 0 0 0 1 0 0 0 0 1 0 0 0 
+37 15 1 0 0 0 1 0 0 0 0 1 0 0 0 
+38 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+39 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+40 15 1 0 0 0 1 0 0 0 0 0 0 0 0 
+41 15 1 0 0 0 1 0 0 0 0 1 1 0 153454 
+42 16 1 0 0 0 1 0 0 0 0 1 0 0 0 
+43 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+44 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+45 16 1 0 0 0 1 0 0 0 0 1 0 0 0 
+46 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+47 16 1 1 0 0 1 0 0 0 0 1 1 0 215065 
+50 16 1 0 0 0 1 0 0 0 0 0 0 0 0 
+53 16 1 0 0 0 1 0 0 0 0 1 0 0 0 
+54 16 0 0 0 0 0 0 0 0 0 0 0 0 0 
+57 17 1 0 0 0 1 0 0 0 0 1 0 0 0 

@@ -1,0 +1,118 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_vgem_postproc_ctx_free",
+    "parameters": [
+      "unsigned int width",
+      "unsigned int height"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_ee6d239a",
+        "arguments": {
+          "locations": [
+            "postproc_job.desc_count@112"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun height () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun width () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  width (_ bv3 32) ) (concat  (select  width (_ bv2 32) ) (concat  (select  width (_ bv1 32) ) (select  width (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  height (_ bv3 32) ) (concat  (select  height (_ bv2 32) ) (concat  (select  height (_ bv1 32) ) (select  height (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (=  false (=  (_ bv0 32) ?B1 ) ) (=  false (=  (_ bv0 32) ?B2 ) ) ) (bvule  (bvmul  (_ bv4 64) (bvmul  ((_ zero_extend 32)  ?B1 ) ((_ zero_extend 32)  ?B2 ) ) ) (_ bv67108864 64) ) ) (=  false (bvule  ?B2 (bvudiv  (_ bv16777216 32) ?B1 ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun height () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun width () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (let ( (?B1 (concat  (select  width (_ bv3 32) ) (concat  (select  width (_ bv2 32) ) (concat  (select  width (_ bv1 32) ) (select  width (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  height (_ bv3 32) ) (concat  (select  height (_ bv2 32) ) (concat  (select  height (_ bv1 32) ) (select  height (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (=  false (=  (_ bv0 32) ?B1 ) ) (=  false (=  (_ bv0 32) ?B2 ) ) ) (bvule  (bvmul  (_ bv4 64) (bvmul  ((_ zero_extend 32)  ?B1 ) ((_ zero_extend 32)  ?B2 ) ) ) (_ bv67108864 64) ) ) (bvule  ?B2 (bvudiv  (_ bv16777216 32) ?B1 ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 753
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 741
+      }
+    ]
+  },
+  "trigger": {
+    "function": "vgem_postproc_ctx_free",
+    "file": "vgem_postproc.c",
+    "args": [
+      {
+        "name": "width",
+        "type": "unsigned int",
+        "value_le_hex": "0x00004072",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "height",
+        "type": "unsigned int",
+        "value_le_hex": "0xe4a1678f",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ vgem_postproc_ctx_free",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "vgem_postproc.c",
+        "line": 377
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_postproc.c",
+      "line": 377,
+      "function": "vgem_postproc_ctx_free"
+    },
+    "memory_layout": [
+      {
+        "name": "postproc_job.desc_count@112",
+        "locations": [
+          {
+            "offset": 112,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "postproc_job.desc_count@112",
+      "symbol": "vgem_postproc_ctx_free"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "postproc_job.desc_count is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "postproc_job.desc_count@112",
+      "sa": "postproc_job.desc_count@112",
+      "code": "postproc_job.desc_count"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

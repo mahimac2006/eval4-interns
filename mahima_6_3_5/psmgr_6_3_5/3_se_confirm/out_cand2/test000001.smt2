@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun copy_len () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun out_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  copy_len (_ bv3 32) ) (concat  (select  copy_len (_ bv2 32) ) (concat  (select  copy_len (_ bv1 32) ) (select  copy_len (_ bv0 32) ) ) ) ) ) ) (and  (bvult  (_ bv0 32) ?B1 ) (=  false (bvule  (bvadd  (concat  (select  out_offset (_ bv3 32) ) (concat  (select  out_offset (_ bv2 32) ) (concat  (select  out_offset (_ bv1 32) ) (select  out_offset (_ bv0 32) ) ) ) ) ?B1 ) (_ bv256 32) ) ) ) ) )
+(check-sat)
+(exit)

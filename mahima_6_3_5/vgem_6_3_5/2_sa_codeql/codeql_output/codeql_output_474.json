@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "postproc_job_reap",
+  "target_file": "vgem_postproc.c",
+  "target_line": 584,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'job_count' read through pointer of type postproc_ctx in postproc_job_reap(). This type is freed in vgem_postproc_ctx_free() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_job_reap"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 584,
+      "func": "postproc_job_reap",
+      "callee": ""
+    }
+  ]
+}

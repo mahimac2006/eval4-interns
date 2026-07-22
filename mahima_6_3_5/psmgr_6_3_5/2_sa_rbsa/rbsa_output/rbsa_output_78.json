@@ -1,0 +1,70 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "psmgr_session_lookup",
+  "target_file": "net/psmgr/psmgr_sock.c",
+  "target_line": 60,
+  "target_cwe": "CWE-843",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_session_lookup"
+  },
+  "discovered_sinks": [
+    {
+      "file": "net/psmgr/psmgr_sock.c",
+      "line": 60,
+      "func": "psmgr_session_lookup",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "psmgr_connect",
+  "trigger_candidates": [
+    "psmgr_connect"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "psmgr_connect:arg0",
+    "psmgr_connect:arg1",
+    "psmgr_connect:arg2",
+    "psmgr_connect:arg3"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_connect",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_connect",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "psmgr_connect",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_connect",
+      "name": "arg3",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "psmgr_connect",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "ASSERT({psmgr_session_lookup:%6})"
+  ],
+  "concrete_params": []
+}

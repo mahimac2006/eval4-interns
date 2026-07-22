@@ -1,8 +1,0 @@
-KLEE: Using Z3 solver backend
-KLEE: Deterministic allocator: Using quarantine queue size 8
-KLEE: Deterministic allocator: globals (start-address=0x7c3e07a00000 size=10 GiB)
-KLEE: Deterministic allocator: constants (start-address=0x7c3b87a00000 size=10 GiB)
-KLEE: Deterministic allocator: heap (start-address=0x7b3b87a00000 size=1024 GiB)
-KLEE: Deterministic allocator: stack (start-address=0x7b1b87a00000 size=128 GiB)
-KLEE: ERROR: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand8_wmi1.c:13: ASSERTION FAIL: proc_param >= 0 && proc_param <= CEILING
-KLEE: NOTE: now ignoring this error at this location

@@ -1,8 +1,0 @@
-array role[4] : w32 -> w8 = symbolic
-array sess_state[4] : w32 -> w8 = symbolic
-(query [(Eq 1
-             (ReadLSB w32 0 role))
-         (Eq false
-             (Eq 5
-                 (ReadLSB w32 0 sess_state)))]
-        false)

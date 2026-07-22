@@ -1,0 +1,17 @@
+#include "klee.h"
+#include <assert.h>
+typedef unsigned char u8; typedef unsigned short u16; typedef unsigned int u32;
+typedef unsigned long long u64; typedef signed char s8; typedef short s16; typedef int s32;
+typedef unsigned char uint8_t; typedef unsigned short uint16_t; typedef unsigned int uint32_t;
+typedef unsigned long long uint64_t; typedef long long int64_t; typedef int int32_t;
+typedef unsigned long uintptr_t; typedef unsigned long size_t; typedef long ssize_t;
+/* WMI-2 dmamove_ioctl_validate — SE oracle from SA rule WMI-2_LiveResourceInconsistency */
+#define DESC_SIZE 16
+int main(void){
+  unsigned long desc_count; klee_make_symbolic(&desc_count, sizeof(desc_count), "desc_count");
+  unsigned long desc_buf_size; klee_make_symbolic(&desc_buf_size, sizeof(desc_buf_size), "desc_buf_size");
+  unsigned long i; klee_make_symbolic(&i, sizeof(i), "i");
+  klee_assume(desc_buf_size >= desc_count * DESC_SIZE);
+  klee_assume(i < desc_count);
+  assert((i * DESC_SIZE) + DESC_SIZE <= desc_buf_size);
+  return 0;}

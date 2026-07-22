@@ -1,0 +1,13 @@
+array role_managed[4] : w32 -> w8 = symbolic
+array token[4] : w32 -> w8 = symbolic
+array wl1[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0
+                 (ReadLSB w32 0 role_managed)))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w32 0 token)))
+         (Eq false
+             (Eq 144
+                 (ReadLSB w32 0 wl1)))]
+        false)

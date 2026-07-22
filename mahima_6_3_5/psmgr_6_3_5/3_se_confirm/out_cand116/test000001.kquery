@@ -1,0 +1,13 @@
+array handler[8] : w32 -> w8 = symbolic
+array token[4] : w32 -> w8 = symbolic
+array write_count[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 write_count))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w32 0 token)))
+         (Eq false
+             (Eq 0
+                 N0:(ReadLSB w64 0 handler)))
+         (Eq false (Eq 4096 N0))]
+        false)

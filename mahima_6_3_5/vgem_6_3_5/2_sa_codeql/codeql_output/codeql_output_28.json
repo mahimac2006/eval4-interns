@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "pipeline_open",
+  "target_file": "vgem_pipeline.c",
+  "target_line": 82,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'pipeline_open' sets signal field 'pipeline_ctx.job_count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=pipeline_ctx;field=job_count;offset=256] [oracle:assert=pipeline_ctx.job_count stays within the domain its consumer's agreement governs;assume=producer sets job_count without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "pipeline_open"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_pipeline.c",
+      "line": 82,
+      "func": "pipeline_open",
+      "callee": ""
+    }
+  ]
+}

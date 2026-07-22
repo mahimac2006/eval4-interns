@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun alloc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun pending_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (=  false (bvule  (concat  (select  pending_count (_ bv3 32) ) (concat  (select  pending_count (_ bv2 32) ) (concat  (select  pending_count (_ bv1 32) ) (select  pending_count (_ bv0 32) ) ) ) ) (concat  (select  alloc_count (_ bv3 32) ) (concat  (select  alloc_count (_ bv2 32) ) (concat  (select  alloc_count (_ bv1 32) ) (select  alloc_count (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

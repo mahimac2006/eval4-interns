@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun pixel_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) ) (?B2 (bvudiv  (bvadd  (_ bv4095 64) (concat  (select  pixel_size (_ bv7 32) ) (concat  (select  pixel_size (_ bv6 32) ) (concat  (select  pixel_size (_ bv5 32) ) (concat  (select  pixel_size (_ bv4 32) ) (concat  (select  pixel_size (_ bv3 32) ) (concat  (select  pixel_size (_ bv2 32) ) (concat  (select  pixel_size (_ bv1 32) ) (select  pixel_size (_ bv0 32) ) ) ) ) ) ) ) ) ) (_ bv4096 64) ) ) ) (and  (and  (=  ?B1 ((_ extract 31  0)  ?B2 ) ) (bvule  ?B1 (_ bv1024 32) ) ) (=  false (=  ?B2 ((_ zero_extend 32)  ?B1 ) ) ) ) ) )
-(check-sat)
-(exit)

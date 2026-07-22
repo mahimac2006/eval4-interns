@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun desc_index () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (bvult  (concat  (select  desc_index (_ bv3 32) ) (concat  (select  desc_index (_ bv2 32) ) (concat  (select  desc_index (_ bv1 32) ) (select  desc_index (_ bv0 32) ) ) ) ) (_ bv16 32) ) )
-(check-sat)
-(exit)

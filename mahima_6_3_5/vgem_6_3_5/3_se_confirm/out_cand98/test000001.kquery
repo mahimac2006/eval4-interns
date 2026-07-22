@@ -1,0 +1,7 @@
+array desc_buf_size[8] : w32 -> w8 = symbolic
+array desc_count[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Ule (Mul w64 24
+                           (ZExt w64 (ReadLSB w32 0 desc_count)))
+                  (ReadLSB w64 0 desc_buf_size)))]
+        false)

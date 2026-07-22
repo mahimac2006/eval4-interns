@@ -1,0 +1,75 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "pipeline_ioctl",
+  "target_file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+  "target_line": 425,
+  "target_cwe": "CWE-843",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "pipeline_ioctl"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_pipeline/vgem_pipeline.c",
+      "line": 425,
+      "func": "pipeline_ioctl",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "pipeline_ioctl",
+  "trigger_candidates": [
+    "pipeline_ioctl"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "pipeline_ioctl:arg0",
+    "pipeline_ioctl:arg1",
+    "pipeline_ioctl:arg2"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "pipeline_ioctl",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "pipeline_ioctl",
+      "name": "arg2",
+      "type": ""
+    }
+  ],
+  "init_apis": [
+    "pipeline_open"
+  ],
+  "producers": [
+    {
+      "api": "pipeline_open",
+      "type": "",
+      "out": ""
+    }
+  ],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "pipeline_open",
+      "api": "pipeline_open",
+      "capture": []
+    },
+    {
+      "name": "trigger",
+      "api": "pipeline_ioctl",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "ASSERT({pipeline_ioctl:%2})"
+  ],
+  "concrete_params": []
+}

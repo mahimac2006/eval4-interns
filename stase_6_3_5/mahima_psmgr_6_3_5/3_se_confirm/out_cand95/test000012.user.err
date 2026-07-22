@@ -1,7 +1,0 @@
-Error: invalid klee_assume call (provably false)
-File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand95_wmi2.c
-Line: 23
-assembly.ll line: 201
-State: 18
-Stack: 
-	#000000201 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand95_wmi2.c:23

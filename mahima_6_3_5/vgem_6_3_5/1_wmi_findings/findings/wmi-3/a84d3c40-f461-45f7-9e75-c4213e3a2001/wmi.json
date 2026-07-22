@@ -1,0 +1,118 @@
+{
+  "operation": {
+    "name": "copyMem_at_vgem_dmamove_buf_state_get",
+    "parameters": [
+      "unsigned long completion_addr",
+      "unsigned long value"
+    ],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_79b437d1",
+        "arguments": {
+          "destinations": [
+            "vgem_buf_entry.file@8"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun completion_addr () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  (_ bv0 64) (concat  (select  completion_addr (_ bv7 32) ) (concat  (select  completion_addr (_ bv6 32) ) (concat  (select  completion_addr (_ bv5 32) ) (concat  (select  completion_addr (_ bv4 32) ) (concat  (select  completion_addr (_ bv3 32) ) (concat  (select  completion_addr (_ bv2 32) ) (concat  (select  completion_addr (_ bv1 32) ) (select  completion_addr (_ bv0 32) ) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun completion_addr () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (=  false (=  (_ bv0 64) (concat  (select  completion_addr (_ bv7 32) ) (concat  (select  completion_addr (_ bv6 32) ) (concat  (select  completion_addr (_ bv5 32) ) (concat  (select  completion_addr (_ bv4 32) ) (concat  (select  completion_addr (_ bv3 32) ) (concat  (select  completion_addr (_ bv2 32) ) (concat  (select  completion_addr (_ bv1 32) ) (select  completion_addr (_ bv0 32) ) ) ) ) ) ) ) ) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 519
+      },
+      {
+        "name": "test000002",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 531
+      }
+    ]
+  },
+  "trigger": {
+    "function": "vgem_dmamove_buf_state_get",
+    "file": "vgem_dmamove.c",
+    "args": [
+      {
+        "name": "completion_addr",
+        "type": "unsigned long",
+        "value_le_hex": "0x0000000000000000",
+        "size_bytes": 8,
+        "source": "klee_witness"
+      },
+      {
+        "name": "value",
+        "type": "unsigned long",
+        "value_le_hex": "0x0000000000000000",
+        "size_bytes": 8,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ vgem_dmamove_buf_state_get",
+  "metadata": {
+    "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "mechanism": "attacker-pointer-into-field",
+        "indicates": "WMI-3",
+        "file": "vgem_dmamove.c",
+        "line": 243
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_dmamove.c",
+      "line": 243,
+      "function": "vgem_dmamove_buf_state_get"
+    },
+    "memory_layout": [
+      {
+        "name": "vgem_buf_entry.file@8",
+        "locations": [
+          {
+            "offset": 8,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "vgem_buf_entry.file@8",
+      "symbol": "vgem_dmamove_buf_state_get"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "assertion": "file holds trusted, not attacker-determined, content",
+        "assumptions": [
+          "externally-originated content installed into the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "vgem_buf_entry.file@8",
+      "sa": "vgem_buf_entry.file@8",
+      "code": "vgem_buf_entry.file"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

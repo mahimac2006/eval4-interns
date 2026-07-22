@@ -1,0 +1,30 @@
+NO-POC REASON: WMI-3 @ __nlmsg_put (af_netlink.c:2168)
+
+This WMI-3 finding flags attacker-determined content (nlmsg_seq) flowing
+through __nlmsg_put into the authoritative netlink_ops.recvmsg output.
+This is a data-flow / information-flow vulnerability, NOT a memory-safety
+issue.  There is no KASAN-visible out-of-bounds access in __nlmsg_put or
+any function on its call path from netlink_recvmsg:
+
+  1. nlmsg_put always checks skb_tailroom >= nlmsg_total_size(payload)
+     before calling __nlmsg_put, so skb_put can never overrun.
+  2. The memset at line 2168 writes NLMSG_ALIGN(size)-size bytes starting
+     at nlh+size, which always falls inside the NLMSG_ALIGN(size)-byte
+     allocation that skb_put just made.
+  3. All in-tree callers use fixed, non-negative payload values.
+  4. Even the pathological int-underflow case (payload = -15 → size = 1
+     → NLMSG_ALIGN(1) = 4) still keeps header and padding writes within
+     the kmalloc'd buffer; no KASAN report fires.
+
+The PoC in poc.c reaches __nlmsg_put via:
+  sendmsg(RTM_GETLINK+NLM_F_DUMP)
+    -> rtnetlink_rcv_msg -> netlink_dump_start -> netlink_dump
+    -> rtnl_dump_ifinfo -> rtnl_fill_ifinfo -> nlmsg_put -> __nlmsg_put
+  recvmsg
+    -> netlink_recvmsg -> netlink_dump -> ... -> __nlmsg_put
+
+It demonstrates the WMI-3 violation: the attacker-controlled nlmsg_seq
+(0xDEAD) appears in every recvmsg response written by __nlmsg_put.
+However, no KASAN crash can be produced.  gcov is not available in the
+kernel, and pattern_gate_enabled is false, so neither coverage-based
+confirmation nor the expected-result pattern is accepted as PASS.

@@ -1,7 +1,0 @@
-Error: ASSERTION FAIL: access_index < bound
-File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/wmi4.c
-Line: 18
-assembly.ll line: 63
-State: 2
-Stack: 
-	#000000063 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/wmi4.c:18

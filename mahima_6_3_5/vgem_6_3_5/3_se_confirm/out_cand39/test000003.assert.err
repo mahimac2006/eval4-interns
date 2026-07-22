@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: job_desc_buf_nonnull != 0 || job_desc_count == 0
+File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand39_wmi1.c
+Line: 13
+assembly.ll line: 42
+State: 3
+Stack: 
+	#000000042 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand39_wmi1.c:13

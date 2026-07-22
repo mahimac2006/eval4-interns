@@ -1,0 +1,11 @@
+array peer_role[4] : w32 -> w8 = symbolic
+array sess_role[4] : w32 -> w8 = symbolic
+array sess_state[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 sess_role))
+         (Eq 2
+             (ReadLSB w32 0 peer_role))
+         (Eq false
+             (Eq 2
+                 (ReadLSB w32 0 sess_state)))]
+        false)

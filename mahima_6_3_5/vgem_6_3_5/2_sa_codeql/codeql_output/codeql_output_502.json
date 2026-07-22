@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "postproc_job_submit",
+  "target_file": "vgem_postproc.c",
+  "target_line": 483,
+  "target_cwe": null,
+  "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+  "wmi_index": null,
+  "message": "WMI-3 attacker content into authoritative position (allocated-content-into-field): content is installed into struct field 'postproc_job.ctx' \u2014 the position the confused consumer later follows as a trusted reference. [mechanism:allocated-content-into-field;indicates=WMI-3] [mem:struct=postproc_job;field=ctx;offset=144] [oracle:assert=ctx holds trusted, not attacker-determined, content;assume=externally-originated content installed into the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_job_submit"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 483,
+      "func": "postproc_job_submit",
+      "callee": ""
+    }
+  ]
+}

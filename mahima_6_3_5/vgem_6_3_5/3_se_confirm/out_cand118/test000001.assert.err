@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: job_count > 0
+File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand118_wmi2.c
+Line: 11
+assembly.ll line: 27
+State: 2
+Stack: 
+	#000000027 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_vgem/3_se_confirm/cand118_wmi2.c:11

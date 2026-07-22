@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun cur_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  cur_state (_ bv3 32) ) (concat  (select  cur_state (_ bv2 32) ) (concat  (select  cur_state (_ bv1 32) ) (select  cur_state (_ bv0 32) ) ) ) ) ) ) (and  (=  false (=  (_ bv1 32) ?B1 ) ) (=  false (=  (_ bv0 32) (ite  (=  false (=  (_ bv2 32) ?B1 ) ) (_ bv0 32) (_ bv1 32) ) ) ) ) ) )
-(check-sat)
-(exit)

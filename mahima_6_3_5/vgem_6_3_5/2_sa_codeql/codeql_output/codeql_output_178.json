@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "dmamove_fetch_ring",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 520,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'desc_buf' read through pointer of type dmamove_job in dmamove_fetch_ring(). This type is freed in dmamove_job_reap() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'desc_buf' read through pointer of type dmamove_job in dmamove_fetch_ring(). This type is freed in dmamove_job_submit() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'desc_buf' read through pointer of type dmamove_job in dmamove_fetch_ring(). This type is freed in vgem_dmamove_ctx_free() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "dmamove_fetch_ring"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 520,
+      "func": "dmamove_fetch_ring",
+      "callee": ""
+    }
+  ]
+}

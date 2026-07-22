@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun window_sz () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  window_sz (_ bv3 32) ) (concat  (select  window_sz (_ bv2 32) ) (concat  (select  window_sz (_ bv1 32) ) (select  window_sz (_ bv0 32) ) ) ) ) ) ) (and  (=  false (=  (_ bv0 32) ?B1 ) ) (bvule  ?B1 (_ bv4096 32) ) ) ) )
-(check-sat)
-(exit)

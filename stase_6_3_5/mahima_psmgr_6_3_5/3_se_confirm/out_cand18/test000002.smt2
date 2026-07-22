@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun requested_id () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun session_id () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  requested_id (_ bv3 32) ) (concat  (select  requested_id (_ bv2 32) ) (concat  (select  requested_id (_ bv1 32) ) (select  requested_id (_ bv0 32) ) ) ) ) ) ) (and  (=  false (=  (_ bv0 32) ?B1 ) ) (=  ?B1 (concat  (select  session_id (_ bv3 32) ) (concat  (select  session_id (_ bv2 32) ) (concat  (select  session_id (_ bv1 32) ) (select  session_id (_ bv0 32) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

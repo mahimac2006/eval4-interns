@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun slot () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  slot (_ bv3 32) ) (concat  (select  slot (_ bv2 32) ) (concat  (select  slot (_ bv1 32) ) (select  slot (_ bv0 32) ) ) ) ) ) ) (and  (bvule  ?B1 (_ bv255 32) ) (bvult  ?B1 (_ bv64 32) ) ) ) )
+(check-sat)
+(exit)

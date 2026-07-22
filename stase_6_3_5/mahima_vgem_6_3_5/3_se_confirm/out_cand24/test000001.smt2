@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun flags () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun src_role () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (=  (_ bv0 32) (bvand  (concat  (select  flags (_ bv3 32) ) (concat  (select  flags (_ bv2 32) ) (concat  (select  flags (_ bv1 32) ) (select  flags (_ bv0 32) ) ) ) ) (_ bv1 32) ) ) (=  (_ bv0 32) (concat  (select  src_role (_ bv3 32) ) (concat  (select  src_role (_ bv2 32) ) (concat  (select  src_role (_ bv1 32) ) (select  src_role (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

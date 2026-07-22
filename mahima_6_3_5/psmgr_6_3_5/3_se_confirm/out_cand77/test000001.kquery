@@ -1,0 +1,5 @@
+array sessions_active[8] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Slt 0
+                  (ReadLSB w64 0 sessions_active)))]
+        false)

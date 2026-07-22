@@ -1,0 +1,50 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "dmamove_release",
+  "target_file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "target_line": 1033,
+  "target_cwe": "CWE-843",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "dmamove_release"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+      "line": 1033,
+      "func": "dmamove_release",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "dmamove_release",
+  "trigger_candidates": [
+    "dmamove_release"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "dmamove_release:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "dmamove_release",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "dmamove_release",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "ASSERT({dmamove_release:%2})"
+  ],
+  "concrete_params": []
+}

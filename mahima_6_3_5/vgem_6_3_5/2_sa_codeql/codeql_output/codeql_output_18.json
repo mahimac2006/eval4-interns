@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "dmamove_fetch_ring",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 522,
+  "target_cwe": null,
+  "rule": "WMI-1_SignalDivergence_UngovernedSignal",
+  "wmi_index": null,
+  "message": "WMI-1 shared-state divergence (signal-set-unchecked): 'dmamove_fetch_ring' sets signal field 'dmamove_job.import_desc_count', which a different component branches on to reinterpret the object \u2014 a candidate ungoverned signal. [mechanism:unchecked-signal-field-set;indicates=WMI-1] [mem:struct=dmamove_job;field=import_desc_count;offset=132] [oracle:assert=dmamove_job.import_desc_count stays within the domain its consumer's agreement governs;assume=producer sets import_desc_count without enforcing the consumer's cross-field invariant]",
+  "sink": {
+    "callee": "",
+    "enclosing": "dmamove_fetch_ring"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 522,
+      "func": "dmamove_fetch_ring",
+      "callee": ""
+    }
+  ]
+}

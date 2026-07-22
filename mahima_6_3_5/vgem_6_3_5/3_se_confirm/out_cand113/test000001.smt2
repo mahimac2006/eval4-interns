@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun pending () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (bvult  (_ bv0 32) (concat  (select  pending (_ bv3 32) ) (concat  (select  pending (_ bv2 32) ) (concat  (select  pending (_ bv1 32) ) (select  pending (_ bv0 32) ) ) ) ) ) )
+(check-sat)
+(exit)

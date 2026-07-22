@@ -1,0 +1,8 @@
+array attacker_controlled[4] : w32 -> w8 = symbolic
+array authoritative[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 authoritative))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w32 0 attacker_controlled)))]
+        false)

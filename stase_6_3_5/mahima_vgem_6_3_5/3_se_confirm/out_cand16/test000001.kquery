@@ -1,5 +1,0 @@
-array pending_count[4] : w32 -> w8 = symbolic
-(query [(Eq false
-             (Ule (ReadLSB w32 0 pending_count)
-                  64))]
-        false)

@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun alloc_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (=  (_ bv1 32) (concat  (select  alloc_size (_ bv3 32) ) (concat  (select  alloc_size (_ bv2 32) ) (concat  (select  alloc_size (_ bv1 32) ) (select  alloc_size (_ bv0 32) ) ) ) ) ) )
-(check-sat)
-(exit)

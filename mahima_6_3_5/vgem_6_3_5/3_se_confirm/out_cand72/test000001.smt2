@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun buf_size () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun dst_offset () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun length () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (let ( (?B1 (concat  (select  buf_size (_ bv3 32) ) (concat  (select  buf_size (_ bv2 32) ) (concat  (select  buf_size (_ bv1 32) ) (select  buf_size (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  dst_offset (_ bv3 32) ) (concat  (select  dst_offset (_ bv2 32) ) (concat  (select  dst_offset (_ bv1 32) ) (select  dst_offset (_ bv0 32) ) ) ) ) ) ) (and  (bvule  ?B2 ?B1 ) (bvule  (concat  (select  length (_ bv3 32) ) (concat  (select  length (_ bv2 32) ) (concat  (select  length (_ bv1 32) ) (select  length (_ bv0 32) ) ) ) ) (bvsub  ?B1 ?B2 ) ) ) ) )
+(check-sat)
+(exit)

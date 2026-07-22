@@ -1,8 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun content_attacker () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun content_trusted () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun resource_inconsistent () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun resource_live () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (and  (and  (=  (_ bv1 32) (concat  (select  resource_live (_ bv3 32) ) (concat  (select  resource_live (_ bv2 32) ) (concat  (select  resource_live (_ bv1 32) ) (select  resource_live (_ bv0 32) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  resource_inconsistent (_ bv3 32) ) (concat  (select  resource_inconsistent (_ bv2 32) ) (concat  (select  resource_inconsistent (_ bv1 32) ) (select  resource_inconsistent (_ bv0 32) ) ) ) ) ) ) (=  (_ bv1 32) (concat  (select  content_attacker (_ bv3 32) ) (concat  (select  content_attacker (_ bv2 32) ) (concat  (select  content_attacker (_ bv1 32) ) (select  content_attacker (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv1 32) (concat  (select  content_trusted (_ bv3 32) ) (concat  (select  content_trusted (_ bv2 32) ) (concat  (select  content_trusted (_ bv1 32) ) (select  content_trusted (_ bv0 32) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

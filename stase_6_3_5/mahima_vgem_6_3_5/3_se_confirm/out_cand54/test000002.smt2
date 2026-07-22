@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun intermediate_pending () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun state_val () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (=  (_ bv3 32) (concat  (select  state_val (_ bv3 32) ) (concat  (select  state_val (_ bv2 32) ) (concat  (select  state_val (_ bv1 32) ) (select  state_val (_ bv0 32) ) ) ) ) ) (bvult  (_ bv0 32) (concat  (select  intermediate_pending (_ bv3 32) ) (concat  (select  intermediate_pending (_ bv2 32) ) (concat  (select  intermediate_pending (_ bv1 32) ) (select  intermediate_pending (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

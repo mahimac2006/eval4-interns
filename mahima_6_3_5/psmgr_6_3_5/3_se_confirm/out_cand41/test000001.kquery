@@ -1,0 +1,5 @@
+array window_sz[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Ule (ReadLSB w32 0 window_sz)
+                  128))]
+        false)

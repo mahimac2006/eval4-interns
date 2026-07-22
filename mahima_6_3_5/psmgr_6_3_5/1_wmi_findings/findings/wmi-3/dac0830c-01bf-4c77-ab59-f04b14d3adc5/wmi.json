@@ -1,0 +1,95 @@
+{
+  "operation": {
+    "name": "copyMem_at_psmgr_create",
+    "parameters": [
+      "int protocol"
+    ],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_42896a97",
+        "arguments": {
+          "destinations": [
+            "psmgr_session.sk@216"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(assert true )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 56
+      }
+    ]
+  },
+  "trigger": {
+    "function": "psmgr_create",
+    "file": "psmgr_sock.c",
+    "args": []
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ psmgr_create",
+  "metadata": {
+    "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "mechanism": "allocated-content-into-field",
+        "indicates": "WMI-3",
+        "file": "psmgr_sock.c",
+        "line": 195
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "psmgr_sock.c",
+      "line": 195,
+      "function": "psmgr_create"
+    },
+    "memory_layout": [
+      {
+        "name": "psmgr_session.sk@216",
+        "locations": [
+          {
+            "offset": 216,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "psmgr_session.sk@216",
+      "symbol": "psmgr_create"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-3_AttackerContent_IntoAuthoritativePosition",
+        "assertion": "sk holds trusted, not attacker-determined, content",
+        "assumptions": [
+          "externally-originated content installed into the field"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "psmgr_session.sk@216",
+      "sa": "psmgr_session.sk@216",
+      "code": "psmgr_session.sk"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

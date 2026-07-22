@@ -1,0 +1,85 @@
+{
+  "operation": {
+    "name": "copyMem_at_uinput_open",
+    "parameters": [],
+    "effects": [
+      {
+        "type": "copyMem",
+        "id": "e_74314eaa",
+        "arguments": {
+          "destinations": [
+            null
+          ]
+        }
+      }
+    ]
+  },
+  "trigger": {
+    "function": "uinput_open",
+    "file": "drivers/input/misc/uinput.c",
+    "args": []
+  },
+  "name": "WMI-3: Attacker-Determined Content in an Authoritative Position @ uinput_open",
+  "metadata": {
+    "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+    "detected_by": [
+      {
+        "engine": "rbsa",
+        "rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+        "mechanism": null,
+        "indicates": "WMI-3",
+        "file": "drivers/input/misc/uinput.c",
+        "line": 391
+      }
+    ],
+    "bug_type": "WMI-3 Attacker-Determined Content in an Authoritative Position",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "drivers/input/misc/uinput.c",
+      "line": 391,
+      "function": "uinput_open"
+    },
+    "memory_layout": [
+      {
+        "name": null,
+        "locations": [
+          {
+            "offset": 0,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": null,
+      "symbol": "uinput_open"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "rbsa/attacker-content-in-pointer-field-wmi3",
+        "assertion": "attacker_controlled == 0",
+        "assumptions": [
+          "authoritative == 1"
+        ],
+        "oracle_kind": "wmi3_archetype_fallback"
+      },
+      "result": "CONFIRMED (SA invariant violated)",
+      "candidate": 6,
+      "bitcode": "3_se_confirm/cand6.bc",
+      "klee_output": "3_se_confirm/out_cand6",
+      "scope_limit": "The static record did not supply source-level symbolic constraints or an ABI harness; this confirms the STASE WMI-3 oracle, not entry-point reachability or a concrete PoC."
+    },
+    "memory": {
+      "name": null
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 3,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

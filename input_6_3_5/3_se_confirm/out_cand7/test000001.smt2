@@ -1,0 +1,6 @@
+(set-logic QF_AUFBV )
+(declare-fun attacker_controlled () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun authoritative () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  (_ bv1 32) (concat  (select  authoritative (_ bv3 32) ) (concat  (select  authoritative (_ bv2 32) ) (concat  (select  authoritative (_ bv1 32) ) (select  authoritative (_ bv0 32) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  attacker_controlled (_ bv3 32) ) (concat  (select  attacker_controlled (_ bv2 32) ) (concat  (select  attacker_controlled (_ bv1 32) ) (select  attacker_controlled (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

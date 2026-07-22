@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_exec",
+  "target_file": "psmgr_pipeline.c",
+  "target_line": 644,
+  "target_cwe": null,
+  "rule": "WMI-4_ArbitraryAccess_TargetOrExtentFromField",
+  "wmi_index": null,
+  "message": "WMI-4 arbitrary access (indirect-call-via-field): the access target is loaded from struct field 'psmgr_desc.handler' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. [mechanism:indirect-call-via-field;indicates=WMI-4] [mem:struct=psmgr_desc;field=handler;offset=136] [oracle:assert=handler governs a bounded, trusted call target;assume=access target loaded from the field]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_exec"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 644,
+      "func": "psmgr_exec",
+      "callee": ""
+    }
+  ]
+}

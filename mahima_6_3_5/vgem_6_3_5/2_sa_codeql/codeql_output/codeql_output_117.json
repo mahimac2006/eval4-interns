@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "postproc_job_submit",
+  "target_file": "vgem_postproc.c",
+  "target_line": 483,
+  "target_cwe": null,
+  "rule": "WMI-2_LiveResourceInconsistency",
+  "wmi_index": null,
+  "message": "WMI-2 live resource inconsistency (field-controlled-alloc-size): the resource's extent field 'postproc_job.ctx' is consulted inconsistently while the resource stays live (no free) \u2014 a candidate live type/extent confusion. [mechanism:field-controlled-alloc-size;indicates=WMI-2] [mem:struct=postproc_job;field=ctx;offset=144] [oracle:assert=postproc_job.ctx is interpreted consistently across all live consumers;assume=resource stays live while read under >= 2 incompatible models]",
+  "sink": {
+    "callee": "",
+    "enclosing": "postproc_job_submit"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 483,
+      "func": "postproc_job_submit",
+      "callee": ""
+    }
+  ]
+}

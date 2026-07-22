@@ -1,0 +1,7 @@
+(set-logic QF_AUFBV )
+(declare-fun completions_present () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun desc_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(declare-fun desc_index () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (and  (=  false (=  (_ bv0 32) (concat  (select  completions_present (_ bv3 32) ) (concat  (select  completions_present (_ bv2 32) ) (concat  (select  completions_present (_ bv1 32) ) (select  completions_present (_ bv0 32) ) ) ) ) ) ) (bvult  (concat  (select  desc_index (_ bv3 32) ) (concat  (select  desc_index (_ bv2 32) ) (concat  (select  desc_index (_ bv1 32) ) (select  desc_index (_ bv0 32) ) ) ) ) (concat  (select  desc_count (_ bv3 32) ) (concat  (select  desc_count (_ bv2 32) ) (concat  (select  desc_count (_ bv1 32) ) (select  desc_count (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

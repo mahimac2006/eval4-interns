@@ -1,7 +1,0 @@
-Error: ASSERTION FAIL: producer_view == consumer_view
-File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand17_tmpl.c
-Line: 14
-assembly.ll line: 43
-State: 2
-Stack: 
-	#000000043 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand17_tmpl.c:14

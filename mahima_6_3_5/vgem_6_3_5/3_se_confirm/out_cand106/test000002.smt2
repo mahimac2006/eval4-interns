@@ -1,0 +1,5 @@
+(set-logic QF_AUFBV )
+(declare-fun status () (Array (_ BitVec 32) (_ BitVec 8) ) )
+(assert (=  false (=  (_ bv0 32) (concat  (select  status (_ bv3 32) ) (concat  (select  status (_ bv2 32) ) (concat  (select  status (_ bv1 32) ) (select  status (_ bv0 32) ) ) ) ) ) ) )
+(check-sat)
+(exit)

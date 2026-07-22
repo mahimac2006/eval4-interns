@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "vgem_postproc_ctx_alloc",
+  "target_file": "vgem_postproc.c",
+  "target_line": 348,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'job_idr' read through pointer of type postproc_ctx in vgem_postproc_ctx_alloc(). This type is freed in vgem_postproc_ctx_free() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_postproc_ctx_alloc"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 348,
+      "func": "vgem_postproc_ctx_alloc",
+      "callee": ""
+    }
+  ]
+}

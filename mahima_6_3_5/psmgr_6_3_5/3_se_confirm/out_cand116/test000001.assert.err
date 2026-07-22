@@ -1,0 +1,7 @@
+Error: ASSERTION FAIL: handler == VALID_HANDLER
+File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand116_wmi4.c
+Line: 18
+assembly.ll line: 52
+State: 2
+Stack: 
+	#000000052 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand116_wmi4.c:18

@@ -1,0 +1,52 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "sock_set_flag",
+  "target_file": "./include/asm-generic/bitops/instrumented-non-atomic.h",
+  "target_line": 28,
+  "target_cwe": "CWE-787",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "gep_variable_index",
+    "enclosing": "sock_set_flag"
+  },
+  "discovered_sinks": [
+    {
+      "file": "./include/asm-generic/bitops/instrumented-non-atomic.h",
+      "line": 28,
+      "func": "sock_set_flag",
+      "callee": "gep_variable_index"
+    }
+  ],
+  "trigger_api": "psmgr_release",
+  "trigger_candidates": [
+    "psmgr_release"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "psmgr_release:arg0"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_release",
+      "name": "arg0",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "psmgr_release",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "0 <= {sock_set_flag:%div.i17} < sizeof({sock_set_flag:%25})"
+  ],
+  "concrete_params": []
+}

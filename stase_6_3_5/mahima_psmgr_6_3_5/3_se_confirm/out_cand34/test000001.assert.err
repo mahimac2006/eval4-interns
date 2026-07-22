@@ -1,7 +1,0 @@
-Error: ASSERTION FAIL: !(role == ROLE_FORWARD) || enc_xfrm_validated == 1
-File: /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand34_wmi1.c
-Line: 20
-assembly.ll line: 57
-State: 1
-Stack: 
-	#000000057 in main() at /tmp/claude-1000/-home-mahima-eval4-main/a348d2cf-cf87-4370-82e7-e7db81fe1239/scratchpad/se_psmgr/3_se_confirm/cand34_wmi1.c:20

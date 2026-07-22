@@ -1,0 +1,16 @@
+[
+ {
+  "file": "./include/linux/file.h",
+  "line": 32,
+  "func": "fput_light",
+  "callee": "",
+  "detail": "WMI-1 Stale Reference: file is freed here but field 'file' (type vgem_buf_entry) still holds a pointer to it. This creates a dangling reference exploitable for UAF."
+ },
+ {
+  "file": "./include/linux/file.h",
+  "line": 45,
+  "func": "fdput",
+  "callee": "",
+  "detail": "WMI-1 Stale Reference: file is freed here but field 'file' (type vgem_buf_entry) still holds a pointer to it. This creates a dangling reference exploitable for UAF."
+ }
+]

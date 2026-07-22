@@ -1,8 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun freed () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun signal_ungoverned () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun view_a () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun view_b () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (and  (=  (_ bv1 32) (concat  (select  signal_ungoverned (_ bv3 32) ) (concat  (select  signal_ungoverned (_ bv2 32) ) (concat  (select  signal_ungoverned (_ bv1 32) ) (select  signal_ungoverned (_ bv0 32) ) ) ) ) ) (=  (_ bv0 32) (concat  (select  freed (_ bv3 32) ) (concat  (select  freed (_ bv2 32) ) (concat  (select  freed (_ bv1 32) ) (select  freed (_ bv0 32) ) ) ) ) ) ) (=  (concat  (select  view_a (_ bv3 32) ) (concat  (select  view_a (_ bv2 32) ) (concat  (select  view_a (_ bv1 32) ) (select  view_a (_ bv0 32) ) ) ) ) (concat  (select  view_b (_ bv3 32) ) (concat  (select  view_b (_ bv2 32) ) (concat  (select  view_b (_ bv1 32) ) (select  view_b (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

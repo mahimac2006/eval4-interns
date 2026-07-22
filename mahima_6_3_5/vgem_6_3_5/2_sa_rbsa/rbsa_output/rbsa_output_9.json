@@ -1,0 +1,77 @@
+{
+  "project": "eval4_6_3_5_eval4_drivers_vgem",
+  "target_func": "vgem_postproc_ctx_free",
+  "target_file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+  "target_line": 392,
+  "target_cwe": "CWE-416",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_postproc_ctx_free"
+  },
+  "discovered_sinks": [
+    {
+      "file": "drivers/vgem/vgem_postproc/vgem_postproc.c",
+      "line": 392,
+      "func": "vgem_postproc_ctx_free",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "pipeline_open",
+  "trigger_candidates": [
+    "pipeline_open",
+    "pipeline_release",
+    "postproc_release"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "pipeline_open:arg1",
+    "pipeline_release:arg1",
+    "postproc_release:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "pipeline_open",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "pipeline_release",
+      "name": "arg1",
+      "type": ""
+    },
+    {
+      "function": "postproc_release",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [
+    "pipeline_open"
+  ],
+  "producers": [
+    {
+      "api": "pipeline_open",
+      "type": "",
+      "out": ""
+    }
+  ],
+  "observable_apis": [],
+  "init_plan": [
+    {
+      "name": "pipeline_open",
+      "api": "pipeline_open",
+      "capture": []
+    },
+    {
+      "name": "trigger",
+      "api": "pipeline_open",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "!freed({vgem_postproc_ctx_free:%54}) before access"
+  ],
+  "concrete_params": []
+}

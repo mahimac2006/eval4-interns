@@ -1,0 +1,23 @@
+{
+  "project": "net_psmgr",
+  "engine": "codeql",
+  "target_func": "psmgr_process_data",
+  "target_file": "psmgr_pipeline.c",
+  "target_line": 281,
+  "target_cwe": null,
+  "rule": "WMI-3b_AttackerContent_OffsetControlledWrite",
+  "wmi_index": null,
+  "message": "WMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('pb') into object 'struct psmgr_desc' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). [mechanism:write-at-attacker-offset;indicates=WMI-3] [mem:struct=psmgr_desc;field=pb;offset=?] [oracle:assert=pb stays within the object's declared buffer;assume=external content written at a variable offset into the object]\nWMI-3 attacker content in authoritative position (offset-controlled-write): external content is written at an attacker-controlled offset ('out_offset') into object 'struct psmgr_desc' \u2014 reaching past its buffer into a trailing field (the authoritative position the consumer follows). [mechanism:write-at-attacker-offset;indicates=WMI-3] [mem:struct=psmgr_desc;field=out_offset;offset=?] [oracle:assert=out_offset stays within the object's declared buffer;assume=external content written at a variable offset into the object]",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_process_data"
+  },
+  "discovered_sinks": [
+    {
+      "file": "psmgr_pipeline.c",
+      "line": 281,
+      "func": "psmgr_process_data",
+      "callee": ""
+    }
+  ]
+}

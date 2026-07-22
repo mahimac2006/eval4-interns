@@ -1,0 +1,4 @@
+array ret[4] : w32 -> w8 = symbolic
+(query [(Eq 1
+             (ReadLSB w32 0 ret))]
+        false)

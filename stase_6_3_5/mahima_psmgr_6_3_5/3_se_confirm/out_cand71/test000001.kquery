@@ -1,7 +1,0 @@
-array hdr_payload_len[4] : w32 -> w8 = symbolic
-array wup_len[4] : w32 -> w8 = symbolic
-(query [(Ult N0:(ReadLSB w32 0 hdr_payload_len)
-              8)
-         (Eq (ReadLSB w32 0 wup_len)
-             N0)]
-        false)

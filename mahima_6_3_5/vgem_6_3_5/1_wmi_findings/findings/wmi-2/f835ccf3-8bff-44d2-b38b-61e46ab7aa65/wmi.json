@@ -1,0 +1,118 @@
+{
+  "operation": {
+    "name": "addOffsetPtr_at_dmamove_finalize_pending",
+    "parameters": [
+      "unsigned int pd0_length",
+      "unsigned int pd1_length"
+    ],
+    "effects": [
+      {
+        "type": "addOffsetPtr",
+        "id": "e_3ddc8cdb",
+        "arguments": {
+          "locations": [
+            "move_desc.completion_token@24"
+          ]
+        }
+      }
+    ],
+    "preconditions": [
+      "(set-logic QF_AUFBV )\n(declare-fun pd0_length () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun pd1_length () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (=  (_ bv0 32) (concat  (select  pd0_length (_ bv3 32) ) (concat  (select  pd0_length (_ bv2 32) ) (concat  (select  pd0_length (_ bv1 32) ) (select  pd0_length (_ bv0 32) ) ) ) ) ) (=  false (bvule  (concat  (select  pd1_length (_ bv3 32) ) (concat  (select  pd1_length (_ bv2 32) ) (concat  (select  pd1_length (_ bv1 32) ) (select  pd1_length (_ bv0 32) ) ) ) ) (_ bv65536 32) ) ) ) )\n(check-sat)\n(exit)\n",
+      "(set-logic QF_AUFBV )\n(declare-fun pd0_length () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(declare-fun pd1_length () (Array (_ BitVec 32) (_ BitVec 8) ) )\n(assert (and  (=  (_ bv0 32) (concat  (select  pd0_length (_ bv3 32) ) (concat  (select  pd0_length (_ bv2 32) ) (concat  (select  pd0_length (_ bv1 32) ) (select  pd0_length (_ bv0 32) ) ) ) ) ) (bvule  (concat  (select  pd1_length (_ bv3 32) ) (concat  (select  pd1_length (_ bv2 32) ) (concat  (select  pd1_length (_ bv1 32) ) (select  pd1_length (_ bv0 32) ) ) ) ) (_ bv65536 32) ) ) )\n(check-sat)\n(exit)\n"
+    ],
+    "preconditions_meta": [
+      {
+        "name": "test000002",
+        "is_bug_witness": true,
+        "format": "smt2",
+        "size_chars": 573
+      },
+      {
+        "name": "test000001",
+        "is_bug_witness": false,
+        "format": "smt2",
+        "size_chars": 561
+      }
+    ]
+  },
+  "trigger": {
+    "function": "dmamove_finalize_pending",
+    "file": "vgem_dmamove.c",
+    "args": [
+      {
+        "name": "pd0_length",
+        "type": "unsigned int",
+        "value_le_hex": "0x00000000",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      },
+      {
+        "name": "pd1_length",
+        "type": "unsigned int",
+        "value_le_hex": "0x80000100",
+        "size_bytes": 4,
+        "source": "klee_witness"
+      }
+    ]
+  },
+  "name": "WMI-2: Live Resource Inconsistency @ dmamove_finalize_pending",
+  "metadata": {
+    "rule": "WMI-2_LiveResourceInconsistency",
+    "detected_by": [
+      {
+        "engine": "codeql",
+        "rule": "WMI-2_LiveResourceInconsistency",
+        "mechanism": "bookkeeping-field-threshold-gate",
+        "indicates": "WMI-2",
+        "file": "vgem_dmamove.c",
+        "line": 402
+      }
+    ],
+    "bug_type": "WMI-2 Live Resource Inconsistency",
+    "verdict_kind": "symex_explored",
+    "crash_location": {
+      "file": "vgem_dmamove.c",
+      "line": 402,
+      "function": "dmamove_finalize_pending"
+    },
+    "memory_layout": [
+      {
+        "name": "move_desc.completion_token@24",
+        "locations": [
+          {
+            "offset": 24,
+            "size": 8
+          }
+        ]
+      }
+    ],
+    "memory_relation": {
+      "segment": "move_desc.completion_token@24",
+      "symbol": "dmamove_finalize_pending"
+    },
+    "concrete_oracle": null,
+    "symex_oracle": {
+      "oracle": "klee",
+      "confirms_sa_candidate": true,
+      "oracle_spec": {
+        "source_sa_rule": "WMI-2_LiveResourceInconsistency",
+        "assertion": "move_desc.completion_token is interpreted consistently across all live consumers",
+        "assumptions": [
+          "resource stays live while read under >= 2 incompatible models"
+        ]
+      },
+      "result": "CONFIRMED (SA invariant violated)"
+    },
+    "memory": {
+      "name": "move_desc.completion_token@24",
+      "sa": "move_desc.completion_token@24",
+      "code": "move_desc.completion_token"
+    },
+    "wma": "Logic-Induced Signal Divergence to Adversary-Controlled Memory Access",
+    "wmi_index": 2,
+    "relational_witness": null,
+    "derivation_witness": null,
+    "witness_passed": false,
+    "produced_by": "stase3"
+  }
+}

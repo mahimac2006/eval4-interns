@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun opt_param_max () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (=  false (bvule  (concat  (select  opt_param_max (_ bv3 32) ) (concat  (select  opt_param_max (_ bv2 32) ) (concat  (select  opt_param_max (_ bv1 32) ) (select  opt_param_max (_ bv0 32) ) ) ) ) (_ bv16 32) ) ) )
-(check-sat)
-(exit)

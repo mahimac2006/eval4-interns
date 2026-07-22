@@ -1,7 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun gen () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun slot () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun token_gen_invalid () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (bvult  (concat  (select  slot (_ bv3 32) ) (concat  (select  slot (_ bv2 32) ) (concat  (select  slot (_ bv1 32) ) (select  slot (_ bv0 32) ) ) ) ) (_ bv64 32) ) (=  false (=  (concat  (select  gen (_ bv3 32) ) (concat  (select  gen (_ bv2 32) ) (concat  (select  gen (_ bv1 32) ) (select  gen (_ bv0 32) ) ) ) ) (concat  (select  token_gen_invalid (_ bv3 32) ) (concat  (select  token_gen_invalid (_ bv2 32) ) (concat  (select  token_gen_invalid (_ bv1 32) ) (select  token_gen_invalid (_ bv0 32) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

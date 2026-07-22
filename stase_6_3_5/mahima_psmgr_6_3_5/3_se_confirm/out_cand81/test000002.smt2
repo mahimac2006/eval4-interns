@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun peer_session_id () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun sess_session_id () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (=  false (=  (concat  (select  sess_session_id (_ bv3 32) ) (concat  (select  sess_session_id (_ bv2 32) ) (concat  (select  sess_session_id (_ bv1 32) ) (select  sess_session_id (_ bv0 32) ) ) ) ) (concat  (select  peer_session_id (_ bv3 32) ) (concat  (select  peer_session_id (_ bv2 32) ) (concat  (select  peer_session_id (_ bv1 32) ) (select  peer_session_id (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

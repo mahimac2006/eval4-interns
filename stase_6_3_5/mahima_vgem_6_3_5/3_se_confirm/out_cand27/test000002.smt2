@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun pending_capacity () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun pending_count () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  pending_count (_ bv3 32) ) (concat  (select  pending_count (_ bv2 32) ) (concat  (select  pending_count (_ bv1 32) ) (select  pending_count (_ bv0 32) ) ) ) ) ) ) (and  (bvult  (_ bv0 32) ?B1 ) (=  false (bvule  ?B1 (concat  (select  pending_capacity (_ bv3 32) ) (concat  (select  pending_capacity (_ bv2 32) ) (concat  (select  pending_capacity (_ bv1 32) ) (select  pending_capacity (_ bv0 32) ) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

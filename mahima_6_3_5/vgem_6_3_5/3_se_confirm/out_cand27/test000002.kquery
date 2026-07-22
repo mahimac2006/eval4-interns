@@ -1,0 +1,8 @@
+array pending_capacity[4] : w32 -> w8 = symbolic
+array pending_count[4] : w32 -> w8 = symbolic
+(query [(Ult 0
+              N0:(ReadLSB w32 0 pending_count))
+         (Eq false
+             (Ule N0
+                  (ReadLSB w32 0 pending_capacity)))]
+        false)

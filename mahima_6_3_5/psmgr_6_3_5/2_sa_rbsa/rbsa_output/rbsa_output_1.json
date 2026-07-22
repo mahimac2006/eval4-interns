@@ -1,0 +1,58 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "psmgr_sendmsg",
+  "target_file": "net/psmgr/psmgr_pipeline.c",
+  "target_line": 518,
+  "target_cwe": "CWE-416",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_sendmsg"
+  },
+  "discovered_sinks": [
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 518,
+      "func": "psmgr_sendmsg",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "psmgr_sendmsg",
+  "trigger_candidates": [
+    "psmgr_sendmsg"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "psmgr_sendmsg:arg0",
+    "psmgr_sendmsg:arg2"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_sendmsg",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_sendmsg",
+      "name": "arg2",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "psmgr_sendmsg",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "!freed({psmgr_sendmsg:%224}) before access"
+  ],
+  "concrete_params": []
+}

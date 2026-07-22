@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun job_id () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (=  false (bvult  (concat  (select  job_id (_ bv3 32) ) (concat  (select  job_id (_ bv2 32) ) (concat  (select  job_id (_ bv1 32) ) (select  job_id (_ bv0 32) ) ) ) ) (_ bv64 32) ) ) )
-(check-sat)
-(exit)

@@ -1,0 +1,281 @@
+diff -ruN /Users/mahimachaudhary/Downloads/eval4_linux/drivers/vgem/vgem_dmamove/vgem_dmamove.c /Users/mahimachaudhary/Downloads/eval4_linux_6_6_25/drivers/vgem/vgem_dmamove/vgem_dmamove.c
+--- /Users/mahimachaudhary/Downloads/eval4_linux/drivers/vgem/vgem_dmamove/vgem_dmamove.c	2026-07-15 14:00:20
++++ /Users/mahimachaudhary/Downloads/eval4_linux_6_6_25/drivers/vgem/vgem_dmamove/vgem_dmamove.c	2026-07-15 15:15:58
+@@ -10,7 +10,7 @@
+  *
+  * Completion token table:
+  *   vgem_postproc registers kernel completion record addresses via
+- *   vgem_dmamove_token_alloc(). Each call returns an u64 token encoding a 
++ *   vgem_dmamove_token_alloc(). Each call returns an u64 token encoding a
+  *   slot index, generation counter, and address tag. postproc writes the 
+  *   token into move_desc.completion_token.
+  *
+@@ -321,17 +321,21 @@
+ 	 */
+ 
+ 
+-	if (state->state != VGEM_BUF_STATE_POSTPROC &&
+-		state->state != VGEM_BUF_STATE_COMPLETE) {
++	if (state->state == VGEM_BUF_STATE_INIT &&
++	    state->intermediate_pending == 0) {
+ 		spin_unlock_irqrestore(&state->lock, flags);
+-		pr_debug("%s: mark_staged: postproc has not completed, skipped\n",
+-				DRIVER_NAME);
++		pr_debug("%s: mark_staged: no intermediate job in flight, skipped\n",
++			 DRIVER_NAME);
+ 		return;
+ 	}
+ 
+ 	state->stage_flags |= VGEM_BUF_STAGE_STAGING;
+ 	state->staging_gen++;
+-	state->state = VGEM_BUF_STATE_COMPLETE;
++
++	if (state->state == VGEM_BUF_STATE_INIT)
++		state->state = VGEM_BUF_STATE_STAGING;
++	else if (state->state == VGEM_BUF_STATE_POSTPROC)
++		state->state = VGEM_BUF_STATE_COMPLETE;
+ 	spin_unlock_irqrestore(&state->lock, flags);
+ }
+ EXPORT_SYMBOL_GPL(vgem_dmamove_buf_mark_staged);
+@@ -404,12 +408,12 @@
+ 
+ 		/*
+ 		 * Attempt to resolve the completion token through the token
+-		 * table. 
++		 * table.
+ 		 */
+ 		resolved = token_resolve(pd->completion_token);
+ 		if (resolved) {
+ 			pd->completion_token = resolved;
+-		} else {
++		} else if (state_desc_count > 0) {
+ 			pd->flags |= MOVE_DESC_FLAG_SKIP_COMPLETION;
+ 		}
+ 	}
+@@ -480,7 +484,7 @@
+ 	if (ret)
+ 		return ret;
+ 
+-	ret = dma_buf_vmap_unlocked(job->desc_buf, &desc_map);
++	ret = dma_buf_vmap(job->desc_buf, &desc_map);
+ 	if (ret) {
+ 		dma_buf_end_cpu_access(job->desc_buf, DMA_FROM_DEVICE);
+ 		return ret;
+@@ -491,14 +495,14 @@
+ 	if (desc_count > 0 && descs[0].reserved != PIPELINE_DESC_MAGIC) {
+ 		pr_err("%s: job %d: bad ring magic 0x%x\n",
+ 		       DRIVER_NAME, job->id, descs[0].reserved);
+-		dma_buf_vunmap_unlocked(job->desc_buf, &desc_map);
++		dma_buf_vunmap(job->desc_buf, &desc_map);
+ 		dma_buf_end_cpu_access(job->desc_buf, DMA_FROM_DEVICE);
+ 		return -EINVAL;
+ 	}
+ 
+ 	if (job->desc_buf->size <
+ 	    (u64)desc_count * sizeof(struct move_desc)) {
+-		dma_buf_vunmap_unlocked(job->desc_buf, &desc_map);
++		dma_buf_vunmap(job->desc_buf, &desc_map);
+ 		dma_buf_end_cpu_access(job->desc_buf, DMA_FROM_DEVICE);
+ 		return -EINVAL;
+ 	}
+@@ -507,7 +511,7 @@
+ 					   sizeof(struct move_desc),
+ 					   GFP_KERNEL);
+ 	if (!job->pending_descs) {
+-		dma_buf_vunmap_unlocked(job->desc_buf, &desc_map);
++		dma_buf_vunmap(job->desc_buf, &desc_map);
+ 		dma_buf_end_cpu_access(job->desc_buf, DMA_FROM_DEVICE);
+ 		return -ENOMEM;
+ 	}
+@@ -516,7 +520,7 @@
+ 	       desc_count * sizeof(struct move_desc));
+ 	job->pending_count = desc_count;
+ 
+-	dma_buf_vunmap_unlocked(job->desc_buf, &desc_map);
++	dma_buf_vunmap(job->desc_buf, &desc_map);
+ 	dma_buf_end_cpu_access(job->desc_buf, DMA_FROM_DEVICE);
+ 
+ 	job->import_desc_count = state_desc_count;
+@@ -634,13 +638,13 @@
+ 	ret = dma_buf_begin_cpu_access(job->dst_buf, DMA_TO_DEVICE);
+ 	if (ret) goto out_end_src;
+ 
+-	ret = dma_buf_vmap_unlocked(job->desc_buf, &desc_map);
++	ret = dma_buf_vmap(job->desc_buf, &desc_map);
+ 	if (ret) goto out_end_dst;
+ 
+-	ret = dma_buf_vmap_unlocked(job->src_buf, &src_map);
++	ret = dma_buf_vmap(job->src_buf, &src_map);
+ 	if (ret) goto out_vunmap_desc;
+ 
+-	ret = dma_buf_vmap_unlocked(job->dst_buf, &dst_map);
++	ret = dma_buf_vmap(job->dst_buf, &dst_map);
+ 	if (ret) goto out_vunmap_src;
+ 
+ 	ret = dmamove_run_descs(job, desc_map.vaddr, job->desc_count,
+@@ -649,11 +653,11 @@
+ 	if (job->src_role == VGEM_DMA_FLAG_SRC_STAGING && ret == 0)
+ 		vgem_dmamove_buf_mark_staged(job->src_buf, (u32)job->id);
+ 
+-	dma_buf_vunmap_unlocked(job->dst_buf, &dst_map);
++	dma_buf_vunmap(job->dst_buf, &dst_map);
+ out_vunmap_src:
+-	dma_buf_vunmap_unlocked(job->src_buf, &src_map);
++	dma_buf_vunmap(job->src_buf, &src_map);
+ out_vunmap_desc:
+-	dma_buf_vunmap_unlocked(job->desc_buf, &desc_map);
++	dma_buf_vunmap(job->desc_buf, &desc_map);
+ out_end_dst:
+ 	dma_buf_end_cpu_access(job->dst_buf, DMA_TO_DEVICE);
+ out_end_src:
+@@ -797,29 +801,6 @@
+ 	job->completed   = 0;
+ 	job->ctx         = ctx;
+ 
+-	/*
+-	 * Reject STAGING submissions if the source buffer has an
+-	 * INTERMEDIATE postproc job in flight. The buffer must reach
+-	 * POSTPROC or COMPLETE state before STAGING is allowed.
+-	 */
+-	if (job->src_role == VGEM_DMA_FLAG_SRC_STAGING) {
+-		struct vgem_buf_state *bst;
+-		bst = vgem_dmamove_buf_state_get(job->src_buf);
+-		if (bst) {
+-			unsigned long sflags;
+-			int reject = 0;
+-			spin_lock_irqsave(&bst->lock, sflags);
+-			if (bst->state == VGEM_BUF_STATE_INIT &&
+-			    bst->intermediate_pending > 0)
+-				reject = 1;
+-			spin_unlock_irqrestore(&bst->lock, sflags);
+-			if (reject) {
+-				ret = -EBUSY;
+-				goto err_put_dst;
+-			}
+-		}
+-	}
+-
+ 	INIT_WORK(&job->work, dmamove_job_execute);
+ 
+ 	mutex_lock(&ctx->lock);
+@@ -954,19 +935,19 @@
+ 	ret = dma_buf_begin_cpu_access(job->dst_buf, DMA_TO_DEVICE);
+ 	if (ret) goto out_end_src;
+ 
+-	ret = dma_buf_vmap_unlocked(job->src_buf, &src_map);
++	ret = dma_buf_vmap(job->src_buf, &src_map);
+ 	if (ret) goto out_end_dst;
+ 
+-	ret = dma_buf_vmap_unlocked(job->dst_buf, &dst_map);
++	ret = dma_buf_vmap(job->dst_buf, &dst_map);
+ 	if (ret) goto out_vunmap_src;
+ 
+ 	ret = dmamove_run_descs(job, job->pending_descs,
+ 				job->pending_count, &src_map, &dst_map, true);
+ 	*out_completed = job->completed;
+ 
+-	dma_buf_vunmap_unlocked(job->dst_buf, &dst_map);
++	dma_buf_vunmap(job->dst_buf, &dst_map);
+ out_vunmap_src:
+-	dma_buf_vunmap_unlocked(job->src_buf, &src_map);
++	dma_buf_vunmap(job->src_buf, &src_map);
+ out_end_dst:
+ 	dma_buf_end_cpu_access(job->dst_buf, DMA_TO_DEVICE);
+ out_end_src:
+@@ -1146,7 +1127,7 @@
+ 	if (ret)
+ 		goto out_put_dst;
+ 
+-	ret = dma_buf_vmap_unlocked(desc_buf, &desc_map);
++	ret = dma_buf_vmap(desc_buf, &desc_map);
+ 	if (ret) {
+ 		dma_buf_end_cpu_access(desc_buf, DMA_FROM_DEVICE);
+ 		goto out_put_dst;
+@@ -1184,7 +1165,7 @@
+ 		arg.out_valid_count++;
+ 	}
+ 
+-	dma_buf_vunmap_unlocked(desc_buf, &desc_map);
++	dma_buf_vunmap(desc_buf, &desc_map);
+ 	dma_buf_end_cpu_access(desc_buf, DMA_FROM_DEVICE);
+ out_put_dst:
+ 	dma_buf_put(dst_buf);
+diff -ruN /Users/mahimachaudhary/Downloads/eval4_linux/drivers/vgem/vgem_postproc/vgem_postproc.c /Users/mahimachaudhary/Downloads/eval4_linux_6_6_25/drivers/vgem/vgem_postproc/vgem_postproc.c
+--- /Users/mahimachaudhary/Downloads/eval4_linux/drivers/vgem/vgem_postproc/vgem_postproc.c	2026-07-15 14:00:20
++++ /Users/mahimachaudhary/Downloads/eval4_linux_6_6_25/drivers/vgem/vgem_postproc/vgem_postproc.c	2026-07-15 15:15:58
+@@ -61,7 +61,7 @@
+ /**
+  * struct postproc_comp_entry - per-descriptor completion tracking
+  * @value: written by vgem_dmamove after the descriptor's transfer completes.
+- * @token: token registered with vgem_dmamove. 
++ * @token: opaque token registered with vgem_dmamove. 
+  */
+ struct postproc_comp_entry {
+ 	u32	value;
+@@ -74,7 +74,7 @@
+  * @src_buf:		source dma-buf (XRGB8888)
+  * @dst_buf:		destination dma-buf (ARGB8888)
+  * @desc_buf:		descriptor ring dma-buf, or NULL
+- * @completions:	per-descriptor completion record array
++ * @completions:	per-descriptor completion record array (vmalloc)
+  * @desc_count:		number of descriptors authored
+  * @width:		frame width in pixels
+  * @height:		frame height in pixels
+@@ -258,10 +258,10 @@
+ 	ret = dma_buf_begin_cpu_access(job->dst_buf, DMA_TO_DEVICE);
+ 	if (ret) goto out_end_src;
+ 
+-	ret = dma_buf_vmap_unlocked(job->src_buf, &src_map);
++	ret = dma_buf_vmap(job->src_buf, &src_map);
+ 	if (ret) goto out_end_dst;
+ 
+-	ret = dma_buf_vmap_unlocked(job->dst_buf, &dst_map);
++	ret = dma_buf_vmap(job->dst_buf, &dst_map);
+ 	if (ret) goto out_vunmap_src;
+ 
+ 	postproc_xrgb_to_argb(src_map.vaddr, dst_map.vaddr,
+@@ -271,7 +271,7 @@
+ 		ret = dma_buf_begin_cpu_access(job->desc_buf, DMA_TO_DEVICE);
+ 		if (ret) goto out_vunmap_dst;
+ 
+-		ret = dma_buf_vmap_unlocked(job->desc_buf, &desc_map);
++		ret = dma_buf_vmap(job->desc_buf, &desc_map);
+ 		if (ret) {
+ 			dma_buf_end_cpu_access(job->desc_buf, DMA_TO_DEVICE);
+ 			goto out_vunmap_dst;
+@@ -279,7 +279,7 @@
+ 
+ 		ret = postproc_build_desc_ring(job, &desc_map);
+ 
+-		dma_buf_vunmap_unlocked(job->desc_buf, &desc_map);
++		dma_buf_vunmap(job->desc_buf, &desc_map);
+ 		dma_buf_end_cpu_access(job->desc_buf, DMA_TO_DEVICE);
+ 
+ 		if (ret)
+@@ -287,14 +287,14 @@
+ 	}
+ 
+ 	/*
+-	 * Update kernel-internal buffer state.
++	 * Update kernel-internal buffer state. 
+ 	 */
+ 	postproc_update_buf_state(job);
+ 
+ out_vunmap_dst:
+-	dma_buf_vunmap_unlocked(job->dst_buf, &dst_map);
++	dma_buf_vunmap(job->dst_buf, &dst_map);
+ out_vunmap_src:
+-	dma_buf_vunmap_unlocked(job->src_buf, &src_map);
++	dma_buf_vunmap(job->src_buf, &src_map);
+ out_end_dst:
+ 	dma_buf_end_cpu_access(job->dst_buf, DMA_TO_DEVICE);
+ out_end_src:
+@@ -313,7 +313,7 @@
+ 		      ? DMA_RESV_USAGE_READ
+ 		      : DMA_RESV_USAGE_WRITE;
+ 
+-	fence = dma_fence_allocate_private_stub();
++	fence = dma_fence_allocate_private_stub(ktime_get());
+ 	if (IS_ERR(fence)) {
+ 		ret = PTR_ERR(fence);
+ 		goto out;

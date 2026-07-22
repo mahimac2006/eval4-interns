@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "vgem_postproc_ctx_free",
+  "target_file": "vgem_postproc.c",
+  "target_line": 388,
+  "target_cwe": null,
+  "rule": "WMI-3_ArbitraryFree_StaleTraversal",
+  "wmi_index": null,
+  "message": "WMI-3 Arbitrary Free: vgem_postproc_ctx_free() traverses 'completions' through a pointer that could be stale (type postproc_job is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: vgem_postproc_ctx_free() traverses 'dst_buf' through a pointer that could be stale (type postproc_job is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: vgem_postproc_ctx_free() traverses 'src_buf' through a pointer that could be stale (type postproc_job is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.\nWMI-3 Arbitrary Free: vgem_postproc_ctx_free() traverses 'desc_buf' through a pointer that could be stale (type postproc_job is freed elsewhere). Elements reached through this traversal are freed here. If the pointer was reclaimed, attacker controls what gets freed.",
+  "sink": {
+    "callee": "",
+    "enclosing": "vgem_postproc_ctx_free"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_postproc.c",
+      "line": 388,
+      "func": "vgem_postproc_ctx_free",
+      "callee": ""
+    }
+  ]
+}

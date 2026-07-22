@@ -1,0 +1,65 @@
+[
+ {
+  "file": "./include/linux/energy_model.h",
+  "line": 244,
+  "func": "em_cpu_energy",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'em_perf_domain.nr_perf_states' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=em_perf_domain;field=nr_perf_states;offset=8\\] \\[oracle:assert=nr_perf_states governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 292,
+  "func": "iosys_map_memcpy_to",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'iosys_map.(unknown field)' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=iosys_map;field=(unknown field);offset=0\\] \\[oracle:assert=(unknown field) governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 312,
+  "func": "iosys_map_memcpy_from",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'iosys_map.(unknown field)' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=iosys_map;field=(unknown field);offset=0\\] \\[oracle:assert=(unknown field) governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/iosys-map.h",
+  "line": 347,
+  "func": "iosys_map_memset",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'iosys_map.(unknown field)' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=iosys_map;field=(unknown field);offset=0\\] \\[oracle:assert=(unknown field) governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/pid.h",
+  "line": 155,
+  "func": "ns_of_pid",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'pid.level' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=pid;field=level;offset=4\\] \\[oracle:assert=level governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/pid.h",
+  "line": 167,
+  "func": "is_child_reaper",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (array-index-from-field): the access index is loaded from struct field 'pid.level' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:array-index-from-field;indicates=WMI-4\\] \\[mem:struct=pid;field=level;offset=4\\] \\[oracle:assert=level governs a bounded, trusted in-bounds array index;assume=access index loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/signal.h",
+  "line": 239,
+  "func": "siginitset",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field '(unnamed class/struct/union).sig' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=(unnamed class/struct/union);field=sig;offset=0\\] \\[oracle:assert=sig governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "./include/linux/signal.h",
+  "line": 252,
+  "func": "siginitsetinv",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field '(unnamed class/struct/union).sig' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=(unnamed class/struct/union);field=sig;offset=0\\] \\[oracle:assert=sig governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ },
+ {
+  "file": "drivers/vgem/vgem_dmamove/vgem_dmamove.c",
+  "line": 515,
+  "func": "dmamove_fetch_ring",
+  "callee": "",
+  "detail": "WMI-4 arbitrary access (copy-references-field): the access extent/source/dest is loaded from struct field 'dmamove_job.pending_descs' \u2014 the attacker-shaped WMI-3 content followed into an arbitrary memory access. \\[mechanism:copy-references-field;indicates=WMI-4\\] \\[mem:struct=dmamove_job;field=pending_descs;offset=120\\] \\[oracle:assert=pending_descs governs a bounded, trusted referenced operand;assume=access extent/source/dest loaded from the field\\]"
+ }
+]

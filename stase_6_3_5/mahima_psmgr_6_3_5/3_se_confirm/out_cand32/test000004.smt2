@@ -1,7 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun peer_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun role () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun sess_state () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (and  (=  (_ bv0 32) (concat  (select  role (_ bv3 32) ) (concat  (select  role (_ bv2 32) ) (concat  (select  role (_ bv1 32) ) (select  role (_ bv0 32) ) ) ) ) ) (=  (_ bv5 32) (concat  (select  sess_state (_ bv3 32) ) (concat  (select  sess_state (_ bv2 32) ) (concat  (select  sess_state (_ bv1 32) ) (select  sess_state (_ bv0 32) ) ) ) ) ) ) (=  (_ bv5 32) (concat  (select  peer_state (_ bv3 32) ) (concat  (select  peer_state (_ bv2 32) ) (concat  (select  peer_state (_ bv1 32) ) (select  peer_state (_ bv0 32) ) ) ) ) ) ) )
-(check-sat)
-(exit)

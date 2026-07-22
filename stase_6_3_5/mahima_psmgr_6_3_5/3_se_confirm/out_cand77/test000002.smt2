@@ -1,5 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun sessions_active () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (bvslt  (_ bv0 64) (concat  (select  sessions_active (_ bv7 32) ) (concat  (select  sessions_active (_ bv6 32) ) (concat  (select  sessions_active (_ bv5 32) ) (concat  (select  sessions_active (_ bv4 32) ) (concat  (select  sessions_active (_ bv3 32) ) (concat  (select  sessions_active (_ bv2 32) ) (concat  (select  sessions_active (_ bv1 32) ) (select  sessions_active (_ bv0 32) ) ) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

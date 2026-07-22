@@ -1,7 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun role_managed () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun token () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun wl1 () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (and  (and  (=  false (=  (_ bv0 32) (concat  (select  role_managed (_ bv3 32) ) (concat  (select  role_managed (_ bv2 32) ) (concat  (select  role_managed (_ bv1 32) ) (select  role_managed (_ bv0 32) ) ) ) ) ) ) (=  false (=  (_ bv0 32) (concat  (select  token (_ bv3 32) ) (concat  (select  token (_ bv2 32) ) (concat  (select  token (_ bv1 32) ) (select  token (_ bv0 32) ) ) ) ) ) ) ) (=  false (=  (_ bv144 32) (concat  (select  wl1 (_ bv3 32) ) (concat  (select  wl1 (_ bv2 32) ) (concat  (select  wl1 (_ bv1 32) ) (select  wl1 (_ bv0 32) ) ) ) ) ) ) ) )
-(check-sat)
-(exit)

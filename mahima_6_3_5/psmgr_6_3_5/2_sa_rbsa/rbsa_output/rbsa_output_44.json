@@ -1,0 +1,71 @@
+{
+  "project": "eval4_6_3_5_eval4_net_psmgr",
+  "target_func": "psmgr_write_count_update",
+  "target_file": "net/psmgr/psmgr_pipeline.c",
+  "target_line": 168,
+  "target_cwe": "CWE-190",
+  "attack_vector": "L",
+  "sink": {
+    "callee": "",
+    "enclosing": "psmgr_write_count_update"
+  },
+  "discovered_sinks": [
+    {
+      "file": "net/psmgr/psmgr_pipeline.c",
+      "line": 168,
+      "func": "psmgr_write_count_update",
+      "callee": ""
+    }
+  ],
+  "trigger_api": "psmgr_sendmsg",
+  "trigger_candidates": [
+    "psmgr_sendmsg",
+    "psmgr_write_count_update"
+  ],
+  "setup_api": null,
+  "setup_candidates": [],
+  "symbolic_params": [
+    "psmgr_sendmsg:arg0",
+    "psmgr_sendmsg:arg2",
+    "psmgr_write_count_update:arg0",
+    "psmgr_write_count_update:arg1"
+  ],
+  "symbolic_param_details": [
+    {
+      "function": "psmgr_sendmsg",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_sendmsg",
+      "name": "arg2",
+      "type": ""
+    },
+    {
+      "function": "psmgr_write_count_update",
+      "name": "arg0",
+      "type": ""
+    },
+    {
+      "function": "psmgr_write_count_update",
+      "name": "arg1",
+      "type": ""
+    }
+  ],
+  "init_apis": [],
+  "producers": [],
+  "observable_apis": [
+    "psmgr_getsockopt"
+  ],
+  "init_plan": [
+    {
+      "name": "trigger",
+      "api": "psmgr_sendmsg",
+      "capture": []
+    }
+  ],
+  "klee_assumes": [
+    "{psmgr_write_count_update:%6} + {val_2065} <= TYPE_MAX"
+  ],
+  "concrete_params": []
+}

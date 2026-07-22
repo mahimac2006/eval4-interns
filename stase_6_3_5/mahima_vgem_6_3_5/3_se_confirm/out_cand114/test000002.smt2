@@ -1,6 +1,0 @@
-(set-logic QF_AUFBV )
-(declare-fun height () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(declare-fun width () (Array (_ BitVec 32) (_ BitVec 8) ) )
-(assert (let ( (?B1 (concat  (select  width (_ bv3 32) ) (concat  (select  width (_ bv2 32) ) (concat  (select  width (_ bv1 32) ) (select  width (_ bv0 32) ) ) ) ) ) (?B2 (concat  (select  height (_ bv3 32) ) (concat  (select  height (_ bv2 32) ) (concat  (select  height (_ bv1 32) ) (select  height (_ bv0 32) ) ) ) ) ) ) (and  (and  (and  (=  false (=  (_ bv0 32) ?B1 ) ) (=  false (=  (_ bv0 32) ?B2 ) ) ) (bvule  (bvmul  (_ bv4 64) (bvmul  ((_ zero_extend 32)  ?B1 ) ((_ zero_extend 32)  ?B2 ) ) ) (_ bv67108864 64) ) ) (bvule  ?B2 (bvudiv  (_ bv16777216 32) ?B1 ) ) ) ) )
-(check-sat)
-(exit)

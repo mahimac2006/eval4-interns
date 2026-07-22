@@ -1,0 +1,23 @@
+{
+  "project": "drivers_vgem",
+  "engine": "codeql",
+  "target_func": "dmamove_finalize_pending",
+  "target_file": "vgem_dmamove.c",
+  "target_line": 386,
+  "target_cwe": null,
+  "rule": "WMI-2_TypeConfusionLeak_StaleDeref",
+  "wmi_index": null,
+  "message": "WMI-2 Type Confusion Leak: Field 'pending_descs' read through pointer of type dmamove_job in dmamove_finalize_pending(). This type is freed in dmamove_job_reap() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'pending_descs' read through pointer of type dmamove_job in dmamove_finalize_pending(). This type is freed in dmamove_job_submit() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.\nWMI-2 Type Confusion Leak: Field 'pending_descs' read through pointer of type dmamove_job in dmamove_finalize_pending(). This type is freed in vgem_dmamove_ctx_free() without invalidating all references. If memory is reclaimed by a different type, this read leaks attacker-controlled data.",
+  "sink": {
+    "callee": "",
+    "enclosing": "dmamove_finalize_pending"
+  },
+  "discovered_sinks": [
+    {
+      "file": "vgem_dmamove.c",
+      "line": 386,
+      "func": "dmamove_finalize_pending",
+      "callee": ""
+    }
+  ]
+}
