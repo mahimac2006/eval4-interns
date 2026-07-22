@@ -1,0 +1,80 @@
+NO POC REASON
+=============
+Finding: WMI-3: Attacker-Determined Content in an Authoritative Position @
+         do_one_broadcast (af_netlink.c:1473)
+File:    net/netlink/af_netlink.c
+
+Concrete blocker
+----------------
+This finding is an **information-flow integrity issue** (WMI-3), not a
+memory-safety violation.  The STASE analysis identified a path where
+attacker-controlled data (from a userspace netlink `sendmsg(2)` to a multicast
+group) flows through `netlink_ops.sendmsg` into `do_one_broadcast` and is
+delivered to receiving sockets on the multicast group without cryptographic or
+origin-based validation.  The "authoritative position" is the receive queue of
+the listener, and the "attacker-determined content" is the skb data that the
+sending user placed in the netlink message.
+
+The KLEE witness confirms the invariant:
+  "authoritative content remains trusted and not attacker-determined"
+is violated when content_trusted=0 while content_attacker=1.
+
+However, there is no memory-safety defect in the `do_one_broadcast` function or
+its callers (`netlink_broadcast_filtered` → `netlink_broadcast_deliver` →
+`__netlink_sendskb`).  Specifically:
+
+  1. `skb_clone(p->skb, p->allocation)` at line 1473 copies the skb structure
+     and shares the data buffer via the skb dataref mechanism — it is a correct
+     use of the buffer-sharing API.
+
+  2. `skb_get(skb)` + `skb_orphan(skb)` at lines 1475–1480 correctly manages
+     the shared-skb lifecycle (no destructor is set for broadcast-allocated
+     skbs, so `skb_orphan` is a no-op beyond clearing sk/sk->sk_destruct).
+
+  3. `netlink_broadcast_deliver` → `__netlink_sendskb` places the cloned skb
+     on the receiving socket's `sk_receive_queue`, with proper spinlock
+     protection.  The receive queue is drained by `recvmsg(2)` under the
+     socket lock; no concurrent-access defect exists because the broadcast
+     iteration runs under `netlink_lock_table()` (read_lock) and each
+     `do_one_broadcast` call increments the destination socket's refcount via
+     `sock_hold`, preventing premature destruction.
+
+  4. The original skb (from the sender's `alloc_skb`) is correctly consumed
+     by `netlink_trim` during the broadcast, and the remaining reference is
+     freed by `kfree_skb` in `netlink_unicast` (which returns -ECONNREFUSED
+     because no socket with portid 0 exists — this is the error userspace
+     sees).  The clone on the listener's queue survives via its own dataref.
+
+  5. The cleanup code in `netlink_broadcast_filtered` correctly frees any
+     undelivered skb2 references (via `kfree_skb(info.skb2)` or
+     `consume_skb(info.skb2)`).
+
+All kernel memory accesses along the call path are in-bounds and follow
+proper reference-counting and locking discipline.  No KASAN, KMSAN, or
+UBSAN detection is possible because no out-of-bounds, use-after-free, or
+undefined-behavior event occurs.
+
+Confirmed over 4 submissions (NETLINK_USERSOCK with varying payloads,
+multi-threaded stress, and NETLINK_ROUTE).  No sanitizer fired in any run.
+
+PoC demonstration of the information flow
+-----------------------------------------
+A working PoC (`poc2.c`) was submitted that:
+  - Opens a NETLINK_USERSOCK listener bound to multicast group 1
+  - Opens a sender, connects to group 1, and sends broadcast messages
+  - The listener receives the attacker-controlled payload bytes verbatim
+
+This confirms the code path is reached and the information flow exists.
+However, this is an integrity violation observable only at the semantic
+level — the kernel's KASAN/KMSAN/UBSAN instrumentation does not flag it.
+
+Attempts to force a crash
+-------------------------
+Multiple efforts to force a crash along the call path were unsuccessful:
+  - Multi-threaded concurrent broadcasting (8 senders, 8 listeners, 64
+    iterations)
+  - Varying payload sizes (0–16000 bytes)
+  - Protocols NETLINK_USERSOCK and NETLINK_ROUTE
+  - Rapid open/close/connect cycles to stress reference counting
+
+No sanitizer fired in any run.
