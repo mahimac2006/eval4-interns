@@ -1,0 +1,5 @@
+{
+  "available": false,
+  "kind": "gcov",
+  "note": "no gcov data (kernel may lack CONFIG_GCOV_KERNEL=y, or the PoC crashed before coverage could be read)"
+}
