@@ -1,0 +1,59 @@
+{
+  "available": false,
+  "kind": "gcov",
+  "note": "gcov output present but no .gcda paths parsed",
+  "functions_by_file": {
+    "psmgr_core.c": {
+      "functions_total": 16,
+      "functions_reached": 7,
+      "reached": [
+        {
+          "name": "psmgr_check_seq",
+          "calls": 3,
+          "bb": "5/7"
+        },
+        {
+          "name": "psmgr_sendmsg",
+          "calls": 3,
+          "bb": "33/80"
+        },
+        {
+          "name": "compute_out_offset",
+          "calls": 2,
+          "bb": "4/17"
+        },
+        {
+          "name": "psmgr_process_data",
+          "calls": 2,
+          "bb": "16/27"
+        },
+        {
+          "name": "psmgr_write_count_update",
+          "calls": 2,
+          "bb": "5/7"
+        },
+        {
+          "name": "psmgr_exec",
+          "calls": 1,
+          "bb": "7/10"
+        },
+        {
+          "name": "psmgr_process_commit_req",
+          "calls": 1,
+          "bb": "6/9"
+        }
+      ],
+      "not_reached": [
+        "poll_wait",
+        "psmgr_handler_flush",
+        "psmgr_handler_passthrough",
+        "psmgr_handler_reduce",
+        "psmgr_handler_verify",
+        "psmgr_poll",
+        "psmgr_process_ctrl",
+        "psmgr_recvmsg",
+        "sock_poll_wait"
+      ]
+    }
+  }
+}

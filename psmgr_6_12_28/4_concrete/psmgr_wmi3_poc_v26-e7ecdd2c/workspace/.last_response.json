@@ -1,0 +1,53 @@
+{
+  "verdict": "FAIL",
+  "mode": "kernel",
+  "pass_reason": null,
+  "pattern_gate_enabled": false,
+  "pattern_match": false,
+  "exit_code": 0,
+  "timed_out": false,
+  "binary": "poc_psmgr",
+  "duration_s": 182.173,
+  "sanitizer_variant": "kernel",
+  "profiling": {
+    "exec_time_s": 182.173,
+    "entrypoint": "poc_psmgr",
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "wrong_entrypoint": null,
+  "wrong_entrypoint_reason": null,
+  "sanitizer_fired": false,
+  "crash_type": null,
+  "crash_location": null,
+  "top_app_frames": [],
+  "crashes": [],
+  "signature_required": true,
+  "signature_match": null,
+  "reproducible": null,
+  "repro_runs_confirmed": null,
+  "output": " /poc/poc_psmgr\r\r\n[*] initiator_id=2 responder_id=3 out_offset=128\r\r\n[*] step1 DATA(len=4, write_count=48) -> ret=12 errno=0\r\r\n[*] step2 DATA(len=16, handler=0x0000414141414141) -> ret=24 errno=0\r\r\n[*] step3 COMMIT_REQ -> ret=16 errno=0\r\r\n[   76.274050] PSMGR-POC: triggering exec on poisoned handler 0x0000414141414141\r\r\n[*] step4 OPT_EXEC: invoking corrupted handler -> expect kernel fault\r\r\n[   76.282545] BUG: unable to handle page fault for address: 0000414141414141\r\r\n[   76.282829] \nPF: supervisor instruction fetch in kernel mode\r\r\n[   76.282829] ",
+  "coverage": {
+    "available": false,
+    "kind": "gcov",
+    "note": "gcov output present but no .gcda paths parsed"
+  },
+  "coverage_summary": "call-path: psmgr_process_data \u2717 | NOT reached: psmgr_process_data",
+  "variants": {
+    "kernel": {
+      "verdict": "FAIL",
+      "sanitizer_fired": false,
+      "crash_type": null,
+      "crash_location": null,
+      "crashes": [],
+      "signature_match": null,
+      "reproducible": null,
+      "coverage": {
+        "available": false,
+        "kind": "gcov",
+        "note": "gcov output present but no .gcda paths parsed"
+      },
+      "error": null
+    }
+  }
+}

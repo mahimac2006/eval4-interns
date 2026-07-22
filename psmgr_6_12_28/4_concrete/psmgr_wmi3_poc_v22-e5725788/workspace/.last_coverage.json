@@ -1,0 +1,114 @@
+{
+  "available": true,
+  "kind": "gcov",
+  "totals": {
+    "files_reached": 200,
+    "subsystems_reached": 2
+  },
+  "subsystems": {
+    "init": {
+      "files_reached": 6,
+      "files": [
+        "init/calibrate.gcda",
+        "init/do_mounts.gcda",
+        "init/do_mounts_initrd.gcda",
+        "init/initramfs.gcda",
+        "init/main.gcda",
+        "init/version.gcda"
+      ]
+    },
+    "kernel": {
+      "files_reached": 194,
+      "files": [
+        "kernel/acct.gcda",
+        "kernel/async.gcda",
+        "kernel/audit.gcda",
+        "kernel/audit_fsnotify.gcda",
+        "kernel/audit_tree.gcda",
+        "kernel/audit_watch.gcda",
+        "kernel/auditfilter.gcda",
+        "kernel/auditsc.gcda",
+        "kernel/capability.gcda",
+        "kernel/cgroup/cgroup-v1.gcda",
+        "kernel/cgroup/cgroup.gcda",
+        "kernel/cgroup/cpuset.gcda",
+        "kernel/cgroup/debug.gcda",
+        "kernel/cgroup/freezer.gcda",
+        "kernel/cgroup/legacy_freezer.gcda",
+        "kernel/cgroup/misc.gcda",
+        "kernel/cgroup/namespace.gcda",
+        "kernel/cgroup/pids.gcda",
+        "kernel/cgroup/rdma.gcda",
+        "kernel/cgroup/rstat.gcda",
+        "kernel/compat.gcda",
+        "kernel/cpu.gcda",
+        "kernel/crash_core.gcda",
+        "kernel/crash_reserve.gcda",
+        "kernel/cred.gcda",
+        "kernel/delayacct.gcda",
+        "kernel/dma.gcda",
+        "kernel/dma/direct.gcda",
+        "kernel/dma/mapping.gcda",
+        "kernel/dma/ops_helpers.gcda",
+        "kernel/dma/remap.gcda",
+        "kernel/dma/swiotlb.gcda",
+        "kernel/elfcorehdr.gcda",
+        "kernel/entry/common.gcda",
+        "kernel/entry/syscall_user_dispatch.gcda",
+        "kernel/exec_domain.gcda",
+        "kernel/exit.gcda",
+        "kernel/extable.gcda",
+        "kernel/fork.gcda",
+        "kernel/freezer.gcda"
+      ]
+    }
+  },
+  "truncated": false,
+  "note": "200 files reached across 2 subsystems; use these to see how deep the PoC got toward the vulnerable function",
+  "functions_by_file": {
+    "psmgr_core.c": {
+      "functions_total": 16,
+      "functions_reached": 5,
+      "reached": [
+        {
+          "name": "compute_out_offset",
+          "calls": 1,
+          "bb": "4/17"
+        },
+        {
+          "name": "psmgr_check_seq",
+          "calls": 1,
+          "bb": "5/7"
+        },
+        {
+          "name": "psmgr_process_data",
+          "calls": 1,
+          "bb": "16/27"
+        },
+        {
+          "name": "psmgr_sendmsg",
+          "calls": 1,
+          "bb": "29/80"
+        },
+        {
+          "name": "psmgr_write_count_update",
+          "calls": 1,
+          "bb": "5/7"
+        }
+      ],
+      "not_reached": [
+        "poll_wait",
+        "psmgr_exec",
+        "psmgr_handler_flush",
+        "psmgr_handler_passthrough",
+        "psmgr_handler_reduce",
+        "psmgr_handler_verify",
+        "psmgr_poll",
+        "psmgr_process_commit_req",
+        "psmgr_process_ctrl",
+        "psmgr_recvmsg",
+        "sock_poll_wait"
+      ]
+    }
+  }
+}

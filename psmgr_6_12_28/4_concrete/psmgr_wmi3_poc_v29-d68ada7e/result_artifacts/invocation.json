@@ -1,0 +1,4 @@
+{
+  "poc_name": "poc_psmgr",
+  "sanitizer": "kasan"
+}

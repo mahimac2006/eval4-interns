@@ -1,0 +1,5 @@
+{
+  "available": false,
+  "kind": "gcov",
+  "note": "gcov output present but no .gcda paths parsed"
+}
