@@ -1,0 +1,74 @@
+Finding: WMI-3: Attacker-Determined Content in an Authoritative Position
+         @ do_one_broadcast (af_netlink.c:1475)
+
+Vulnerability type: WMI-3 (Logic/Integrity violation — crash family: unknown)
+
+===== No Sanitizer-Crash PoC Possible =====
+
+This is a WMI-3 information-flow / trust-integrity finding from the STASE
+static analysis tool.  The engine identified an information flow where
+attacker-determined (untrusted/unauthorized) data reaches the authoritative
+position "netlink_ops.sendmsg" (the netlink protocol's sendmsg function-pointer
+slot) without an integrity check that would distinguish trusted from untrusted
+content.
+
+Concretely, when userspace calls sendmsg(2) on an AF_NETLINK socket and
+addresses the message to a multicast group, the flow is:
+
+  sendmsg(2) -> sock_sendmsg -> netlink_ops.sendmsg (= netlink_sendmsg)
+    -> netlink_broadcast -> netlink_broadcast_filtered
+    -> do_one_broadcast (line 1475: skb_get / skb_clone delivery)
+    -> netlink_broadcast_deliver
+    -> __netlink_sendskb / skb_queue_tail on each subscribed socket
+
+The data starts in userspace (untrusted, attacker-controlled) and flows through
+the authoritative sendmsg handler to all subscribers.  The STASE/WMI-3 finding
+flags this as "attacker-determined content in an authoritative position"
+because the kernel treats the delivered data with the authority of the sendmsg
+path, but the data originated from an untrusted source.
+
+There is NO memory corruption (use-after-free, out-of-bounds, uninitialized
+read) on this path:
+ - skb_clone / skb_get / skb_orphan all operate safely on freshly allocated or
+   properly refcounted skbuffs.
+ - The receive-side delivery (__netlink_sendskb -> skb_queue_tail) is a
+   standard skb-queue operation with no truncation, overflow, or type confusion.
+ - No integer overflow, shift-past-bounds, or signed/unsigned mismatch is
+   present in do_one_broadcast or its callees.
+
+Therefore KASAN, KMSAN, and UBSAN cannot fire on this code path.  The finding
+is a trust/integrity weakness, not a memory-safety defect.
+
+===== PoC Behaviour (verified in QEMU) =====
+
+The submitted PoC (poc_netlink_broadcast.c) successfully reaches
+do_one_broadcast and delivers attacker-controlled content:
+
+  - Creates 4 NETLINK_GENERIC receiver sockets, each subscribed to group 0
+  - Sends a 144-byte netlink message targeting group 0 via sendmsg(2)
+  - All 4 receivers verify receipt of identical payload (0x42 / 'B' bytes)
+
+Per-run console output from the instrumented QEMU:
+
+  [+] Receiver[0] bound, portid=20000, groups=0x1
+  [+] Receiver[1] bound, portid=20001, groups=0x1
+  [+] Receiver[2] bound, portid=20002, groups=0x1
+  [+] Receiver[3] bound, portid=20003, groups=0x1
+  [+] Broadcast sent.  errno=0 (ok)
+  [0] Received 144 bytes from portid=68
+  [0] Payload verif: 0x42 * N (all=OK)
+  [1] Received 144 bytes from portid=68
+  [1] Payload verif: 0x42 * N (all=OK)
+  [2] Received 144 bytes from portid=68
+  [2] Payload verif: 0x42 * N (all=OK)
+  [3] Received 144 bytes from portid=68
+  [3] Payload verif: 0x42 * N (all=OK)
+  [+] Done.
+
+Exit code 0.  No kernel warning, KASAN splat, UBSAN report, or any other
+sanitizer output appears in dmesg.
+
+This confirms the full call path was exercised and the attacker-controlled
+payload was delivered through the authoritative sendmsg channel to every
+subscriber.  No sanitizer crash is possible because the finding describes a
+logic/integrity violation (WMI-3), not a memory safety defect.
